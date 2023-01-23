@@ -1,0 +1,168 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=0.75in]{geometry}
+\usepackage[document]{ragged2e}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{commath}
+\usepackage{wrapfig}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{xcolor}
+
+\renewenvironment{leftbar}[1][\hsize]
+{%
+    \def\FrameCommand
+    {%
+        {\color{black}\vrule width 1pt}%
+        \hspace{0pt}%must no space.
+        \fboxsep=\FrameSep\colorbox{white}%
+    }%
+    \MakeFramed{\hsize#1\advance\hsize-\width\FrameRestore}%
+}
+{\endMakeFramed}
+
+\title{
+    \textbf{Physical Chemistry} \\
+    \textbf{Electrochemistry}
+}
+\author{
+    Note taken by: Turja Roy
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Electrolysis and Electrolytic conductance}
+\underline{\textbf{Electrolysis:}} The process of decomposition of chemical substances in presence of electricity. \\
+
+
+\underline{\textbf{Electrolytes:}} Electrovalent substances that form ions in solutions which conduct an electric current. \\
+\textit{Example: all ionic substances.} \\
+
+\subsection*{Electricity and Electron: Historical reference}
+\begin{enumerate}
+    \item Egyptians from eel fish
+    \item 500 BC -- Greek (Thelis) : Static current from Amber (a type of fossil)
+    \item 1600 -- William Gilbert : de magnato -- Electricus (latin)
+    \item Benzamin Franklin : Kite experiment -- Lighning = Electricity
+    \item Michael Faraday : Faraday's laws of electrolysis
+\end{enumerate}
+
+\section*{Faraday's Laws of Electrolysis}
+\subsection*{1st Law}
+The amount of substance deposited at the electrode during electrolysis is directly proportional to the current passing through the solution. \\
+\begin{minipage}{0.4\textwidth}
+    \begin{align*}
+        m &\propto Q \\
+        m &\propto it \; \; \; \; \; \; [Q = it] \\
+        m &= Zit
+    \end{align*}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}{0.5\textwidth}
+    m: deposited substance \\
+    Q: current (in Coulomb) \\
+    Z: Electrochemical equivalent \\
+    Z = 1 for i = 1 A and t = 1 s (Q = 1 C)
+\end{minipage} \\
+\underline{\textbf{Electrochemical equivalent (Z):}} The amount of substance deposited at electrode for passing 1 C or 1 A current for 1 s time. \\
+
+\subsection*{2nd Law}
+If the same quantity of electricity is passed through different electrolyte solutions for the same time, the amount of substances deposited at the electrodes is directly proportional to their equivalent weight/chemical equivalent.
+
+\begin{align*}
+    \frac{\text{Amount of Ag deposited}}{\text{amount of Cu deposited}} &= \frac{\text{Chemical equivalent of Ag}}{\text{Chemical equivalent of Cu}} \\
+    \frac{\text{Ag deposited}}{\text{Al deposited}} &= \frac{\text{Chemical equivalent of Ag}}{\text{Chemical equivalent of Al}} 
+\end{align*}
+
+\begin{minipage}{0.45\textwidth}
+    \begin{align*}
+        Ag^+ + e^- &= 1F \\
+        Cu^+ + 2e^- &= 2F \\
+        Al^+ + 3e^- &= 3F \\
+    \end{align*}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}{0.45\textwidth}
+    For 1 mol Ag $\rightarrow$ 1 F \\
+    For 1 mol Cu $\rightarrow$ 2 F \\
+    For 1 mol Al $\rightarrow$ 3 F \\
+\end{minipage}
+
+\begin{minipage}{0.45\textwidth}
+    \quad\quad\quad\quad Quantity of electricity = $n \times F$
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}{0.5\textwidth}
+    n: Valency of the ion \\
+    F: Faraday number (96500 C) \\
+    (Charge of 1 mole electron) \\
+\end{minipage}
+\vspace{1cm}
+
+\section*{Electrolytic Conductance}
+The power of electrolytes to conduct electric current is termed conductivity or conductance. Like metallic conductors, electrolytes obey Ohm's law. \\
+The resistance of a conductor is directly proportional to its length $l$ and inversely proportional to its cross-section $A$. \\
+\begin{minipage}{0.7\textwidth}
+    \begin{align*}
+        \text{Resistance, }
+        R &\propto \frac{l}{A} \\
+        R &= \rho \times \frac{l}{A}
+    \end{align*}
+\end{minipage} \\
+\begin{minipage}{0.7\textwidth}
+    \begin{align*}
+        \text{Conductance, }
+        C &= \frac{1}{R} \\
+        &= \frac{A}{\rho l} \\
+    \end{align*}
+\end{minipage}
+
+\subsection*{Specific Conductance}
+The conductacne of 1 cc electrolytic solution. \\
+\begin{minipage}{0.5\textwidth}
+    $$ \kappa = \frac{1}{R} \cdot \frac{l}{A} $$
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}{0.4\textwidth}
+    l = 1 cm \\
+    A = 1 $cm^2$
+\end{minipage}
+$$ \text{Unit = } \frac{1}{ohm} \cdot \frac{cm}{cm^2} = ohm^{-1}cm^{-1} = S \ cm^{-1} $$
+
+\subsection*{Equivalent Conductance}
+The conductance of 1 g-equivalent of electrolyte dissolved in $V$ cc of water. \\
+\begin{minipage}{0.5\textwidth}
+    $$ \Lambda = \kappa \times V $$
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}{0.4\textwidth}
+    $\Lambda$ = Equivalent conductance \\
+    $V$ = Volume in cc
+\end{minipage} \vspace{.5cm}
+
+In general, if N gram-equivalent electrolyte is dissolved in $1000$ cc of solution, the volume of hte solution containing 1 gram-equivalent will be $1000/N$. Thus,
+$$ \Lambda = \kappa \times \frac{1000}{N} $$
+
+In the same way, if N gram-equivalent electrolyte is dissolved in $V$ cc of solution, the volume of hte solution containing 1 gram-equivalent will be $V/N$. Thus,
+$$ \Lambda = \kappa \times \frac{V}{N} $$
+\begin{align*}
+    \text{Unit: }
+    \Lambda &= \kappa \times V \\
+    &= \frac{1}{R} \times \frac{l}{A} \times V \\
+    &= \frac{1}{ohm} \times \frac{cm}{cm^2} \times \frac{cm^3}{eqvt} \\
+    &= \text{ohm}^{-1} cm^2 \text{eqvt}^{-1} \\
+\end{align*}
+
+\subsection*{Molar Conductance}
+The conductance of 1 mole of electrolyte dissolved in $V$ cc of solution.
+
+
+
+
+
+    
+
+\end{document}
