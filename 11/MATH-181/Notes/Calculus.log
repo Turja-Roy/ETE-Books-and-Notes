@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.1.9)  5 FEB 2023 16:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.1.9)  6 FEB 2023 00:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -480,7 +480,7 @@ File: l3backend-pdftex.def 2022-04-14 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count297
 \l__pdf_internal_box=\box65
 )
-(./Calculus.aux)
+No file Calculus.aux.
 \openout1 = `Calculus.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
@@ -497,7 +497,6 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
 LaTeX Font Info:    ... okay on input line 38.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
 LaTeX Font Info:    ... okay on input line 38.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -589,9 +588,9 @@ Package pdftex.def Info: ./images//Thomae.png  used on input line 111.
  [2 <./images//Dirichlet h_x.png> <./images//Thomae.png>] [3] (./Calculus.aux) 
 ) 
 Here is how much of TeX's memory you used:
- 14712 strings out of 478238
- 298279 string characters out of 5850457
- 570262 words of memory out of 5000000
+ 14710 strings out of 478238
+ 298253 string characters out of 5850457
+ 570269 words of memory out of 5000000
  32682 multiletter control sequences out of 15000+600000
  479014 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
