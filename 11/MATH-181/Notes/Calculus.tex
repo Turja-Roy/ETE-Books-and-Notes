@@ -1,0 +1,137 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=0.75in]{geometry}
+\usepackage[document]{ragged2e}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{commath}
+\usepackage{wrapfig}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{mindmap}
+
+\renewenvironment{leftbar}[1][\hsize]
+{%
+    \def\FrameCommand
+    {%
+        {\color{black}\vrule width 1pt}%
+        \hspace{0pt}%must no space.
+        \fboxsep=\FrameSep\colorbox{white}%
+    }%
+    \MakeFramed{\hsize#1\advance\hsize-\width\FrameRestore}%
+}
+{\endMakeFramed}
+
+\title{
+    \textbf{MATH-181} \\
+    \textbf{Calculus}
+}
+\author{
+    Note taken by: Turja Roy \\
+    ID: 2108052
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{tikzpicture}
+    \node{Constants}
+    child {node {Fixed}}
+    child {node {Arbitrary}}
+    ;
+\end{tikzpicture} \\
+\underline{\textbf{Function:}} A rule associating a unique output to a given input.
+
+\section*{Continuity}
+\subsubsection*{(A deeper dive) Discussion: Examples of Dirichlet and Thomae\footnote{Stephen Abbott - Understanding Analysis 4.1}}
+Given a function $f$ with domain $A \subseteq \mathbb{R}$, we want to define continuity at a point $c \in A$ to mean that if $x \in A$ is chosen \textit{near c}, then $f(x)$ will be near $f(c)$. \\
+Symbolically, we will say $f$ is continuous at $c$ if
+$$ \lim_{x \to c} f(x) = f(c) $$
+However, the problem is that, at present, it's not entirely clear what is meant by $ \lim_{x \to c} f(x) $. Let's define a function (Idea of German mathematitian Peter Lejuene Dirichlet) $g$ like this:\\
+\begin{minipage}{0.45\textwidth}
+    \begin{equation*}
+        g(x)
+        \begin{cases}
+            1 & \text{if } x \in \mathbb{Q} \\
+            0 & \text{if } x \notin \mathbb{Q}
+        \end{cases}
+    \end{equation*}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[scale=0.4]{Dirichlet g_x.png}
+\end{minipage} \\
+Does it make sense to attach a value to the expression $\lim_{x \to 1/2} \ g(x)$? One idea is to consider a sequence $(x_n) \to 1/2$. Using our notion of limit of a sequence if we try to define $g(x_n)$  as simply the limit of the sequence $g(x_n)$, the limit depends on how the sequence $(x_n)$ is chosen. If each $x_n$ is rational, then
+$$ \lim_{n \to \infty} g(x_n) = 1 $$ 
+And if $x_n$ is irrational for each n, then
+$$ \lim_{n \to \infty} g(x_n) = 0 $$ 
+Generally speaking, we want the value of $\lim_{x \to c} g(x)$ to be independent of how we approach c. In this particular case, the definition of a functional limit that we agree on should lead to the conclusion that
+$$ \lim_{x \to 1/2} g(x) \quad\text{does not exist} $$ 
+We can also realize that Dirichlet's function is not continuous at c = 1/2. In fact, the real significance of the function is that there's nothing unique about the point c=1/2. Because both $\mathbb{Q}$ and $\mathbb{Q}'$ are dense in the real line, it follows that for any $z \in \mathbb{R}$ we can find sequences $(x_n) \subseteq \mathbb{Q}$ and $(y_n) \subseteq \mathbb{Q}'$ such that
+$$ \lim x_n = \lim y_n = z $$ 
+Because
+$$ \lim g(x_n) \neq \lim g(y_n) $$ 
+the same line of reasoning reveals that $g(x)$ is not continuous at $z$. In fact, Dirichlet's function is a \textit{nowhere-continuous} on $\mathbb{R}$.
+How about if we redefine the Dirichlet's function in the following way? \\
+\begin{minipage}{0.45\textwidth}
+    \begin{equation*}
+        h(x) = 
+        \begin{cases}
+            x & \text{ if } x \in \mathbb{Q} \\
+            0 & \text{ if } x \notin \mathbb{Q}
+        \end{cases}
+    \end{equation*}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[scale=0.4]{Dirichlet h_x.png}
+\end{minipage} \\
+$h$ is not continuous at every point $c \neq 0$ in the same way. \\
+But, when $c=0$, these two limits are both equal to $h(0)=0$. Regardless of how we construct a sequence $(z_n)$ converging to zero, the limit is always $\lim h(z_n)=0$. \\
+This observation goes to the heart of what we want functional limits to entail. To assert that
+$$ \lim_{x \to c} h(x) = L $$ 
+should imply that
+$$ h(z_n) \to L \text{ for all sequences } (z_n) \to c $$ 
+
+\quad To this point, we've been discussing continuity of a function at a particular point in its doman. This is a significant departure from thinking of continuous founctions as curves that can be drawn without lifting the pen from the paper, and it leads to some fascinating questions. In 1875, K. J. Thomae discovered the function
+\begin{equation*}
+    t(x) = 
+    \begin{cases}
+        1 & \text{ if } x = 0 \\
+        1/n & \text{ if } x = m/n \in \mathbb{Q}\backslash \{0\} \text{ is in lowest terms with n $>$ 0 } \\
+        0 & \text{ if } x \notin \mathbb{Q}
+    \end{cases}
+\end{equation*}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.5]{Thomae.png}
+\end{figure} \\
+If $c \in \mathbb{Q}$, then $t(c) > 0$. Because $\mathbb{Q}'$ is dense in $\mathbb{R}$, we can find a sequence $(y_n)$ in $\mathbb{Q}'$ converging to c. The result is that
+$$ \lim t(y_n) = 0 \neq t(c) $$ 
+and Thomae's function fails to be continuous at any rational point.\\
+Let's try this argument on some irrational point like $c=\sqrt{2}$. All irrational values get mapped to $0$ by function $t$, so let's consider a sequence $(x_n)$ of rational numbers instead that converges to $\sqrt{2}$. So, the sequence of rational approximations for $\sqrt{2}$ might be
+$$ \left( 1, \frac{14}{10}, \frac{141}{100}, \frac{1414}{1000}, \frac{14142}{10000}, \frac{141421}{100000}, ... \right) $$ 
+In this case, the sequence $t(x_n)$ begins,
+$$ \left( 1, \frac{1}{5}, \frac{1}{100}, \frac{1}{500}, \frac{1}{5000}, \frac{1}{100000}, ... \right) $$ 
+The denominator of these fractions are getting larger and fast approaching $0 = t(\sqrt{2})$. This always happens. The closer a rational number is chosen to a fixed irrational number, the larger its denominator must necessarily be. Consequently, Thomae's function has the bizarre property of being continuous at every irrational point and discontinuous at every rational point on $\mathbb{R}$. \\
+
+\quad Can there be examples of functions with the opposite property? If we're given some set $A \subseteq \mathbb{R}$, is it always possible to find a function that is continuous only on the set $A^c$? In each of our examples, the functions were defined to have erratic oscillations around points in the domain. What about we restrict our attention to somewhat less volatile functions like a \textit{monotinic} (A function which is either always increasing or always decreasing on a given domain) function? What might we be able to say about the set of discontinuities of a monotonic function on $\mathbb{R}$?
+
+
+
+\section*{Limit}
+
+\footnote{
+    $ \forall \epsilon > 0 \quad U_\epsilon (x) = \left\{ x\in\mathbb{R} : \left| x-x_0 \right| < \epsilon \right\} = \left( x_0 - \epsilon, x_0 + \epsilon \right)  $ 
+}
+
+
+
+
+    
+
+\end{document}
