@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.1.9)  6 FEB 2023 00:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.1.9)  6 FEB 2023 18:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -453,7 +453,25 @@ File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 topaths.code.tex
 File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)))
+))) (/usr/share/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+
+(/usr/share/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen272
+\captionmargin=\dimen273
+\caption@leftmargin=\dimen274
+\caption@rightmargin=\dimen275
+\caption@width=\dimen276
+\caption@indent=\dimen277
+\caption@parindent=\dimen278
+\caption@hangindent=\dimen279
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count296
+\c@continuedfloat=\count297
+Package caption Info: wrapfig package is loaded.
+)
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 mindmap.code.tex
 File: tikzlibrarymindmap.code.tex 2021/05/15 v3.1.9a (3.1.9a)
@@ -465,38 +483,39 @@ File: tikzlibrarytrees.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 decorations.code.tex
 (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen272
-\pgfdecoratedremainingdistance=\dimen273
-\pgfdecoratedinputsegmentcompleteddistance=\dimen274
-\pgfdecoratedinputsegmentremainingdistance=\dimen275
-\pgf@decorate@distancetomove=\dimen276
-\pgf@decorate@repeatstate=\count296
-\pgfdecorationsegmentamplitude=\dimen277
-\pgfdecorationsegmentlength=\dimen278
+\pgfdecoratedcompleteddistance=\dimen280
+\pgfdecoratedremainingdistance=\dimen281
+\pgfdecoratedinputsegmentcompleteddistance=\dimen282
+\pgfdecoratedinputsegmentremainingdistance=\dimen283
+\pgf@decorate@distancetomove=\dimen284
+\pgf@decorate@repeatstate=\count298
+\pgfdecorationsegmentamplitude=\dimen285
+\pgfdecorationsegmentlength=\dimen286
 )
 \tikz@lib@dec@box=\box64
 )) (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-04-14 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count297
+\l__color_backend_stack_int=\count299
 \l__pdf_internal_box=\box65
 )
-No file Calculus.aux.
+(./Calculus.aux)
 \openout1 = `Calculus.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -531,19 +550,19 @@ LaTeX Font Info:    ... okay on input line 38.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package ragged2e Info: ABD: executing \RaggedRight on input line 38.
+Package ragged2e Info: ABD: executing \RaggedRight on input line 39.
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count298
-\scratchdimen=\dimen279
+\scratchcounter=\count300
+\scratchdimen=\dimen287
 \scratchbox=\box66
-\nofMPsegments=\count299
-\nofMParguments=\count300
+\nofMPsegments=\count301
+\nofMParguments=\count302
 \everyMPshowfont=\toks38
-\MPscratchCnt=\count301
-\MPscratchDim=\dimen280
-\MPnumerator=\count302
-\makeMPintoPDFobject=\count303
+\MPscratchCnt=\count303
+\MPscratchDim=\dimen288
+\MPnumerator=\count304
+\makeMPintoPDFobject=\count305
 \everyMPtoPDFconversion=\toks39
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -554,13 +573,15 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 39.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 40.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 39.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -569,48 +590,55 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <./images//Dirichlet g_x.png, id=4, 349.305pt x 169.63374pt>
 File: ./images//Dirichlet g_x.png Graphic file (type png)
 <use ./images//Dirichlet g_x.png>
-Package pdftex.def Info: ./images//Dirichlet g_x.png  used on input line 66.
+Package pdftex.def Info: ./images//Dirichlet g_x.png  used on input line 67.
 (pdftex.def)             Requested size: 139.71951pt x 67.85228pt.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images//Dirichlet g_x.pn
 g>]
-<./images//Dirichlet h_x.png, id=22, 374.39874pt x 189.70876pt>
+<./images//Dirichlet h_x.png, id=23, 374.39874pt x 189.70876pt>
 File: ./images//Dirichlet h_x.png Graphic file (type png)
 <use ./images//Dirichlet h_x.png>
-Package pdftex.def Info: ./images//Dirichlet h_x.png  used on input line 91.
+Package pdftex.def Info: ./images//Dirichlet h_x.png  used on input line 98.
 (pdftex.def)             Requested size: 149.75684pt x 75.88214pt.
-<./images//Thomae.png, id=23, 326.21875pt x 151.56625pt>
+<./images//Thomae.png, id=24, 326.21875pt x 151.56625pt>
 File: ./images//Thomae.png Graphic file (type png)
 <use ./images//Thomae.png>
-Package pdftex.def Info: ./images//Thomae.png  used on input line 111.
+Package pdftex.def Info: ./images//Thomae.png  used on input line 121.
 (pdftex.def)             Requested size: 163.10896pt x 75.78293pt.
- [2 <./images//Dirichlet h_x.png> <./images//Thomae.png>] [3] (./Calculus.aux) 
-) 
+ [2 <./images//Dirichlet h_x.png> <./images//Thomae.png>]
+<./images//Functional Limit Definition.png, id=28, 317.185pt x 242.9075pt>
+File: ./images//Functional Limit Definition.png Graphic file (type png)
+<use ./images//Functional Limit Definition.png>
+Package pdftex.def Info: ./images//Functional Limit Definition.png  used on inp
+ut line 146.
+(pdftex.def)             Requested size: 158.5921pt x 121.45345pt.
+ [3 <./images//Functional Limit Definition.png>] (./Calculus.aux) ) 
 Here is how much of TeX's memory you used:
- 14710 strings out of 478238
- 298253 string characters out of 5850457
- 570269 words of memory out of 5000000
- 32682 multiletter control sequences out of 15000+600000
- 479014 words of font info for 66 fonts, out of 8000000 for 9000
+ 16031 strings out of 478238
+ 324206 string characters out of 5850457
+ 591792 words of memory out of 5000000
+ 33994 multiletter control sequences out of 15000+600000
+ 480562 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  88i,15n,91p,643b,708s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/font
-s/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
-share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
-sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/typ
-e1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Calculus.pdf (3 pages, 159436 bytes).
+</usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
+r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></
+usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/ams
+fonts/symbols/msbm10.pfb>
+Output written on Calculus.pdf (3 pages, 170507 bytes).
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
+ 91 PDF objects out of 1000 (max. 8388607)
  53 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

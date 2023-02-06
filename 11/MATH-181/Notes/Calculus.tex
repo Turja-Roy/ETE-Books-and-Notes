@@ -11,6 +11,7 @@
 \usepackage{framed}
 \usepackage{xcolor}
 \usepackage{tikz}
+\usepackage{caption}
 \usetikzlibrary{mindmap}
 
 \renewenvironment{leftbar}[1][\hsize]
@@ -64,17 +65,23 @@ However, the problem is that, at present, it's not entirely clear what is meant 
 \begin{minipage}{0.45\textwidth}
     \centering
     \includegraphics[scale=0.4]{Dirichlet g_x.png}
-\end{minipage} \\
-Does it make sense to attach a value to the expression $\lim_{x \to 1/2} \ g(x)$? One idea is to consider a sequence $(x_n) \to 1/2$. Using our notion of limit of a sequence if we try to define $g(x_n)$  as simply the limit of the sequence $g(x_n)$, the limit depends on how the sequence $(x_n)$ is chosen. If each $x_n$ is rational, then
-$$ \lim_{n \to \infty} g(x_n) = 1 $$ 
-And if $x_n$ is irrational for each n, then
-$$ \lim_{n \to \infty} g(x_n) = 0 $$ 
-Generally speaking, we want the value of $\lim_{x \to c} g(x)$ to be independent of how we approach c. In this particular case, the definition of a functional limit that we agree on should lead to the conclusion that
-$$ \lim_{x \to 1/2} g(x) \quad\text{does not exist} $$ 
-We can also realize that Dirichlet's function is not continuous at c = 1/2. In fact, the real significance of the function is that there's nothing unique about the point c=1/2. Because both $\mathbb{Q}$ and $\mathbb{Q}'$ are dense in the real line, it follows that for any $z \in \mathbb{R}$ we can find sequences $(x_n) \subseteq \mathbb{Q}$ and $(y_n) \subseteq \mathbb{Q}'$ such that
-$$ \lim x_n = \lim y_n = z $$ 
-Because
-$$ \lim g(x_n) \neq \lim g(y_n) $$ 
+    \captionof{figure}{\small Dirichlet's Function, $g(x)$}
+\end{minipage} \\~\\
+Does it make sense to attach a value to the expression $\lim_{x \to 1/2} \ g(x)$? One idea is to consider a sequence $(x_n) \to 1/2$. Using our notion of limit of a sequence if we try to define $g(x_n)$  as simply the limit of the sequence $g(x_n)$, the limit depends on how the sequence $(x_n)$ is chosen. If each $x_n$ is rational, then \[
+    \lim_{n \to \infty} g(x_n) = 1
+\]
+And if $x_n$ is irrational for each n, then \[
+    \lim_{n \to \infty} g(x_n) = 0
+\]
+Generally speaking, we want the value of $\lim_{x \to c} g(x)$ to be independent of how we approach c. In this particular case, the definition of a functional limit that we agree on should lead to the conclusion that \[
+    \lim_{x \to 1/2} g(x) \quad\text{does not exist}
+\]
+We can also realize that Dirichlet's function is not continuous at c = 1/2. In fact, the real significance of the function is that there's nothing unique about the point c=1/2. Because both $\mathbb{Q}$ and $\mathbb{Q}'$ are dense in the real line, it follows that for any $z \in \mathbb{R}$ we can find sequences $(x_n) \subseteq \mathbb{Q}$ and $(y_n) \subseteq \mathbb{Q}'$ such that \[
+    \lim x_n = \lim y_n = z
+\]
+Because \[
+    \lim g(x_n) \neq \lim g(y_n)
+\]
 the same line of reasoning reveals that $g(x)$ is not continuous at $z$. In fact, Dirichlet's function is a \textit{nowhere-continuous} on $\mathbb{R}$.
 How about if we redefine the Dirichlet's function in the following way? \\
 \begin{minipage}{0.45\textwidth}
@@ -89,13 +96,16 @@ How about if we redefine the Dirichlet's function in the following way? \\
 \begin{minipage}{0.45\textwidth}
     \centering
     \includegraphics[scale=0.4]{Dirichlet h_x.png}
-\end{minipage} \\
+    \captionof{figure}{\small Modified Dirichlet's Function, $h(x)$}
+\end{minipage} \\~\\
 $h$ is not continuous at every point $c \neq 0$ in the same way. \\
 But, when $c=0$, these two limits are both equal to $h(0)=0$. Regardless of how we construct a sequence $(z_n)$ converging to zero, the limit is always $\lim h(z_n)=0$. \\
-This observation goes to the heart of what we want functional limits to entail. To assert that
-$$ \lim_{x \to c} h(x) = L $$ 
-should imply that
-$$ h(z_n) \to L \text{ for all sequences } (z_n) \to c $$ 
+This observation goes to the heart of what we want functional limits to entail. To assert that \[
+    \lim_{x \to c} h(x) = L
+\]
+should imply that \[
+    h(z_n) \to L \text{ for all sequences } (z_n) \to c
+\]
 
 \quad To this point, we've been discussing continuity of a function at a particular point in its doman. This is a significant departure from thinking of continuous founctions as curves that can be drawn without lifting the pen from the paper, and it leads to some fascinating questions. In 1875, K. J. Thomae discovered the function
 \begin{equation*}
@@ -109,14 +119,18 @@ $$ h(z_n) \to L \text{ for all sequences } (z_n) \to c $$
 \begin{figure}[ht]
     \centering
     \includegraphics[scale=0.5]{Thomae.png}
+    \captionof{figure}{\small Thomae's Function, $t(x)$}
 \end{figure} \\
-If $c \in \mathbb{Q}$, then $t(c) > 0$. Because $\mathbb{Q}'$ is dense in $\mathbb{R}$, we can find a sequence $(y_n)$ in $\mathbb{Q}'$ converging to c. The result is that
-$$ \lim t(y_n) = 0 \neq t(c) $$ 
+If $c \in \mathbb{Q}$, then $t(c) > 0$. Because $\mathbb{Q}'$ is dense in $\mathbb{R}$, we can find a sequence $(y_n)$ in $\mathbb{Q}'$ converging to c. The result is that \[
+    \lim t(y_n) = 0 \neq t(c)
+\]
 and Thomae's function fails to be continuous at any rational point.\\
-Let's try this argument on some irrational point like $c=\sqrt{2}$. All irrational values get mapped to $0$ by function $t$, so let's consider a sequence $(x_n)$ of rational numbers instead that converges to $\sqrt{2}$. So, the sequence of rational approximations for $\sqrt{2}$ might be
-$$ \left( 1, \frac{14}{10}, \frac{141}{100}, \frac{1414}{1000}, \frac{14142}{10000}, \frac{141421}{100000}, ... \right) $$ 
-In this case, the sequence $t(x_n)$ begins,
-$$ \left( 1, \frac{1}{5}, \frac{1}{100}, \frac{1}{500}, \frac{1}{5000}, \frac{1}{100000}, ... \right) $$ 
+Let's try this argument on some irrational point like $c=\sqrt{2}$. All irrational values get mapped to $0$ by function $t$, so let's consider a sequence $(x_n)$ of rational numbers instead that converges to $\sqrt{2}$. So, the sequence of rational approximations for $\sqrt{2}$ might be \[
+    \left( 1, \frac{14}{10}, \frac{141}{100}, \frac{1414}{1000}, \frac{14142}{10000}, \frac{141421}{100000}, ... \right)
+\]
+In this case, the sequence $t(x_n)$ begins, \[
+    \left( 1, \frac{1}{5}, \frac{1}{100}, \frac{1}{500}, \frac{1}{5000}, \frac{1}{100000}, ... \right)
+\]
 The denominator of these fractions are getting larger and fast approaching $0 = t(\sqrt{2})$. This always happens. The closer a rational number is chosen to a fixed irrational number, the larger its denominator must necessarily be. Consequently, Thomae's function has the bizarre property of being continuous at every irrational point and discontinuous at every rational point on $\mathbb{R}$. \\
 
 \quad Can there be examples of functions with the opposite property? If we're given some set $A \subseteq \mathbb{R}$, is it always possible to find a function that is continuous only on the set $A^c$? In each of our examples, the functions were defined to have erratic oscillations around points in the domain. What about we restrict our attention to somewhat less volatile functions like a \textit{monotinic} (A function which is either always increasing or always decreasing on a given domain) function? What might we be able to say about the set of discontinuities of a monotonic function on $\mathbb{R}$?
@@ -124,10 +138,33 @@ The denominator of these fractions are getting larger and fast approaching $0 = 
 
 
 \section*{Limit}
-
-\footnote{
+Considering a function $f:A \to R$, a limit point $c$ of $A$ is a point with the property that every $\epsilon$-neighbourhood\footnote{
     $ \forall \epsilon > 0 \quad U_\epsilon (x) = \left\{ x\in\mathbb{R} : \left| x-x_0 \right| < \epsilon \right\} = \left( x_0 - \epsilon, x_0 + \epsilon \right)  $ 
-}
+} $U_\epsilon(c)$ intersects $A$ in some point other than $c$. Equivalently, $c$ is a limit point of $A$  if and only if $c=\lim x_n$ for some sequence $(x_n) \subseteq A$ with $x_n \neq c$.
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[scale=0.5]{Functional Limit Definition.png}
+    \caption{\small Definition of Functional Limit}
+\end{figure}
+
+\underline{\textbf{Definition:}}\footnote{Stephen Abbott - Understanding Analysis}
+Let $f: A \to \mathbb{R}$ and let c be a limit point of the domain $A$.\\
+\[
+    \lim_{x \to c} f(x) = L \iff (\forall \epsilon > 0 ,\; \exists \delta > 0 : 0 < |x-c| < \delta)
+\]
+
+
+
+
+
+
+A constant $a$ is said to be a limit of the variable $x$, if \[
+    0 < |x-a| <\delta
+\] where $\delta$ is a pre-assigned positive quantity as small as we please.
+
+
+
+
 
 
 
