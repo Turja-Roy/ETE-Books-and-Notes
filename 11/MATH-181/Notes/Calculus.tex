@@ -28,7 +28,7 @@
 
 \title{
     \textbf{MATH-181} \\
-    \textbf{Calculus}
+    \textbf{Differential Calculus}
 }
 \author{
     Note taken by: Turja Roy \\
@@ -39,12 +39,22 @@
 \begin{document}
 \maketitle
 
-\begin{tikzpicture}
-    \node{Constants}
-    child {node {Fixed}}
-    child {node {Arbitrary}}
-    ;
-\end{tikzpicture} \\
+\begin{minipage}{0.45\textwidth}
+    \begin{tikzpicture}
+        \node at (0,0){Constants}
+        child {node at (-1,0){Fixed}}
+        child {node at (1,0){Arbitrary}}
+        ;
+    \end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+    \begin{tikzpicture}
+        \node at (0,0){Variables}
+        child {node at (2,0){Independent}}
+        child {node at (-2,0){Dependent}}
+        ;
+    \end{tikzpicture}
+\end{minipage} \\~\\
 \underline{\textbf{Function:}} A rule associating a unique output to a given input.
 
 \section*{Continuity}

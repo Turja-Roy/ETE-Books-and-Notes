@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.1.9)  13 FEB 2023 15:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.1.9)  13 FEB 2023 16:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -590,7 +590,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <./images//Dirichlet g_x.png, id=4, 349.305pt x 169.63374pt>
 File: ./images//Dirichlet g_x.png Graphic file (type png)
 <use ./images//Dirichlet g_x.png>
-Package pdftex.def Info: ./images//Dirichlet g_x.png  used on input line 67.
+Package pdftex.def Info: ./images//Dirichlet g_x.png  used on input line 77.
 (pdftex.def)             Requested size: 139.71951pt x 67.85228pt.
  [1
 
@@ -599,29 +599,29 @@ g>]
 <./images//Dirichlet h_x.png, id=23, 374.39874pt x 189.70876pt>
 File: ./images//Dirichlet h_x.png Graphic file (type png)
 <use ./images//Dirichlet h_x.png>
-Package pdftex.def Info: ./images//Dirichlet h_x.png  used on input line 98.
+Package pdftex.def Info: ./images//Dirichlet h_x.png  used on input line 108.
 (pdftex.def)             Requested size: 149.75684pt x 75.88214pt.
 <./images//Thomae.png, id=24, 326.21875pt x 151.56625pt>
 File: ./images//Thomae.png Graphic file (type png)
 <use ./images//Thomae.png>
-Package pdftex.def Info: ./images//Thomae.png  used on input line 121.
+Package pdftex.def Info: ./images//Thomae.png  used on input line 131.
 (pdftex.def)             Requested size: 163.10896pt x 75.78293pt.
  [2 <./images//Dirichlet h_x.png> <./images//Thomae.png>]
 <./images//Functional Limit Definition.png, id=28, 317.185pt x 242.9075pt>
 File: ./images//Functional Limit Definition.png Graphic file (type png)
 <use ./images//Functional Limit Definition.png>
 Package pdftex.def Info: ./images//Functional Limit Definition.png  used on inp
-ut line 146.
+ut line 156.
 (pdftex.def)             Requested size: 158.5921pt x 121.45345pt.
  [3 <./images//Functional Limit Definition.png>] [4] (./Calculus.aux) ) 
 Here is how much of TeX's memory you used:
- 16031 strings out of 478238
- 324206 string characters out of 5850457
- 592792 words of memory out of 5000000
- 33994 multiletter control sequences out of 15000+600000
+ 16056 strings out of 478238
+ 324723 string characters out of 5850457
+ 592805 words of memory out of 5000000
+ 34019 multiletter control sequences out of 15000+600000
  480562 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 88i,15n,91p,643b,708s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 88i,15n,91p,643b,798s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/sh
 are/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/p
@@ -636,7 +636,7 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
 /symbols/msbm10.pfb>
-Output written on Calculus.pdf (4 pages, 185209 bytes).
+Output written on Calculus.pdf (4 pages, 185902 bytes).
 PDF statistics:
  99 PDF objects out of 1000 (max. 8388607)
  58 compressed objects within 1 object stream
