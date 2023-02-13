@@ -3,28 +3,15 @@
 \usepackage[document]{ragged2e}
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{commath}
-\usepackage{wrapfig}
+\usepackage{amsmath,amsfonts,amsthm,thmtools,amssymb,mathtools,commath}
 \usepackage{enumerate}
 \usepackage{framed}
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{caption}
 \usetikzlibrary{mindmap}
-
-\renewenvironment{leftbar}[1][\hsize]
-{%
-    \def\FrameCommand
-    {%
-        {\color{black}\vrule width 1pt}%
-        \hspace{0pt}%must no space.
-        \fboxsep=\FrameSep\colorbox{white}%
-    }%
-    \MakeFramed{\hsize#1\advance\hsize-\width\FrameRestore}%
-}
-{\endMakeFramed}
+\usepackage[most]{tcolorbox}
+\input{preamble.tex}
 
 \title{
     \textbf{MATH-181} \\
@@ -57,7 +44,7 @@
 \end{minipage} \\~\\
 \underline{\textbf{Function:}} A rule associating a unique output to a given input.
 
-\section*{Continuity}
+\section{Continuity}
 \subsubsection*{(A deeper dive) Discussion: Examples of Dirichlet and Thomae\footnote{Stephen Abbott - Understanding Analysis 4.1}}
 Given a function $f$ with domain $A \subseteq \mathbb{R}$, we want to define continuity at a point $c \in A$ to mean that if $x \in A$ is chosen \textit{near c}, then $f(x)$ will be near $f(c)$. \\
 Symbolically, we will say $f$ is continuous at $c$ if
@@ -143,11 +130,18 @@ In this case, the sequence $t(x_n)$ begins, \[
 \]
 The denominator of these fractions are getting larger and fast approaching $0 = t(\sqrt{2})$. This always happens. The closer a rational number is chosen to a fixed irrational number, the larger its denominator must necessarily be. Consequently, Thomae's function has the bizarre property of being continuous at every irrational point and discontinuous at every rational point on $\mathbb{R}$. \\
 
-\quad Can there be examples of functions with the opposite property? If we're given some set $A \subseteq \mathbb{R}$, is it always possible to find a function that is continuous only on the set $A^c$? In each of our examples, the functions were defined to have erratic oscillations around points in the domain. What about we restrict our attention to somewhat less volatile functions like a \textit{monotinic} (A function which is either always increasing or always decreasing on a given domain) function? What might we be able to say about the set of discontinuities of a monotonic function on $\mathbb{R}$?
+\quad Can there be examples of functions with the opposite property? If we're given some set $A \subseteq \mathbb{R}$, is it always possible to find a function that is continuous only on the set $A^c$? In each of our examples, the functions were defined to have erratic oscillations around points in the domain. What about we restrict our attention to somewhat less volatile functions like a \textit{monotinic} (A function which is either always increasing or always decreasing on a given domain) function? What might we be able to say about the set of discontinuities of a monotonic function on $\mathbb{R}$? \\~\\
 
+\begin{center}
+\begin{tikzpicture}
+    \node at (0,0){Limits}
+    child {node at (-1,0){Limit of variable}}
+    child {node at (1,0){Limit of function}}
+    ;
+\end{tikzpicture}
+\end{center}
 
-
-\section*{Functional Limit}
+\section{Functional Limit}
 Considering a function $f:A \to R$, a limit point $c$ of $A$ is a point with the property that every $\epsilon$-neighbourhood\footnote{     $\epsilon$-neighbourhood: 
     $ \forall \epsilon > 0, U_\epsilon (a) = \{ x\in\mathbb{R} : |x-a| < \epsilon \} = (a-\epsilon, a+\epsilon)  $ 
 } $U_\epsilon(c)$ intersects $A$ in some point other than $c$. Equivalently, $c$ is a limit point of $A$  if and only if $c=\lim x_n$ for some sequence $(x_n) \subseteq A$ with $x_n \neq c$. \\
@@ -177,6 +171,7 @@ Let $f : A \to \mathbb{R}$ and let c be a limit point of the domain of A. We can
 \]
 \hfill\vline\hfill
 \begin{minipage}{0.9\textwidth}
+% \begin{example}
     \textbf{Ex 1: (i) If $f(x) = 3x+1$, prove that $ \lim_{x \to 2} f(x) = 7 $}
 
     Let $\epsilon>0$. The definition requires we produce a $\delta>0$ so that $0<|x-2|<\delta$ leads to the conclusion $|f(x)-7|<\epsilon$ \[
@@ -188,12 +183,14 @@ Let $f : A \to \mathbb{R}$ and let c be a limit point of the domain of A. We can
     Given an arbitrary $\epsilon>0$, our goal is to prove $|g(x)-4|<\epsilon$ by restricting $| x-2 |$ to be smaller than some carefully chosen $\delta$. \\\[
         |g(x)-4| = |x^2-4| = |x+2||x-2|
     \] We can make $|x-2|$ as small as we like, but we need an upper bound on $|x+2|$ in order to know how small to choose $\delta$. If we agree that our $\delta$-neighbourhood around $c=2$ must have radius no bigger than $\delta=1$, then we get the upper bound $|x+2|\le |3+2|=5$ for all $x\in U_\delta(c)$. \\
-    Now, for $\delta=\text{min}{1,\epsilon/5}$, if $0<|x-2|<\delta$, then \[
+    Now, for $\delta=\text{min}(1,\epsilon/5)$, if $0<|x-2|<\delta$, then \[
         |x^2-4| = |x+2||x-2| < (5)\frac{\epsilon}{5} = \epsilon
     \] and hence, the limit is proved. \\~\\
+% \end{example}
 
 
-    \textbf{Ex 2: From the definition of $(\delta,\epsilon)$ show that $\lim_{x \to 3} (2x^3-3x^2-18x+29)=2$}
+% \begin{example}
+    \textbf{From the definition of $(\delta,\epsilon)$ show that $\lim_{x \to 3} (2x^3-3x^2-18x+29)=2$}
 
     Let for a given $\epsilon>0$, however small $0<|x-3|<\lambda<1$ ------(1)
     \begin{align*}
@@ -207,11 +204,11 @@ Let $f : A \to \mathbb{R}$ and let c be a limit point of the domain of A. We can
     or, $\lambda=\epsilon/35$. Therefore, we can determine a small positive number $\delta$ depending on $\epsilon$ such that the limit is established. Here $\delta=\epsilon/35$. Hence it's proved that \[
         \lim_{x \to 3} (2x^3-3x^2-18x+29) = 2 \quad\quad \text{[From (1) and (2)]}
     \]
-    
+% \end{example}
+
     
 
 \end{minipage}
-
 
 
 
