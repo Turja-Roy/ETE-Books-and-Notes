@@ -139,7 +139,8 @@ The denominator of these fractions are getting larger and fast approaching $0 = 
 
 \section{Functional Limit}
 Considering a function $f:A \to R$, a limit point $c$ of $A$ is a point with the property that every $\epsilon$-neighbourhood\footnote{     $\epsilon$-neighbourhood: 
-    $ \forall \epsilon > 0, U_\epsilon (a) = \{ x\in\mathbb{R} : |x-a| < \epsilon \} = (a-\epsilon, a+\epsilon)  $ 
+    $ \forall \epsilon > 0, U_\epsilon (a) = \{ x\in\mathbb{R} : |x-a| < \epsilon \} = (a-\epsilon, a+\epsilon)  $ \\
+    \quad$\delta$-neighbourhood: $ U_\delta(a) = \{x \in \mathbb{R} : |x-a| < \delta \} = (a-\delta, a+\delta) $
 } $U_\epsilon(c)$ intersects $A$ in some point other than $c$. Equivalently, $c$ is a limit point of $A$  if and only if $c=\lim x_n$ for some sequence $(x_n) \subseteq A$ with $x_n \neq c$. \\
 \begin{figure}[htpb]
     \centering
@@ -147,7 +148,10 @@ Considering a function $f:A \to R$, a limit point $c$ of $A$ is a point with the
     \caption{\small Definition of Functional Limit}
 \end{figure}
 
-\underline{\textbf{Definition ($\epsilon-\delta$ version):}}
+\underline{\textbf{}}
+
+\begin{definition}{$\epsilon-\delta$ Version}
+
 Let $f: A \to \mathbb{R}$ and let c be a limit point of the domain $A$.\\
 \[
     \lim_{x \to c} f(x) = L \iff (\forall \epsilon>0, \exists\delta>0 : \forall x \in A, (0 < |x-c| < \delta \implies |f(x)-L| < \epsilon))
@@ -155,28 +159,20 @@ Let $f: A \to \mathbb{R}$ and let c be a limit point of the domain $A$.\\
 Here, \[
     |f(x)-L|<\epsilon \text{ is equivalent to } f(x) \in U_\epsilon(L)
 \]
-Likewise,\footnote{
-    $\delta$-neighbourhood: $ U_\delta(a) = \{x \in \mathbb{R} : |x-a| < \delta \} = (a-\delta, a+\delta) $
-}
-\[
+Likewise, \[
     |x-c|<\delta \iff x \in U_\delta(x)
 \]
-\underline{\textbf{Definition (Topological Version):}}
-Let $f : A \to \mathbb{R}$ and let c be a limit point of the domain of A. We can say, \[
-    \lim_{x \to c} f(x)=L \iff ( \forall U_\epsilon(L), \exists U_\delta(c) : \forall x \in A, ( x \in U_\delta(c) \land x \neq c \implies f(x) \in U_\epsilon(L) ) )
-\] \\
+\end{definition}
 
-
-\begin{Definition}{Topological Version}
+\begin{definition}{Topological Version}
 
     Let $f : A \to \mathbb{R}$ and let c be a limit point of the domain of A. We can say, \[
         \lim_{x \to c} f(x)=L \iff ( \forall U_\epsilon(L), \exists U_\delta(c) : \forall x \in A, ( x \in U_\delta(c) \land x \neq c \implies f(x) \in U_\epsilon(L) ) )
     \] \\
-\end{Definition}
+\end{definition}
 
 
-\begin{exercise}
-    {\textbf{(i) If $f(x) = 3x+1$, prove that $ \lim_{x \to 2} f(x) = 7 $}}
+\begin{exercise}{\textbf{(i) If $f(x) = 3x+1$, prove that $ \lim_{x \to 2} f(x) = 7 $}}
 
     Let $\epsilon>0$. The definition requires we produce a $\delta>0$ so that $0<|x-2|<\delta$ leads to the conclusion $|f(x)-7|<\epsilon$ \[
         |f(x)-7| = |(3x+1)-7| = |3x-6| = 3|x-2|
@@ -192,8 +188,7 @@ Let $f : A \to \mathbb{R}$ and let c be a limit point of the domain of A. We can
     \] and hence, the limit is proved. \\~\\
 \end{exercise}
 
-\begin{exercise}
-    {\textbf{From the definition of $(\delta,\epsilon)$ show that $\lim_{x \to 3} (2x^3-3x^2-18x+29)=2$}}
+\begin{exercise}{\textbf{From the definition of $(\delta,\epsilon)$ show that $\lim_{x \to 3} (2x^3-3x^2-18x+29)=2$}}
 
     Let for a given $\epsilon>0$, however small $0<|x-3|<\lambda<1$ ------(1)
     \begin{align*}

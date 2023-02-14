@@ -7,33 +7,16 @@
 \usepackage[most]{tcolorbox}
 \usepackage{cleveref}
 
+
 %%%%%%%%%%%%%%%%
 %  Definition  %
 %%%%%%%%%%%%%%%%
-\tcbuselibrary{theorems,skins}
+\tcbuselibrary{theorems,skins,hooks}
 \newtcbtheorem[number within=section]{definition}{Definition}%
 {
     theorem style=definition,
     enhanced,
-    colframe=geen,
-    before skip=1mm,after skip=1mm,
-    boxrule=1pt,
-    attach boxed title to top left={xshift=-1mm,yshift*=1mm-\tcboxedtitleheight},
-    titlerule=0mm,
-    toptitle=1mm,
-    bottomtitle=1mm,
-    fonttitle=\bfseries,
-    % fontupper=\normalsize,
-    coltitle=cyan!50!black,
-    colbacktitle=cyan!15!white,
-    colback=gray!10,
-}{def}
-
-\newtcbtheorem[number within=section]{Definition}{Definition}
-{
-    theorem style=definition,
-    enhanced,
-	before skip=1mm,after skip=1mm, colback=cyan!5,colframe=cyan!80!black,boxrule=0.5mm,
+	before skip=2mm,after skip=2mm, colback=cyan!5,colframe=cyan!80!black,boxrule=0.5mm,
 	attach boxed title to top left={xshift=1cm,yshift*=1mm-\tcboxedtitleheight},
 	boxed title style={frame code={
 					\path[fill=cyan]
@@ -42,7 +25,7 @@
 					([yshift=-1mm,xshift=1mm]frame.north east)
 					arc[start angle=180,end angle=0,radius=1mm];
 					\path[left color=cyan!30!black,right color=cyan!30!black,
-						middle color=cyan!60!black]
+						middle color=cyan!50!black]
 					([xshift=-2mm]frame.north west) -- ([xshift=2mm]frame.north east)
 					[rounded corners=1mm]-- ([xshift=1mm,yshift=-1mm]frame.north east)
 					-- (frame.south east) -- (frame.south west)
@@ -52,13 +35,14 @@
 		},
 	fonttitle=\bfseries,
 	title={#2},#1
-}{Def}
+}{def}
+
 
 %%%%%%%%%%%%%
 %  Theorem  %
 %%%%%%%%%%%%%
 \tcbuselibrary{theorems,skins}
-\newtcbtheorem[number within=section]{theorem}{Theorem}%
+\newtcbtheorem[use counter from=definition]{theorem}{Theorem}%
 {
     theorem style=definition,
     enhanced,
@@ -73,6 +57,28 @@
     colbacktitle=cyan!15!white,
     colback=gray!10,
 }{thrm}
+
+
+%%%%%%%%%%%%%%%
+%  Corollary  %
+%%%%%%%%%%%%%%%
+\tcbuselibrary{theorems,skins}
+\newtcbtheorem[use counter from=theorem]{corollary}{Corollary}%
+{
+    theorem style=definition,
+    enhanced,
+    colframe=geen,
+    boxrule=1pt,
+    titlerule=0mm,
+    toptitle=1mm,
+    bottomtitle=1mm,
+    fonttitle=\bfseries,
+    % fontupper=\normalsize,
+    coltitle=cyan!50!black,
+    colbacktitle=cyan!15!white,
+    colback=gray!10,
+}{corl}
+
 
 %%%%%%%%%%%%%%
 %  Exercise  %
@@ -93,4 +99,4 @@
 	fonttitle = \bfseries\sffamily,
 	description font = \mdseries
 }
-{th}
+{exc}
