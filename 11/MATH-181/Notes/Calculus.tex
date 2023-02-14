@@ -3,10 +3,6 @@
 \usepackage[document]{ragged2e}
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
-\usepackage{amsmath,amsfonts,amsthm,thmtools,amssymb,mathtools,commath}
-\usepackage{enumerate}
-\usepackage{framed}
-\usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{caption}
 \usetikzlibrary{mindmap}
@@ -189,9 +185,8 @@ Let $f : A \to \mathbb{R}$ and let c be a limit point of the domain of A. We can
 % \end{example}
 
 
-% \begin{example}
-    \textbf{From the definition of $(\delta,\epsilon)$ show that $\lim_{x \to 3} (2x^3-3x^2-18x+29)=2$}
-
+\begin{example}
+    {\textbf{From the definition of $(\delta,\epsilon)$ show that $\lim_{x \to 3} (2x^3-3x^2-18x+29)=2$}}
     Let for a given $\epsilon>0$, however small $0<|x-3|<\lambda<1$ ------(1)
     \begin{align*}
         \therefore |2x^3-3x^2-18x+29 - 2| &= |2x^3-3x^2-18x+27| \\
@@ -204,7 +199,7 @@ Let $f : A \to \mathbb{R}$ and let c be a limit point of the domain of A. We can
     or, $\lambda=\epsilon/35$. Therefore, we can determine a small positive number $\delta$ depending on $\epsilon$ such that the limit is established. Here $\delta=\epsilon/35$. Hence it's proved that \[
         \lim_{x \to 3} (2x^3-3x^2-18x+29) = 2 \quad\quad \text{[From (1) and (2)]}
     \]
-% \end{example}
+\end{example}
 
     
 

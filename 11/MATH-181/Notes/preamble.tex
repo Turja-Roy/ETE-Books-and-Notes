@@ -1,3 +1,4 @@
+% \usepackage[tmargin=2cm,rmargin=1in,lmargin=1in,margin=0.85in,bmargin=2cm,footskip=.2in]{geometry}
 \usepackage{enumerate}
 \usepackage{framed}
 \usepackage{amsmath,amsfonts,amsthm,thmtools,amssymb,mathtools,commath}
@@ -10,5 +11,11 @@
 \newtcbtheorem[number within=section]{example}{Example}%
 {
     colback=green!5,
-    colframe=green!35
+    frame hidden,
+    detach title,
+    before upper = \tcbtitle\par\smallskip,
+    coltitle=green!35!black,
+    % colframe=green!35!black,
+    fonttitle=\bfseries\sffamily
+    % description font=\mdseries
 }{th}

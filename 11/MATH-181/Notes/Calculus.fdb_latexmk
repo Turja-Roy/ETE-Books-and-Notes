@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1676309302 "/home/turja/ETE-Books-and_Notes/11/MATH-181/Notes/Calculus.tex" "Calculus.pdf" "Calculus" 1676309304
-  "/home/turja/ETE-Books-and_Notes/11/MATH-181/Notes/Calculus.tex" 1676309300 11040 74b7b1bbf8f276e27ac83f3ca421a786 ""
+["pdflatex"] 1676365113 "/home/turja/ETE-Books-and_Notes/11/MATH-181/Notes/Calculus.tex" "Calculus.pdf" "Calculus" 1676365115
+  "/home/turja/ETE-Books-and_Notes/11/MATH-181/Notes/Calculus.tex" 1676364986 10902 628a1e7361bab7be9155921309ff7ed2 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -21,6 +21,7 @@
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmr17.tfm" 1650183167 1292 296a67155bdbfc32aa9c636f21e91433 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmr6.tfm" 1650183167 1300 b62933e007d01cfd073f79b963c01526 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmr8.tfm" 1650183167 1292 21c1c5bfeaebccffdb478fd231a0997d ""
+  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm" 1650183167 1272 e2d13f0df30bf3ad990bb9d028e37f34 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1650183167 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1650183167 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1650183167 1120 8b7d695260f3cff42e636090a8002094 ""
@@ -35,6 +36,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1650183167 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1650183167 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1650183167 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb" 1650183167 28902 2f5c04fd2884d1878057baa5aad22765 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1650183167 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1650183167 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1650183167 36118 fad905eba93cff5bce1e185fe980a177 ""
@@ -195,13 +197,13 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1673490126 4300098 260a2a55478b167caf626776f0e12746 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1673206139 2927658 b312f516b18f4ed54217a3d19e0b6791 ""
-  "Calculus.aux" 1676309303 826 394e87211f41cac060dd145ac61bed92 "pdflatex"
-  "Calculus.tex" 1676309300 11040 74b7b1bbf8f276e27ac83f3ca421a786 ""
+  "Calculus.aux" 1676365115 852 264ceb9c64856e1c0b73758786e3aeae "pdflatex"
+  "Calculus.tex" 1676364986 10902 628a1e7361bab7be9155921309ff7ed2 ""
   "images//Dirichlet g_x.png" 1675542429 2327 29bdbdc74e9d60212e3e47209df798c9 ""
   "images//Dirichlet h_x.png" 1675542445 3340 5416b7d2e5e4ef6e654e7d176bec691e ""
   "images//Functional Limit Definition.png" 1675683662 6494 8f4ec61de32cdf75117484692704c5ab ""
   "images//Thomae.png" 1675546493 4721 3ebfb4689adb20f7830b4b4711fb5258 ""
-  "preamble.tex" 1676309270 317 8a05383ab18163eb853b7b17a0a83fd3 ""
+  "preamble.tex" 1676365113 602 0e49b3fa99b192c21a1b6fa87373a37d ""
   (generated)
   "Calculus.aux"
   "Calculus.log"
