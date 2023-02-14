@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.1.9)  14 FEB 2023 14:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.1.9)  14 FEB 2023 18:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/turja/ETE-Books-and_Notes/11/MATH-181/Notes/Calculus.tex
-(/home/turja/ETE-Books-and_Notes/11/MATH-181/Notes/Calculus.tex
+**Calculus.tex
+(./Calculus.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-04-10> (/usr/share/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -154,7 +154,8 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
-) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
  (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen163
@@ -212,7 +213,8 @@ File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfarrowsep=\dimen186
-) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@max=\dimen187
 \pgf@sys@shading@range@num=\count272
@@ -300,7 +302,8 @@ Package caption Info: Standard document class detected.
 File: tikzlibrarymindmap.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytrees.code.tex
 File: tikzlibrarytrees.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
 \pgfdecoratedcompleteddistance=\dimen265
 \pgfdecoratedremainingdistance=\dimen266
 \pgfdecoratedinputsegmentcompleteddistance=\dimen267
@@ -582,8 +585,14 @@ Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 \xmathstrut@dim=\dimen301
 ) (/usr/share/texmf-dist/tex/latex/commath/commath.sty (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
-))
-\c@tcb@cnt@example=\count322
+)) (/usr/share/texmf-dist/tex/latex/cleveref/cleveref.sty
+Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
+Package cleveref Info: `amsthm' support loaded on input line 3026.
+Package cleveref Info: `listings' support loaded on input line 3131.
+)
+\c@tcb@cnt@definition=\count322
+\c@tcb@cnt@example=\count323
+\c@tcb@cnt@exercise=\count324
 ) (./Calculus.aux)
 \openout1 = `Calculus.aux'.
 
@@ -639,16 +648,16 @@ LaTeX Font Info:    ... okay on input line 22.
 Package ragged2e Info: ABD: executing \RaggedRight on input line 22.
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count323
+\scratchcounter=\count325
 \scratchdimen=\dimen302
 \scratchbox=\box80
-\nofMPsegments=\count324
-\nofMParguments=\count325
+\nofMPsegments=\count326
+\nofMParguments=\count327
 \everyMPshowfont=\toks50
-\MPscratchCnt=\count326
+\MPscratchCnt=\count328
 \MPscratchDim=\dimen303
-\MPnumerator=\count327
-\makeMPintoPDFobject=\count328
+\MPnumerator=\count329
+\makeMPintoPDFobject=\count330
 \everyMPtoPDFconversion=\toks51
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -659,7 +668,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count329
+\c@lstlisting=\count331
  (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks52
@@ -697,20 +706,113 @@ File: ./images//Functional Limit Definition.png Graphic file (type png)
 <use ./images//Functional Limit Definition.png>
 Package pdftex.def Info: ./images//Functional Limit Definition.png  used on input line 146.
 (pdftex.def)             Requested size: 158.5921pt x 121.45345pt.
- [3 <./images//Functional Limit Definition.png>] [4] (./Calculus.aux) ) 
+ [3 <./images//Functional Limit Definition.png>]
+
+./Calculus.tex:171: Package pgfkeys Error: Choice 'definition' unknown in choice key '/tcb/theorem style'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.171 
+      
+This error message was generated by an \errmessage
+command, so I can't give any explicit help.
+Pretend that you're Hercule Poirot: Examine all clues,
+and deduce the truth by order and method.
+
+
+./Calculus.tex:171: Package xcolor Error: Undefined color `geen'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.171 
+      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Runaway argument?
+{def\l__tcobox_theo_label_separator_tl 
+./Calculus.tex:171: Paragraph ended before \tcb@set@label was complete.
+<to be read again> 
+                   \par 
+l.171 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+./Calculus.tex:171: Extra }, or forgotten \endgroup.
+\kvtcb@phantom ...x_theo_label_separator_tl \par }
+                                                  
+l.171 
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+Runaway argument?
+{th\l__tcobox_theo_label_separator_tl 
+./Calculus.tex:180: Paragraph ended before \tcb@set@label was complete.
+<to be read again> 
+                   \par 
+l.180 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+./Calculus.tex:180: Extra }, or forgotten \endgroup.
+\kvtcb@phantom ...x_theo_label_separator_tl \par }
+                                                  
+l.180 
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+Runaway argument?
+{th\l__tcobox_theo_label_separator_tl 
+./Calculus.tex:197: Paragraph ended before \tcb@set@label was complete.
+<to be read again> 
+                   \par 
+l.197 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+./Calculus.tex:197: Extra }, or forgotten \endgroup.
+\kvtcb@phantom ...x_theo_label_separator_tl \par }
+                                                  
+l.197 
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+[4] [5] (./Calculus.aux) ) 
 Here is how much of TeX's memory you used:
- 24356 strings out of 478238
- 521361 string characters out of 5850457
- 822137 words of memory out of 5000000
- 42149 multiletter control sequences out of 15000+600000
- 480856 words of font info for 73 fonts, out of 8000000 for 9000
+ 26079 strings out of 478238
+ 560265 string characters out of 5850457
+ 883962 words of memory out of 5000000
+ 43868 multiletter control sequences out of 15000+600000
+ 481163 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 88i,15n,96p,699b,803s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 88i,15n,96p,649b,1081s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Calculus.pdf (4 pages, 201096 bytes).
+Output written on Calculus.pdf (5 pages, 202604 bytes).
 PDF statistics:
- 140 PDF objects out of 1000 (max. 8388607)
- 73 compressed objects within 1 object stream
+ 143 PDF objects out of 1000 (max. 8388607)
+ 75 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  177 words of extra memory for PDF output out of 10000 (max. 10000000)
 
