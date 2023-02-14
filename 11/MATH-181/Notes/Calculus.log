@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.1.9)  14 FEB 2023 18:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.1.9)  14 FEB 2023 19:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -591,8 +591,9 @@ Package cleveref Info: `amsthm' support loaded on input line 3026.
 Package cleveref Info: `listings' support loaded on input line 3131.
 )
 \c@tcb@cnt@definition=\count322
-\c@tcb@cnt@example=\count323
-\c@tcb@cnt@exercise=\count324
+\c@tcb@cnt@Definition=\count323
+\c@tcb@cnt@theorem=\count324
+\c@tcb@cnt@exercise=\count325
 ) (./Calculus.aux)
 \openout1 = `Calculus.aux'.
 
@@ -648,16 +649,16 @@ LaTeX Font Info:    ... okay on input line 22.
 Package ragged2e Info: ABD: executing \RaggedRight on input line 22.
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count325
+\scratchcounter=\count326
 \scratchdimen=\dimen302
 \scratchbox=\box80
-\nofMPsegments=\count326
-\nofMParguments=\count327
+\nofMPsegments=\count327
+\nofMParguments=\count328
 \everyMPshowfont=\toks50
-\MPscratchCnt=\count328
+\MPscratchCnt=\count329
 \MPscratchDim=\dimen303
-\MPnumerator=\count329
-\makeMPintoPDFobject=\count330
+\MPnumerator=\count330
+\makeMPintoPDFobject=\count331
 \everyMPtoPDFconversion=\toks51
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -668,7 +669,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count331
+\c@lstlisting=\count332
  (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks52
@@ -721,20 +722,8 @@ command, so I can't give any explicit help.
 Pretend that you're Hercule Poirot: Examine all clues,
 and deduce the truth by order and method.
 
-
-./Calculus.tex:171: Package xcolor Error: Undefined color `geen'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.171 
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 Runaway argument?
-{def\l__tcobox_theo_label_separator_tl 
+{Def\l__tcobox_theo_label_separator_tl 
 ./Calculus.tex:171: Paragraph ended before \tcb@set@label was complete.
 <to be read again> 
                    \par 
@@ -801,18 +790,18 @@ deleted material, e.g., by typing `I$}'.
 
 [4] [5] (./Calculus.aux) ) 
 Here is how much of TeX's memory you used:
- 26079 strings out of 478238
- 560265 string characters out of 5850457
- 883962 words of memory out of 5000000
- 43868 multiletter control sequences out of 15000+600000
+ 26116 strings out of 478238
+ 561136 string characters out of 5850457
+ 886962 words of memory out of 5000000
+ 43905 multiletter control sequences out of 15000+600000
  481163 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 88i,15n,96p,649b,1081s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 88i,15n,96p,649b,1307s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Calculus.pdf (5 pages, 202604 bytes).
+Output written on Calculus.pdf (5 pages, 203165 bytes).
 PDF statistics:
- 143 PDF objects out of 1000 (max. 8388607)
- 75 compressed objects within 1 object stream
+ 145 PDF objects out of 1000 (max. 8388607)
+ 76 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 177 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 183 words of extra memory for PDF output out of 10000 (max. 10000000)
 

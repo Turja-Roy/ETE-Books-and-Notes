@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1676377491 "Calculus.tex" "Calculus.pdf" "Calculus" 1676377491
+["pdflatex"] 1676380663 "Calculus.tex" "Calculus.pdf" "Calculus" 1676380663
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -198,13 +198,13 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1673490126 4300098 260a2a55478b167caf626776f0e12746 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1673206139 2927658 b312f516b18f4ed54217a3d19e0b6791 ""
-  "Calculus.aux" 1676377485 826 684cb7250da823ac1eb117ddbf77a179 "pdflatex"
-  "Calculus.tex" 1676377233 11169 5a85a8233f30093b25a5fdc0d72ded3e ""
+  "Calculus.aux" 1676380659 826 684cb7250da823ac1eb117ddbf77a179 "pdflatex"
+  "Calculus.tex" 1676379853 11169 0dab691d27f886f0279a7d86fec596b4 ""
   "images//Dirichlet g_x.png" 1675542429 2327 29bdbdc74e9d60212e3e47209df798c9 ""
   "images//Dirichlet h_x.png" 1675542445 3340 5416b7d2e5e4ef6e654e7d176bec691e ""
   "images//Functional Limit Definition.png" 1675683662 6494 8f4ec61de32cdf75117484692704c5ab ""
   "images//Thomae.png" 1675546493 4721 3ebfb4689adb20f7830b4b4711fb5258 ""
-  "preamble.tex" 1676377490 2121 4b027561b90b396a4af0e37affa5582f ""
+  "preamble.tex" 1676380662 2662 36ebb191cd1af69e69d5d3be0dcba573 ""
   (generated)
   "Calculus.aux"
   "Calculus.log"
