@@ -252,6 +252,31 @@ Informally speaking, we can say $L^-$ is the LHL of the function $f$ at a point 
 \[ -\epsilon < x-5 < \epsilon \]
 \[ 5-\epsilon < x < 5+\epsilon \]
 
+\begin{theorem}{Relation between one-sided and two-sided limits}
+    
+    Limit of a function at point $a$ exists if:
+    \begin{enumerate}[(i)]
+        \item $\lim_{x \to a^-} f(x)$ exists
+        \item $\lim_{x \to a^+} f(x)$ exists
+        \item $\lim_{x \to a^-} = \lim_{x \to a^+}$ 
+    \end{enumerate}
+    That is, \[
+        \lim_{x \to a} f(x) = L \iff \lim_{x \to a^-} f(x) = \lim_{x \to a^+} f(x) = L 
+    \]
+\end{theorem}
+\begin{theorem}{The Squeeze (or Sandwitch) Theorem}
+    
+    If there is a $c>0$ such that \[
+        f(x)\le g(x)\le h(x)
+    \] for all $x\in(a-c,a)\cup(a,a+c)$ (i.e $x$ in a deleted neighbourhood of $c$), if \[
+        \lim_{x \to a} f(x) = \lim_{x \to a} h(x) = L \text{, then } \lim_{x \to a} g(x) = L
+    \]
+    \begin{center}
+        \includegraphics[scale=0.5]{SqueezeTheorem.png}
+        \captionof{figure}{\small SqueezeTheorem.png}
+    \end{center}
+\end{theorem}
+
 
 
 
