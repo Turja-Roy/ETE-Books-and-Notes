@@ -213,20 +213,35 @@ Likewise, \[
     \]
 \end{example}
 
-\begin{theorem}{Sequential Criterion for Functional Limits}
+% \begin{theorem}{Sequential Criterion for Functional Limits}
 
-    Given a function $f:A\to\mathbb{R}$ and a limit point $c$ of $A$, the following two statements are equivalent:
-    \begin{enumerate}[(i)]
-        \item $\lim_{x \to c} f(x) = L$
-        \item For all sequences $(x_n)\subseteq A$ satisfying $x_n\neq c$ and $(x_n)\to c$, it follows that $f(x_n)\to L$
-    \end{enumerate}
-\end{theorem}
-\begin{note}{Proof}
-
-HI I'm TURJA
-\end{note}
+%     Given a function $f:A\to\mathbb{R}$ and a limit point $c$ of $A$, the following two statements are equivalent:
+%     \begin{enumerate}[(i)]
+%         \item $\lim_{x \to c} f(x) = L$
+%         \item For all sequences $(x_n)\subseteq A$ satisfying $x_n\neq c$ and $(x_n)\to c$, it follows that $f(x_n)\to L$
+%     \end{enumerate}
+% \end{theorem}
     
+\subsection{Left hand limit and Right hand limit}
 
+Informally speaking, we can say $L^-$ is the LHL of the function $f$ at a point $a$ if we can get $f(x)$ as close as we want to $L$ by taking $a$ to the left of $x$ and close to $x$, but not equal to $a$, and we write \[
+    \lim_{x \to a^-} f(x) = L^-
+    \] In the same way, we can say $L^+$ is the RHL of the function if we take a to the right, and we write \[
+    \lim_{x \to a^+} f(x) = L^+
+\]
+
+\begin{definition}{Left Handed Limit}
+
+\[
+    L^- = \lim_{x \to a^-} f(x) \iff \left( \forall\epsilon>0,\exists\delta : \forall x, 0<(a-x)<\delta \implies |f(x)-L^-|<\epsilon \right) 
+\]
+\end{definition}
+\begin{definition}{Right Handed Limit}
+
+\[
+    L^+ = \lim_{x \to a^+} f(x) \iff \left( \forall\epsilon>0,\exists\delta : \forall x, 0<(x-a)<\delta \implies |f(x)-L^+|<\epsilon \right) 
+\]
+\end{definition}
 
 
 
