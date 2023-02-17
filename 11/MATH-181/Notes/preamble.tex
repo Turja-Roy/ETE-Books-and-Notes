@@ -80,11 +80,11 @@
 % }{corl}
 
 
-%%%%%%%%%%%%%%
-%  Exercise  %
-%%%%%%%%%%%%%%
+%%%%%%%%%%%%%
+%  Example  %
+%%%%%%%%%%%%%
 \tcbuselibrary{theorems,skins,hooks}
-\newtcbtheorem[number within=section]{exercise}{Exercise}%
+\newtcbtheorem[number within=section]{example}{Example}%
 {
 	enhanced,
 	breakable,
@@ -99,4 +99,37 @@
 	fonttitle = \bfseries\sffamily,
 	description font = \mdseries
 }
-{exc}
+{xmp}
+
+
+%%%%%%%%%%%%%%
+%  Exercise  %
+%%%%%%%%%%%%%%
+\tcbuselibrary{theorems,skins,hooks}
+\newtcbtheorem[number within=section]{exercise}{Exercise}%
+{
+    enhanced,
+    breakable,
+    colback=black!5,
+    colframe=black!30,
+    left=0.5em,
+    before skip=10pt,
+    after skip=10pt,
+    boxrule=0pt,
+    boxsep=0pt,
+    arc=0pt,
+    outer arc=0pt,
+    borderline west={3pt}{0pt}{black!30},
+}{exc}
+
+%%%%%%%%%%
+%  Note  %
+%%%%%%%%%%
+\tcbuselibrary{theorems,skins,hooks}
+\newtcbtheorem{note}{Note}%
+{
+    colback=gray!5,
+    boxrule=1pt,
+    boxsep=0pt,
+    arc=2pt,
+}

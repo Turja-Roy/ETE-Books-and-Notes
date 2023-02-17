@@ -11,7 +11,7 @@
 
 \title{
     \textbf{MATH-181} \\
-    \textbf{Differential Calculus}
+    \textbf{Calculus}
 }
 \author{
     Note taken by: Turja Roy \\
@@ -38,9 +38,13 @@
         ;
     \end{tikzpicture}
 \end{minipage} \\~\\
-\underline{\textbf{Function:}} A rule associating a unique output to a given input.
 
-\subsubsection*{(A deeper dive) Discussion: Examples of Dirichlet and Thomae\footnote{Stephen Abbott - Understanding Analysis 4.1}}
+\begin{definition}{Function}
+
+    A rule associating a unique output to a given input.
+\end{definition}
+
+\subsubsection*{Discussion (A deeper dive): Examples of Dirichlet and Thomae\footnote{Stephen Abbott - Understanding Analysis 4.1}}
 Given a function $f$ with domain $A \subseteq \mathbb{R}$, we want to define continuity at a point $c \in A$ to mean that if $x \in A$ is chosen \textit{near c}, then $f(x)$ will be near $f(c)$. \\
 Symbolically, we will say $f$ is continuous at $c$ if
 $$ \lim_{x \to c} f(x) = f(c) $$
@@ -151,8 +155,7 @@ Considering a function $f:A \to R$, a limit point $c$ of $A$ is a point with the
 
 \begin{definition}{$\epsilon-\delta$ Version}
 
-Let $f: A \to \mathbb{R}$ and let c be a limit point of the domain $A$.\\
-\[
+Let $f: A \to \mathbb{R}$ and let c be a limit point of the domain $A$. \[
     \lim_{x \to c} f(x) = L \iff (\forall \epsilon>0, \exists\delta>0 : \forall x \in A, (0 < |x-c| < \delta \implies |f(x)-L| < \epsilon))
 \]
 Here, \[
@@ -171,7 +174,7 @@ Likewise, \[
 \end{definition}
 
 
-\begin{exercise}{\textbf{(i) If $f(x) = 3x+1$, prove that $ \lim_{x \to 2} f(x) = 7 $}}
+\begin{example}{\textbf{(i) If $f(x) = 3x+1$, prove that $ \lim_{x \to 2} f(x) = 7 $}}
 
     Let $\epsilon>0$. The definition requires we produce a $\delta>0$ so that $0<|x-2|<\delta$ leads to the conclusion $|f(x)-7|<\epsilon$ \[
         |f(x)-7| = |(3x+1)-7| = |3x-6| = 3|x-2|
@@ -185,9 +188,9 @@ Likewise, \[
     Now, for $\delta=\text{min}(1,\epsilon/5)$, if $0<|x-2|<\delta$, then \[
         |x^2-4| = |x+2||x-2| < (5)\frac{\epsilon}{5} = \epsilon
     \] and hence, the limit is proved. \\~\\
-\end{exercise}
+\end{example}
 
-\begin{exercise}{\textbf{From the definition of $(\delta,\epsilon)$ show that $\lim_{x \to 3} (2x^3-3x^2-18x+29)=2$}}
+\begin{example}{\textbf{From the definition of $(\delta,\epsilon)$ show that $\lim_{x \to 3} (2x^3-3x^2-18x+29)=2$}}
 
     Let for a given $\epsilon>0$, however small $0<|x-3|<\lambda<1$ ------(1)
     \begin{align*}
@@ -201,7 +204,7 @@ Likewise, \[
     or, $\lambda=\epsilon/35$. Therefore, we can determine a small positive number $\delta$ depending on $\epsilon$ such that the limit is established. Here $\delta=\epsilon/35$. Hence it's proved that \[
         \lim_{x \to 3} (2x^3-3x^2-18x+29) = 2 \quad\quad \text{[From (1) and (2)]}
     \]
-\end{exercise}
+\end{example}
 
     
 
