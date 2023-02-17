@@ -230,19 +230,27 @@ Informally speaking, we can say $L^-$ is the LHL of the function $f$ at a point 
     \lim_{x \to a^+} f(x) = L^+
 \]
 
-\begin{definition}{Left Handed Limit}
+\begin{definition}{Left Hand Limit}
 
 \[
     L^- = \lim_{x \to a^-} f(x) \iff \left( \forall\epsilon>0,\exists\delta : \forall x, 0<(a-x)<\delta \implies |f(x)-L^-|<\epsilon \right) 
 \]
 \end{definition}
-\begin{definition}{Right Handed Limit}
+\begin{definition}{Right Hand Limit}
 
 \[
     L^+ = \lim_{x \to a^+} f(x) \iff \left( \forall\epsilon>0,\exists\delta : \forall x, 0<(x-a)<\delta \implies |f(x)-L^+|<\epsilon \right) 
 \]
 \end{definition}
 
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[scale=0.5]{Limit1.png}
+    \caption{\small Left and Right Hand Limit}
+\end{figure}
+\[ |x-5| < \epsilon \]
+\[ -\epsilon < x-5 < \epsilon \]
+\[ 5-\epsilon < x < 5+\epsilon \]
 
 
 
