@@ -39,10 +39,10 @@
     \end{tikzpicture}
 \end{minipage} \\~\\
 
-\begin{definition}{Function}
+\begin{definition*}{Function}
 
     A rule associating a unique output to a given input.
-\end{definition}
+\end{definition*}
 
 \subsubsection*{Discussion (A deeper dive): Examples of Dirichlet and Thomae\footnote{Stephen Abbott - Understanding Analysis 4.1}}
 Given a function $f$ with domain $A \subseteq \mathbb{R}$, we want to define continuity at a point $c \in A$ to mean that if $x \in A$ is chosen \textit{near c}, then $f(x)$ will be near $f(c)$. \\
@@ -140,12 +140,12 @@ The denominator of these fractions are getting larger and fast approaching $0 = 
 \end{tikzpicture}
 \end{center}
 
-\begin{definition}{Limit of variable}
+\begin{definition*}{Limit of variable}
 
-    \[
-        \lim_{x \to c} x = L \iff (\forall \varepsilon > 0) (\exists \delta > 0) {x \mid |x - c| < \delta} \subseteq {x \mid |x - L| < \varepsilon},  
-    \]
-\end{definition}
+    A constant $a$ is said to be the limit of the variable $x$, if \[
+        0 < |x-a| < \delta
+    \] where $\delta$ is a pre-assigned positive quantity as small as we please.
+\end{definition*}
 
 \section{Functional Limit}
 Considering a function $f:A \to R$, a limit point $c$ of $A$ is a point with the property that every $\epsilon$-neighbourhood\footnote{     $\epsilon$-neighbourhood: 
