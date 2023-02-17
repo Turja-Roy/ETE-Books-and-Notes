@@ -41,22 +41,22 @@
 %%%%%%%%%%%%%
 %  Theorem  %
 %%%%%%%%%%%%%
-% \tcbuselibrary{theorems,skins}
-% \newtcbtheorem[use counter from=definition]{theorem}{Theorem}%
-% {
-%     theorem style=definition,
-%     enhanced,
-%     colframe=geen,
-%     boxrule=1pt,
-%     titlerule=0mm,
-%     toptitle=1mm,
-%     bottomtitle=1mm,
-%     fonttitle=\bfseries,
-%     % fontupper=\normalsize,
-%     coltitle=cyan!50!black,
-%     colbacktitle=cyan!15!white,
-%     colback=gray!10,
-% }{thrm}
+\tcbuselibrary{theorems,skins,hooks}
+\newtcbtheorem[use counter from=definition]{theorem}{Theorem}%
+{
+    theorem style=plain,
+    enhanced,
+    colframe=geen,
+    boxrule=1pt,
+    titlerule=0mm,
+    toptitle=1mm,
+    bottomtitle=1mm,
+    fonttitle=\bfseries,
+    fontupper=\mdseries\itshape,
+    coltitle=cyan!60!black,
+    colbacktitle=cyan!15!white,
+    colback=gray!10
+}{thrm}
 
 
 %%%%%%%%%%%%%%%
@@ -126,10 +126,15 @@
 %  Note  %
 %%%%%%%%%%
 \tcbuselibrary{theorems,skins,hooks}
-\newtcbtheorem{note}{Note}%
+\newtcbtheorem{note}{}%
 {
+    theorem style=plain,
+    enhanced,
+    % frame hidden,
+    fonttitle=\bfseries,
+    coltitle=gray!30!black,
     colback=gray!5,
-    boxrule=1pt,
+    boxrule=0pt,
     boxsep=0pt,
-    arc=2pt,
-}
+    arc=8pt,
+}{nte}
