@@ -333,6 +333,7 @@ Informally speaking, we can say $L^-$ is the LHL of the function $f$ at a point 
         \item $ \lim_{x \to a} \left\{ \frac{f(x)}{g(x)} \right\} = \frac{l}{m} $, provided $g(x)\neq 0$
         \item $ \lim_{x \to a} c = c $
         \item $ \lim_{x \to a} c f(x) = c \lim_{x \to a} f(x) $
+        \item $ \lim_{x \to a} \left( f(x) \right)^n = \left( \lim_{x \to a} f(x) \right)^n $
         \item $ \lim_{x \to a} \sqrt[n]{f(x)} = \sqrt[n]{\lim_{x \to a} f(x)} $, provided $\lim_{x \to a} f(x) > 0$
     \end{enumerate}
 \end{theorem}
@@ -412,6 +413,33 @@ Greek \textit{asymptotos} means `nonintersecting'. Asymptote is infinitesimally 
     \end{center}
 \end{minipage}
 
+%%%%%%%%%%%%%%%%%%%%%%%%
+%  End Behavior Model  %
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{End Behavior Model}
+For numerically large values of $x$, we can sometimes model the behavior of a complicated function by a simpler one that acts virtually in the same way.
+
+\begin{example}{Let $f(x) = 3x^4 - 2x^3 + 3x^2 - 5x + 6$ and $g(x) = 3x^4$. Show that while $f$ and $g$ are quite different for numerically small values of $x$, they are virtually identical for $|x|$ large.}
+    
+    We can test the claim that $g(x)$ models $f(x)$ for numerically large values of $x$ by taking the ratio of the functions as $x \to \pm \infty$. \\
+    \begin{align*}
+        \lim_{x \to \pm\infty} \frac{f(x)}{g(x)} &= \lim_{x \to \pm\infty} \frac{3x^4-2x^3+3x^2-5x+6}{3x^4} \\
+        &= \lim_{x \to \pm\infty} \left( 1 - \frac{2}{3x} + \frac{1}{x^2} - \frac{5}{3x^3} + \frac{2}{x^4} \right)  \\
+        &= 1 \\
+    \end{align*}
+    convincing evidence that $f$ and $g$ behave alike for $|x|$ large.
+\end{example}
+
+\begin{definition}{End Behavior Model}
+
+    The function $g(x)$ is a
+    \begin{enumerate}[(a)]
+        \item left end behavior model for f(x) if and only if \[ \lim_{x \to -\infty} \frac{f(x)}{g(x)} = 1 \]
+        \item right end behavior model for f(x) if and only if \[ \lim_{x \to +\infty} \frac{f(x)}{g(x)} = 1 \]
+    \end{enumerate}
+\end{definition}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  Continuity and Discontinuity  %
@@ -421,7 +449,7 @@ Greek \textit{asymptotos} means `nonintersecting'. Asymptote is infinitesimally 
 
 \begin{theorem}{Continuity}
     
-    \\~\\ A function $f(x)$ is said to be continuous at $x=a$ if,
+    \\ A function $f(x)$ is said to be continuous at $x=a$ if,
     \begin{enumerate}[(i)]
         \item $\lim_{x \to a^-} f(x)$ exists
         \item $\lim_{x \to a^+} f(x)$ exists
