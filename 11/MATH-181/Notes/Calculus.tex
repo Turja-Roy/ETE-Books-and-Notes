@@ -232,9 +232,7 @@ Informally speaking, we can say $L^-$ is the LHL of the function $f$ at a point 
 
 \begin{definition}{Left Hand Limit}
 
-\[
-    L^- = \lim_{x \to a^-} f(x) \iff \left( \forall\epsilon>0,\exists\delta : \forall x, 0<(a-x)<\delta \implies |f(x)-L^-|<\epsilon \right) 
-\]
+    \[ L^- = \lim_{x \to a^-} f(x) \iff \left( \forall\epsilon>0,\exists\delta : \forall x, 0<(a-x)<\delta \implies |f(x)-L^-|<\epsilon \right) \]
 \end{definition}
 \begin{definition}{Right Hand Limit}
 
@@ -263,9 +261,32 @@ Informally speaking, we can say $L^-$ is the LHL of the function $f$ at a point 
     That is, \[
         \lim_{x \to a} f(x) = L \iff \lim_{x \to a^-} f(x) = \lim_{x \to a^+} f(x) = L 
     \]
-\end{theorem}
-\begin{theorem}{The Squeeze (or Sandwitch) Theorem}
-    
+\end{theorem} \\~\\
+
+\begin{minipage}{0.6\textwidth}
+    \begin{alignat*}{2}
+             & \text{\underline{Put x=1}}\\
+             & \frac{x^2-1}{x-1} &&\to \frac{0}{0} \to \text{Apply L'H\^ospital} \\
+        x\to1 \quad & \frac{x^2-1}{x+1} &&\to \frac{0}{2} \to \text{Limit exists} \\
+             & \frac{x^2+1}{x^2-1} &&\to \frac{2}{0} \to \text{Limit doesn't exist} \\
+    \end{alignat*}
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+    \textbf{Use L'H\^opital Rule}\\
+    \underline{The 7 Indeterminate forms} \\
+    \begin{enumerate}[(1)]
+        \item $\frac{0}{0}$ 
+        \item $\frac{\infty}{\infty}$ 
+        \item $0 \times \infty$ 
+        \item $\infty-\infty$
+        \item $1^{\infty}$ 
+        \item $0^0$ 
+        \item $\infty^0$
+    \end{enumerate} \\~\\
+\end{minipage}
+
+\begin{theorem}{The Squeeze/Sandwitch Theorem}
+   
     If there is a $c>0$ such that \[
         f(x)\le g(x)\le h(x)
     \] for all $x\in(a-c,a)\cup(a,a+c)$ (i.e $x$ in a deleted neighbourhood of $c$), if \[
@@ -273,7 +294,7 @@ Informally speaking, we can say $L^-$ is the LHL of the function $f$ at a point 
     \]
     \begin{center}
         \includegraphics[scale=0.5]{SqueezeTheorem.png}
-        \captionof{figure}{\small SqueezeTheorem.png}
+        \captionof{figure}{\small Squeeze Theorem}
     \end{center}
 \end{theorem}
 
