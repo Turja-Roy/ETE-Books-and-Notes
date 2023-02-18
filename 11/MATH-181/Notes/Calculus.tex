@@ -168,8 +168,6 @@ Considering a function $f:A \to R$, a limit point $c$ of $A$ is a point with the
     \caption{\small Definition of Functional Limit}
 \end{figure}
 
-\underline{\textbf{}}
-
 \begin{definition}{$\epsilon-\delta$ Version}
 
 Let $f: A \to \mathbb{R}$ and let c be a limit point of the domain $A$. \[
@@ -191,15 +189,15 @@ Likewise, \[
 \end{definition}
 
 
-\begin{example}{\textbf{(i) If $f(x) = 3x+1$, prove that $ \lim_{x \to 2} f(x) = 7 $}}
+\begin{example}{(i) If $f(x) = 3x+1$, prove that $ \lim_{x \to 2} f(x) = 7 $ \\
+    (ii) Show that $\lim_{x \to 2} g(x) = 4$ where $g(x)=x^2$.}
 
-    Let $\epsilon>0$. The definition requires we produce a $\delta>0$ so that $0<|x-2|<\delta$ leads to the conclusion $|f(x)-7|<\epsilon$ \[
+    \textbf{(i)} Let $\epsilon>0$. The definition requires we produce a $\delta>0$ so that $0<|x-2|<\delta$ leads to the conclusion $|f(x)-7|<\epsilon$ \[
         |f(x)-7| = |(3x+1)-7| = |3x-6| = 3|x-2|
     \]
     Thus, if we choose $\delta=\epsilon/3$, then $0<|x-2|<\delta$ implies $|f(x)-7|<3(\epsilon/3)=\epsilon$ \\~\\
-    \textbf{(ii) Show that $\lim_{x \to 2} g(x) = 4$ where $g(x)=x^2$.}
     
-    Given an arbitrary $\epsilon>0$, our goal is to prove $|g(x)-4|<\epsilon$ by restricting $| x-2 |$ to be smaller than some carefully chosen $\delta$. \\\[
+    \textbf{(ii)} Given an arbitrary $\epsilon>0$, our goal is to prove $|g(x)-4|<\epsilon$ by restricting $| x-2 |$ to be smaller than some carefully chosen $\delta$. \\\[
         |g(x)-4| = |x^2-4| = |x+2||x-2|
     \] We can make $|x-2|$ as small as we like, but we need an upper bound on $|x+2|$ in order to know how small to choose $\delta$. If we agree that our $\delta$-neighbourhood around $c=2$ must have radius no bigger than $\delta=1$, then we get the upper bound $|x+2|\le |3+2|=5$ for all $x\in U_\delta(c)$. \\
     Now, for $\delta=\text{min}(1,\epsilon/5)$, if $0<|x-2|<\delta$, then \[
@@ -207,7 +205,7 @@ Likewise, \[
     \] and hence, the limit is proved. \\~\\
 \end{example}
 
-\begin{example}{\textbf{From the definition of $(\delta,\epsilon)$ show that $\lim_{x \to 3} (2x^3-3x^2-18x+29)=2$}}
+\begin{example}{From the definition of $(\delta,\epsilon)$ show that $\lim_{x \to 3} (2x^3-3x^2-18x+29)=2$}
 
     Let for a given $\epsilon>0$, however small $0<|x-3|<\lambda<1$ ------(1)
     \begin{align*}
