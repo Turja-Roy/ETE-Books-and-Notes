@@ -44,6 +44,11 @@
     A rule associating a unique output to a given input.
 \end{definition*}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Discussion: Examples of Dirichlet and Thomae  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsubsection*{Discussion (A deeper dive): Examples of Dirichlet and Thomae\footnote{Stephen Abbott - Understanding Analysis 4.1}}
 Given a function $f$ with domain $A \subseteq \mathbb{R}$, we want to define continuity at a point $c \in A$ to mean that if $x \in A$ is chosen \textit{near c}, then $f(x)$ will be near $f(c)$. \\
 Symbolically, we will say $f$ is continuous at $c$ if
@@ -147,6 +152,11 @@ The denominator of these fractions are getting larger and fast approaching $0 = 
     \] where $\delta$ is a pre-assigned positive quantity as small as we please.
 \end{definition*}
 
+
+%%%%%%%%%%%%%%%%%%%%%%
+%  Functional Limit  %
+%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Functional Limit}
 Considering a function $f:A \to R$, a limit point $c$ of $A$ is a point with the property that every $\epsilon$-neighbourhood\footnote{     $\epsilon$-neighbourhood: 
     $ \forall \epsilon > 0, U_\epsilon (a) = \{ x\in\mathbb{R} : |x-a| < \epsilon \} = (a-\epsilon, a+\epsilon)  $ \\
@@ -163,7 +173,7 @@ Considering a function $f:A \to R$, a limit point $c$ of $A$ is a point with the
 \begin{definition}{$\epsilon-\delta$ Version}
 
 Let $f: A \to \mathbb{R}$ and let c be a limit point of the domain $A$. \[
-    \lim_{x \to c} f(x) = L \iff (\forall \epsilon>0, \exists\delta>0 : \forall x \in A, (0 < |x-c| < \delta \implies |f(x)-L| < \epsilon))
+    \lim_{x \to c} f(x) = L \iff (\forall \epsilon>0, \exists\delta>0 : \forall x \in A, 0 < |x-c| < \delta \implies |f(x)-L| < \epsilon)
 \]
 Here, \[
     |f(x)-L|<\epsilon \text{ is equivalent to } f(x) \in U_\epsilon(L)
@@ -176,7 +186,7 @@ Likewise, \[
 \begin{definition}{Topological Version}
 
     Let $f : A \to \mathbb{R}$ and let c be a limit point of the domain of A. We can say, \[
-        \lim_{x \to c} f(x)=L \iff ( \forall U_\epsilon(L), \exists U_\delta(c) : \forall x \in A, ( x \in U_\delta(c) \land x \neq c \implies f(x) \in U_\epsilon(L) ) )
+        \lim_{x \to c} f(x)=L \iff ( \forall U_\epsilon(L), \exists U_\delta(c) : \forall x \in A, x \in U_\delta(c) \land x \neq c \implies f(x) \in U_\epsilon(L) )
     \] \\
 \end{definition}
 
@@ -222,6 +232,10 @@ Likewise, \[
 %     \end{enumerate}
 % \end{theorem}
     
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Left Hand Limit and Right Hand Limit  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsection{Left hand limit and Right hand limit}
 
 Informally speaking, we can say $L^-$ is the LHL of the function $f$ at a point $a$ if we can get $f(x)$ as close as we want to $L$ by taking $a$ to the left of $x$ and close to $x$, but not equal to $a$, and we write \[
@@ -282,8 +296,46 @@ Informally speaking, we can say $L^-$ is the LHL of the function $f$ at a point 
         \item $1^{\infty}$ 
         \item $0^0$ 
         \item $\infty^0$
-    \end{enumerate} \\~\\
+    \end{enumerate}
 \end{minipage}
+
+\begin{example}{
+        Investigate the following function at $x=0$ and $x=\frac{1}{2}$ \\
+        \begin{equation*}
+            f(x)
+            \begin{cases}
+                1+2x, &\text{ for }-\frac{1}{2}\le x<0 \\
+                1-2x, &\text{ for }0\le x<\frac{1}{2} \\
+                -1+2x &\text{ for }x>\frac{1}{2}
+            \end{cases}
+        \end{equation*}
+    }
+
+        For $x=0$ :
+        \[ \text{LHL} = \lim_{x \to 0^-} f(x) = \lim_{x \to 0^-} \left\{ 1 + 2 \times 0 \right\} = 1 \]
+        \[ \text{RHL} = \lim_{x \to 0^+} f(x) = \lim_{x \to 0^+} \left\{ 1 - 2 \times 0 \right\} = 1 \]
+        \[ f(0) = 1-2\times0 = 1 \]
+        Thus we get, $\lim_{x \to 0} f(x) = 1 = f(0)$. i.e The function is continuous at $x=0$ \\~\\
+
+        For $x=\frac{1}{2}$ :
+        \[ \text{LHL} = \lim_{x \to \frac{1}{2}^-} f(x) = \lim_{x \to \frac{1}{2}^-} \left\{ 1 - 2\left( \frac{1}{2} \right)  \right\} = 0 \]
+        \[ \text{RHL} = \lim_{x \to \frac{1}{2}^+} f(x) = \lim_{x \to \frac{1}{2}^+} \left\{ -1 + 2\left( \frac{1}{2} \right)  \right\} = 0 \]
+        % \[ f\left( \frac{1}{2} \right) \text{doesn't exist} \]
+        As LHL=RHL, we can say that limit exists at $x=\frac{1}{2}$. However, the function is discontinuous at $x=\frac{1}{2}$ since $f\left( \frac{1}{2} \right) $ doesn't exist.
+\end{example}
+
+\begin{theorem}{Fundamental Theorems on Limits}
+    
+    If $\lim_{x \to a} f(x) = l$ and $\lim_{x \to a} g(x) = m$, where $l$ and $m$ are finite quantities and $c$ is a constant,
+    \begin{enumerate}[(i)]
+        \item $ \lim_{x \to a} \left\{ f(x) \pm g(x) \right\} = l \pm m $
+        \item $ \lim_{x \to a} \left\{ f(x)g(x) \right\} = lm $ 
+        \item $ \lim_{x \to a} \left\{ \frac{f(x)}{g(x)} \right\} = \frac{l}{m} $, provided $g(x)\neq 0$
+        \item $ \lim_{x \to a} c = c $
+        \item $ \lim_{x \to a} c f(x) = c \lim_{x \to a} f(x) $
+        \item $ \lim_{x \to a} \sqrt[n]{f(x)} = \sqrt[n]{\lim_{x \to a} f(x)} $, provided $\lim_{x \to a} f(x) > 0$
+    \end{enumerate}
+\end{theorem}
 
 \begin{theorem}{The Squeeze/Sandwitch Theorem}
    
@@ -296,10 +348,87 @@ Informally speaking, we can say $L^-$ is the LHL of the function $f$ at a point 
         \includegraphics[scale=0.5]{SqueezeTheorem.png}
         \captionof{figure}{\small Squeeze Theorem}
     \end{center}
+\end{theorem} \\~\\
+
+
+%%%%%%%%%%%%%%%%
+%  Asymptotes  %
+%%%%%%%%%%%%%%%%
+
+\subsection{Asymptotes}
+Greek \textit{asymptotos} means `nonintersecting'. Asymptote is infinitesimally close to a curve, but never touches it.
+
+\begin{definition}{Asymptote}
+
+    An asymptote of a curve $f(x)$ is a line such that the distance between the curve and the line approaches zero as one or both of the $x$ and $y$ coordinates approach infinity. \\
+    There are 3 types of asymptotes:
+    \begin{enumerate}
+        \item Vertical asymptote
+        \item Horizontal asymptote
+        \item Oblique asymptote
+    \end{enumerate}
+\end{definition}
+
+\begin{center}
+    \includegraphics[scale=0.4]{Types of asymptotes.png}
+    \captionof{figure}{\small Types of asymptotes}
+\end{center}
+
+\begin{definition}{Vertical asymptote}
+    
+    The line $x=a$ is a vertical asymptote of the function $f(x)$ if $f$ approaches infinity as $x$ approaches $a$. That is, either \[
+        \lim_{x \to a^-} f(x) = \pm \infty, \text{ or } \lim_{x \to a^+} f(x) = \pm \infty, \text{ or both. }
+    \]
+\end{definition}
+\begin{definition}{Horizontal asymptote}
+
+    The horizontal line $y=c$ is a horizontal asymptote of the function $g(x)$ if \[
+        \lim_{x \to -\infty} g(x) = c, \text{ or } \lim_{x \to +\infty} g(x) = c
+    \]
+\end{definition}
+\begin{definition}{Oblique asymptote}
+
+    A function $f(x)$ is asymptotic to the straight line $y=mx+b$ $(m \neq 0)$ if \[
+        \lim_{x \to +\infty} \left[ f(x) - (mx+b) \right] = 0, \text{ or } \lim_{x \to -\infty} \left[ f(x) - (mx+b) \right] = 0
+    \]
+\end{definition}
+
+\begin{minipage}{0.32\textwidth}
+    \begin{center}
+        \includegraphics[scale=0.2]{Vertical asymptotes.jpg}
+        \captionof{figure}{\small Vertical asymptote}
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.33\textwidth}
+    \begin{center}
+        \includegraphics[scale=0.2]{Horizontal asymptotes.jpg}
+        \captionof{figure}{\small Horizontal asymptote}
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.33\textwidth}
+    \begin{center}
+        \includegraphics[scale=0.3]{Oblique asymptotes.jpeg}
+        \captionof{figure}{\small Oblique asymptote}
+    \end{center}
+\end{minipage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Continuity and Discontinuity  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Continuity and Discontinuity}
+
+\begin{theorem}{Continuity}
+    
+    \\~\\ A function $f(x)$ is said to be continuous at $x=a$ if,
+    \begin{enumerate}[(i)]
+        \item $\lim_{x \to a^-} f(x)$ exists
+        \item $\lim_{x \to a^+} f(x)$ exists
+        \item $f(x)$ is finite
+        \item $\lim_{x \to a^-} f(x) = f(a) = \lim_{x \to a^+} f(x)$
+    \end{enumerate}
 \end{theorem}
-
-
-
 
 
 
