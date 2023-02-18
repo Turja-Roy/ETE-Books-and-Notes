@@ -438,7 +438,31 @@ For numerically large values of $x$, we can sometimes model the behavior of a co
         \item left end behavior model for f(x) if and only if \[ \lim_{x \to -\infty} \frac{f(x)}{g(x)} = 1 \]
         \item right end behavior model for f(x) if and only if \[ \lim_{x \to +\infty} \frac{f(x)}{g(x)} = 1 \]
     \end{enumerate}
+    If $g(x)$ provides both a left and a right end behavior model, it is simply called an \textbf{End Behavior Model}.
 \end{definition}
+
+\begin{example}{Find an end behavior model for
+    \begin{enumerate}[(a)]
+        \item $f(x) = \frac{2x^5+x^4-x^2+1}{3x^2-5x+7}$
+        \item $g(x) = \frac{2x^3-x^2+x-1}{5x^3+x^2+x-5}$
+    \end{enumerate}}
+    
+    \textbf{(a)} $2x^5$ is an end behavior model for the numerator of $f$, and $3x^2$ for the denominator. This makes \[
+        \frac{2x^5}{3x^2} = \frac{2}{3}x^2
+    \] an end behavior model for $f$. \\~\\
+    \textbf{(b)} $2x^3$ is an end behavior model for the numerator of $g$, and $5x^3$ for the denominator. This makes \[
+        \frac{2x^3}{5x^3} = \frac{2}{5}
+    \] an end behavior model for $g$.
+\end{example}
+
+\begin{example}{Let $f(x)=x+e^{-x}$. Show that $g(x)=x$ is a right end behavior model for $f$ while $h(x)=e^{-x}$ is a left end behavior model for $f$.}
+    
+    On the right, \[
+        \lim_{x \to \infty} \frac{f(x)}{g(x)} = \lim_{x \to \infty} \frac{x+e^{-x}}{x} = \lim_{x \to \infty} \left( 1+\frac{e^{-x}}{x} \right) = 1
+    \] On the left, \[
+        \lim_{x \to -\infty} \frac{f(x)}{h(x)} = \lim_{x \to -\infty} \frac{x+e^{-x}}{e^{-x}} = \lim_{x \to -\infty} \left( \frac{x}{e^{-x}}+1 \right) = 1
+    \]
+\end{example}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
