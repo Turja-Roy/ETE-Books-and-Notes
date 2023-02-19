@@ -218,6 +218,30 @@ The denominator of these fractions are getting larger and fast approaching $0 = 
 
 The natural number $N$ in the original version of the definition is the point where the sequence $(a_n)$ enters $U_\epsilon(a)$, never to leave. It should be apparent that \textit{the value of $N$ depends on the choice of $\epsilon$}. The smaller the $\epsilon$-neighbourhood, the larger the $N$ may have to be.
 
+\begin{example}{Prove that \[ \lim \left( \frac{n+1}{n} \right) =1 \]}
+    
+Let's consider an arbitrary $\epsilon>0$. Choose $N\in \mathbb{N}$ with $N>\frac{1}{\epsilon}$. To verify that the choice of $N$ is appropriate, let $n\in\mathbb{N}$ satisfy $n \ge N$. Then, $n \ge N$ implies $n>\frac{1}{\epsilon}$, which is the same as saying $\frac{1}{n}<\epsilon$. Finally this means \[
+    \left| \frac{n+1}{n} - 1 \right| < \epsilon
+\] as desired. \qed
+\end{example}
+
+\begin{note}
+    
+    To prove the previous example, let's work in the backward direction. To prove the convergence, we have to make sure (according to the definition) $|a_n-a|<\epsilon$, i.e \[
+        \left| \frac{n+1}{n}-1 \right| < \epsilon \text{ or, } \frac{1}{n}<\epsilon \text{ or, } n>\frac{1}{\epsilon}
+    \] So, we have to find out when or where $n>\frac{1}{\epsilon}$ is true. If we choose $N > \frac{1}{\epsilon}$, our statement holds, and thus we prove the convergence.
+\end{note}
+
+\begin{example}{Verify, using the definition of convergence of a sequence, that the following sequences converge to the proposed limit.
+    \begin{enumerate}[(a)]
+        \item $\lim \frac{1}{6n^2+1}=0$ 
+        \item $\lim \frac{3n+1}{2n+5}=\frac{3}{2}$
+        \item $\lim \frac{2}{\sqrt{n+3}}=0$
+    \end{enumerate}}
+    
+    \textbf{(a)} Let's consider $\epsilon>0$. Choose $N\in \mathbb{N}$ with $N>\frac{1}{\epsilon}$. To verify the choice is appropriate, let $n\in \mathbb{N}$ satisfy $n \ge N$. Then 
+\end{example}
+
 
 %%%%%%%%%%%%%%%%%%%%%%
 %  Functional Limit  %
