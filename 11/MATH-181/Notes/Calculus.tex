@@ -22,6 +22,15 @@
 \begin{document}
 \maketitle
 
+\tableofcontents
+
+\newpage
+%%%%%%%%%%%
+%  Intro  %
+%%%%%%%%%%%
+
+\section{Intro}
+
 \begin{minipage}{0.45\textwidth}
     \begin{tikzpicture}
         \node at (0,0){Constants}
@@ -136,6 +145,13 @@ The denominator of these fractions are getting larger and fast approaching $0 = 
 
 \quad Can there be examples of functions with the opposite property? If we're given some set $A \subseteq \mathbb{R}$, is it always possible to find a function that is continuous only on the set $A^c$? In each of our examples, the functions were defined to have erratic oscillations around points in the domain. What about we restrict our attention to somewhat less volatile functions like a \textit{monotinic} (A function which is either always increasing or always decreasing on a given domain) function? What might we be able to say about the set of discontinuities of a monotonic function on $\mathbb{R}$? \\~\\
 
+
+%%%%%%%%%%%
+%  Limit  %
+%%%%%%%%%%%
+
+\section{Limit}
+
 \begin{center}
 \begin{tikzpicture}
     \node at (0,0){Limits}
@@ -153,15 +169,60 @@ The denominator of these fractions are getting larger and fast approaching $0 = 
 \end{definition*}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Limit of a Sequence  %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Limit of a Sequence}
+
+\begin{definition}{Sequence}
+
+    A \textit{sequence} is a function whose domain is $N$.\\
+    Given a function $f:N \to \mathbb{R}$, $f(n)$ is the $n$th term on the list. The notation for sequences reinforces this familiar Understanding.
+\end{definition}
+
+\begin{example}{Each of the following are common ways to describe a sequence}.
+
+    \begin{enumerate}[(i)]
+        \item $ \left( 1,\frac{1}{2},\frac{1}{3},\frac{1}{4},\cdots \right)  $
+        \item $ \left( \frac{1+n}{n} \right)_{n=1}^{\infty} = \left( \frac{2}{1},\frac{3}{2},\frac{4}{3},\cdots \right)  $
+       \item $(a_n)$, where  $a_n=2^n$ for each $n\in \mathbb{N}$
+       \item $(x_n)$, where $x_1=2$ and $x_{n+1}=\frac{x_n+1}{2}$
+    \end{enumerate}
+\end{example}
+
+\begin{definition}{Convergence of a Sequence}
+    
+    A sequence $(a_n)$ \textit{converges} to a real number $a$ if \[
+        \forall\epsilon,\exists N\in\mathbb{N} : n \ge N \implies |a_n-a|<\epsilon
+    \] To indicate that $(a_n)$ converges to $a$, we write either $\lim a_n=a $ or $(a_n) \to a$.
+\end{definition}
+
+\begin{definition}{$\epsilon$-neighbourhood and $\delta$-neighbourhood}
+    
+\textbf{$\epsilon$-neighbourhood:}
+    \[ \forall \epsilon > 0, U_\epsilon (a) = \{ x\in\mathbb{R} : |x-a| < \epsilon \} = (a-\epsilon, a+\epsilon) \]
+    \textbf{$\delta$-neighbourhood:}
+    \[ U_\delta(a) = \{x \in \mathbb{R} : |x-a| < \delta \} = (a-\delta, a+\delta) \]
+
+\end{definition}
+
+\begin{definition}{Convergence of a Sequence: Topological Version}
+    
+    A sequence $(a_n)$ converges to $a$ if, given any $\epsilon$-neighbourhood $U_\epsilon(a)$ of $a$, there exists a point in the sequence after which all of the terms are in $U_\epsilon(a)$. In other words, every $\epsilon$-neighbourhood contains all but a finite number of the terms $(a_n)$.
+\end{definition}
+\begin{center}
+    \includegraphics[scale=0.6]{Limit of a sequence Topological Version.png}
+    \captionof{figure}{\small Limit of a sequence}
+\end{center} 
+
+
 %%%%%%%%%%%%%%%%%%%%%%
 %  Functional Limit  %
 %%%%%%%%%%%%%%%%%%%%%%
 
-\section{Functional Limit}
-Considering a function $f:A \to R$, a limit point $c$ of $A$ is a point with the property that every $\epsilon$-neighbourhood\footnote{     $\epsilon$-neighbourhood: 
-    $ \forall \epsilon > 0, U_\epsilon (a) = \{ x\in\mathbb{R} : |x-a| < \epsilon \} = (a-\epsilon, a+\epsilon)  $ \\
-    \quad$\delta$-neighbourhood: $ U_\delta(a) = \{x \in \mathbb{R} : |x-a| < \delta \} = (a-\delta, a+\delta) $
-} $U_\epsilon(c)$ intersects $A$ in some point other than $c$. Equivalently, $c$ is a limit point of $A$  if and only if $c=\lim x_n$ for some sequence $(x_n) \subseteq A$ with $x_n \neq c$. \\
+\subsection{Functional Limit}
+Considering a function $f:A \to R$, a limit point $c$ of $A$ is a point with the property that every $\epsilon$-neighbourhood $U_\epsilon(c)$ intersects $A$ in some point other than $c$. Equivalently, $c$ is a limit point of $A$  if and only if $c=\lim x_n$ for some sequence $(x_n) \subseteq A$ with $x_n \neq c$. \\
 \begin{figure}[htpb]
     \centering
     \includegraphics[scale=0.5]{Functional Limit Definition.png}
@@ -197,7 +258,7 @@ Likewise, \[
     \]
     Thus, if we choose $\delta=\epsilon/3$, then $0<|x-2|<\delta$ implies $|f(x)-7|<3(\epsilon/3)=\epsilon$ \\~\\
     
-    \textbf{(ii)} Given an arbitrary $\epsilon>0$, our goal is to prove $|g(x)-4|<\epsilon$ by restricting $| x-2 |$ to be smaller than some carefully chosen $\delta$. \\\[
+    \textbf{(ii)} Given an arbitrary $\epsilon>0$, our goal is to prove $|g(x)-4|<\epsilon$ by restricting $| x-2 |$ to be smaller than some carefully chosen $\delta$. \[
         |g(x)-4| = |x^2-4| = |x+2||x-2|
     \] We can make $|x-2|$ as small as we like, but we need an upper bound on $|x+2|$ in order to know how small to choose $\delta$. If we agree that our $\delta$-neighbourhood around $c=2$ must have radius no bigger than $\delta=1$, then we get the upper bound $|x+2|\le |3+2|=5$ for all $x\in U_\delta(c)$. \\
     Now, for $\delta=\text{min}(1,\epsilon/5)$, if $0<|x-2|<\delta$, then \[
@@ -221,20 +282,12 @@ Likewise, \[
     \]
 \end{example}
 
-% \begin{theorem}{Sequential Criterion for Functional Limits}
 
-%     Given a function $f:A\to\mathbb{R}$ and a limit point $c$ of $A$, the following two statements are equivalent:
-%     \begin{enumerate}[(i)]
-%         \item $\lim_{x \to c} f(x) = L$
-%         \item For all sequences $(x_n)\subseteq A$ satisfying $x_n\neq c$ and $(x_n)\to c$, it follows that $f(x_n)\to L$
-%     \end{enumerate}
-% \end{theorem}
-    
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  Left Hand Limit and Right Hand Limit  %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Left hand limit and Right hand limit}
+\subsubsection{Left hand limit and Right hand limit}
 
 Informally speaking, we can say $L^-$ is the LHL of the function $f$ at a point $a$ if we can get $f(x)$ as close as we want to $L$ by taking $a$ to the left of $x$ and close to $x$, but not equal to $a$, and we write \[
     \lim_{x \to a^-} f(x) = L^-
@@ -310,15 +363,14 @@ Informally speaking, we can say $L^-$ is the LHL of the function $f$ at a point 
     }
 
         For $x=0$ :
-        \[ \text{LHL} = \lim_{x \to 0^-} f(x) = \lim_{x \to 0^-} \left\{ 1 + 2 \times 0 \right\} = 1 \]
-        \[ \text{RHL} = \lim_{x \to 0^+} f(x) = \lim_{x \to 0^+} \left\{ 1 - 2 \times 0 \right\} = 1 \]
+        \[ \text{LHL} = \lim_{x \to 0^-} f(x) = \lim_{x \to 0^-} \{ 1 + 2 \times 0 \} = 1 \]
+        \[ \text{RHL} = \lim_{x \to 0^+} f(x) = \lim_{x \to 0^+} \{ 1 - 2 \times 0 \} = 1 \]
         \[ f(0) = 1-2\times0 = 1 \]
         Thus we get, $\lim_{x \to 0} f(x) = 1 = f(0)$. i.e The function is continuous at $x=0$ \\~\\
 
         For $x=\frac{1}{2}$ :
         \[ \text{LHL} = \lim_{x \to \frac{1}{2}^-} f(x) = \lim_{x \to \frac{1}{2}^-} \left\{ 1 - 2\left( \frac{1}{2} \right)  \right\} = 0 \]
         \[ \text{RHL} = \lim_{x \to \frac{1}{2}^+} f(x) = \lim_{x \to \frac{1}{2}^+} \left\{ -1 + 2\left( \frac{1}{2} \right)  \right\} = 0 \]
-        % \[ f\left( \frac{1}{2} \right) \text{doesn't exist} \]
         As LHL=RHL, we can say that limit exists at $x=\frac{1}{2}$. However, the function is discontinuous at $x=\frac{1}{2}$ since $f\left( \frac{1}{2} \right) $ doesn't exist.
 \end{example}
 
@@ -326,8 +378,8 @@ Informally speaking, we can say $L^-$ is the LHL of the function $f$ at a point 
     
     If $\lim_{x \to a} f(x) = l$ and $\lim_{x \to a} g(x) = m$, where $l$ and $m$ are finite quantities and $c$ is a constant,
     \begin{enumerate}[(i)]
-        \item $ \lim_{x \to a} \left\{ f(x) \pm g(x) \right\} = l \pm m $
-        \item $ \lim_{x \to a} \left\{ f(x)g(x) \right\} = lm $ 
+        \item $ \lim_{x \to a} \{ f(x) \pm g(x) \} = l \pm m $
+        \item $ \lim_{x \to a} \{ f(x)g(x) \} = lm $ 
         \item $ \lim_{x \to a} \left\{ \frac{f(x)}{g(x)} \right\} = \frac{l}{m} $, provided $g(x)\neq 0$
         \item $ \lim_{x \to a} c = c $
         \item $ \lim_{x \to a} c f(x) = c \lim_{x \to a} f(x) $
@@ -354,7 +406,7 @@ Informally speaking, we can say $L^-$ is the LHL of the function $f$ at a point 
 %  Asymptotes  %
 %%%%%%%%%%%%%%%%
 
-\subsection{Asymptotes}
+\subsubsection{Asymptotes}
 Greek \textit{asymptotos} means `nonintersecting'. Asymptote is infinitesimally close to a curve, but never touches it.
 
 \begin{definition}{Asymptote}
@@ -388,7 +440,7 @@ Greek \textit{asymptotos} means `nonintersecting'. Asymptote is infinitesimally 
 \begin{definition}{Oblique asymptote}
 
     A function $f(x)$ is asymptotic to the straight line $y=mx+b$ $(m \neq 0)$ if \[
-        \lim_{x \to +\infty} \left[ f(x) - (mx+b) \right] = 0, \text{ or } \lim_{x \to -\infty} \left[ f(x) - (mx+b) \right] = 0
+        \lim_{x \to +\infty} [ f(x) - (mx+b) ] = 0, \text{ or } \lim_{x \to -\infty} [ f(x) - (mx+b) ] = 0
     \]
 \end{definition}
 
@@ -415,7 +467,7 @@ Greek \textit{asymptotos} means `nonintersecting'. Asymptote is infinitesimally 
 %  End Behavior Model  %
 %%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{End Behavior Model}
+\subsubsection{End Behavior Model}
 For numerically large values of $x$, we can sometimes model the behavior of a complicated function by a simpler one that acts virtually in the same way.
 
 \begin{example}{Let $f(x) = 3x^4 - 2x^3 + 3x^2 - 5x + 6$ and $g(x) = 3x^4$. Show that while $f$ and $g$ are quite different for numerically small values of $x$, they are virtually identical for $|x|$ large.}
@@ -480,8 +532,20 @@ For numerically large values of $x$, we can sometimes model the behavior of a co
     \end{enumerate}
 \end{definition}
 
+\begin{theorem}{Classification of Discontinuity}
+
+    \begin{enumerate}[(i)]
+        \item Ordinary discontinuity / discontinuity of 1st order
+        \item Ordinary discontinuity / discontinuity of 2nd order
+        \item Removal discontinuity
+        \item Mixed discontinuity
+        \item Oscillatory discontinuity
+        \item Infinite discontinuity
+    \end{enumerate}
+\end{theorem}
 
 
-    
+
+
 
 \end{document}
