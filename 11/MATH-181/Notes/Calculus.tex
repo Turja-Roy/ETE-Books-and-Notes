@@ -221,8 +221,8 @@ The natural number $N$ in the original version of the definition is the point wh
 \begin{example}{Prove that \[ \lim \left( \frac{n+1}{n} \right) =1 \]}
     
 Let's consider an arbitrary $\epsilon>0$. Choose $N\in \mathbb{N}$ with $N>\frac{1}{\epsilon}$. To verify that the choice of $N$ is appropriate, let $n\in\mathbb{N}$ satisfy $n \ge N$. Then, $n \ge N$ implies $n>\frac{1}{\epsilon}$, which is the same as saying $\frac{1}{n}<\epsilon$. Finally this means \[
-    \left| \frac{n+1}{n} - 1 \right| < \epsilon
-\] as desired. \qed
+    \left| \frac{n+1}{n} - 1 \right| < \epsilon \text{ \quad as desired. } \qed
+\] 
 \end{example}
 
 \begin{note}
@@ -239,8 +239,61 @@ Let's consider an arbitrary $\epsilon>0$. Choose $N\in \mathbb{N}$ with $N>\frac
         \item $\lim \frac{2}{\sqrt{n+3}}=0$
     \end{enumerate}}
     
-    \textbf{(a)} Let's consider $\epsilon>0$. Choose $N\in \mathbb{N}$ with $N>\frac{1}{\epsilon}$. To verify the choice is appropriate, let $n\in \mathbb{N}$ satisfy $n \ge N$. Then 
+    \textbf{(a)} Let's consider $\varepsilon>0$. Choose $N\in\mathbb{N}$ with $N>\frac{1}{\sqrt{6\varepsilon}}$. For any $n \ge N$ \[
+        n>\frac{1}{\sqrt{6\varepsilon}} \text{ or, } 6n^2>\frac{1}{\varepsilon} \text{ or, } \varepsilon>\frac{1}{6n^2}
+    \] which finally gives \[ \left| \frac{1}{6n^2+1}-0 \right| <\varepsilon \qed \] 
+
+    \textbf{(b)} For $\varepsilon>0$, let's choose $N \in \mathbb{N}$ such that $N>\frac{13}{4\epsilon}$. Now, let there be $n\in \mathbb{N}$ and $n \ge N$. Hence,
+    \begin{align*}
+        n &> \frac{13}{4\varepsilon} \text{ or, } \varepsilon>\frac{13}{4n} \\
+        \varepsilon &> \frac{13}{4n+10} = \frac{13}{2(2n+5)} \\
+        \varepsilon &> -\frac{13}{2(2n+5)} \\
+        \varepsilon &> -\frac{13}{2(2n+5)}+\frac{3}{2}-\frac{3}{2} \\
+        \varepsilon &> \frac{-13+6n+15}{2(2n+5)} - \frac{3}{2} \\
+        \varepsilon &> \frac{3n+1}{2n+5} - \frac{3}{2}
+    \end{align*}
+    \[ \therefore \left| \frac{3n+1}{2n+5} - \frac{3}{2} \right| < \varepsilon \qed \] 
+
+    \textbf{(c)} For $\varepsilon>0$, let's choose $N>\frac{4}{\varepsilon^2}$. Let there be $n \ge N$. Hence,
+    \begin{align*}
+        n &> \frac{4}{\varepsilon^2} \\
+        \varepsilon^2 &> \frac{4}{n} \\
+        \varepsilon &> \frac{2}{\sqrt{n}}
+    \end{align*} \[  
+       \therefore \left| \frac{2}{\sqrt{n+3}} - 0 \right| < \varepsilon \qed
+    \] 
 \end{example}
+
+\begin{note}
+    \textbf{Scratch works for solving previous examples} \\
+    \begin{minipage}{0.3\textwidth}
+        \textbf{(a)}
+        \begin{align*}
+            \left| \frac{1}{6n^2+1} - 0 \right| &< \varepsilon \\
+            6n^2+1 &> \frac{1}{\varepsilon} \\
+            n^2 &> \frac{1}{6\varepsilon} - \frac{1}{6} \\
+            n &> \frac{1}{\sqrt{6\varepsilon}}
+        \end{align*}
+    \end{minipage}
+    \begin{minipage}{0.33\textwidth}
+        \textbf{(b)}
+        \begin{align*}
+            \left| \frac{3n+1}{2n+5} - \frac{3}{2} \right| &< \varepsilon \\
+            \left| -\frac{13}{4n+10} \right| &< \varepsilon \\
+            4n+10 &> \frac{13}{\varepsilon} \\
+            n &> \frac{13}{4\varepsilon}
+        \end{align*}
+    \end{minipage}
+    \begin{minipage}{0.33\textwidth}
+        \textbf{(c)}
+        \begin{align*}
+            \left| \frac{2}{\sqrt{n+3}} - 0 \right| &< \varepsilon \\
+            n + 3 &> \frac{4}{\varepsilon^2} \\
+            n &> \frac{4}{\varepsilon^2} - 3 \\
+            n &> \frac{4}{\varepsilon^2}
+        \end{align*}
+    \end{minipage}
+\end{note}
 
 
 %%%%%%%%%%%%%%%%%%%%%%
