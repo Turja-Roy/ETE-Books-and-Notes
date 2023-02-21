@@ -1,8 +1,9 @@
-% \usepackage[tmargin=2cm,rmargin=1in,lmargin=1in,margin=0.85in,bmargin=2cm,footskip=.2in]{geometry}
 \usepackage{enumerate}
 \usepackage{framed}
 \usepackage{amsmath,amsfonts,amsthm,thmtools,amssymb,mathtools,commath}
 \usepackage{tikz}
+\usetikzlibrary{mindmap}
+\usepackage{caption}
 \usepackage{xcolor}
 \usepackage[most]{tcolorbox}
 \usepackage{cleveref}
@@ -16,7 +17,7 @@
 {
     theorem style=definition,
     enhanced,
-	before skip=2mm,after skip=2mm, colback=cyan!5,colframe=cyan!80!black,boxrule=0.5mm,
+	before skip=5mm,after skip=2mm, colback=cyan!5,colframe=cyan!80!black,boxrule=0.5mm,
 	attach boxed title to top left={xshift=1cm,yshift*=1mm-\tcboxedtitleheight},
 	boxed title style={frame code={
 					\path[fill=cyan]
@@ -89,6 +90,7 @@
 {
 	enhanced,
 	breakable,
+    before skip=5mm, after skip=2mm,
 	colback = gray!5,
 	frame hidden,
 	boxrule = 0sp,
@@ -114,8 +116,7 @@
     colback=black!5,
     colframe=black!30,
     left=0.5em,
-    before skip=10pt,
-    after skip=10pt,
+    before skip=3mm, after skip=2mm,
     boxrule=0pt,
     boxsep=0pt,
     arc=0pt,
