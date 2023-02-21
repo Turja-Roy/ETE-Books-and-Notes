@@ -112,14 +112,75 @@ The denominator of these fractions are getting larger and fast approaching $0 = 
     \end{enumerate}
 \end{definition}
 
-\begin{theorem}{Classification of Discontinuity}
+\begin{definition}{Cauchy's Definition of Continuity}
+    
+    A function $f:A \to \mathbb{R}$ is continuous at a point $c\in A$ if \[
+        \forall \epsilon>0, \exists\delta>0 : \forall x\in A, |x-c|<\delta \implies |f(x)-f(c)|<\epsilon
+    \]
+\end{definition}
 
+\begin{theorem}{Properties of Continuous Functions}
+    
+    Let $f(x)$ and $g(x)$ be two functions of $x$ each being continuous at $x=a$. For $\lim_{x \to a} f(x) = l$ and $\lim_{x \to a} g(x) = m$, the following statements are true:
     \begin{enumerate}[(i)]
-        \item Ordinary discontinuity / discontinuity of 1st order
-        \item Ordinary discontinuity / discontinuity of 2nd order
+        \item $ \lim_{x \to a} \{ f(x)\pm g(x) \} = \lim_{x \to a} f(x) \pm \lim_{x \to a} g(x) = f(a)\pm g(a) $
+        \item $ \lim_{x \to a} \{ f(x)g(x) \} = \lim_{x \to a} f(x)\lim_{x \to a} g(x) = f(a)g(a) $
+        \item $ \lim_{x \to a} \frac{f(x)}{g(x)} = \frac{\lim_{x \to a} f(x)}{\lim_{x \to a} g(x)} = \frac{f(a)}{g(a)} $
+        \item If $f(x)$ is continuous in a closed interval, it's bounded in that interval
+        \item A function wich is continuous in a closed interval attains at least once its least upper and greatest lower bounds.
+        \item A continuous function wich has opposite sign at two points meets its domain vanishes at least once between these points.
+        \item A continuous function $f(x)$ in the interval $(a,b)$ assumes at least once every value between $f(a)$ and $f(b)$, it being supposed that $f(a) \neq f(b)$.
+        \item The converse of this theorem is not true i.e a function $f(x)$ which takes all values between $f(a)$ and $f(b)$ is not necessarily continuous in the interval $(a,b)$.
+    \end{enumerate}
+\end{theorem}
+
+%%%%%%%%%%%%%%%%%%%
+%  Discontinuity  %
+%%%%%%%%%%%%%%%%%%%
+
+\subsection{Discontinuity}
+
+\begin{definition}{Discontinuous Function}
+    
+    A function $f(x)$ is said to be discontinuous for $x=a$ if $f(x)$ does not satisfy at least one of the conditions of continuity in Definition 2.1.1. \\~\\
+
+    \underline{\textbf{Discontinuities are:}}
+    \begin{enumerate}[(i)]
+        \item Ordinary discontinuity / discontinuity of 1st kind
+        \item Ordinary discontinuity / discontinuity of 2nd kind
         \item Removal discontinuity
         \item Mixed discontinuity
         \item Oscillatory discontinuity
         \item Infinite discontinuity
     \end{enumerate}
-\end{theorem}
+\end{definition}\vspace{5mm}
+
+\underline{\textbf{A. Discontinuity of the first kind:}}
+If the function $f(x)$ has finite limit, but  \[
+    \lim_{h \to 0} f(a+h) \neq \lim_{h \to 09} f(a-h) \neq f(a)
+\] the function is said to have ordinary discontinuity or discontinuity of the first kind at $x=a$. \\~\\
+
+\underline{\textbf{B. Discontinuity of the second kind:}}
+If both the limits of $f(x)$, i.e \[
+    \lim_{h \to 0} f(a-h) \text{ and } \lim_{h \to 0} f(a+h)
+\] do not exist for $x=a$ then $f(x)$ has a discontinuity of the second kind at $x=a$. \\~\\
+
+\underline{\textbf{C. Mixed discontinuity:}}
+If one of the limits of $f(x)$ exists, then the discontinuity of the function $f(x)$ at $x=a$ is called a mixed discontinuity. That is, if \[
+    \lim_{h \to 0} f(a+h) = f(a) \text{ but } \lim_{h \to 0} f(a-h) \neq f(a)
+\] then $f(x)$ is continuous on the right but it has an ordinary discontinuity on the left for $x=a$. In the same way, if \[
+     \lim_{h \to 0} f(a-h) = f(a) \text{ but } \lim_{h \to 0} f(a+h) \neq  f(a)
+\] then $f(x)$ is continuous on the right at $x=a$, and discontinuous on the left. \\~\\
+
+\underline{\textbf{D. Removal discontinuity:}}
+If \[
+    \lim_{h \to 0} f(a+h) = \lim_{h \to 0} f(a-h) \neq f(a)
+\] then the function $f(x)$ is said to have a removal discontinuity for $x=a$. \\~\\
+
+\underline{\textbf{E. Infinite discontinuity:}}
+If both the limits of $f(x)$ are infinite, the function $f(x)$ has an infinite discontinuity. That is, if \[
+    \lim_{h \to 0^-} f(x) = \pm \infty \text{ or, } \lim_{h \to 0^+} f(x) = \pm \infty
+\] then $f(x)$ is said to have an infinite discontinuity at $x=a$. \\~\\
+
+\underline{\textbf{F. Oscillatory discontinuity:}}
+A function $f(x)$ having a discontinuity at a point $x=a$ may oscillate finitely or doesn't tend to a finite limit or to $\pm \infty$ as $x \to \infty$. In such a case, $f(x)$ has an Oscillatory discontinuity at $x=a$.

@@ -6,3 +6,4 @@
 \contentsline {subsubsection}{\numberline {1.2.3}End Behavior Model}{11}{}%
 \contentsline {section}{\numberline {2}Continuity and Discontinuity}{13}{}%
 \contentsline {subsection}{\numberline {2.1}Continuity}{15}{}%
+\contentsline {subsection}{\numberline {2.2}Discontinuity}{16}{}%
