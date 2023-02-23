@@ -183,7 +183,7 @@ If both the limits of $f(x)$ are infinite, the function $f(x)$ has an infinite d
 \] then $f(x)$ is said to have an infinite discontinuity at $x=a$. \\~\\
 
 \underline{\textbf{F. Oscillatory discontinuity:}}
-A function $f(x)$ having a discontinuity at a point $x=a$ may oscillate finitely or doesn't tend to a finite limit or to $\pm \infty$ as $x \to \infty$. In such a case, $f(x)$ has an Oscillatory discontinuity at $x=a$.
+A function $f(x)$ having a discontinuity at a point $x=a$ may oscillate finitely or infinitely to $\pm \infty$ as $x \to \infty$. In such a case, $f(x)$ has an Oscillatory discontinuity at $x=a$.
 
 \begin{example}{Examine the continuity of the function $f(x)$ at $x=\frac{3}{2}$ where 
     \begin{equation*}
@@ -200,4 +200,18 @@ A function $f(x)$ having a discontinuity at a point $x=a$ may oscillate finitely
     \[ f \left( \frac{3}{2} \right) = -3-2 \left( \frac{3}{2} \right)) = -6 \]
     \[ \therefore \text{RHL} = f\left(\frac{3}{2}\right) \neq \text{LHL} \]
     Thus $f(x)$ has a mixed discontinuity and it's discontinuous on the left.
+\end{example}
+
+\begin{example}{Show that the function \[
+    f(x) = \frac{x-2}{x-1}
+\] has an infinite discontinuity at $x=1$.}
+    
+    $f(x)$ has an infinite discontinuity at $x=a$, if &\lim_{x \to 0} \{ L_R - L_L \} = \infty$. Here,
+    \[ f(1) = -\frac{1}{0} \text{ is undefined } \] Hence $f(x)$ is discontinuous at $x=1$. Now,
+    \begin{align*}
+        \lim_{h \to 0} \left| f(1+h) - f(1-h) \right| &= \lim_{h \to 0} \left| \frac{-1+h}{h} - \frac{-1-h}{-h} \right| \\
+        &= \lim_{h \to 0} \left| -\frac{2}{/h} \right| \\
+        &= \infty \\
+    \end{align*}
+    Hence, the discontinuity at $x=1$ is infinite.
 \end{example}
