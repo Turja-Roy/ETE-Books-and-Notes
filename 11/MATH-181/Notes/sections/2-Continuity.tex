@@ -8,7 +8,7 @@
 %  Discussion: Examples of Dirichlet and Thomae  %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection*{Discussion (A deeper dive): Examples of Dirichlet and Thomae\footnote{Stephen Abbott - Understanding Analysis 4.1}}
+\subsection[Discussion: Examples of Dirichlet and Thomae]{Discussion: Examples of Dirichlet and Thomae\footnote{Stephen Abbott - Understanding Analysis 4.1 (Out of syllabus; ignore if you want.)}}
 Given a function $f$ with domain $A \subseteq \mathbb{R}$, we want to define continuity at a point $c \in A$ to mean that if $x \in A$ is chosen \textit{near c}, then $f(x)$ will be near $f(c)$. \\
 Symbolically, we will say $f$ is continuous at $c$ if
 $$ \lim_{x \to c} f(x) = f(c) $$
@@ -220,3 +220,16 @@ A function $f(x)$ having a discontinuity at a point $x=a$ may oscillate finitely
     
     As $x \to a$, $(x-a) \to 0$. Hence, the function oscillates infinitely as $x \to a$.
 \end{example}
+
+
+\begin{theorem}{Continuity of some elementary functions}
+    
+    The following functions are continuous for all values of $x$ 
+    \begin{enumerate}[(i)]
+        \item $f(x) = x^n$ when $n$ is any rational number except at $x=a$ when $n$ is negative.
+        \item $f(x) = a_0x^n + a_1x^{n-1} + a_2x^{n-2} + \cdots + a_nx^0$
+        \item $f(x) = \frac{g(x)}{h(x)} ; h(x) \neq 0$ when $g(x)$ and $h(x)$ are continuous.
+        \item $f(x)=e^x$
+        \item $f(x)=\log{x}=\ln{x}; x>0$
+    \end{enumerate}
+\end{theorem}
