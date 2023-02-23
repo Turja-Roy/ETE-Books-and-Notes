@@ -184,3 +184,20 @@ If both the limits of $f(x)$ are infinite, the function $f(x)$ has an infinite d
 
 \underline{\textbf{F. Oscillatory discontinuity:}}
 A function $f(x)$ having a discontinuity at a point $x=a$ may oscillate finitely or doesn't tend to a finite limit or to $\pm \infty$ as $x \to \infty$. In such a case, $f(x)$ has an Oscillatory discontinuity at $x=a$.
+
+\begin{example}{Examine the continuity of the function $f(x)$ at $x=\frac{3}{2}$ where 
+    \begin{equation*}
+        f(x)
+        \begin{cases}
+            3-2x, &\text{ if } 0 \le x < \frac{3}{2} \\
+            -3-2x, & \text{ if } x \ge \frac{3}{2}
+        \end{cases}
+    \end{equation*}
+    }
+    
+    \[ \text{LHL } \lim_{x \to \frac{3}{2}^-} f(x) = \lim_{x \to \frac{3}{2}^-} \left\{ 3-2 \left( \frac{3}{2} \right) \right\} = 0 \]
+    \[ \text{RHL } \lim_{x \to \frac{3}{2}^+} f(x) = \lim_{x \to \frac{3}{2}^+} \left\{ -3-2 \left( \frac{3}{2} \right) \right\} = -6 \]
+    \[ f \left( \frac{3}{2} \right) = -3-2 \left( \frac{3}{2} \right)) = -6 \]
+    \[ \therefore \text{RHL} = f\left(\frac{3}{2}\right) \neq \text{LHL} \]
+    Thus $f(x)$ has a mixed discontinuity and it's discontinuous on the left.
+\end{example}
