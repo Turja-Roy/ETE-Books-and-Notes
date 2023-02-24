@@ -1,0 +1,91 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  DE and their Solutions  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Differential Equations and Their Solutions}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Classification of DE  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Classification of Differential Equations}
+
+\begin{definition}{Differential Equation}
+    
+    Differential equation is an equation involving derivatives of one or more dependent variables with respect to one or more independent variables.
+\end{definition}
+
+\begin{definition}{Ordinary Differential Equation}
+    
+    A differential equation involving ordinary derivatives of one or more dependent variables with respect to a single independent variable is called an ordinary differential equation.
+\end{definition}
+\begin{example}{Ordinary Differential Equations:}
+    
+    \begin{equation}
+        \frac{dy}{dx} + xy \left( \frac{d}{dx} \right)^2 = 0
+    \end{equation}
+    \begin{equation}
+        \frac{d^4 x}{dt^4} + 5 \frac{d^2 x}{dt^2} + 3x = \sin{t}
+    \end{equation}
+\end{example}
+
+\begin{definition}{Partial Differential Equation}
+    
+    A differential equation involving partial derivatives of one or more dependent variables with respect to more than one independent variables is called an partial differential equation.
+\end{definition}
+\begin{example}{Partial Differential Equations:}
+    
+    \begin{equation}
+        \pdv{v}{s} + \pdv{v}{t} = v
+    \end{equation}
+    \begin{equation}
+        \pdv[2]{u}{x} + \pdv[2]{u}{y} + \pdv[2]{u}{z} = 0
+    \end{equation}
+\end{example}
+
+\begin{definition}{Order and Degree of Differential Equations}
+    
+    \textbf{Order of DE:} The order of the highest ordered derivative involved in a differential equation is called the order of the differential equation. \\~\\
+    \textbf{Degree of DE:} The power of the highest order derivative involved in a differential equation is called the degree of the differential equation.
+\end{definition}
+
+\begin{definition}{Linearity of Differential Equations}
+    
+    If the dependent variable  and its various derivatives occur to the first degree only, the DE is a linear DE. Otherwise it's a non-linear DE. \[
+        a_0(x)\dv[n]{y}{x} + a_1(x)\dv[n-1]{y}{x} + \cdots + a_{n-1}(x)\dv{y}{x} + a_n(x)y = b(x)
+    \] Linear DE can also be classified as linear with \textit{constant} and \textit{variable} coefficients.
+\end{definition}
+
+\begin{example}{Ordinary Differential Equations: Orders, Degree, Linearity}
+    
+    \begin{align*}
+        \dv[3]{y}{x} - 3\dv[2]{y}{x} + 3\dv{y}{x} - 6y = \sin{x} &\text\;\;\;\;\;\text{3rd ord 1st deg Lin} \\
+        \dv[2]{y}{x} + \left( \dv{y}{x} \right)^2 + y = 0 &\text\;\;\;\;\;\text{2nd ord 1st deg Non-Lin} \\
+        y = x\dv{y}{x} + \sqrt{1 + \dv[2]{y}{x} } &\text\;\;\;\;\;\text{2nd ord 1st deg Non-Lin} \\
+        \dv[4]{x}{t} + t^2\dv[3]{x}{t} + \dv{y}{x} = \sin{t} &\text\;\;\;\;\;\text{4th ord 1st deg Lin} \\
+        \dv[2]{y}{x} + 5\dv{y}{x} + 6y^2 = 0 &\text\;\;\;\;\;\text{2nd ord 1st deg Non-Lin} \\
+        \dv[2]{y}{x} + 5 \left( \dv{y}{x} \right)^3 + 6y = 0 &\text\;\;\;\;\;\text{2nd ord 1st deg Non-Lin} \\
+        \dv[2]{y}{x} + 5y\dv{y}{x} + 6y = 0 &\text\;\;\;\;\;\text{2nd ord 1st deg Lin}
+    \end{align*}
+\end{example}
+
+
+%%%%%%%%%%%%%%%
+%  Solutions  %
+%%%%%%%%%%%%%%%
+
+\subsection{Solutions}
+
+The study of a Differential Equation consists of $3$ phases:
+\begin{enumerate}
+    \item Formulation of DE from the given physical situation.
+    \item Solutions of DE, evaluating the arbitrary constants from the given condition.
+    \item Physical interpretation of the solution.
+\end{enumerate}
+
+\begin{example}{Obtain the DE of the co-axial circle \[
+    x^2+y^2+2ax+c^2=0
+\]}
+
+    
+\end{example}
