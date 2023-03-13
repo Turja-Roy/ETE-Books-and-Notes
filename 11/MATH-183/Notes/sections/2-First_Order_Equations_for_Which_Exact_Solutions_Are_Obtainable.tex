@@ -173,16 +173,63 @@ is called an \textbf{Exact Differential Equation}.
 
 \begin{example}{Solve the initial-value problem \[
         (2x\cos y + 3x^2y) \: d{x} + (x^3 - x^2\sin y - y) \: d{y} = 0 \;\;;\;\; y(0) = 2
-\]}
+    \] \vspace{-40pt}
+}
 
     \begin{align*}
         (2x\cos y \: dx - x^2\sin y \: d{y}) + (3x^2y \: d{x} + x^3 \: d{y}) - y \: d{y} &= 0 \\
         d(x^2 \cos y) + d(x^3y) + d(\frac{y^2}{2}) &= d(c_1) \\
-        \boxed{ 2x^2 \cos y + x^3y + y^2 = c }
+        2x^2 \cos y + x^3y + y^2 &= c 
     \end{align*}
+    Substituting $x=0$ and $y=2$,
+    \[ 2^2 = c \]
+    Hence, the solution is: \[
+        2x^2 \cos y + x^3y + y^2 = 4 
+    \]
 \end{example}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Integrating Factors  %
+%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\subsubsection{Integrating Factors}
+
+\begin{definition}{Integrating Factor (IF)}
+    
+    If the DE
+    \begin{equation}
+        M(x,y) \: d{x} + N(x,y) \: d{y} = 0
+    \end{equation}
+    is not exact in a domain $D$ but the DE
+    \begin{equation}
+        \mu(x,y)M(x,y) \: d{x} + \mu(x,y)N(x,y) \: d{y} = 0
+    \end{equation}
+    is exact in $D$, then $\mu(x,y)$ is called an \textbf{Integrating Factor} of the DE.
+\end{definition}
+
+\begin{example}{Integrating factor}
+    
+    Consider the DE
+    \begin{equation}
+        (3y + 4xy^2) \: d{x} + (2x + 3x^2y) \: d{y} = 0
+    \end{equation}
+    This equation is of the form (2.1.4), where
+     \begin{align*}
+        M(x,y) &= 3y+4xy^2 ,& N(x,y) &= 2x+3x^2y \\
+        \pdv{M(x,y)}{y} &= 3+8xy ,& \pdv{N(x,y)}{x} &= 2+6xy
+    \end{align*}
+    Since \[
+        \pdv{M(x,y)}{y} \neq \pdv{N(x,y)}{x}
+    \] except for $(x,y)$ such that $2xy + 1 = 0$, Equation (2.1.4) is not exact in any rectangular domain $D$. \\
+    Let $\mu(x,y) = x^2y$. Then the corresponding DE of the form (2.1.5) is \[
+        (3x^2y^2 + 4x^3y^3) \: d{x} + (2x^3y + 3x^4y^2) \: d{y} = 0
+    \]
+    This equation is exact in every rectangular domain $D$, since
+    \[
+        \pdv{[\mu(x,y)M(x,y)]}{y} = 6x^2y+12x^3y^2 = \pdv{[\mu(x,y)N(x,y)]}{x} 
+    \]
+    For all real $(x,y)$. Hence, $\mu(x,y) = x^2y$ is an integrating factor of Equation (2.1.6).
+\end{example}
 
 
 

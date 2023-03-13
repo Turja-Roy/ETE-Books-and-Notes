@@ -11,3 +11,4 @@
 \contentsline {subsubsection}{\numberline {A}Standard Forms of First-Order Differential Equations}{9}{}%
 \contentsline {subsubsection}{\numberline {B}Exact Differential Equations}{9}{}%
 \contentsline {subsubsection}{\numberline {C}The Solution of Exact Differential Equations}{11}{}%
+\contentsline {subsubsection}{\numberline {D}Integrating Factors}{12}{}%
