@@ -1,0 +1,149 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  1st ord eqn for which Exact Solutions are Obtainable  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{First Order Equations for Which Exact Solutions Are Obtainable}
+
+%%%%%%%%%%%%%%%%%%%%%
+%  Exact DE and IF  %
+%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Exact Differential Equations and Integrating Factors}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  A. Standard Forms of First-Order DE  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Standard Forms of First-Order Differential Equations}
+The first-order differential equations may be expressed in either the \textbf{Derivative Form}
+\begin{equation}
+    \dv{y}{x} = f(x,y)
+\end{equation}
+or the \textbf{Differential Form}
+\begin{equation}
+    M(x,y) \: d{x} + N(x,y) \: d{y} = 0
+\end{equation}
+
+\begin{example}{Standard Forms}
+    
+    The equation \[
+        \dv{y}{x} = \frac{x^2 + y^2}{x-y}
+    \]
+    is the form (2.1.1). It may be written as \[
+        (x^2 + y^2) \: dx + (y-x) \: dy = 0
+    \] which is of the form (2.1.2). \\
+    Again, the equation \[
+        (\sin x + y) \: dx + (x + 3y) \: dy = 0
+    \] is of the form (2.1.2), which can also be written as \[
+    \dv{y}{x} = - \frac{\sin x + y}{x + 3y}
+    \]
+\end{example}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  B. Exact Differential Equations  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Exact Differential Equations}
+
+\begin{definition}{Exact Differential}
+    
+    Let $F$ be a function of two real variables such that  $F$ has continuous first partial derivatives in a domain $D$. The total differential $dF$ of the function $F$ is defined by the formula
+    \[
+        d{F(x,y)} = \pdv{F(x,y)}{x} \: dx + \pdv{F(x,y)}{y} \: dy
+    \]
+    for all $(x,y) \in D$.
+\end{definition} \\~\\
+
+Comparing $dF(x,y)$ with the form (2.1.2), we get
+\[
+    \pdv{F(x,y)}{x} = M(x,y) \;\;\; and \;\;\;
+    \pdv{F(x,y)}{y} = N(x,y)
+\]
+
+\begin{example}{}
+    
+    Let $F$ be a function \[
+        F(x,y) = xy^2 + 2x^3y
+    \] for all real $(x,y)$. Then
+    \[
+        \pdv{F(x,y)}{x} = y^2 + 6x^2y ,\;\;\;
+        \pdv{F(x,y)}{y} = 2xy + 2x^3
+    \]
+    and the total differential $dF$ is defined by \[
+        dF(x,y) = (y^2 + 6x^2y) \: dx + (2xy + 2x^3) \: dy
+    \]
+    for all real $(x,y)$
+\end{example}
+
+\begin{definition}{Exact Differential Equation}
+    
+    The expression
+    \begin{equation}
+        M(x,y) \: d{x} + N(x,y) \: d{y}
+    \end{equation}
+    is called an exact differential in a domain $D$ if there exists a function $F$ of two real variables such that this expression equals the total differential $dF(x,y)$ for all $(x,y) \in D$. \\
+    That is, expression (2.1.3) is an exact differential in $D$ if there exists a function $F$ such that
+\[
+    \pdv{F(x,y)}{x} = M(x,y) \;\;\; and \;\;\;
+    \pdv{F(x,y)}{y} = N(x,y)
+\]
+for all $(x,y) \in D$. \\
+If $M(x,y) \: d{x} + N(x,y) \: d{y}$ is an exact differential, then the differential equation
+\[ M(x,y) \: d{x} + N(x,y) \: d{y} = 0 \]
+is called an \textbf{Exact Differential Equation}.
+\end{definition}
+
+\begin{theorem}{Exact Differential Equation}
+    
+    \begin{enumerate}
+        \item If the DE $M(x,y) \: d{x} + N(x,y) \: d{y} = 0$ is exact in $D$, then
+            \[ \forall (x,y)\in D, \;\;\; \pdv{M(x,y)}{y} = \pdv{N(x,y)}{x} \]
+        \item Conversely, if 
+            \[ \forall (x,y)\in D, \;\;\; \pdv{M(x,y)}{y} = \pdv{N(x,y)}{x} \]
+        then the DE is exact in $D$.
+    \end{enumerate}
+\end{theorem} \\~\\
+
+\underline{\textbf{Proof (1):}}
+\begin{align*}
+    \pdv{F(x,y)}{x} = M(x,y) \;\;\;&,\;\;\; \pdv{F(x,y)}{y} = N(x,y)  \\
+    \frac{\partial^2 F(x,y)}{\partial x \partial y} = \pdv{M(x,y)}{y} \;\;\;&,\;\;\; \frac{\partial^2 F(x,y)}{\partial x \partial y} = \pdv{N(x,y)}{x}
+\end{align*}
+\[
+    \because \frac{\partial^2 F(x,y)}{\partial y \partial x} = \frac{\partial^2 F(x,y)}{\partial x \partial y}
+\] \[
+    \therefore \pdv{M(x,y)}{y} = \pdv{N(x,y)}{x} \qed
+\]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Solution of Exact DE  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\subsubsection{The Solution of Exact Differential Equations}
+
+\begin{theorem}{Solution of Exact DE}
+    
+    \\If $M(x,y) \: d{x} + N(x,y) \: d{y} = 0$ is exact in domain $D$, then
+    \[
+        \forall(x,y)\in D, \exists F(x,y) : \pdv{F(x,y)}{x} = M(x,y) \;\;\;and\;\;\;
+        \pdv{F(x,y)}{y} = N(x,y)
+    \]
+    Then the equation may be written \[
+        \pdv{F(x,y)}{x} \: d{x} + \pdv{F(x,y)}{y} \: d{y} = 0
+    \] or simply, \[
+        dF(x,y) = 0
+    \]
+    Here, $F(x,y) = c$ is a one-parameter family of solutions of this DE, where $c$ is an arbitrary constant.
+\end{theorem}
+
+
+
+
+
+
+
+
+
+
+
+

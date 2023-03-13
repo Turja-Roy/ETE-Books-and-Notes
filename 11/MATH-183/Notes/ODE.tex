@@ -8,6 +8,9 @@
 
 \input{preamble.tex}
 
+\numberwithin{equation}{subsection}
+\renewcommand{\thesubsubsection}{\Alph{subsubsection}}
+
 \title{
     \textbf{Math-183} \\
     \textbf{Differential Equations}
@@ -33,6 +36,9 @@
 %%%%%%%%%%%%%%
 
 \import{./sections}{1-DE_and_Solutions.tex}
+\pagebreak
+
+\import{./sections}{2-First_Order_Equations_for_Which_Exact_Solutions_Are_Obtainable.tex}
 \pagebreak
 
 \end{document}

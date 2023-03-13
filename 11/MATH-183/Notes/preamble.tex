@@ -43,7 +43,8 @@
 %  Theorem  %
 %%%%%%%%%%%%%
 \tcbuselibrary{theorems,skins,hooks}
-\newtcbtheorem[use counter from=definition]{theorem}{Theorem}%
+% \newtcbtheorem[use counter from=definition]{theorem}{Theorem}%
+\newtcbtheorem[number within=subsection]{theorem}{Theorem}%
 {
     theorem style=plain,
     enhanced,
@@ -86,7 +87,7 @@
 %  Example  %
 %%%%%%%%%%%%%
 \tcbuselibrary{theorems,skins,hooks}
-\newtcbtheorem[number within=section]{example}{Example}%
+\newtcbtheorem[number within=subsection]{example}{Example}%
 {
 	enhanced,
 	breakable,

@@ -76,6 +76,42 @@
 
 \subsection{Solutions}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  A. Nature of Solutions  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Nature of Solutions}
+An nth-order Differential Equation:
+\begin{equation}
+    F \left[ x, y, \dv{y}{x}, \cdots, \dv[n]{y}{x} \right] = 0
+\end{equation}
+
+\begin{definition}{Explicit solution}
+    
+    $f$ is an explicit solution of (1.2.1) if \[
+        \forall x \in I, F \left[ x, f(x), f'(x), \cdots, f^{(n)}(x) \right] = 0
+    \] where $I$ is a real interval.
+\end{definition}
+
+\begin{definition}{Implicit solution}
+    
+    $g(x,y)=0$ is an implicit solution if this relation defines at least one real function $f(x)$ on an interval $I$ such that $f$ is an explicit solution of (1.2.1)
+\end{definition}
+
+\begin{example}{Explicit and Implicit Solutions}
+    
+    \[ x^2 + y^2 - 25 = 0 \;\;:\;\; \text{ Implicit solution } \]
+    \[ 2x + 2y\dv{y}{x} = 0 \]
+    \[ x + y\dv{y}{x} = 0 \;\;:\;\; \text{ Differential Equation } \]
+    \[ y = \pm \sqrt{25 - x^2} \;;\; -5 \le x \le 5 \;\;:\;\; \text{ Explicit solution } \]
+\end{example}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  B. Methods of Solutions  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Methods of Solution}
+
 The study of a Differential Equation consists of $3$ phases:
 \begin{enumerate}
     \item Formulation of DE from the given physical situation.
@@ -83,9 +119,190 @@ The study of a Differential Equation consists of $3$ phases:
     \item Physical interpretation of the solution.
 \end{enumerate}
 
-\begin{example}{Obtain the DE of the co-axial circle \[
-    x^2+y^2+2ax+c^2=0
-\]}
+\begin{example}{
+    Show that the function $f(x) = e^x+2x^2+6x+7$ is a solution to the DE $\dv[2]{y}{x} - 3\dv{y}{x} + 2y = 4x^2$ 
+}
 
+    \[ f(x) = e^x + 2x^2 + 6x + 7 \]
+    \[ f'(x) = e^x + 4x + 6 \]
+    \[ f"(x) = e^x + 4 \]
+    \begin{align*}
+        \dv[2]{y}{x} - 3\dv{y}{x} + 2y &= (e^x+4) - 3(e^x+4x+6) + 2(e^x+2x^2+6x+7) \\
+        &= 0\cdot e^x + 0\cdot x + (4-18+14) + 4x^2 \\
+        &= 4x^2
+    \end{align*} \qed
+\end{example}
+
+\begin{example}{
+    Show that the function $f(x) = \dfrac{1}{1+x^2}$ is a solution to the DE $(1+x^2)\dv[2]{y}{x} + 4\dv{y}{x} + 2y = 0$ 
+}
     
+    \[ f(x) = \frac{1}{1+x^2} \]
+    \[ (1+x^2)f(x) = 1 \]
+    \[ (1+x^2)f'(x) + 2xf(x) = 0 \]
+    \[ (1+x^2)f''(x) + 2xf'(x) + 2xf'(x) + 2f(x) = 0 \]
+    \[
+        (1+x^2) \dv[2]{y}{x} + 4x \dv{y}{x} + 2y = 0
+    \] \qed
+\end{example}
+
+\begin{example}{
+    Show that the function $y = (2x^2+2e^{3x}+3)e^{-2x}$ satisfies the DE \[
+        \dv{y}{x} + 2y = 6e^x + 4xe^{-2x}
+    \]}
+    
+    \[ y = ( 2x^2 + 2e^{3x} + 3 ) e^{-2x} \]
+    \[ y_1 = ( 4x + 6e^{3x} )e^{-2x} - ( 2x^2 + 2e^{3x} + 3 )2e^{-2x} \]
+    \[ y_1 = 4xe^{-2x} + 6e^x - 2y \]
+    \[
+        \dv{y}{x} + 2y = 6e^x + 4e^{-2x}
+    \] \qed
+\end{example}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Initial value, Boundary value problems, Existence of Solutions  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Initial-Value and Boundary-Value Problems, and Existence of Solutions}
+
+%%%%%%%%%%%%%%%%%%%%
+%  A. IVP and BVP  %
+%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Initial-value Problems and Boundary-value Problems}
+
+One of the most frequently encountered type of problems in Differential Equations involves both a DE and one or more supplementary conditions which the solution of the given DE must satisfy. \\~\\
+
+\begin{definition}{IVP and BVP}
+    
+    Consider the first-order DE \[
+        \dv{y}{x} = f(x,y)
+    \] where $f$ is a continuous function of $x$ and $y$ in some domain $D$ of the $xy$ plane; and let $(x_0,y_0)$ be a point of $D$. The \textbf{initial-value problem} associated with the DE is to find a solution $\phi$ of the DE, defined on some real interval containing $x_0$, and satisfying the initial condition \[
+        \phi(x_0) = y_0
+    \] In the customary abbreviated notation, this initial-value problem may be written \[
+        \dv{y}{x} = f(x,y)
+    \] \[
+        y(x_0) = y_0
+    \] \\~\\
+
+    If the conditions relate to two different $x$ values (the extreme or boundary values), the proble is called a \textbf{Two-Point Boundary-Value Problem} or simply a \textbf{Boundary-Value Problem (BVP)}.
+\end{definition}
+
+\begin{example}{Find the solution of the DE $\dv{y}{x} = 2x$ such that $\forall x\in I, f'(x) = 2x$ and  $f(1)=4$}
+    
+    \[ \dv{y}{x} = 2x \]
+    \[ \int {\dv{y}{x}} \: d{x} = \int {2x} \: d{x} \]
+    \[ y = x^2 + c \]
+    Substituting $y=4$ and $x=1$,
+    \[ 4 = 1 + c \text{ or } c = 3 \]
+    \[ \therefore \text{ Solution: } y^2 = x + 3 \] \qed
+\end{example}
+
+\begin{example}{$\dv{y}{x} = -\dfrac{x}{y}$, $y(3)=4$}
+    
+    \[ x + y \dv{y}{x} = 0 \]
+    \[ \int{x} \: d{x} + \int{y \dv{y}{x}} \: d{x} = 0 \]
+    \[ \frac{x^2}{2} + \frac{y^2}{2} = c' \]
+    \[ x^2 + y^2 = c \]
+
+    Substituting $x=3$ and $y=4$,
+    \[ 16^2 + 3^2 = c \text{ or } c = 25 \]
+    \[ \therefore \text{ Solution: } x^2 + y^2 - 25 = 0 \]
+\end{example}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  B. Existence of Solutions  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Existence of Solutions}
+
+Not all initial-value and boundary-value problems have solutions. For example,\[
+    \dv[2]{y}{x} + y = 0
+\] \[ y(0) = 1 \;\;,\;\; y(\pi) = 5 \]
+has no solutions! Thus arises the question of \textit{existence} of solutions. We can say, every initial-value problem that satisfies definition (1.3.1) has \textit{at least one} solution. However, there arises another question. Can a problem have more than one solution? \\
+Let's consider the initial-value problem
+\[ \dv{y}{x} = y^{1/3} \;\;;\;\;y(0) = 0 \]
+One may verify that the functions $f_1$ and $f_2$ defined, respectively, by \[
+    \forall x\in \mathbb{R} ,\;\; f_1(x) = 0
+\] and \[
+    f_2(x) = (\frac{2}{3}x)^{3/2}, \;\; x \ge 0; \;\; f_2(x) = 0, \;\; x \le 0
+\] are both solutions of this initial-value problem. In fact, this problem has infinitely many solutions. Hence, we can state that the initial-value problem need not have a \textit{unique} solution. In order to ensure uniqeness, some additional requiremnt must certainly be imposed.
+
+\begin{theorem}{Basic Existence and Uniqueness Theorem}
+    
+    \\\textbf{Hypothesis: }
+    Consider the differential equation
+    \begin{equation}
+        \dv{y}{x} = f(x,y)
+    \end{equation}
+    where
+    \begin{itemize}
+        \item The function $f$ is a continuous function of $x$ and $y$ in some domain $D$ of the xy plane, and
+        \item The partial derivative $\pdv{f}{y}$ is also a continuous function of $x$ and $y$ in $D$; and let $(x_0,y_0)$ be a point in $D$.
+    \end{itemize}
+
+    \textbf{Conclusion: }
+    There exists a unique solution $\phi$ of the differential equation (1.3.1), defined on some interval $|x-x_0| \le h$, where $h$ is sufficiently small, that satisfies the condition
+    \[
+        \phi(x_0) = y_0
+    \]
+\end{theorem}
+
+\begin{example}{
+        Show that \[
+            y = 4e^{2x} + 2e^{-3x}
+        \] is a solution of the initial-value problem \[
+        \dv[2]{y}{x} + \dv{y}{x} - 6y = 0
+        \] \[ y(0) = 6 \]
+        \[ y'(0) = 2 \]
+        Is $y=2e^{2x} + 4e^{-3x}$ also a solution of this problem? Explain why or why not.
+    }
+    
+    \[ y = 4e^{2x} + 2e^{-3x} \]
+    \[ y_1 = 8e^{2x} - 6e^{-3x} \]
+    \[ y_2 = 16e^{2x} + 18e^{-3x} \]
+    \begin{align*}
+        y_2 + y_1 - 6y &= (16e^{2x} + 18e^{-3x}) + (8e^{2x} - 6e^{-3x}) - 6(4e^{2x} + 2e^{-3x}) \\
+        &= 0\cdot e^{2x} + 0\cdot e^{-3x} \\
+        &= 0
+    \end{align*}
+    The solution also satisfies $y(0)=6$ and  $y'(0)=2$ \\~\\
+
+    Now,
+    for $y = 2e^{2x} + 4e^{-3x}$,
+    \[ y_1 = 4e^{2x} - 12e^{-3x} \;\;;\;\; y_2 = 8e^{2x} + 36e^{-3x} \]
+    \begin{align*}
+        y_2 + y_1 - 6y &= (8e^{2x} + 36e^{-3x}) + (4e^{2x} - 12e^{-3x}) - 6(2e^{2x} + 4e^{-3x}) \\
+        &= 0\cdot e^{2x} + 0\cdot e^{-3x} \\
+        &= 0
+    \end{align*}
+    However, in this case,
+    \[ y(0) = 6 \;\;;\;\; y'(0) = -8 \]
+    As we can see, this solution doesn't satisfy the initial-value problem. Hence $y=2e^{2x} + 4e^{-3x}$ is not a solution of this problem.
+\end{example}
+
+\begin{example}{
+        Given that every solution of \[
+            x^3 \dv[3]{y}{x} - 3x^2 \dv[2]{y}{x} + 6x \dv{y}{x} - 6y = 0
+        \] may be written in the form $y = c_1x + c_2x^2 + c_3x^3$ for some choice of the arbitrary constants $c_1$, $c_2$, and $c_3$, solve the initial-value problem consisting of the above DE plus the three conditions \\
+        \[ y(2)=0 \;\;,\;\; y'(2)=2 \;\;,\;\; y''(2)=6 \]
+    }
+    
+    \[ y = c_1x + c_2x^2 + c_3x^3 \]
+    \begin{equation}
+        y(2) = 0 \text{ or, } 8c_3 + 4c_2 + 2c_1 = 0
+    \end{equation}
+    \[ y' = c_1 + 2c_2x + 3c_3x^2 \]
+    \begin{equation}
+        y'(2) = 2 \text{ or, } 12c_3 + 4c_2 + c_1 = 2
+    \end{equation}
+    \[ y'' = 0 + 2c_2 + 6c_3x \]
+    \begin{equation}
+        y''(2) = 6 \text{ or, } 12c_3 + 2c_2 + 0c_1 = 6
+    \end{equation}
+    Solving (1.3.1), (1.3.2), and (1.3.3) we get,
+    \[ c_1 = 2 \;\;,\;\; c_2 = -3 \;\;,\;\; c_3 = 1 \]
+    \[ \therefore \text{ Solution: } y = 2x - 3x^2 + x^3 \]
 \end{example}
