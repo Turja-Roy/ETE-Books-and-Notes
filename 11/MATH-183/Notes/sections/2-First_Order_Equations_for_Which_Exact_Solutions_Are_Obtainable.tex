@@ -136,6 +136,51 @@ is called an \textbf{Exact Differential Equation}.
     Here, $F(x,y) = c$ is a one-parameter family of solutions of this DE, where $c$ is an arbitrary constant.
 \end{theorem}
 
+\begin{example}{Solve the equation \[
+        (3x^2 + 4xy) \: d{x} + (2x^2 + 2y) \: d{y} = 0
+\]}
+    
+    \textbf{Standard Method:}
+    \begin{align*}
+        \pdv{F(x,y)}{x} &= M(x,y) = 3x^2 + 4xy \\
+        F(x,y) &= \int (3x^2 + 4xy) \: \partial{x} + \phi(y) \\
+        &= x^3 + 2x^2y + \phi(y) \\
+    \end{align*}
+    Again, \[
+        \pdv{F(x,y)}{y} = 2x^2 + \pdv{\phi(y)}{y} = 2x^2 + 2y
+    \] \[
+        \dv{\phi(y)}{y} = 2y
+    \] \[
+    \int \dv{\phi(y)}{y} \: d{y} = \int 2y \: d{y}
+    \] \[
+        \phi(y) = y^2 + c_0
+    \]
+    Thus, we get \[
+        F(x,y) = x^3 + 2x^2y + y^2 + c_0
+    \] Hence, a one-parameter family of the solution is $F(x,y) = c_1$ or, \[
+        x^3 + 2x^2y + y^2 + c_0 = c_1
+    \]\[
+        \boxed{x^3 + 2x^2y + y^2 = c}
+    \]
+    \textbf{Method of Grouping:}
+    \begin{align*}
+        (3x^2 + 4xy) \: d{x} + (2x^2 + 2y) \: d{y} &= 0 \\
+        3x^2 \: d{x} + (4xy \: d{x} + 2x^2 \: d{y}) + 2y \: d{y} &= 0 \\
+        d(x^3) + d(2x^2y) + d(y^2) &= d(c) \\
+        \boxed{x^3 + 2x^2y + y^2 = c}
+    \end{align*}
+\end{example}
+
+\begin{example}{Solve the initial-value problem \[
+        (2x\cos y + 3x^2y) \: d{x} + (x^3 - x^2\sin y - y) \: d{y} = 0 \;\;;\;\; y(0) = 2
+\]}
+
+    \begin{align*}
+        (2x\cos y \: dx - x^2\sin y \: d{y}) + (3x^2y \: d{x} + x^3 \: d{y}) - y \: d{y} &= 0 \\
+        d(x^2 \cos y) + d(x^3y) + d(\frac{y^2}{2}) &= d(c_1) \\
+        \boxed{ 2x^2 \cos y + x^3y + y^2 = c }
+    \end{align*}
+\end{example}
 
 
 
