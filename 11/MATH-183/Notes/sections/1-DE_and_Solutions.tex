@@ -10,17 +10,15 @@
 
 \subsection{Classification of Differential Equations}
 
-\begin{definition}{Differential Equation}
-    
+\begin{definition}{Differential Equation}{}
     Differential equation is an equation involving derivatives of one or more dependent variables with respect to one or more independent variables.
 \end{definition}
 
-\begin{definition}{Ordinary Differential Equation}
-    
+\begin{definition}{Ordinary Differential Equation}{}
     A differential equation involving ordinary derivatives of one or more dependent variables with respect to a single independent variable is called an ordinary differential equation.
 \end{definition}
-\begin{example}{Ordinary Differential Equations:}
-    
+
+\begin{example}{Ordinary Differential Equations:}{}
     \begin{equation}
         \frac{dy}{dx} + xy \left( \frac{d}{dx} \right)^2 = 0
     \end{equation}
@@ -29,12 +27,10 @@
     \end{equation}
 \end{example}
 
-\begin{definition}{Partial Differential Equation}
-    
+\begin{definition}{Partial Differential Equation}{}
     A differential equation involving partial derivatives of one or more dependent variables with respect to more than one independent variables is called an partial differential equation.
 \end{definition}
-\begin{example}{Partial Differential Equations:}
-    
+\begin{example}{Partial Differential Equations:}{}
     \begin{equation}
         \pdv{v}{s} + \pdv{v}{t} = v
     \end{equation}
@@ -43,21 +39,19 @@
     \end{equation}
 \end{example}
 
-\begin{definition}{Order and Degree of Differential Equations}
+\begin{definition}{Order and Degree of Differential Equations}{}
     
     \textbf{Order of DE:} The order of the highest ordered derivative involved in a differential equation is called the order of the differential equation. \\~\\
     \textbf{Degree of DE:} The power of the highest order derivative involved in a differential equation is called the degree of the differential equation.
 \end{definition}
 
-\begin{definition}{Linearity of Differential Equations}
-    
+\begin{definition}{Linearity of Differential Equations}{}
     If the dependent variable  and its various derivatives occur to the first degree only, the DE is a linear DE. Otherwise it's a non-linear DE. \[
         a_0(x)\dv[n]{y}{x} + a_1(x)\dv[n-1]{y}{x} + \cdots + a_{n-1}(x)\dv{y}{x} + a_n(x)y = b(x)
     \] Linear DE can also be classified as linear with \textit{constant} and \textit{variable} coefficients.
 \end{definition}
 
-\begin{example}{Ordinary Differential Equations: Orders, Degree, Linearity}
-    
+\begin{example}{Ordinary Differential Equations: Orders, Degree, Linearity}{}
     \begin{align*}
         \dv[3]{y}{x} - 3\dv[2]{y}{x} + 3\dv{y}{x} - 6y = \sin{x} &\text\;\;\;\;\;\text{3rd ord 1st deg Lin} \\
         \dv[2]{y}{x} + \left( \dv{y}{x} \right)^2 + y = 0 &\text\;\;\;\;\;\text{2nd ord 1st deg Non-Lin} \\
@@ -86,20 +80,17 @@ An nth-order Differential Equation:
     F \left[ x, y, \dv{y}{x}, \cdots, \dv[n]{y}{x} \right] = 0
 \end{equation}
 
-\begin{definition}{Explicit solution}
-    
+\begin{definition}{Explicit solution}{}
     $f$ is an explicit solution of (1.2.1) if \[
         \forall x \in I, F \left[ x, f(x), f'(x), \cdots, f^{(n)}(x) \right] = 0
     \] where $I$ is a real interval.
 \end{definition}
 
-\begin{definition}{Implicit solution}
-    
+\begin{definition}{Implicit solution}{}
     $g(x,y)=0$ is an implicit solution if this relation defines at least one real function $f(x)$ on an interval $I$ such that $f$ is an explicit solution of (1.2.1)
 \end{definition}
 
-\begin{example}{Explicit and Implicit Solutions}
-    
+\begin{example}{Explicit and Implicit Solutions}{}
     \[ x^2 + y^2 - 25 = 0 \;\;:\;\; \text{ Implicit solution } \]
     \[ 2x + 2y\dv{y}{x} = 0 \]
     \[ x + y\dv{y}{x} = 0 \;\;:\;\; \text{ Differential Equation } \]
@@ -121,8 +112,7 @@ The study of a Differential Equation consists of $3$ phases:
 
 \begin{example}{
     Show that the function $f(x) = e^x+2x^2+6x+7$ is a solution to the DE $\dv[2]{y}{x} - 3\dv{y}{x} + 2y = 4x^2$ 
-}
-
+}{}
     \[ f(x) = e^x + 2x^2 + 6x + 7 \]
     \[ f'(x) = e^x + 4x + 6 \]
     \[ f"(x) = e^x + 4 \]
@@ -135,8 +125,7 @@ The study of a Differential Equation consists of $3$ phases:
 
 \begin{example}{
     Show that the function $f(x) = \dfrac{1}{1+x^2}$ is a solution to the DE $(1+x^2)\dv[2]{y}{x} + 4\dv{y}{x} + 2y = 0$ 
-}
-    
+}{}
     \[ f(x) = \frac{1}{1+x^2} \]
     \[ (1+x^2)f(x) = 1 \]
     \[ (1+x^2)f'(x) + 2xf(x) = 0 \]
@@ -149,8 +138,7 @@ The study of a Differential Equation consists of $3$ phases:
 \begin{example}{
     Show that the function $y = (2x^2+2e^{3x}+3)e^{-2x}$ satisfies the DE \[
         \dv{y}{x} + 2y = 6e^x + 4xe^{-2x}
-    \]}
-    
+\]}{}
     \[ y = ( 2x^2 + 2e^{3x} + 3 ) e^{-2x} \]
     \[ y_1 = ( 4x + 6e^{3x} )e^{-2x} - ( 2x^2 + 2e^{3x} + 3 )2e^{-2x} \]
     \[ y_1 = 4xe^{-2x} + 6e^x - 2y \]
@@ -175,8 +163,7 @@ The study of a Differential Equation consists of $3$ phases:
 
 One of the most frequently encountered type of problems in Differential Equations involves both a DE and one or more supplementary conditions which the solution of the given DE must satisfy. \\~\\
 
-\begin{definition}{IVP and BVP}
-    
+\begin{definition}{IVP and BVP}{}
     Consider the first-order DE \[
         \dv{y}{x} = f(x,y)
     \] where $f$ is a continuous function of $x$ and $y$ in some domain $D$ of the $xy$ plane; and let $(x_0,y_0)$ be a point of $D$. The \textbf{initial-value problem} associated with the DE is to find a solution $\phi$ of the DE, defined on some real interval containing $x_0$, and satisfying the initial condition \[
@@ -190,8 +177,7 @@ One of the most frequently encountered type of problems in Differential Equation
     If the conditions relate to two different $x$ values (the extreme or boundary values), the proble is called a \textbf{Two-Point Boundary-Value Problem} or simply a \textbf{Boundary-Value Problem (BVP)}.
 \end{definition}
 
-\begin{example}{Find the solution of the DE $\dv{y}{x} = 2x$ such that $\forall x\in I, f'(x) = 2x$ and  $f(1)=4$}
-    
+\begin{example}{Find the solution of the DE $\dv{y}{x} = 2x$ such that $\forall x\in I, f'(x) = 2x$ and  $f(1)=4$}{}
     \[ \dv{y}{x} = 2x \]
     \[ \int {\dv{y}{x}} \: d{x} = \int {2x} \: d{x} \]
     \[ y = x^2 + c \]
@@ -200,8 +186,7 @@ One of the most frequently encountered type of problems in Differential Equation
     \[ \therefore \text{ Solution: } y^2 = x + 3 \] \qed
 \end{example}
 
-\begin{example}{$\dv{y}{x} = -\dfrac{x}{y}$, $y(3)=4$}
-    
+\begin{example}{$\dv{y}{x} = -\dfrac{x}{y}$, $y(3)=4$}{}
     \[ x + y \dv{y}{x} = 0 \]
     \[ \int{x} \: d{x} + \int{y \dv{y}{x}} \: d{x} = 0 \]
     \[ \frac{x^2}{2} + \frac{y^2}{2} = c' \]
@@ -230,8 +215,7 @@ One may verify that the functions $f_1$ and $f_2$ defined, respectively, by \[
     f_2(x) = (\frac{2}{3}x)^{3/2}, \;\; x \ge 0; \;\; f_2(x) = 0, \;\; x \le 0
 \] are both solutions of this initial-value problem. In fact, this problem has infinitely many solutions. Hence, we can state that the initial-value problem need not have a \textit{unique} solution. In order to ensure uniqeness, some additional requiremnt must certainly be imposed.
 
-\begin{theorem}{Basic Existence and Uniqueness Theorem}
-    
+\begin{theorem}{Basic Existence and Uniqueness Theorem}{}
     \\\textbf{Hypothesis: }
     Consider the differential equation
     \begin{equation}
@@ -258,8 +242,7 @@ One may verify that the functions $f_1$ and $f_2$ defined, respectively, by \[
         \] \[ y(0) = 6 \]
         \[ y'(0) = 2 \]
         Is $y=2e^{2x} + 4e^{-3x}$ also a solution of this problem? Explain why or why not.
-    }
-    
+    }{}
     \[ y = 4e^{2x} + 2e^{-3x} \]
     \[ y_1 = 8e^{2x} - 6e^{-3x} \]
     \[ y_2 = 16e^{2x} + 18e^{-3x} \]
@@ -288,8 +271,7 @@ One may verify that the functions $f_1$ and $f_2$ defined, respectively, by \[
             x^3 \dv[3]{y}{x} - 3x^2 \dv[2]{y}{x} + 6x \dv{y}{x} - 6y = 0
         \] may be written in the form $y = c_1x + c_2x^2 + c_3x^3$ for some choice of the arbitrary constants $c_1$, $c_2$, and $c_3$, solve the initial-value problem consisting of the above DE plus the three conditions \\
         \[ y(2)=0 \;\;,\;\; y'(2)=2 \;\;,\;\; y''(2)=6 \]
-    }
-    
+    }{}
     \[ y = c_1x + c_2x^2 + c_3x^3 \]
     \begin{equation}
         y(2) = 0 \text{ or, } 8c_3 + 4c_2 + 2c_1 = 0

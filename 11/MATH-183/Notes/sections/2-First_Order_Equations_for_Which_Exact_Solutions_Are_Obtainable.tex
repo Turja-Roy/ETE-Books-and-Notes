@@ -24,8 +24,7 @@ or the \textbf{Differential Form}
     M(x,y) \: d{x} + N(x,y) \: d{y} = 0
 \end{equation}
 
-\begin{example}{Standard Forms}
-    
+\begin{example}{Standard Forms}{}
     The equation \[
         \dv{y}{x} = \frac{x^2 + y^2}{x-y}
     \]
@@ -45,8 +44,7 @@ or the \textbf{Differential Form}
 
 \subsubsection{Exact Differential Equations}
 
-\begin{definition}{Exact Differential}
-    
+\begin{definition}{Exact Differential}{}
     Let $F$ be a function of two real variables such that  $F$ has continuous first partial derivatives in a domain $D$. The total differential $dF$ of the function $F$ is defined by the formula
     \[
         d{F(x,y)} = \pdv{F(x,y)}{x} \: dx + \pdv{F(x,y)}{y} \: dy
@@ -60,8 +58,7 @@ Comparing $dF(x,y)$ with the form (2.1.2), we get
     \pdv{F(x,y)}{y} = N(x,y)
 \]
 
-\begin{example}{}
-    
+\begin{example}{}{}
     Let $F$ be a function \[
         F(x,y) = xy^2 + 2x^3y
     \] for all real $(x,y)$. Then
@@ -75,8 +72,7 @@ Comparing $dF(x,y)$ with the form (2.1.2), we get
     for all real $(x,y)$
 \end{example}
 
-\begin{definition}{Exact Differential Equation}
-    
+\begin{definition}{Exact Differential Equation}{}
     The expression
     \begin{equation}
         M(x,y) \: d{x} + N(x,y) \: d{y}
@@ -93,8 +89,7 @@ If $M(x,y) \: d{x} + N(x,y) \: d{y}$ is an exact differential, then the differen
 is called an \textbf{Exact Differential Equation}.
 \end{definition}
 
-\begin{theorem}{Exact Differential Equation}
-    
+\begin{theorem}{Exact Differential Equation}{}
     \begin{enumerate}
         \item If the DE $M(x,y) \: d{x} + N(x,y) \: d{y} = 0$ is exact in $D$, then
             \[ \forall (x,y)\in D, \;\;\; \pdv{M(x,y)}{y} = \pdv{N(x,y)}{x} \]
@@ -121,8 +116,7 @@ is called an \textbf{Exact Differential Equation}.
  
 \subsubsection{The Solution of Exact Differential Equations}
 
-\begin{theorem}{Solution of Exact DE}
-    
+\begin{theorem}{Solution of Exact DE}{}
     \\If $M(x,y) \: d{x} + N(x,y) \: d{y} = 0$ is exact in domain $D$, then
     \[
         \forall(x,y)\in D, \exists F(x,y) : \pdv{F(x,y)}{x} = M(x,y) \;\;\;and\;\;\;
@@ -138,8 +132,7 @@ is called an \textbf{Exact Differential Equation}.
 
 \begin{example}{Solve the equation \[
         (3x^2 + 4xy) \: d{x} + (2x^2 + 2y) \: d{y} = 0
-\]}
-    
+\]}{}
     \textbf{Standard Method:}
     \begin{align*}
         \pdv{F(x,y)}{x} &= M(x,y) = 3x^2 + 4xy \\
@@ -174,8 +167,7 @@ is called an \textbf{Exact Differential Equation}.
 \begin{example}{Solve the initial-value problem \[
         (2x\cos y + 3x^2y) \: d{x} + (x^3 - x^2\sin y - y) \: d{y} = 0 \;\;;\;\; y(0) = 2
     \] \vspace{-40pt}
-}
-
+}{}
     \begin{align*}
         (2x\cos y \: dx - x^2\sin y \: d{y}) + (3x^2y \: d{x} + x^3 \: d{y}) - y \: d{y} &= 0 \\
         d(x^2 \cos y) + d(x^3y) + d(\frac{y^2}{2}) &= d(c_1) \\
@@ -194,8 +186,7 @@ is called an \textbf{Exact Differential Equation}.
 
 \subsubsection{Integrating Factors}
 
-\begin{definition}{Integrating Factor (IF)}
-    
+\begin{definition}{Integrating Factor (IF)}{}
     If the DE
     \begin{equation}
         M(x,y) \: d{x} + N(x,y) \: d{y} = 0
@@ -207,8 +198,7 @@ is called an \textbf{Exact Differential Equation}.
     is exact in $D$, then $\mu(x,y)$ is called an \textbf{Integrating Factor} of the DE.
 \end{definition}
 
-\begin{example}{Integrating factor}
-    
+\begin{example}{Integrating factor}{}
     Consider the DE
     \begin{equation}
         (3y + 4xy^2) \: d{x} + (2x + 3x^2y) \: d{y} = 0
@@ -231,6 +221,36 @@ is called an \textbf{Exact Differential Equation}.
     For all real $(x,y)$. Hence, $\mu(x,y) = x^2y$ is an integrating factor of Equation (2.1.6).
 \end{example}
 
+\begin{example}{
+    Determine whether or not the following equation is exact
+    \[ \left(\dfrac{x}{y^2} + x\right) \: d{x} + \left(\dfrac{x^2}{y^3} + y\right) \: d{y} = 0 \]
+    }{}
+    \[ \pdv{M(x,y)}{y} = -\frac{x}{2y^3} \]
+    \[ \pdv{N(x,y)}{x} = \frac{2x}{y^3} \]
+    Here, $\pdv{M(x,y)}{y} \neq \pdv{N(x,y)}{x}$. Hence, the equation is not exact.
+\end{example}
+
+\begin{example}{Determine the constant $A$ in the following equations such that the equation is exact
+    \begin{equation*} 1.\quad
+        (Ax^2y + 2y^2) \: d{x} + x^3 + 4xy \: d{y} = 0
+    \end{equation*}
+    \begin{equation*} 2.\quad
+        \left( \frac{Ay}{x^3} + \frac{y}{x^2} \right) \: d{x} + \left( \frac{1}{x^2} - \frac{1}{x} \right) \: d{y} = 0
+    \end{equation*}
+}{}
+    \textbf{1.}
+    \[ \pdv{M(x,y)}{y} = \pdv{(Ax^2y + 2y^2)}{y} = Ax^2 + 4y \]
+    \[ \pdv{N(x,y)}{x} = \pdv{(x^3 + 4xy)}{x} = 3x^2 + 4y \]
+    Equating the coefficients of $x^2$, we get \[
+        \boxed{A=3}
+    \]
+    \textbf{2.}
+    \[ \pdv{M(x,y)}{y} = \pdv{ \left( \frac{Ay}{x^3} + \frac{y}{x^2} \right) }{y} = \frac{A}{x^3} + \frac{1}{x^2} \]
+    \[ \pdv{N(x,y)}{x} = \pdv{ \left( \frac{1}{x^2} - \frac{1}{x} \right) }{x} = -\frac{1}{2x^3} + \frac{1}{x^2} \]
+    Equating the coefficients of $\frac{1}{x^3}$, we get \[
+        \boxed{A = -\frac{1}{2}}
+    \]
+\end{example}
 
 
 

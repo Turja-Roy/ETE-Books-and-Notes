@@ -7,6 +7,7 @@
 \usepackage{xcolor}
 \usepackage[most]{tcolorbox}
 \usepackage{cleveref}
+\usepackage{hyperref}
 
 
 %%%%%%%%%%%%%%%%
@@ -37,6 +38,12 @@
 	fonttitle=\bfseries,
 	title={#2},#1
 }{def}
+
+\newcommand{\definition}[2]{
+\begin{definition}{#1}{}
+    #2
+\end{definition}
+}
 
 
 %%%%%%%%%%%%%
