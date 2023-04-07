@@ -50,7 +50,7 @@ or the \textbf{Differential Form}
         d{F(x,y)} = \pdv{F(x,y)}{x} \: dx + \pdv{F(x,y)}{y} \: dy
     \]
     for all $(x,y) \in D$.
-\end{definition} \\~\\
+\end{definition} \vspace{0.25cm}
 
 Comparing $dF(x,y)$ with the form (2.1.2), we get
 \[
@@ -97,7 +97,7 @@ is called an \textbf{Exact Differential Equation}.
             \[ \forall (x,y)\in D, \;\;\; \pdv{M(x,y)}{y} = \pdv{N(x,y)}{x} \]
         then the DE is exact in $D$.
     \end{enumerate}
-\end{theorem} \\~\\
+\end{theorem} \vspace{0.5cm}
 
 \underline{\textbf{Proof (1):}}
 \begin{align*}
@@ -253,6 +253,192 @@ is called an \textbf{Exact Differential Equation}.
 \end{example}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Separable Equations and Equations Reducible to this Form  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Separable Equations and Equations Reducible to this Form}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Separable Equations  %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Separable Equations}
+
+\begin{definition}{Separable Equations}{}
+    An equations of the form
+    \begin{equation}
+        F(x)G(y) \: d{x} + f(x)g(y) \: d{y} = 0
+    \end{equation}
+    is called an equation with separable variables or simply a separable equation.
+\end{definition}
+
+\begin{theorem}{Solution of Separable Differential Equations}{}
+    \\In general, the separable equations are not exact, but they possess an obvious integrating factor $\dfrac{1}{f(x)G(y)}$ \\
+    Thus the equation (2.2.1) becomes
+    \begin{equation}
+        \frac{F(x)}{f(x)} \: d{x} + \frac{g(y)}{G(y)} \: d{y} = 0
+    \end{equation}
+    which is exact, because \[
+        \pdv{}{y} \left( \frac{F(x)}{f(x)} \right) = 0 = \pdv{}{x} \left( \frac{g(y)}{G(y)} \right)
+    \]
+    We can write the equation (2.2.2) as \[
+        M(x) \: d{x} + N(y) \: d{y} = 0
+    \] where $M(x) = \dfrac{F(x)}{f(x)}$ and $N(y) = \dfrac{g(y)}{G(y)}$ \\
+    A one-parameter family solution to the DE is
+    \begin{equation}
+        \int{M(x)} \: d{x} + \int{N(y)} \: d{y} = c
+    \end{equation}
+\end{theorem}
+
+\begin{example}{Solve the equation \[
+    (x-4)y^4 \: d{x} - x^3(y^2-3) \: d{y} = 0
+\]}{}
+    The equation is separable; dividing by $x^3y^4$ we obtain
+    \[ \frac{x-4}{x^3} \: d{x} - \frac{y^2-3}{y^4} \: d{y} = 0 \]
+    \[ \int{(x^{-2} - 4x^{-3})} \: d{x} - \int{(y^{-2} - 3y^{-4})} \: d{y} = 0 \]
+    \[ \boxed{-\frac{1}{x} + \frac{2}{x^2} + \frac{1}{y} - \frac{1}{y^3} = c} \]
+    The DE in derivative form:
+    \[ \dv{y}{x} = \frac{(x-4)y^4}{x^3(y^2-3)} \]
+    Here, $y=0$ is a solution which was lost in the separation process.
+\end{example}
+
+\begin{example}{Solve the initial-value problem that consists of the DE \[
+        x\sin{y} \: d{x} + (x^2+1)\cos{y} \: d{y} = 0
+\] and the initial condition $y(1) = \frac{\pi}{2}$}{}
+    \[ \frac{x}{x^2+1} \: d{x} + \frac{\cos y}{\sin y} \: d{y} = 0 \]
+    \[ \frac{1}{2}\int{\frac{d(x^2+1)}{x^2+1}} + \int{\cot y} \: d{y} = 0 \]
+    \[ \frac{1}{2}\ln|x^2+1| + \ln|\sin y| = \ln|c_1| \]
+    \[ \ln|(x^2+1)\sin^2 y| = \ln|c| \]
+    \[ \therefore (x^2+1)\sin^2y = c \]
+    Applying the initial condition, we get \[
+        2\sin^2\frac{\pi}{2} = c \text{ or, } c = 2
+    \] Thus, the solution is
+    \[ \boxed{(x^2+1)\sin^2y = 2} \]
+\end{example}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Homogeneous Equations  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Homogeneous Equations}
+
+\begin{definition}{Homogeneous Equations}{}
+    The first-orger differential equation \[
+        M(x,y) \: d{x} + N(x,y) \: d{y} = 0
+    \] is said to be homogeneous if, when written in the derivative form \[
+        \dv{y}{x} = f(x,y)
+    \] there exists a function $g$ such that $f(x,y)$ can be expressed in the form $g(y/x)$
+\end{definition}
+
+\begin{example}{}{}
+    The DE \[
+        x^2 - 3y^2 \: d{x} + 2xy \: d{y} = 0
+    \] is homogeneous. To see this, we first write the derivative form of the equation: \[
+        \dv{y}{x} = \frac{3y^2 - x^2}{2xy} = \frac{3y}{2x} - \frac{x}{2y}
+    \] We see that the DE can be written as \[
+        \dv{y}{x} = \frac{3}{2} \left( \frac{y}{x} \right) - \frac{1}{2} \left( \frac{1}{y/x} \right) 
+    \] in which the right side of the equation is of the form $g(y/x)$ for a certain function $g$.
+\end{example}
+
+\begin{example}{The equation \[
+        (y + \sqrt{x^2 + y^2}) \: d{x} - x \: d{y} = 0
+\] is homogeneous.}{}
+    Derivative form:
+    \begin{align*}
+        \dv{y}{x} &= \frac{y + \sqrt{x^2 + y^2}}{x} \\
+        &= \frac{y}{x} + \frac{\sqrt{x^2 + y^2}}{\sqrt{x^2}} \\
+        &= \frac{y}{x} + \sqrt{1 + \left( \frac{y}{x} \right)^2} = g\left( \frac{y}{x} \right) \\
+    \end{align*}
+\end{example}
+
+\begin{definition}{Homogeneous Equation of degree n}{}
+    A function $F$ is called homogeneous of degree n if \[
+        F(tx,ty) = t^nF(x,y)
+    \] This means that if the $tx$ and $ty$ are substituted for $x$ and $y$ respectively in $F(x,y)$, and if $t^n$ is then factored out, the other factor that remains is the original expression $F(x,y)$ itself.
+\end{definition}
+For example, the function given by $F(x,y) = x^2+y^2$ is homogeneous of degree 2, since \[
+    F(tx,ty) = (tx)^2+(ty)^2 = t^2(x^2+y^2) = t^2F(x,y)
+\]
+Now, suppose both $M(x,y)$ and $N(x,y)$ in the DE \[
+    M(x,y) \: d{x} + N(x,y) \: d{y} = 0
+\] are homogeneous of the same degree $n$. Since $M(tx,ty) = t^n M(x,y)$, for $t = \frac{1}{x}$, we have
+\[ M \left( 1,\frac{y}{x} \right) = \left( \frac{1}{x} \right)^n M(x,y) \]
+\[ M(x,y) = \left( \frac{1}{x} \right)^{-n} M\left( 1, \frac{y}{x} \right) \]
+Similarly, \[
+    N(x,y) = \left( \frac{1}{x} \right)^{-n} N\left( 1, \frac{y}{x} \right)
+\]
+Now, writing the DE in derivative form, we get
+\begin{align*}
+    \dv{y}{x} &= - \frac{M(x,y)}{N(x,y)} \\
+    &= - \frac{ \left(\frac{1}{x}\right)^{-n} M\left(1,\frac{y}{x}\right) }{ \left(\frac{1}{x}\right)^{-n} N\left(1,\frac{y}{x}\right) } \\
+    &= - \frac{M\left(1,\frac{y}{x}\right)}{N\left(1,\frac{y}{x}\right)} \\
+    &= g\left(\frac{y}{x}\right)
+\end{align*}
+
+\begin{note}{}
+    If $M(x,y)$ and $N(x,y)$ in \[
+        M(x,y) \: d{x} + N(x,y) \: d{y} = 0
+    \] are both homogeneous functions of the same degree $n$, then the differential equation is a homogeneous differential equation.
+\end{note}
+
+\begin{theorem}{}{}
+    \\If
+    \begin{equation}
+        M(x,y) \: d{x} + N(x,y) \: d{y} = 0
+    \end{equation}
+    is a homogeneous equation, then the change of variables $y = vx$ transforms the equation into a separable equation in the variables $v$ and $x$.
+\end{theorem} \vspace{0.5cm}
+
+\underline{\textbf{Proof:}} \\
+Since $M(x,y) \: d{x} + N(x,y) \: d{y} = 0$ is homogeneous, it may be written in the form \[
+    \dv{y}{x} = g \left( \frac{y}{x} \right)
+\] Let $y = vx$. Then \[
+    \dv{y}{x} = v + x\dv{v}{x}
+\] and the initial equation becomes \[
+    v + x\dv{v}{x} = g(v)
+\] or, \[
+    [v - g(v)] \: d{x} + x \: d{v} = 0
+\]
+
+This equation is separable. Separating the variables we obtain
+\begin{equation}
+    \frac{d{v}}{v - g(v)} + \frac{d{x}}{x} = 0
+\end{equation}
+
+\begin{theorem}{Solution of a Homogeneous Differential Equation}{}
+    To solve a DE of the form (2.2.4), we let $y = vx$ and transform the homogeneous equation into a separable equation of the form (2.2.5). From this, we have \[
+        \int{\frac{dv}{v - g(v)}} + \int{\frac{dx}{x}} = c
+    \] where $c$ is an arbitrary constant. Letting $F(v)$ denote \[
+        \int{\frac{dv}{v - g(v)}}
+    \] and returning to the original dependent variable $y$, the solution takes the form \[
+        F\left( \frac{y}{x} \right) + \ln|x| = c
+    \]
+\end{theorem}
+
+\begin{example}{Solve the equation \[
+        (x^2 - 3y^2) \: d{x} + 2xy \: d{y} = 0
+\]}{}
+    Derivative form: \[
+        \dv{y}{x} = - \frac{x}{2y} + \frac{3y}{2x}
+    \] Letting $y = vx$, we get
+    \begin{align*}
+        v + x\dv{v}{x} &= -\frac{1}{2v} + \frac{3v}{2} \\
+        x\dv{v}{x} &= \frac{v^2-1}{2v} \\
+        \frac{2v \: dv}{v^2-1} &= \frac{dx}{x}
+    \end{align*}
+    Integrating, we find
+    \begin{align*}
+        \ln|v^2 - 1| &= \ln|x| + \ln|c| \\
+        |v^2 - 1| &= |cx| \\
+        |\frac{y^2}{x^2} - 1| &= |cx| \\
+        |y^2 - x^2| &= x^2|cx|
+    \end{align*}
+    For $y \ge x \ge 0$, it can be written as \[
+        \boxed{y^2 - x^2 = cx^3}
+    \]
+\end{example}
 
 
 

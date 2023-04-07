@@ -12,3 +12,6 @@
 \contentsline {subsubsection}{\numberline {B}Exact Differential Equations}{9}{subsubsection.2.1.2}%
 \contentsline {subsubsection}{\numberline {C}The Solution of Exact Differential Equations}{11}{subsubsection.2.1.3}%
 \contentsline {subsubsection}{\numberline {D}Integrating Factors}{12}{subsubsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.2}Separable Equations and Equations Reducible to this Form}{14}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {A}Separable Equations}{14}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {B}Homogeneous Equations}{15}{subsubsection.2.2.2}%

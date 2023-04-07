@@ -6,8 +6,8 @@
 \usepackage{caption}
 \usepackage{xcolor}
 \usepackage[most]{tcolorbox}
-\usepackage{cleveref}
 \usepackage{hyperref}
+\usepackage{cleveref}
 
 
 %%%%%%%%%%%%%%%%
@@ -16,7 +16,7 @@
 \tcbuselibrary{theorems,skins,hooks}
 \newtcbtheorem[number within=subsection]{definition}{Definition}%
 {
-    theorem style=definition,
+    % theorem style=definition,
     enhanced,
 	before skip=2mm,after skip=2mm, colback=cyan!5,colframe=cyan!80!black,boxrule=0.5mm,
 	attach boxed title to top left={xshift=1cm,yshift*=1mm-\tcboxedtitleheight},
@@ -39,11 +39,11 @@
 	title={#2},#1
 }{def}
 
-\newcommand{\definition}[2]{
-\begin{definition}{#1}{}
-    #2
-\end{definition}
-}
+% \newcommand{\definition}[2]{
+% \begin{definition}{#1}{}
+%     #2
+% \end{definition}
+% }
 
 
 %%%%%%%%%%%%%
@@ -55,7 +55,7 @@
 {
     theorem style=plain,
     enhanced,
-    colframe=geen,
+    colframe=green!50!black,
     boxrule=1pt,
     titlerule=0mm,
     toptitle=1mm,
