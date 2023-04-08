@@ -118,18 +118,22 @@
 \tcbuselibrary{theorems,skins,hooks}
 \newtcbtheorem[number within=section]{exercise}{Exercise}%
 {
-    enhanced,
-    breakable,
-    colback=black!5,
-    colframe=black!30,
-    left=0.5em,
-    before skip=10pt,
-    after skip=10pt,
-    boxrule=0pt,
-    boxsep=0pt,
-    arc=0pt,
-    outer arc=0pt,
-    borderline west={3pt}{0pt}{black!30},
+	enhanced,
+	breakable,
+	colback = gray!15,
+	frame hidden,
+	boxrule = 0sp,
+	borderline west = {2pt}{0pt}{black},
+    borderline north = {4pt}{0pt}{black},
+	sharp corners,
+	% detach title,
+	before upper = \tcbtitle\par\smallskip,
+    toptitle = 15pt,
+    bottomtitle = 10pt,
+    coltitle = white,
+    colbacktitle = gray!60!black,
+	fonttitle = \bfseries\sffamily,
+	description font = \mdseries\bfseries
 }{exc}
 
 %%%%%%%%%%
