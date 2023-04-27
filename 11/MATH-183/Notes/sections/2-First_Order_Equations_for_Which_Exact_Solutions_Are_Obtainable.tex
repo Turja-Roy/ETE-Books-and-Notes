@@ -880,6 +880,24 @@ How to solve a DE that is not of one of the five types?
 
 \subsubsection{Finding Integrating Factors}
 
+Separable equations always possess integrating factors that can be determined by immediate inspection. However, some non-separable equations also possess such integrating factors that can be determined.\\
+
+Suppose a non-exact DE
+\begin{equation}
+    M(x,y) \: d{x} + N(x,y) \: d{y} = 0
+\end{equation}
+has an IF $\mu(x,y)$. Then the equation is
+\begin{equation}
+    \mu(x,y)M(x,y) \: d{x} + \mu(x,y)N(x,y) \: d{y} = 0
+\end{equation}
+is exact. Now, we can say the equation (2.4.2) is exact if and only if \[
+    \frac{\partial}{\partial{y}} \: \left[ \mu(x,y)M(x,y) \right] = \frac{\partial}{\partial{x}} \: \left[ \mu(x,y)N(x,y) \right]
+\]\[
+    M(x,y)\pdv{\mu(x,y)}{y} + \mu(x,y)\pdv{M(x,y)}{y} = N(x,y)\pdv{\mu(x,y)}{x} + \mu(x,y)\pdv{N(x,y)}{x} 
+\]
+\begin{equation}
+    N(x,y)\pdv{\mu}{x} - M(x,y)\pdv{\mu}{x} = \left[ \pdv{M(x,y)}{y} - \pdv{N(x,y)}{x} \right] \mu
+\end{equation}
 
 
 
