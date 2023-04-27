@@ -404,7 +404,7 @@ Since $M(x,y) \: d{x} + N(x,y) \: d{y} = 0$ is homogeneous, it may be written in
 
 This equation is separable. Separating the variables we obtain
 \begin{equation}
-    \frac{d{v}}{v - g(v)} + \frac{d{x}}{x} = 0
+    \frac{d{v}}{v - g(v)} + \frac{d{x}}{x} = 0 \qed
 \end{equation}
 
 \begin{theorem}{Solution of a Homogeneous Differential Equation}{}
@@ -600,10 +600,285 @@ This equation is separable. Separating the variables we obtain
     \end{align*}
     \[ \boxed{(x^2+y^2)\sqrt{x^2+y^2} = x^3\ln|cx^3|} \]
 
+    \textbf{11.}
+    \[ (\sqrt{x+y} + \sqrt{x-y}) \: d{x} + (\sqrt{x-y} - \sqrt{x+y}) \: d{y} = 0 \]
+    \[ \dv{y}{x} = \frac{\sqrt{\frac{x}{y}+1} - \sqrt{x-y}-1}{\sqrt{\frac{x}{y}+1} + \sqrt{\frac{x}{y}-1}} \]
+    Letting $x = vy$,
+    \begin{align*}
+        v + y\dv{v}{y} &= \frac{\sqrt{v+1} - \sqrt{v-1}}{\sqrt{v+1} + \sqrt{v-1}} \\
+        &= \frac{v+1+v-1-2\sqrt{v^2-1}}{v+1-v+1} \\
+        v + y\dv{v}{y} &= v - \sqrt{v^2-1} \\
+        \int{ \frac{dv}{\sqrt{v^2-1}} } &= -\int{ \frac{dy}{y} } \\
+        \ln |v + \sqrt{v^2-1}| &= \ln \left| \frac{c}{y} \right| \\
+        \frac{x}{y} + \sqrt{\frac{x^2}{y^2} - 1} &= \frac{c}{y} \\
+    \end{align*}
+    \[ \boxed{ x + \sqrt{x^2-y^2}  = c } \]
+
+    \textbf{12.}
+    \[ (3x+8)(y^2+4) \: d{x} + 4y(x^2+5x+6) \: d{y} = 0 \]
+    \[ \frac{3x+8}{x^2+5x+6} \: d{x} - \frac{4y}{y^2+4} \: d{y} = 0 \]
+    Here, \[
+        \frac{3x+8}{(x+3)(x+2)} = \frac{1}{x+3} + \frac{2}{x+2}
+    \]
+    \[ \therefore \int{ \frac{dx}{x+3} } + 2\int{ \frac{dx}{x+2} } - 2\ln|y^2+4| = c_2 \]
+    \[ \ln|x+3| + 2\ln|x+2| = 2\ln|c_1(y^2+4)| \]
+    \[ (x+3)(x+2)^2 = c(y^2+4) \]
+    Applying initial value,
+    \[ c = \frac{9}{16} \]
+    \[ \boxed{ 16(x+3)(x+2)^2 = 9(y^2+4) } \]
+
+    \textbf{13.}
+    \[ (2x^2+2xy+y^2) \: d{x} + (x^2+2xy) \: d{y} = 0 \]
+    \[ (2xy \: dx + x^2 \: dy) + (y^2 \: dx + 2xy \: dy) + 2x^2 \: dx = 0 \]
+    \[ d(x^2y) + d(xy^2) + d\left( \frac{2}{3}x^3 \right) = d(c_1) \]
+    \[ x^2y + xy^2 + \frac{2}{3}x^3 = c_1 \]
+    \[ \boxed{ 2x^3 + 3x^2y + 3xy^2 = c } \]
+\end{exercise}
+
+\begin{exercise}{
+    Show that the homogeneous equation \[
+        (Ax^2 + Bxy + Cy^2) \: d{x} + (Dx^2 + Exy + Fy^2) \: d{y} = 0
+\] is exact if and only if $B=2D$ and $E=2C$.
+}{}
+    The equation is exact if and only if \[
+        \pdv{(Ax^2 + Bxy + Cy^2)}{y} = \pdv{(Dx^2 + Exy + Fy^2)}{x}
+    \]
+    \[ Bx + 2Cy = 2Dx + Ey \]
+    Equating the coefficients of $x$, $B = 2D$ \\
+    Equating the coefficients of $y$, $E = 2C$
 \end{exercise}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Linear Equations and Bernoulli Equations  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\subsection{Linear Equations and Bernoulli Equations}
+
+%%%%%%%%%%%%%%%%%%%%%
+%  Linear Equation  %
+%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Linear Equation}
+\begin{definition}{Linear Equation}{}
+    A first-order ordinary differential equation is linear in the dependent variable $y$ and independent variable $x$ if it is, or can be, written in the form
+    \begin{equation}
+        \dv{y}{x} + P(x)y = Q(x)
+    \end{equation}
+\end{definition}
+ Equation (2.3.1) can also be written as
+    \begin{equation}
+        [P(x)y - Q(x)] \: d{x} + \: d{y} = 0 
+    \end{equation}
+ Here, \[
+     \frac{\partial}{\partial{y}} M(x,y) = P(x,y) \quad\text{ and }\quad \frac{\partial}{\partial{x}} N(x,y) = 0
+ \]
+ The equation is not exact. So we multiply both sides of (2.3.2) by an integrating factor: \[
+     [\mu(x)P(x)y - \mu(x)Q(x)] \: d{x} + \mu(x) \: d{y} = 0
+ \]
+ Now,
+\begin{align*}
+    \frac{\partial}{\partial{y}} \: \left[\mu(x)M(x,y)\right] &= \frac{\partial}{\partial{x}} \: \left[\mu(x)N(x,y)\right] \\
+    \frac{\partial}{\partial{y}} \: \left[\mu(x)P(x)y - \mu(x)Q(x)\right] &= \frac{\partial}{\partial{x}} \: \left[\mu(x)\right] \\
+    % \mu(x) P(x) &= \dv{\mu(x)}{x} \\
+    \mu P(x) &= \frac{d}{dx} \: \mu \\
+    \int{P(x)} \: d{x} &= \int{ \frac{d\mu}{\mu} } \\
+    \ln|\mu| &= \int{P(x)} \: d{x}
+\end{align*}
+\[ \boxed{ \mu = e^{\int{ P(x) } \: d{x} } } \]
+
+\begin{theorem}{Solution of Linear Differential Equation}{}
+    \\The linear differential equation \[
+        \dv{y}{x} + P(x)y = Q(x)
+    \] has an integrating factor of the form
+    \begin{equation}
+        \mu = e^{\int{P(x)} \: d{x}}
+    \end{equation}
+    A one-parameter family of solution of this equation is \[
+        \mu \: y = \int{\mu \: Q(x)} \: d{x} + c
+    \] or
+    \begin{equation}
+        y \: e^{\int{P(x)} \: d{x}} = \int{e^{\int{P(x)} \: d{x}} \: Q(x)} \: d{x} + c
+    \end{equation}
+    That is,
+    \begin{equation}
+        y = e^{-\int{P(x)} \: d{x}} \left[ \int{e^{\int{P(x)} \: d{x}} \: Q(x)} \: d{x} + c \right]
+    \end{equation}
+\end{theorem}
+
+\begin{example}{
+    Solve the Linear Differential Equation
+    \[ \dv{y}{x} + \left( \frac{2x+1}{x} \right) y = e^{-2x} \]
+    }{} \vspace{-20pt}
+    \[ P(x) = 2 + \frac{1}{x} \]
+    \[ \therefore \text{IF} = e^{\int{P(x)} \: d{x}} = e^{2x + \ln x} = xe^{2x} \]
+    Now,
+    \begin{align*}
+        xe^{2x}\dv{y}{x} + e^{2x}(2x+1)y &= x \\
+        \frac{d}{d{x}} \: (xe^{2x}y) &= x \\
+        xe^{2x}y &= \frac{x^2}{2} + c_1
+    \end{align*}
+    \[ \boxed{ y = \frac{1}{2} xe^{-2x} + \frac{c}{x} e^{-2x} } \]
+\end{example}
+
+\begin{example}{Solve the initial value problem \[
+    (x^2+1)\dv{y}{x} + 4xy = x \;\;,\;\; y(2)=1
+\]}{} \vspace{-20pt}
+    \[ \dv{y}{x} + \left( \frac{4x}{x^2+1} \right) y = \frac{x}{x^2+1} \]
+    \[ \therefore \text{ IF } = \text{exp}\left( 2\int{\frac{2x}{x^2+1}} \: d{x} \right) = \text{exp}\left( 2\ln|x^2+1| \right) = (x^2+1)^2 \]
+    Therefore, the solution is
+    \begin{align*}
+        (x^2+1)^2 y &= \int{ (x^2+1)^2 \cdot \frac{x}{x^2+1} } \: d{x} + c_1 \\
+        &= \int{ (x^3+x) } \: d{x} + c_1 \\
+        &= \frac{x^4}{4} + \frac{x^2}{2} + c \\
+    \end{align*}
+    Applying initial value, 
+    \[ c = 19 \]
+    \[ \boxed{ (x^2+1)^2 y = \frac{x^4}{4} + \frac{x^2}{2} + 19 } \]
+\end{example}
+
+\begin{example}{Solve the linear DE \[
+    y^2 \: d{x} + (3xy-1) \: d{y} = 0
+\]}{} \vspace{-20pt}
+    \[ \dv{x}{y} = -\frac{3x-1}{y^2} = -\frac{3}{y}x + \frac{1}{y^2} \]
+    \[ \therefore \dv{x}{y} + \frac{3}{y}x = \frac{1}{y^2} \]
+    \[ \therefore \text{ IF } = e^{3 \int{\frac{dy}{y}}} = y^3 \]
+    Now,
+    \begin{align*}
+        y^3\dv{x}{y} + 3xy^2 &= y \\
+        y^3 \: dx + (3xy^2 - y) \: dy &= 0 \\
+        (y^3 \: dx + 3xy^2 \: dy) - y \: dy &= 0 \\
+        d(xy^3) - d\left( \frac{y^2}{2} \right) &= d(c_1) \\
+        2xy^3 - y^2 &= c
+    \end{align*}
+    \[ \boxed{ x = \frac{1}{2y} + \frac{c}{y^3} } \]
+\end{example} \vspace{10pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Bernoulli Equations  %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Bernoulli Equations}
+
+\begin{definition}{Bernoulli Equations}{}
+    An equation of the form \[
+        \dv{y}{x} + P(x)y = Q(x)y^n
+    \] is called a Bernoulli Equation. \\
+\end{definition} \vspace{10pt}
+
+If $n=0$ or $n=1$, the equation is simply a linear DE. However, in general case in which $n \neq 0$ or $n \neq 1$, we must proceed in a different manner.
+
+\begin{theorem}{Transformation of Bernoulli Equation to Linear Equation}{}
+    \\Suppose $n \neq 0$ or $n \neq 1$. Then the transformation  \[
+        v = y^{1-n}
+    \] reduces the Bernoulli Equation to a linear equation in $v$.
+\end{theorem}
+
+\underline{\textbf{Proof:}}\\
+\[ \dv{y}{x} + P(x)y = Q(x) y^n \]
+\[ y^{-n}\dv{y}{x} + P(x)y^{1-n} = Q(x) \]
+Substituting $v = y^{1-n}$,
+\begin{align*}
+    \dv{v}{x} &= (1-n)y^{-n}\dv{y}{x} \\
+    \frac{1}{1-n}\dv{v}{x} + P(x)v &= Q(x) \\
+    \dv{v}{x} + (1-n)P(x)v &= (1-n)Q(x)
+\end{align*}
+Letting $P_1(x) = (1-n)P(x)$ and $Q_1(x) = (1-n)Q(x)$ we get,
+\[ \dv{v}{x} + P_1(x)v = Q_1(x) \qed \] 
+
+\begin{example}{\[
+    \dv{y}{x} + y = xy^3
+\]}{}
+    \[ y^{-3}\dv{y}{x} + y^{-2} = x \]
+    Letting $v = y^{-2}$,
+    \begin{align*}
+        \dv{v}{x} &= -2y^{-3}\dv{y}{x} \\
+        -\frac{1}{2}\dv{v}{x} + v &= x \\
+        \dv{v}{x} - 2v &= x \\
+    \end{align*}
+    \[ \therefore \text{ IF } = e^{-\int{2} \: d{x}} = e^{-2x} \]
+    \begin{align*}
+        e^{-2x}v &= \int{ e^{-2x} (-2x) } \: d{x} + c \\
+        e^{-2x}\frac{1}{y^2} &= -2 \int{ xe^{-2x} } \: d{x} + c \\
+        &= xe^{-2x} + \frac{1}{2}e^{-2x} + c
+    \end{align*}
+    \[ \boxed{ \frac{1}{y^2} = x + \frac{1}{2} + ce^{2x} } \]
+\end{example}
+
+\begin{exercise}{
+    Solve the Differential Equations
+    \begin{enumerate}
+        \item $ x^4\dv{y}{x} + 2x^3y = 1 $
+        \item $ \dv{y}{x} + 3y = 3x^2e^{-3x} $
+        \item $ (x^2+x-2)\dv{y}{x} + 3(x+1)y = x-1 $
+        \item $ y \: d{x} + (xy^2+x-y) \: d{y} = 0 $
+        \item $ \cos\theta \: d{r} + (r\sin\theta - \cos^4\theta) \: d{\theta} = 0 $
+        \item $ (y\sin2x - \cos{x}) \: d{x} + (1+\sin^2x) \: d{y} = 0 $
+        \item $ x\dv{y}{x} + y = -2x^6y^4 $
+        \item $ \dv{y}{x} - \frac{y}{x} = -\frac{y^2}{x} $
+        \item $ e^x\left[ y-3(e^x+1)^2 \right] \: d{x} + (e^x+1) \: d{y} = 0 $
+        \item $ \dv{y}{x} + \frac{y}{2x} = \frac{x}{y^3} $
+    \end{enumerate}
+}{}
+    Handwritten solutions on notebook. No time for updating in \LaTeX now. If anyone is interested, contact; I can provide handwritten solutions.
+\end{exercise}
+
+\begin{exercise}{
+    Consider the equation \[
+        a\dv{y}{x} + by = ke^{-\lambda x} 
+    \] where $a$, $b$, and $k$ are positive constants and $\lambda$ is a non-negative constant.
+    \begin{enumerate}[(a)]
+        \item Solve this equation.
+        \item Show that if $\lambda=0$, every solution approaches $\frac{k}{b}$ as $x \to \infty$, but if $\lambda>0$ every solution approaches $0$ as $x \to \infty$.
+    \end{enumerate}
+    }{}
+    Handwritten solutions on notebook. No time for updating in \LaTeX now. If anyone is interested, contact; I can provide handwritten solutions.
+\end{exercise}
+
+\begin{exercise}{
+    \begin{enumerate}[(a)]
+        \item Prove that if $f$ and $g$ are two different solutions of
+        \begin{equation}\tag{A}
+            \dv{y}{x} + P(x)y = Q(x)
+        \end{equation}
+    then $f-g$ is a solution of the equation \[
+        \dv{y}{x} + P(x)y = 0
+    \]
+    \item Thus show that if $f$ and $g$ are two different solutions of Equation (A) and $c$ is an arbitrary constant, then \[
+        c(f-g) + f
+    \] is a one-parameter family of solutions of (A).
+    \end{enumerate}
+    }{}
+    Handwritten solutions on notebook. No time for updating in \LaTeX now. If anyone is interested, contact; I can provide handwritten solutions.
+\end{exercise}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Special Integrating Factors and Transformations  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Special Integrating Factors and Transformations}
+The five basic types of differential equations we've encountered so far:\\
+\begin{itemize}
+    \item Exact $ \to $ Direct solution
+    \item Separable $ \to $ Integrating Factor $ \to $ Exact DE
+    \item Homogeneous $ \to $ Integrating Factor $ \to $ Exact DE
+    \item Linear $ \to $ Appropriate Transformation $ \to $ Separable DE
+    \item Bernoulli $ \to $ Appropriate Transformation $ \to $ Linear DE
+\end{itemize}
+
+How to solve a DE that is not of one of the five types?
+\begin{enumerate}
+    \item Either multiply by proper IF $ \to $ Exact DE
+    \item Or, appropriate transformation $ \to $ One of the five basic forms.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Finding Integrating Factors  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Finding Integrating Factors}
 
 
 

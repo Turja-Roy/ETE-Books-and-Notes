@@ -15,3 +15,8 @@
 \contentsline {subsection}{\numberline {2.2}Separable Equations and Equations Reducible to this Form}{14}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {A}Separable Equations}{14}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {B}Homogeneous Equations}{15}{subsubsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.3}Linear Equations and Bernoulli Equations}{24}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {A}Linear Equation}{24}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {B}Bernoulli Equations}{27}{subsubsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.4}Special Integrating Factors and Transformations}{29}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {A}Finding Integrating Factors}{30}{subsubsection.2.4.1}%
