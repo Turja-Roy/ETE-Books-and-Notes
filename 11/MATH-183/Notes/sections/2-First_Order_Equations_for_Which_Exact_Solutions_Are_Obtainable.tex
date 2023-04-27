@@ -898,6 +898,79 @@ is exact. Now, we can say the equation (2.4.2) is exact if and only if \[
 \begin{equation}
     N(x,y)\pdv{\mu}{x} - M(x,y)\pdv{\mu}{x} = \left[ \pdv{M(x,y)}{y} - \pdv{N(x,y)}{x} \right] \mu
 \end{equation}
+Equation (2.4.3) is a PDE fo rthe general IF  $\mu$, and we're in no position to attempt to solve such an equation. Let's attepts to determine IF of certain special types instead.\\
+If $M$ and $N$ are functions of $x$ and $y$, but the IF $\mu$ depends only upon $x$, then equation (2.4.3) reduces to
+\[
+    N(x,y) \: \dv{\mu(x)}{x} = \mu(x) \: \pdv{M(x,y)}{y} - \mu(x) \: \pdv{N(x,y)}{x}
+\] or,
+    \begin{equation}
+        \frac{d\mu(x)}{\mu(x)} = \frac{1}{N(x,y)} \left[ \mu(x) \: \pdv{M(x,y)}{y} - \mu(x) \: \pdv{N(x,y)}{x} \right] \: d{x}
+    \end{equation}
+Here, if \[
+    \frac{1}{N(x,y)} \left[ \mu(x) \: \pdv{M(x,y)}{y} - \mu(x) \: \pdv{N(x,y)}{x} \right]  
+\]
+depends upon $x$ only, equation (2.4.4) is a separable ordinary equation in the single independent, equation (2.4.4) is a separable ordinary equation in the single independent variable $x$ and the single dependent variable $\mu$. In this case, we may integrate to obtain the IF
+\[
+    \mu(x) = \exp \left\{ \int{ \frac{1}{N(x,y)} \left[ \pdv{M(x,y)}{y} - \pdv{N(x,y)}{x} \right] } \: d{x} \right\}
+\]
+Likewise, if
+\[
+    \frac{1}{M(x,y)} \left[ \pdv{N(x,y)}{x} - \pdv{M(x,y)}{y} \right]
+\] depends upon $y$ only, then we may obtain an IF that depends only on $y$.
+
+\begin{theorem}{Integrating Factors}{}
+    \\Consider the differential equation
+    \begin{equation}
+        M(x,y) \: d{x} + N(x,y) \: d{y} = 0
+    \end{equation}
+    If
+    \begin{equation}
+        \frac{1}{N(x,y)} \left[ \mu(x) \: \pdv{M(x,y)}{y} - \mu(x) \: \pdv{N(x,y)}{x} \right]  
+    \end{equation}
+    depends upon $x$ only, then IF
+    \begin{equation}
+        \mu(x) = \exp \left\{ \int{ \frac{1}{N(x,y)} \left[ \pdv{M(x,y)}{y} - \pdv{N(x,y)}{x} \right] } \: d{x} \right\}
+    \end{equation}
+    And if
+    \begin{equation}
+        \frac{1}{M(x,y)} \left[ \pdv{N(x,y)}{x} - \pdv{M(x,y)}{y} \right]
+    \end{equation}
+    depends upon $y$ only, then IF
+    \begin{equation}
+        \mu(y) = \exp \left\{ \int{ \frac{1}{M(x,y)} \left[ \pdv{N(x,y)}{x} - \pdv{M(x,y)}{y} \right] } \: d{y} \right\}
+    \end{equation}
+\end{theorem}
+
+\begin{example}{\[
+    (2x^2 + y) \: d{x} + (x^2y - x) \: d{y} = 0
+\]}{}
+    This equation is not any of the five basic types of differential equations. We can apply Theorem 2.4.1 in this case. Here, $M(x,y) = 2x^2+y$ and $N(x,y) = x^2y-x$, and the equation (2.4.6) becomes \[
+        \frac{1}{x^2y-x} [1 - (2xy-1)] = \frac{2(1-xy)}{x(xy-y)} = -\frac{2}{x}
+    \]
+    This depends upon $x$ only, so \[
+        \text{ IF } = \exp\left( -\int{\frac{2}{x}} \: d{x} \right) = \exp(-2\ln|x|) = \frac{1}{x^2}
+    \]
+    Thus we obtain the equation \[
+        \left( 2 + \frac{y}{x^2} \right) \: d{x} + \left( y - \frac{1}{x} \right) \: d{y} = 0
+    \]
+    This equation is exact, and the solution is \[
+        2x + \frac{y^2}{2} - \frac{y}{x} = c
+    \]
+\end{example}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  A Special Transformation  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{A Special Transformation}
+
+
+
+
+
+
+
 
 
 
