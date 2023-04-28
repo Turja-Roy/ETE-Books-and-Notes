@@ -904,10 +904,10 @@ If $M$ and $N$ are functions of $x$ and $y$, but the IF $\mu$ depends only upon 
     N(x,y) \: \dv{\mu(x)}{x} = \mu(x) \: \pdv{M(x,y)}{y} - \mu(x) \: \pdv{N(x,y)}{x}
 \] or,
     \begin{equation}
-        \frac{d\mu(x)}{\mu(x)} = \frac{1}{N(x,y)} \left[ \mu(x) \: \pdv{M(x,y)}{y} - \mu(x) \: \pdv{N(x,y)}{x} \right] \: d{x}
+        \frac{d\mu(x)}{\mu(x)} = \frac{1}{N(x,y)} \left[ \pdv{M(x,y)}{y} - \pdv{N(x,y)}{x} \right] \: d{x}
     \end{equation}
 Here, if \[
-    \frac{1}{N(x,y)} \left[ \mu(x) \: \pdv{M(x,y)}{y} - \mu(x) \: \pdv{N(x,y)}{x} \right]  
+    \frac{1}{N(x,y)} \left[ \pdv{M(x,y)}{y} - \pdv{N(x,y)}{x} \right]  
 \]
 depends upon $x$ only, equation (2.4.4) is a separable ordinary equation in the single independent, equation (2.4.4) is a separable ordinary equation in the single independent variable $x$ and the single dependent variable $\mu$. In this case, we may integrate to obtain the IF
 \[
@@ -925,7 +925,7 @@ Likewise, if
     \end{equation}
     If
     \begin{equation}
-        \frac{1}{N(x,y)} \left[ \mu(x) \: \pdv{M(x,y)}{y} - \mu(x) \: \pdv{N(x,y)}{x} \right]  
+        \frac{1}{N(x,y)} \left[ \pdv{M(x,y)}{y} - \pdv{N(x,y)}{x} \right]  
     \end{equation}
     depends upon $x$ only, then IF
     \begin{equation}
@@ -965,6 +965,60 @@ Likewise, if
 
 \subsubsection{A Special Transformation}
 
+\begin{theorem}{A Special Transformation}{}
+    \\Consider the equation
+    \begin{equation}
+        (a_1x + b_1y + c_1) \: d{x} + (a_2x + b_2y + c_2) \: d{y} = 0
+    \end{equation}
+    where $a_1, b_1, c_1, a_2, b_2, c_2$ are constants. \\~\\
+    \textbf{Case 1:} If $\frac{a_2}{a_1} \neq \frac{b_2}{b_1}$, then the transformation
+    \begin{align*}
+        x &= X + h \\
+        y &= Y + k
+    \end{align*}
+    where $(h, k)$ is the solution of the system
+    \begin{align*}
+        a_1h + b_1k + c_1 &= 0 \\
+        a_2h + b_2k + c_2 &= 0
+    \end{align*}
+    reduces the equation (2.4.10) to the Homogeneous Equation
+    \begin{equation}
+        (a_1X + b_1Y) \: d{X} + (a_2X + b_2Y) \: d{Y} = 0
+    \end{equation}
+    \textbf{Case 2:} If $\frac{a_2}{a_1} = \frac{b_2}{b_1}$, then the transformation \[
+        z = a_1x + b_1y
+    \] reduces the equation (2.4.10) to a separable equation in the variables $x$ and $z$.
+\end{theorem}
+
+\begin{example}{\[
+        (x - 2y + 1) \: d{x} + (4x - 3y - 6) \: d{y} = 0
+\]}{} \vspace{-20pt}
+    Here, \[
+        \frac{a_2}{a_1} = 4 \neq \frac{3}{2} = \frac{b_2}{b_1}
+    \] Therefore, we make the transformation
+    \begin{align*}
+        x &= X + h \\
+        y &= Y + k
+    \end{align*}
+    where $(h,k)$ is the solution of the system
+    \begin{align*}
+        h - 2k + 1 &= 0 \\
+        4h - 3k - 6 &= 0
+    \end{align*}
+    The solution of the system is $(3,2)$, and so the transformation is
+    \begin{align*}
+        x &= X + 3 \\
+        y &= Y + 2
+    \end{align*}
+    This reduces the given equation to the homogeneous equation
+    \[ (X-2Y) \: d{X} + (4X-3Y) \: d{Y} = 0 \]
+    \[ \dv{Y}{X} = \frac{1 - 2(Y/X)}{3(Y/X) - 4} \]
+    Letting $Y = vX$,
+    \begin{align*}
+        v + X\dv{v}{X} &= \frac{1-2v}{3v-4} \\
+        \int{ \frac{3v-4}{3v^2-2v-1} } \: d{v} &= -\int{ \frac{dX}{X} }
+    \end{align*}
+\end{example}
 
 
 
