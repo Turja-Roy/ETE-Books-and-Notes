@@ -1,0 +1,85 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Explicit Methods of Solving Higher-Order Linear Differential Equations  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Explicit Methods of Solving Higher-Order Linear Differential Equations}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Basic Theory of Linear Differential Equations  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Basic Theory of Linear Differential Equations}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Definition and Basic Existence Theorem  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Definition and Basic Existence Theorem}
+
+\begin{definition}{Linear ODE and Homogeneous DE of Order $n$}{}
+    A \textbf{linear ordinary differential equation of order $n$} in the dependent variable $y$ and the independent variable $x$ is an equation that is in, or can be expressed in the form
+    \begin{equation}
+        a_0(x)y^{(n)} + a_1(x)y^{(n-1)}n + \cdots + a_{n-1}(x)y' + a_n(x)y = F(x)
+    \end{equation}
+    where $a_0$ is not identically zero. In the equation, $a_0, a_1, \cdots, a_n$ and $F$ are continuous real functions on a real interval $a \le x \le b$ and that $a_0(x) \neq 0$ for any $x$ on $a \le x \le b$. The $F(x)$ is called the nonhomogeneous term. If $F$ is identically zero, Equation (3.1.1) reduces to
+    \begin{equation}
+        a_0(x)y^{(n)} + a_1(x)y^{(n-1)}n + \cdots + a_{n-1}(x)y' + a_n(x)y = 0
+    \end{equation}
+    Equation (3.1.2) is a \textbf{homogeneous differential equation of order $n$}.
+\end{definition}
+
+\begin{example}{}{}
+    The equation \[
+        y'' + 3xy' + x^3y = e^x
+    \] is a linear ordinary differential equation.\\
+    The equation \[
+        y''' + xy'' + 3x^2y' - 5y = \sin x
+    \] is a linear ODE of third order.
+\end{example}
+
+\begin{theorem}{Solution of nth-Order Linear Differential Equation}{}
+    \\\textbf{Hypothesis:}
+    \begin{enumerate}
+        \item Consider the $n$th-order linear differential equation
+            \begin{equation}
+                a_0(x)y^{(n)} + a_1(x)y^{(n-1)}n + \cdots + a_{n-1}(x)y' + a_n(x)y = F(x)
+            \end{equation}
+        where $a_0, a_1, \cdots, a_n$ and $F$ are real functions on a real interval $a \le x \le b$ and $a_0(x) \neq 0$ for any  $x$ on $a \le x \le b$.
+        \item Let $x_0$ be any point of the interval $a \le x \le b$, and let $c_0, c_1, \cdots, c_{n-1}$ be $n$ arbitrary real constants.
+    \end{enumerate}
+    \textbf{Conclusion:} There exists a unique solution $f$ of (3.1.3) such that
+    \begin{equation}
+        f(x_0) = c_0, f'(x_0) = c_1, \cdots, f^{(n-1)}(x_0) = c_{n-1}
+    \end{equation}
+\end{theorem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

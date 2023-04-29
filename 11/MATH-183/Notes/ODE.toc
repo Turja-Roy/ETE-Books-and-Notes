@@ -21,3 +21,6 @@
 \contentsline {subsection}{\numberline {2.4}Special Integrating Factors and Transformations}{29}{subsection.2.4}%
 \contentsline {subsubsection}{\numberline {A}Finding Integrating Factors}{30}{subsubsection.2.4.1}%
 \contentsline {subsubsection}{\numberline {B}A Special Transformation}{32}{subsubsection.2.4.2}%
+\contentsline {section}{\numberline {3}Explicit Methods of Solving Higher-Order Linear Differential Equations}{34}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Basic Theory of Linear Differential Equations}{34}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {A}Definition and Basic Existence Theorem}{34}{subsubsection.3.1.1}%
