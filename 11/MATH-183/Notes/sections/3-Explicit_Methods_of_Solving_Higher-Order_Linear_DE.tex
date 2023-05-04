@@ -37,7 +37,7 @@
     \] is a linear ODE of third order.
 \end{example}
 
-\begin{theorem}{Solution of nth-Order Linear Differential Equation}{}
+\begin{theorem}{Basic Existence Theorem}{}
     \\\textbf{Hypothesis:}
     \begin{enumerate}
         \item Consider the $n$th-order linear differential equation
@@ -47,11 +47,22 @@
         where $a_0, a_1, \cdots, a_n$ and $F$ are real functions on a real interval $a \le x \le b$ and $a_0(x) \neq 0$ for any  $x$ on $a \le x \le b$.
         \item Let $x_0$ be any point of the interval $a \le x \le b$, and let $c_0, c_1, \cdots, c_{n-1}$ be $n$ arbitrary real constants.
     \end{enumerate}
-    \textbf{Conclusion:} There exists a unique solution $f$ of (3.1.3) such that
-    \begin{equation}
+    \textbf{Conclusion:} There exists a unique solution $f$ of (3.1.3) such that \[
         f(x_0) = c_0, f'(x_0) = c_1, \cdots, f^{(n-1)}(x_0) = c_{n-1}
-    \end{equation}
+    \]
+    and this solution is defined over the entire interval $a \le x \le b$.
 \end{theorem}
+
+\begin{corollary}{}{}
+    \\\textbf{Hypothesis:} Let $f$ be a solution of the nth-order homogeneous linear DE
+    \begin{equation}
+        a_0(x)y^{(n)} + a_1(x)y^{(n-1)} + \cdots + a_{n-1}(x)y' + a_n(x)y = 0
+    \end{equation}
+    such that \[
+        f(x_0)=0, f'(x_0)=0, \cdots, f^{(n-1)}(x_0)=0,
+    \] where $x_0$ is a point of the interval $a \le x \le b$ in which the coefficients $a_0, a_1, \cdots, a_n$ are all continuous and $a_0(x) \neq 0$. \\~\\
+    \textbf{Conclusion:} Then $f(x)=0$ for all $x$ on $a \le x \le b$.
+\end{corollary}
 
 
 
