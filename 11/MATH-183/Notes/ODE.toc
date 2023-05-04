@@ -24,3 +24,4 @@
 \contentsline {section}{\numberline {3}Explicit Methods of Solving Higher-Order Linear Differential Equations}{34}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Basic Theory of Linear Differential Equations}{34}{subsection.3.1}%
 \contentsline {subsubsection}{\numberline {A}Definition and Basic Existence Theorem}{34}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {B}The Homogeneous Equation}{36}{subsubsection.3.1.2}%
