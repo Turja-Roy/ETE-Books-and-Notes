@@ -123,13 +123,75 @@ We now consider the fundamental results concerning the homogeneous equation
     \] for all $x$ such that $a \le x \le b$.
 \end{definition}
 
+\begin{definition}{Linear Independence}{}
+    The $n$ functions $f_1, f_2, \cdots, f_n$ are called linearly independent on the interval $a \le x \le b$ if the relation \[
+        c_1f_1(x) + c_2f_2(x) + \cdots + c_nf_n(x) = 0
+    \] for all $x$ such that $a \le x \le b$ implies that \[
+        c_1 = c_2 = \cdots = c_n = 0
+    \] In other words, the only linear combination of $f_1, f_2, \cdots, f_n$ that is identically zero on $a \le x \le b$ is the trivial linear combination \[
+    0\cdot f_1 + 0\cdot f_2 + \cdots + 0\cdot f_n
+    \]
+\end{definition}
 
+\begin{theorem}{Linearly Independent Solutions of n-th Order Linear Differential Equation}{}
+    The n-th order homogeneous linear differential equation
+    \begin{equation}
+        a_0(x)y^{(n)} + a_1(x)y^{(n-1)} + \cdots + a_{n-1}(x)y' + a_n(x)y = 0
+    \end{equation}
+    always possesses $n$ solutions that are linearly independent. Further, if $f_1, f_2, \cdots f_n$ are $n$ linearly independent solutions of (3.1.6), then every solution $f$ of (3.1.6) can be expressed as a linear combination \[
+        c_1f_1(x) + c_2f_2(x) + \cdots + c_nf_n(x) = 0
+    \] of these $n$ linearly independent soulutions by proper choice of the constants $c_1, c_2, \cdots, c_n$.
+\end{theorem}
 
+\begin{example}{}{}
+    We have observed that $\sin x$ and $\cos x$ are solutions of
+    \begin{equation}
+        y'' + y = 0
+    \end{equation}
+    for all $x \in (-\infty, \infty)$. Further, we can show that these two solutions are linearly independent. Suppose $f$ is any solution of (4.7). Then by Theorem 3.1.4 $f$ can be expressed as a certain linear combination $c_1\sin x + c_2\cos x$ of the two linearly independent solutions  $\sin x$ and $\cos x$ by proper choice of $c_1$ and $c_2$. That is, there exist two particular constants $c_1$ and $c_2$ such that
+    \begin{equation}
+        f(x) = c_1\sin x + c_2\cos x
+    \end{equation}
+    for all $x \in (-\infty,\infty)$. For example, it can be easily verified that $f(x) = \sin(x+\pi/6)$ is a solution of the equation (3.1.7). Since \[
+        \sin \left( x + \frac{\pi}{6} \right) = \sin x \cos \frac{\pi}{6} + \cos x \sin \frac{\pi}{6} = \frac{\sqrt{3}}{2}\sin x + \frac{1}{2}\cos x,
+    \] we see that the solution $\sin(x + \pi/6)$ can be expressed as the linear combination \[
+        \frac{\sqrt{3}}{2}\sin x + \frac{1}{2}\cos x
+    \] of the two linearly independent solutions $\sin x$ and $\cos x$. Here, $c_1 = \sqrt{3}/2$ and $c_2 = 1/2$
+\end{example}
 
+\begin{definition}{Fundamental Set of Solutions}{}
+    If $f_1, f_2, \cdots, f_n$ are $n$ linearly independent solutions of the n-th order homogeneous linear differential equation
+     \begin{equation}
+        a_0(x)y^{(n)} + a_1(x)y^{(n-1)} + \cdots + a_{n-1}(x)y' + a_n(x)y = 0
+    \end{equation}
+    on $a \le x \le b$, then the set $f_1, f_2, \cdots, f_n$ is called a fundamental set of solutions of (3.1.9) and the function $f$ defined by \[
+        f(x) = c_1f_1(x) + c_2f_2(x) + \cdots + c_nf_n(x), \quad a \le x \le b,
+    \] where $c_1, c_2, \cdots, c_n$ are arbitrary constants, is called a general solution of (3.1.9 on  $a \le x \le b$.
+\end{definition}
 
+Therefore, if we can find $n$ linearly independent solutions of (3.1.9), we can at once write the general solution of (3.1.9) as a general linear combination of these $n$ solutions.
 
+\begin{example}{}{}
+    The solutions $e^x, e^{-x},$ and $e^{2x}$ of \[
+        y''' - 2y'' + y' + 2y = 0
+    \] may be shown to be linearly independent for all $x \in (-\infty, \infty)$. Thus, $e^x, e^{-x},$ and $e^{2x}$ constitute a fundamental set of the given DE, and its general solution may be expressed as the linear combination \[
+        c_1e^x + e^{-x} + c_3e^{2x}
+    \] where $c_1$, $c_2$, and $c_3$ are arbitrary constants. We can write this as \[
+        y = c_1e^x + e^{-x} + c_3e^{2x}
+    \]
+\end{example}
 
-
+\begin{definition}{Wronskian}{}
+    Let $f_1, f_2, \cdots, f_3$ be $n$ real functions each of which has an $(n-1)$th derivative on a real interval $a \le x \le b$. The determinant \[
+        W(f_1, f_2, \cdots, f_n) = 
+        \begin{vmatrix} 
+            f_1 & f_2 & \cdots & f_n \\
+            f_1' & f_2' & \cdots & f_n' \\
+            \vdots & \vdots & \ddots & \vdots \\
+            f_1^{(n-1)} & f_2^{(n-1)} & \cdots & f_n^{(n-1)}
+        \end{vmatrix}
+    \] is called the Wronskian of these $n$ functions. We observe that $W(f_1, f_2, \cdots, f_n)$ is itself a real function defined on $a \le x \le b$. Its value at $x$ is denoted by  $W(f_1, f_2, \cdots, f_n)(x)$ or by $W[ f_1(x), f_2(x), \cdots, f_n(x) ]$.
+\end{definition}
 
 
 
