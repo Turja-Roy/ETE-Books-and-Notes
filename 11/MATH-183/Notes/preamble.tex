@@ -50,7 +50,6 @@
 %  Theorem  %
 %%%%%%%%%%%%%
 \tcbuselibrary{theorems,skins,hooks}
-% \newtcbtheorem[use counter from=definition]{theorem}{Theorem}%
 \newtcbtheorem[number within=subsection]{theorem}{Theorem}%
 {
     theorem style=plain,
@@ -73,7 +72,7 @@
 %  Corollary  %
 %%%%%%%%%%%%%%%
 \tcbuselibrary{theorems,skins}
-\newtcbtheorem[use counter from=theorem]{corollary}{Corollary}%
+\newtcbtheorem[number within=tcb@cnt@theorem]{corollary}{Corollary}%
 {
     theorem style=plain,
     enhanced,

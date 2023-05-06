@@ -310,7 +310,7 @@ We also observe that $g$ and $f$ are linearly independent, since \[
     = [f(x)]^2v' = \exp\left[ -\int{\frac{a_1(x)}{a_0(x)}} \: d{x} \right] \neq 0
 \]
 
-\begin{theorem}{}{}
+\begin{theorem}{}{} \label{th3.1.8}
     \\\textbf{Hypothesis:} Let $f$ be a nontrivial solution of the second-order homogeneous linear differential equation
     \begin{equation}
         a_0(x)y'' + a_1(x)y' + a_2(x)y = 0
@@ -503,7 +503,7 @@ If the AE of (\ref{eq3}) has the $n$ distinct real roots $m_1, m_2, \cdots, m_n$
 \begin{example}{
     Solve the differential equation \[
         y'' - 3y' + 2y = 0
-\] }{}
+\] }{}\vspace{-20pt}
     The auxiliary equation is \[
         m^2 - 3m + 2y = 0
     \]\[ (m-1)(m-2) = 0 \]
@@ -519,6 +519,161 @@ If the AE of (\ref{eq3}) has the $n$ distinct real roots $m_1, m_2, \cdots, m_n$
         \end{vmatrix} = e^{3x} \neq 0
     \]
 \end{example}
+
+\begin{example}{
+    Solve the differential equation \[
+        y''' - 4y'' + y' + 6y = 0
+\]}{}\vspace{-20pt}
+    The auxiliary equation is \[
+        m^3 - 4m^2 + m + 6 = 0
+    \]\[ (m+1)(m^2-5m+6) = 0 \]
+    \[ (m+1)(m-2)(m-3) \]
+    \[ m = -1, 2, 3 \]
+    Thus the general solution is \[
+        y = c_1e^{-1} + c_2e^{2x} + c_3e^{3x}
+    \]
+\end{example}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Case 2: Repeated Real Roots  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{20pt}
+\subsubsection{Case 2: Repeated Real Roots}
+
+\begin{example}{Consider the equation
+    \begin{equation}
+        y'' - 6y' + 9y = 0
+    \end{equation}
+}{}\vspace{-20pt}
+    The auxiliary equation is \[
+        m^2 - 6m + 9 = 0
+    \]\[ (m-3)^2 = 0 \]
+    The roots of this equation are \[
+        m_1 = 3, m_2 = 3
+    \] (real but not distinct)
+\end{example}
+
+From Example 3.2.3 we find the linear combination \[
+    c_1e^{3x} + c_2e^{3x}
+\] \[ \text{or, } (c_1 + c_2)e^{3x} = c_0e^{3x} \]
+However, the solutions are clearly not the general solution of the given DE, because the solutions are not linearly independent since the Wronskian is zero:\[
+    W(e^{3x}, e^{3x}) =
+    \begin{vmatrix}
+        e^{3x} & e^{3x} \\
+        3e^{3x} & 3e^{3x}
+    \end{vmatrix} = 0
+\]
+So, we must find a linearly independent solution. Since we already know one solution $e^{3x}$, we may apply Theorem 3.1.7 and reduce the order. Let \[
+    y = e^{3x}v
+\] Then \[
+    y' = e^{3x}v' + 3e^{3x}v
+\] \[ y'' = e^{3x}v'' + 6e^{3x}v' + 9e^{3x}v \]
+Substituting into (3.2.3) we obtain \[
+    ( e^{3x}v'' + 6e^{3x}v' + 9e^{3x}v ) - 6( e^{3x}v' + 3e^{3x}v ) + 9e^{3x}v = 0
+\] \[ \text{or, } e^{3x}v'' = 0 \]
+Letting $w = v'$, we have the first-order equation \[
+    e^{3x}\frac{dw}{dx} = 0
+\] \[ \text{or, } \frac{dw}{dx} = 0 \]
+\[ \text{or, } w = c \]
+Choosing the particular solution $w = 1$, we get \[
+    v(x) = \int{w} \: d{x} = \int{} d{x} = x + c_0
+\]
+By Theorem 3.1.7 we know that for any choice of $c_0$, a solution of the given second-order equation (3.2.3) is \[
+    y = v(x)e^{3x} = (x + c_0)e^{3x}
+\] We also observe that this solution and the previously known solution $e^{3x}$ are linearly independent. Choosing $c_0 = 0$, we get $y = xe^{3x}$. And thus corresponding to the double root 3, we find the linearly independent solutions $e^{3x}$ and $xe^{3x}$.
+Thus the general solution of (3.2.3) may be written as \[
+    y = c_1e^{3x} + c_2xe^{3x} \]
+\[ \text{or, } y = (c_1 + c_2x)e^{3x} \]
+
+\begin{theorem}{}{}
+    \begin{enumerate}
+        \item Consider the nth-order homogeneous linear differential equation (\ref{eq3}) with constant coefficients. If the auxiliary equation (\ref{eq4}) has the real root $m$ occurring $k$ times, then the part of the general solution of (\ref{eq3}) corresponding to this $k$-fold repeated root is \[
+            (c_1 + c_2x + c_3x^2 + \cdots + c_kx^{k-1})e^{mx}
+        \]
+        \item If, further, the remaining roots of the auxiliary equation (\ref{eq4}) are the distinct real numbers $m_{k+1}, \cdots, m_n$, then the general solution of (\ref{eq3}) is \[
+            y = (c_1 + c_2x + c_3x^2 + \cdots + c_kx^{k-1})e^{mx} + c_{k+1}e^{m_{k+1}x} + \cdots + c_ne^{m_nx}
+        \]
+        \item If, however, any of the remaining roots are also repeated, then the parts of the general solution of (\ref{eq3}) corresponding to each of these other repeated roots are expressions similar to that corresponding to $m$ in part 1.
+    \end{enumerate}
+\end{theorem}
+
+\begin{example}{Find the solution of \[
+    y^{iv} - 5y''' + 6y'' + 4y' - 8y = 0
+\]}{}\vspace{-20pt}
+    The AE is \[
+        m^4 - 5m^3 + 6m^2 + 4m - 8 = 0
+    \] with roots $2, 2, 2, -1$. Thus, the general equation is \[
+        y = (c_1 + c_2x + c_3x^2)e^{2x} + c_4e^{-x}
+    \]
+\end{example}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Case 3: Conjugate Complex Roots  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Case 3: Conjugate Complex Roots}
+
+Now we suppose that the auxiliary equation has the complex number $a + bi$ as a nonrepeated root. Since the coefficients are real, the conjugate complex number $a - bi$ is also a nonrepeated root. The corresponding part of the solution is \[
+    k_1e^{(a+bi)x} + k_2e^{(a-bi)x}
+\]
+We can replace the complex functions $e^{(a+bi)x}$ and $e^{(a-bi)x}$ by two real linearly independent solutions using Euler's formula \[
+    e^{i\theta} = \cos{\theta} + i\sin{\theta}
+\] Then we have
+\begin{align*}
+    k_1e^{(a+bi)x} + k_2e^{(a-bi)x} &= k_1e^{ax}e^{bix} + k_2e^{ax}e^{-bix} \\
+    &= e^{ax}[ k_1e^{bix} + k_2e^{-bix} ] \\
+    &= e^{ax}[ k_1(\cos{bx}+i\sin{bx}) + k_2(\cos{bx}-i\sin{bx}) ] \\
+    &= e^{ax}[ (k_1+k_2)\cos{bx} + i(k_1-k_2)\sin{bx} ] \\
+    &= e^{ax}[ c_1\sin{bx} + c_2\cos{bx} ]
+\end{align*}
+Thus the part of the general solution corresponding to the nonrepeated conjugate complex roots $a\pm bi$ is \[
+    e^{ax}[c_1\sin{bx} + c_2\cos{bx}]
+\]
+
+\begin{theorem}{}{}
+    \begin{enumerate}
+        \item Consider the nth-order homogeneous linear DE (\ref{eq3}) with constant coefficients. If the auxiliary equation (\ref{eq4}) has the nonrepeated conjugate complex roots $a\pm bi$, then the corresponding part of the general solution of (\ref{eq4}) may be written as \[
+            y = e^{ax}( c_1\sin{bx} + c_2\cos{bx} )
+        \]
+        \item If, however, $a+bi$ and $a-bi$ are each $k$-fold roots of the auxiliary equation (\ref{eq4}), then the corresponding part of the general solution of (\ref{eq3}) may be written as \[
+                y = e^{ax}[ (c_1 + c_2x + c_3x^2 + \cdots + c_kx^{k-1})\sin{bx} + (c_{k+1} + c_{k+2}x + c_{k+3}x^2 + \cdots + c_{2k}x^{k-1})\cos{bx} ]
+        \]
+    \end{enumerate}
+\end{theorem}
+
+\begin{example}{Find the general solution of \[
+    y'' - 6y' + 25y = 0
+\]}{}\vspace{-20pt}
+    The AE is \[
+        m^2 - 6m + 25 = 0
+    \] Solving it, we find \[
+        m = \frac{6 \pm \sqrt{36-100}}{2} = \frac{6\pm8i}{2} = 3 \pm 4i
+    \]
+    Here, the roots are conjugate complex numbers. Hence, the general solution is \[
+        y = e^{3x}(c_1\sin{4x} + c_2\cos{4x})
+    \]
+\end{example}
+
+\begin{example}{Find the general solution of \[
+    y^{iv} - 4y''' + 14y'' - 20y' + 25y = 0
+\]}{}\vspace{-20pt}
+    The AE is \[
+        m^4 - 4m^3 + 14m^2 - 20m + 25 = 0
+    \]
+    The roots are \[
+        m = 1+2i, 1-2i, 1+2i, 1-2i
+    \]
+    Hence, the general solution is \[
+        y = e^{x} [ (c_1+c_2x)\sin{2x} + (c_3+c_4x)\cos{2x} ]
+    \] or \[
+        y = e^{x} [ c_1\sin{2x} + c_2x\sin{2x} + c_3\cos{2x} + c_4x\cos{2x} ]
+    \]
+\end{example}
+
+
+
+
+
 
 
 
