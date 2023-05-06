@@ -241,7 +241,7 @@ Therefore, if we can find $n$ linearly independent solutions of (\ref{eq2}), we 
 \subsubsection{Reduction of Order}
 
 \begin{theorem}{}{}
-    \\\textbf{Hypothesis:} Let $f$ be a nontrivial solutoin of the nth-order homogeneous linear differential equation
+    \\\textbf{Hypothesis:} Let $f$ be a nontrivial solution of the nth-order homogeneous linear differential equation
     \begin{equation}\tag{3.1.2}
         a_0(x)y^{(n)} + a_1(x)y^{(n-1)} + \cdots + a_{n-1}(x)y' + a_n(x)y = 0
     \end{equation}
@@ -445,8 +445,80 @@ We also observe that $g$ and $f$ are linearly independent, since \[
 \vspace{20pt}
 \subsection{The Homogeneous Linear Equation with Constant Coefficients}
 
+%%%%%%%%%%%%%%%%%%
+%  Introduction  %
+%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Introduction}
+In this section we'll consider the special case of the nth-order homogeneous linear differential equation in which all the coefficients are real constants. That is, we'll deal with the following equation
+\begin{equation} \label{eq3}
+    a_0y^{(n)} + a_1y^{(n-1)} + \cdots + a_{n-1}y' + a_ny = 0
+\end{equation}
+where $a_0, a_1, \cdots, a_{n-1}, a_n$ are real constants.
+
+The DE (\ref{eq3}) requires a function $f$ having the property such that if it and its various derivatives are each multiplied by certain constants and the resultant products are then added, the result will be equal to zero for the appropriate domain of this equation.\\~\\
+Therefore, we need a function such that its derivatives are constant multiples of itself. That is, having the following property \[
+    \dv[k]{}{x} f(x) = cf(x)
+\]
+We all know such a function is $e^{mx}$, and \[
+    \dv[k]{}{x} e^{mx} = m^ke^{mx}
+\]
+Thus we'll seek solutions of (\ref{eq3}) of the form $y=e^{mx}$.\\~\\
+Suppose $y=e^{mx}$ is a solution for certain $m$. Then we have:
+\begin{align*}
+    y' &= me^{mx} \\
+    y'' &= m^2e^{mx} \\
+    \vdots & \\
+    y^{(n)} &= m^ne^{mx}
+\end{align*}
+Substituting in (\ref{eq3}) we obtain \[
+    a_0m^ne^{mx} + a_1m^{n-1}e^{mx} + \cdots + a_{n-1}me^{mx} + a_ne^{mx} = 0
+\] or \[
+    e^{mx}( a_0m_n + a_1m^{n-1} + \cdots + a_{n-1}m + a_n ) = 0
+\]
+Since $e^{mx} \neq 0$, we obtain the polynomial equation in the unknown $m$ :
+\begin{equation} \label{eq4}
+    a_0m_n + a_1m^{n-1} + \cdots + a_{n-1}m + a_n = 0
+\end{equation}
+This equation is called the \textbf{Auxiliary Equation} or the \textbf{Characteristic Equation} of the given differential equation (\ref{eq3}).\\~\\
+Note that (\ref{eq4}) is formally obtained from (\ref{eq3}). If $y=e^{mx}$ is a solution of (\ref{eq3}), then the constant $m$ must satisfy (\ref{eq4}). Hence, to solve (\ref{eq3}), we write the auxiliary equation (\ref{eq4}) and solve it for $m$.
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Case 1: Distinct Real Roots  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{20pt}
+\subsubsection{Case 1: Distinct Real Roots}
+
+If the AE of (\ref{eq3}) has the $n$ distinct real roots $m_1, m_2, \cdots, m_n$, then $e^{m_1x}, e^{m_2x}, \cdots, e^{m_nx}$ are $n$ distinct solutions of (\ref{eq3}).
+
+\begin{theorem}{}{}
+    Consider the nth-order homogeneous linear differential equation (\ref{eq3}) with constant coefficients. If the auxiliary equation (\ref{eq4}) has the $n$ distinct real roots \[
+        m_1, m_2, \cdots, m_n
+    \], then the general solution of (\ref{eq3}) is \[
+        y = c_1e^{m_1x} + c_2e^{m_2x} + \cdots + c_ne^{m_nx}
+    \], where $c_1, c_2, \cdots, c_n$ are arbitrary constants.
+\end{theorem}
+
+\begin{example}{
+    Solve the differential equation \[
+        y'' - 3y' + 2y = 0
+\] }{}
+    The auxiliary equation is \[
+        m^2 - 3m + 2y = 0
+    \]\[ (m-1)(m-2) = 0 \]
+    \[ m = 1,2 \]
+    The roots are real and distinct. Thus $e^{x}$ and $e^{2x}$ are the solutions, and the general solution is \[
+        y = c_1e^{x} + c_2e^{2x}
+    \]
+    We can also verify that the solutions are linearly independent. Their Wronskian : \[
+        W(e^{x}, e^{2x}) =
+        \begin{vmatrix}
+            e^{x} & e^{2x} \\
+            e^{x} & 2e^{2x}
+        \end{vmatrix} = e^{3x} \neq 0
+    \]
+\end{example}
 
 
 
