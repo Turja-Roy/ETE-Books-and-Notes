@@ -25,3 +25,5 @@
 \contentsline {subsection}{\numberline {3.1}Basic Theory of Linear Differential Equations}{34}{subsection.3.1}%
 \contentsline {subsubsection}{\numberline {A}Definition and Basic Existence Theorem}{34}{subsubsection.3.1.1}%
 \contentsline {subsubsection}{\numberline {B}The Homogeneous Equation}{36}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {C}Reduction of Order}{39}{subsubsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {D}The Nonhomogeneous Equation}{42}{subsubsection.3.1.4}%

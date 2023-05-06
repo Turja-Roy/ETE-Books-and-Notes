@@ -18,14 +18,14 @@
 
 \begin{definition}{Linear ODE and Homogeneous DE of Order $n$}{}
     A \textbf{linear ordinary differential equation of order $n$} in the dependent variable $y$ and the independent variable $x$ is an equation that is in, or can be expressed in the form
-    \begin{equation}
+    \begin{equation} \label{eq1}
         a_0(x)y^{(n)} + a_1(x)y^{(n-1)}n + \cdots + a_{n-1}(x)y' + a_n(x)y = F(x)
     \end{equation}
-    where $a_0$ is not identically zero. In the equation, $a_0, a_1, \cdots, a_n$ and $F$ are continuous real functions on a real interval $a \le x \le b$ and that $a_0(x) \neq 0$ for any $x$ on $a \le x \le b$. The $F(x)$ is called the nonhomogeneous term. If $F$ is identically zero, Equation (3.1.1) reduces to
-    \begin{equation}
+    where $a_0$ is not identically zero. In the equation, $a_0, a_1, \cdots, a_n$ and $F$ are continuous real functions on a real interval $a \le x \le b$ and that $a_0(x) \neq 0$ for any $x$ on $a \le x \le b$. The $F(x)$ is called the nonhomogeneous term. If $F$ is identically zero, Equation (\ref{eq1}) reduces to
+    \begin{equation} \label{eq2}
         a_0(x)y^{(n)} + a_1(x)y^{(n-1)}n + \cdots + a_{n-1}(x)y' + a_n(x)y = 0
     \end{equation}
-    Equation (3.1.2) is a \textbf{homogeneous differential equation of order $n$}.
+    Equation (\ref{eq2}) is a \textbf{homogeneous differential equation of order $n$}.
 \end{definition}
 
 \begin{example}{}{}
@@ -41,13 +41,13 @@
     \\\textbf{Hypothesis:}
     \begin{enumerate}
         \item Consider the $n$th-order linear differential equation
-            \begin{equation}
+            \begin{equation}\tag{3.1.1}
                 a_0(x)y^{(n)} + a_1(x)y^{(n-1)}n + \cdots + a_{n-1}(x)y' + a_n(x)y = F(x)
             \end{equation}
         where $a_0, a_1, \cdots, a_n$ and $F$ are real functions on a real interval $a \le x \le b$ and $a_0(x) \neq 0$ for any  $x$ on $a \le x \le b$.
         \item Let $x_0$ be any point of the interval $a \le x \le b$, and let $c_0, c_1, \cdots, c_{n-1}$ be $n$ arbitrary real constants.
     \end{enumerate}
-    \textbf{Conclusion:} There exists a unique solution $f$ of (3.1.3) such that \[
+    \textbf{Conclusion:} There exists a unique solution $f$ of (\ref{eq1}) such that \[
         f(x_0) = c_0, f'(x_0) = c_1, \cdots, f^{(n-1)}(x_0) = c_{n-1}
     \]
     and this solution is defined over the entire interval $a \le x \le b$.
@@ -65,7 +65,7 @@
 
 \begin{corollary}{}{}
     \\\textbf{Hypothesis:} Let $f$ be a solution of the nth-order homogeneous linear DE
-    \begin{equation}
+    \begin{equation}\tag{3.1.2}
         a_0(x)y^{(n)} + a_1(x)y^{(n-1)} + \cdots + a_{n-1}(x)y' + a_n(x)y = 0
     \end{equation}
     such that \[
@@ -90,17 +90,17 @@
 \subsubsection{The Homogeneous Equation}
 
 We now consider the fundamental results concerning the homogeneous equation
-\begin{equation}
+\begin{equation}\tag{3.1.2}
     a_0(x)y^{(n)} + a_1(x)y^{(n-1)} + \cdots + a_{n-1}(x)y' + a_n(x)y = 0
 \end{equation}
 
 \begin{theorem}{Basic Theorem on Linear Homogeneous Differential Equations}{}
-    \\\textbf{Hypothesis:} Let $f_1, f_2, \cdots, f_m$ be any $m$ solutions of the homogeneous linear differential equation (3.1.5).\\~\\
+    \\\textbf{Hypothesis:} Let $f_1, f_2, \cdots, f_m$ be any $m$ solutions of the homogeneous linear differential equation (\ref{eq2}).\\~\\
     \textbf{Conclusion:} Then \[
         c_1f_1 + c_2f_2 + \cdots + c_mf_m
-    \] is also a solution of (3.1.5), where $c_1, c_2, \cdots, c_m$ are $m$ arbitrary constants.\\~\\
+    \] is also a solution of (\ref{eq2}), where $c_1, c_2, \cdots, c_m$ are $m$ arbitrary constants.\\~\\
 
-    In other words: Any linear combination of solutions of the homogeneous linear differential equation (3.1.5) is also a solution of (3.1.5).
+    In other words: Any linear combination of solutions of the homogeneous linear differential equation (\ref{eq2}) is also a solution of (3.1.2).
 \end{theorem}
 
 \begin{definition}{Linear Combination}{}
@@ -135,10 +135,10 @@ We now consider the fundamental results concerning the homogeneous equation
 
 \begin{theorem}{Linearly Independent Solutions of n-th Order Linear Differential Equation}{}
     The n-th order homogeneous linear differential equation
-    \begin{equation}
+    \begin{equation}\tag{3.1.2}
         a_0(x)y^{(n)} + a_1(x)y^{(n-1)} + \cdots + a_{n-1}(x)y' + a_n(x)y = 0
     \end{equation}
-    always possesses $n$ solutions that are linearly independent. Further, if $f_1, f_2, \cdots f_n$ are $n$ linearly independent solutions of (3.1.6), then every solution $f$ of (3.1.6) can be expressed as a linear combination \[
+    always possesses $n$ solutions that are linearly independent. Further, if $f_1, f_2, \cdots f_n$ are $n$ linearly independent solutions of (\ref{eq2}), then every solution $f$ of (3.1.2) can be expressed as a linear combination \[
         c_1f_1(x) + c_2f_2(x) + \cdots + c_nf_n(x) = 0
     \] of these $n$ linearly independent soulutions by proper choice of the constants $c_1, c_2, \cdots, c_n$.
 \end{theorem}
@@ -148,11 +148,11 @@ We now consider the fundamental results concerning the homogeneous equation
     \begin{equation}
         y'' + y = 0
     \end{equation}
-    for all $x \in (-\infty, \infty)$. Further, we can show that these two solutions are linearly independent. Suppose $f$ is any solution of (4.7). Then by Theorem 3.1.4 $f$ can be expressed as a certain linear combination $c_1\sin x + c_2\cos x$ of the two linearly independent solutions  $\sin x$ and $\cos x$ by proper choice of $c_1$ and $c_2$. That is, there exist two particular constants $c_1$ and $c_2$ such that
+    for all $x \in (-\infty, \infty)$. Further, we can show that these two solutions are linearly independent. Suppose $f$ is any solution of (3.1.3). Then by Theorem 3.1.4 $f$ can be expressed as a certain linear combination $c_1\sin x + c_2\cos x$ of the two linearly independent solutions  $\sin x$ and $\cos x$ by proper choice of $c_1$ and $c_2$. That is, there exist two particular constants $c_1$ and $c_2$ such that
     \begin{equation}
         f(x) = c_1\sin x + c_2\cos x
     \end{equation}
-    for all $x \in (-\infty,\infty)$. For example, it can be easily verified that $f(x) = \sin(x+\pi/6)$ is a solution of the equation (3.1.7). Since \[
+    for all $x \in (-\infty,\infty)$. For example, it can be easily verified that $f(x) = \sin(x+\pi/6)$ is a solution of the equation (3.1.3). Since \[
         \sin \left( x + \frac{\pi}{6} \right) = \sin x \cos \frac{\pi}{6} + \cos x \sin \frac{\pi}{6} = \frac{\sqrt{3}}{2}\sin x + \frac{1}{2}\cos x,
     \] we see that the solution $\sin(x + \pi/6)$ can be expressed as the linear combination \[
         \frac{\sqrt{3}}{2}\sin x + \frac{1}{2}\cos x
@@ -161,15 +161,15 @@ We now consider the fundamental results concerning the homogeneous equation
 
 \begin{definition}{Fundamental Set of Solutions}{}
     If $f_1, f_2, \cdots, f_n$ are $n$ linearly independent solutions of the n-th order homogeneous linear differential equation
-     \begin{equation}
+    \begin{equation}\tag{3.1.2}
         a_0(x)y^{(n)} + a_1(x)y^{(n-1)} + \cdots + a_{n-1}(x)y' + a_n(x)y = 0
     \end{equation}
-    on $a \le x \le b$, then the set $f_1, f_2, \cdots, f_n$ is called a fundamental set of solutions of (3.1.9) and the function $f$ defined by \[
+    on $a \le x \le b$, then the set $f_1, f_2, \cdots, f_n$ is called a fundamental set of solutions of (\ref{eq2}) and the function $f$ defined by \[
         f(x) = c_1f_1(x) + c_2f_2(x) + \cdots + c_nf_n(x), \quad a \le x \le b,
-    \] where $c_1, c_2, \cdots, c_n$ are arbitrary constants, is called a general solution of (3.1.9 on  $a \le x \le b$.
+    \] where $c_1, c_2, \cdots, c_n$ are arbitrary constants, is called a general solution of (\ref{eq2}) on  $a \le x \le b$.
 \end{definition}
 
-Therefore, if we can find $n$ linearly independent solutions of (3.1.9), we can at once write the general solution of (3.1.9) as a general linear combination of these $n$ solutions.
+Therefore, if we can find $n$ linearly independent solutions of (\ref{eq2}), we can at once write the general solution of (3.1.2) as a general linear combination of these $n$ solutions.
 
 \begin{example}{}{}
     The solutions $e^x, e^{-x},$ and $e^{2x}$ of \[
@@ -192,6 +192,258 @@ Therefore, if we can find $n$ linearly independent solutions of (3.1.9), we can 
         \end{vmatrix}
     \] is called the Wronskian of these $n$ functions. We observe that $W(f_1, f_2, \cdots, f_n)$ is itself a real function defined on $a \le x \le b$. Its value at $x$ is denoted by  $W(f_1, f_2, \cdots, f_n)(x)$ or by $W[ f_1(x), f_2(x), \cdots, f_n(x) ]$.
 \end{definition}
+
+\begin{theorem}{}{}
+    The $n$ solutions $f_1, f_2, \cdots, f_n$ of the nth-order homogeneous linear DE (\ref{eq2}) are linearly independent on $a \le x \le b$ if and only if the Wronskian of $f_1, f_2, \cdots, f_n$ is different from zero for some $x$ on the interval $a \le x \le b$.
+\end{theorem}
+
+\begin{theorem}{}{}
+    The Wronskian of $n$ solutions $f_1, f_2, \cdots, f_n$ of (\ref{eq2}) is either identically zero on $a \le x \le b$ or else is never zero on $a \le x \le b$.
+\end{theorem}
+
+\begin{example}{}{}
+    We can apply Theorem 3.1.2 to show that the solutions $\sin x$ and $\cos x$ of \[
+        y'' + y = 0
+    \] are linearly independent. We find that \[
+        W(\sin x, \cos x) = 
+        \begin{vmatrix}
+            \sin x & \cos x \\
+            \cos x & -\sin x
+        \end{vmatrix} 
+        = -\sin^2x - \cos^2x = -1 \neq 0
+    \] for all real $x$. Thus, since $W(\sin x, \cos x) \neq 0$ for all real $x$, we conclude that $\sin x$ and $\cos x$ are indeed linearly independent solutions of the given DE on every real interval.
+\end{example}
+
+\begin{example}{}{}
+    The solutions $e^{x}, e^{-1}$, and $e^{2x}$ of \[
+        y''' - 2y'' - y' + 2y = 0
+    \] are linearly independent on every real interval, for \[
+        W(e^x, e^{-1}, e^{2x}) =
+        \begin{vmatrix}
+            e^{x} & e^{-1} & e^{2x} \\
+            e^{x} & -e^{-1} & 2e^{2x} \\
+            e^{x} & e^{-1} & 4e^{2x}
+        \end{vmatrix}
+        = e^{2x}
+        \begin{vmatrix}
+            1 & 1 & 1 \\
+            1 & -1 & 2 \\
+            1 & 1 & 4
+        \end{vmatrix} 
+        = -6e^{2x} \neq 0
+    \] for all real $x$.
+\end{example}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%  Reduction of Order  %
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Reduction of Order}
+
+\begin{theorem}{}{}
+    \\\textbf{Hypothesis:} Let $f$ be a nontrivial solutoin of the n-th order homogeneous linear differential equation
+    \begin{equation}\tag{3.1.2}
+        a_0(x)y^{(n)} + a_1(x)y^{(n-1)} + \cdots + a_{n-1}(x)y' + a_n(x)y = 0
+    \end{equation}
+    \textbf{Conclusion:} The transformation $y = f(x)v$ reduces Equation (\ref{eq2}) to an $(n-1)$th-order homogeneous linear different equation in the dependent variable $w = dv/dx$.
+\end{theorem}
+
+According to this theorem, id one nonzero solution of the nth-order homogeneous linear DE (\ref{eq2}) is known, then by making the appropriate transformation we may reduce the given equation to another homogeneous linear DE that is one order lower than the original. We'll now investigate the second-order ($n=2$) DE in detal.\\
+
+Suppose $f$ is a known nontrivial solution of the second-order homogeneous linear equation
+\begin{equation}
+    a_0(x)y'' + a_1(x)y' + a_2(x)y = 0
+\end{equation}
+Let's make the transformation
+\begin{equation}
+    y = f(x)v
+\end{equation}
+, where $f$ is the known solution of (3.1.5) and $v$ is a function of $x$ that will be determined. Then, differentiating, we obtain
+\begin{equation}
+    y' = f(x)v' + f'(x)v,
+\end{equation}
+\begin{equation}
+    y'' = f(x)v'' + 2f'(x)v' + f''(x)v.
+\end{equation}
+
+Substituting (3.1.6), (3.1.7), and (3.1.8) into (3.1.5), we obtain \[
+    a_0(x)[ y'' = f(x)v'' + 2f'(x)v' + f''(x)v ] + a_1(x)[ y' = f(x)v' + f'(x)v ] + a_2(x)f(x)v = 0
+\] or \[
+a_0(x)f(x)v'' + [ 2a_0(x)f'(x) + a_1f(x) ]v' + [ a_0(x)f''(x) + a_1(x)f'(x) + a_2(x)f(x) ]v = 0
+\]
+Since $f$ is a solution of (3.1.5), the coefficient of $v$ is zero, and so the last equation reduces to \[
+    a_0(x)f(x)v'' + [ 2a_0(x)f'(x) + a_1(x)f(x) ]v' = 0
+\]
+Letting $w = v'$, this becomes
+\begin{equation}
+    a_0(x)f(x) \: \frac{dw}{dx} + [ 2a_0(x)f'(x) + a_1(x)f(x) ]w = 0
+\end{equation}
+
+This is a first-order homogeneous linear DE in the dependent variable $w$. The equation is separable; thus, assuming $f(x) \neq 0$ and $a_0(x) \neq 0$, we may write \[
+    \frac{dw}{w} = -2 \left[ 2 \frac{f'(x)}{f(x)} + \frac{a_1(x)}{a_0(x)} \right] \: dx
+\]
+Thus integrating, we obtain \[
+    \ln|w| = -\ln[f(x)]^2 - \int{ \frac{a_1(x)}{a_0(x)} } \: d{x} + \ln|c|
+\] or \[
+w = \frac{ c\cdot \exp\left[ -\int{ \frac{a_1(x)}{a_0(x)} } \: d{x} \right] }{[ f(x) ]^2}
+\]
+This is the general solution of Equation (3.1.9); choosing the particular solution for which $c=1$, recalling that $dv/dw = w$, and integrating again, we now obtain \[
+    v = \int{ \frac{ \exp\left[ -\int{ \frac{a_1(x)}{a_0(x)} } \: d{x} \right] }{[ f(x) ]^2} } \: d{x} 
+\]
+Finally, from (3.1.6), we obtain \[
+    y = f(x) \int{ \frac{ \exp\left[ -\int{ \frac{a_1(x)}{a_0(x)} } \: d{x} \right] }{[ f(x) ]^2} } \: d{x} 
+\]
+If we denote the right side of the function by $g$, which is a solution of (3.1.5), we can write the general solution of (3.1.5) as the following linear combination \[
+    c_1f + c_2g
+\] where $c_1$ and $c_2$ are arbitrary constants.
+
+We also observe that $g$ and $f$ are linearly independent, since \[
+    W(f,g)(x) =
+    \begin{vmatrix}
+        f(x) & g(x) \\
+        f'(x) & g'(x)
+    \end{vmatrix} =
+    \begin{vmatrix}
+        f(x) & f(x)v \\
+        f'(x) & f(x)v' + f'(x)v
+    \end{vmatrix}
+    = [f(x)]^2v' = \exp\left[ -\int{\frac{a_1(x)}{a_0(x)}} \: d{x} \right] \neq 0
+\]
+
+\begin{theorem}{}{}
+    \\\textbf{Hypothesis:} Let $f$ be a nontrivial solution of the second-order homogeneous linear differential equation
+    \begin{equation}
+        a_0(x)y'' + a_1(x)y' + a_2(x)y = 0
+    \end{equation}
+    \textbf{Conclusion 1:} The transformation $y = f(x)v$ reduces (3.1.10) to the first-order linear homogeneous DE \[
+        a_0(x)f(x)\frac{dw}{dx} + [ 2a_0(x)f'(x) + a_1(x)f(x) ]w = 0
+    \] in the dependent variable $w$, where $w = v'$ \\
+    \textbf{Conclusion 2:} The particular solution \[
+        w = \frac{\exp\left[ -\int{ \frac{a_1(x)}{a_0(x)} } \: d{x} \right]}{[f(x)]^2}
+    \] of equation (3.1.10) gives rise to the function $v$, where \[
+    v(x) = \int{ \frac{\exp\left[ -\int{\frac{a_1(x)}{a_0(x)}} \: d{x} \right]}{[f(x)]^2} } \: d{x}
+    \] The function $g(x)$ defined by $g(x) = f(x)v(x)$ is then a solution of the second-order equation (3.1.10). \\
+    \textbf{Conclusion 3:} The original known solution $f$ and the new solution $g$ are linearly independent solutions of (3.1.10), and hence the general solution of (3.1.10) is \[
+        c_1f + c_2g
+    \] where $c_1$ and $c_2$ are arbitrary constants.
+\end{theorem}
+
+\begin{example}{
+        Given that $y=x$ is a solution of
+        \begin{equation}\tag{A}
+            (x^2+1)y'' - 2xy' + 2y = 0
+        \end{equation}
+        find a linearly independent solution by reducing the order.
+    }{}
+    First applying the transformation \[
+        y = xv
+    \] Then \[
+        y' = xv' + v, \text{ and } y'' = xv'' + 2v'
+    \] Substituting these into (A) we obtain \[
+    (x^2+1)(xv''+2v') - 2x(xv'+v) + 2xv = 0
+    \] \[ x(x^2+1)v'' + 2v' = 0 \]
+    Letting $w = v'$,
+    \[ x(x^2+1)\frac{dw}{dx} + 2w = 0 \]
+    \[ \int{\frac{dw}{w}} = -\int{\frac{2dx}{x(x^2+1)}} = \int{\left( -\frac{2}{x} + \frac{2x}{x^2+1} \right)} \: d{x} \]
+    \[ \ln|w| = \ln|x^2+1| - \ln|x|^2 + \ln|c| \]
+    \[ w = \frac{c(x^2+1)}{x^2} \]
+    Letting $c = 1$,
+    \[ v(x) = \int{\left( 1 + \frac{1}{x^2} \right)} \: d{x} = x - \frac{1}{x} \]
+    \[ \therefore g = f(x)v(x) = x\cdot\left( x-\frac{1}{x} \right) = x^2-1 \]
+    Hence, the general solution of (A) is \[
+        \boxed{ y = c_1x + c_2(x^2-1) }
+    \]
+\end{example}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  The Nonhomogeneous Equation  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{The Nonhomogeneous Equation}
+\begin{equation}\tag{3.1.1}
+    a_0(x)y^{(n)} + a_1(x)y^{(n-1)} + \cdots + a_{n-1}(x)y' + a_n(x)y = F(x)
+\end{equation}
+
+\begin{theorem}{}{}
+    \\\textbf{Hypothesis:}
+    \begin{enumerate}
+        \item Let $v$ be any solution of the given (nonhomogeneous) n-th order linear differential equation (\ref{eq1})
+        \item Let $u$ be any solution of the corresponding homogeneous equation
+            \begin{equation} \tag{3.1.2}
+                a_0(x)y^{(n)} + a_1(x)y^{(n-1)} + \cdots + a_{n-1}(x)y' + a_n(x)y = 0
+            \end{equation}
+    \end{enumerate}
+    \textbf{Conclusion:} Then $u + v$ is also a solution of the given (nonhomogeneous) equation (\ref{eq1})
+\end{theorem}
+
+\begin{theorem}{}{}
+    \\\textbf{Hypothesis:}
+    \begin{enumerate}
+        \item Let $y_p$ be a given solution of the nth-order nonhomogeneous linear equation (\ref{eq1}) involving no arbitrary constants.
+        \item Let \[
+            y_c = c_1y_1 + c_2y_2 + \cdots + c_ny_n
+        \] be the general solution of the corresponding homogeneous equation (\ref{eq2})
+    \end{enumerate}
+    \textbf{Conclusion:} Then every solution $\phi$ of the nth-order nonhomogeneous equation (\ref{eq1}) can be expressed in the form \[
+        y_c + y_p
+    \] that is, \[
+        c_1y_1 + c_2y_2 + \cdots + c_ny_n + y_p
+    \] for suitable choice of the $n$ arbitrary constants $c_1, c_2, \cdots, c_n$.
+\end{theorem}
+
+\begin{definition}{}{}
+    Consider the nth-order nonhomogeneous linear DE
+    \begin{equation} \tag{3.1.1}
+        a_0(x)y^{(n)} + a_1(x)y^{(n-1)} + \cdots + a_{n-1}(x)y' + a_n(x)y = F(x)
+    \end{equation}
+    and the corresponding homogeneous equation
+    \begin{equation} \tag{3.1.2}
+        a_0(x)y^{(n)} + a_1(x)y^{(n-1)} + \cdots + a_{n-1}(x)y' + a_n(x)y = 0
+    \end{equation}
+    \textbf{Complimentary Function:} $y_c =$ general solution of (\ref{eq2})\\
+    \textbf{Particular Solution:} $y_p =$ any solution of (\ref{eq1}) involving no arbitrary constant\\
+    \textbf{General Solution of (\ref{eq1}):} $y_c + y_p$
+\end{definition}
+
+\begin{example}{}{}
+    Consider the DE \[
+        y'' + y = x
+    \] The complimentary function \[
+        y_c = c_1\sin x + c_2\cos x
+    \] of the corresponding homogeneous DE \[
+        y'' + y = 0
+    \] A particular integral is \[
+        y_p = x
+    \] Thus the general solution is \[
+        y = y_c + y_p = c_1\sin x + c_2\cos x + x
+    \]
+\end{example}
+
+\begin{theorem}{}{}
+    \\\textbf{Hypothesis:}
+    \begin{enumerate}
+        \item Let $f_1$ be a particular integral of
+            \begin{equation}
+                a_0(x)y^{(n)} + a_1(x)y^{(n-1)} + \cdots + a_{n-1}(x)y' + a_n(x)y = F_1(x)
+            \end{equation}
+        \item Let $f_2$ be a particular integral of
+            \begin{equation}
+                a_0(x)y^{(n)} + a_1(x)y^{(n-1)} + \cdots + a_{n-1}(x)y' + a_n(x)y = F_2(x)
+            \end{equation}
+    \end{enumerate}
+    \textbf{Conclusion:} Then $k_1f_1 + k_2f_2$ is a particular integral of
+    \begin{equation}
+        a_0(x)y^{(n)} + a_1(x)y^{(n-1)} + \cdots + a_{n-1}(x)y' + a_n(x)y = k_1F_1(x) + k_2F_2(x)
+    \end{equation}
+\end{theorem}
+
+
+
+
+
+
 
 
 
