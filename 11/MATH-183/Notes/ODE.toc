@@ -32,3 +32,4 @@
 \contentsline {subsubsection}{\numberline {B}Case 1: Distinct Real Roots}{45}{subsubsection.3.2.2}%
 \contentsline {subsubsection}{\numberline {C}Case 2: Repeated Real Roots}{46}{subsubsection.3.2.3}%
 \contentsline {subsubsection}{\numberline {D}Case 3: Conjugate Complex Roots}{48}{subsubsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {E}An Initial-Value Problem}{49}{subsubsection.3.2.5}%

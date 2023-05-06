@@ -474,11 +474,11 @@ Suppose $y=e^{mx}$ is a solution for certain $m$. Then we have:
 Substituting in (\ref{eq3}) we obtain \[
     a_0m^ne^{mx} + a_1m^{n-1}e^{mx} + \cdots + a_{n-1}me^{mx} + a_ne^{mx} = 0
 \] or \[
-    e^{mx}( a_0m_n + a_1m^{n-1} + \cdots + a_{n-1}m + a_n ) = 0
+    e^{mx}( a_0m^n + a_1m^{n-1} + \cdots + a_{n-1}m + a_n ) = 0
 \]
 Since $e^{mx} \neq 0$, we obtain the polynomial equation in the unknown $m$ :
 \begin{equation} \label{eq4}
-    a_0m_n + a_1m^{n-1} + \cdots + a_{n-1}m + a_n = 0
+    a_0m^n + a_1m^{n-1} + \cdots + a_{n-1}m + a_n = 0
 \end{equation}
 This equation is called the \textbf{Auxiliary Equation} or the \textbf{Characteristic Equation} of the given differential equation (\ref{eq3}).\\~\\
 Note that (\ref{eq4}) is formally obtained from (\ref{eq3}). If $y=e^{mx}$ is a solution of (\ref{eq3}), then the constant $m$ must satisfy (\ref{eq4}). Hence, to solve (\ref{eq3}), we write the auxiliary equation (\ref{eq4}) and solve it for $m$.
@@ -670,6 +670,36 @@ Thus the part of the general solution corresponding to the nonrepeated conjugate
     \]
 \end{example}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  An Initial-Value Problem  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{20pt}
+\subsubsection{An Initial-Value Problem}
+
+\begin{example}{Solve the initial-value problem \[
+    y'' - 6y' + 25y = 0
+\]\[ y(0)=-3, y'(0)=-1 \]}{}
+    We already found the general solution of the DE in Example 3.2.5. It is \[
+        y = e^{3x}( c_1\sin{4x} + c_2\cos{4x} )
+    \] From this, we find \[
+        y' = e^{3x} [ (3c_1-4c_2)\sin{4x} + (4c_1+3c_2)\cos{} ]
+    \] Now, applying the initial condition $y(0)=-3$, we obtain
+    \[ -3 = e^{0}(c_1\sin{0} + c_2\cos{0}) \]
+    \[ \text{or, } c_2=-3 \]
+    Applying initial condition $y'(0)=-1$, we obtain \[
+        -1 = e^{0}[ (3c_1-4c_2)\sin{0} + (4c_1+3c_2)\cos{0} ]
+    \]\[ \text{or, } 4c_1 + 3c_2 = -1 \]
+    \[ \text{or, } c_1=2 \]
+    Thus we can write the solution \[
+        y = e^{3x}(2\sin{4x} - 3\cos{4x})
+    \] We can further modify it by multiplying $\sqrt{(2)^2 + (-3)^2} = \sqrt{13}$ with nominator and denominator
+    \[ y = \sqrt{13}e^{3x} \left[ \frac{2}{\sqrt{13}}\sin{4x} - \frac{3}{\sqrt{13}}\cos{4x} \right] \]
+    From this, we may express the solution in the alternative form \[
+        y = \sqrt{13}e^{3x}\sin( 4x + \phi )
+    \], where \[
+        \sin{\phi}=-\frac{3}{13,} \text{ and } \cos{\phi}=\frac{2}{\sqrt{13}}
+    \]
+\end{example}
 
 
 
