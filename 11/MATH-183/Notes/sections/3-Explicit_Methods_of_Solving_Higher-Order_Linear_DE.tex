@@ -805,7 +805,7 @@ each have the same corresponding homogeneous DE
     y'' - 2y' - 3y = 0
 \end{equation}
 Equation (3.3.6) has solutions $e^{3x}$ and $e^{-1}$ \[
-    \therefore y_c = c_1e^{3x} _ e^{-1}
+    \therefore y_c = c_1e^{3x} + e^{-1}
 \]
 The right member of (3.3.2), $2e^{4x}$, is not a solution of (3.3.6)
 \begin{equation}
@@ -822,10 +822,57 @@ And general solution \[
     y_{(3.3.4)} = c_1e^{3x} + e^{-1} + \frac{1}{2}xe^{4x}
 \]
 
+%%%%%%%%%%%%%%%%
+%  The Method  %
+%%%%%%%%%%%%%%%%
+\vspace{20pt}
+\subsubsection{The Method}
 
+\begin{definition}{UC function}{}
+    We'll call a function a UC function if it is either
+    \begin{enumerate}
+        \item a function defined by one of the following:
+            \begin{enumerate}[(i)]
+                \item $x_n$, where $n$ is a positive integer or zero,
+                \item $e^{ax}$, where $a$ is a constant and $a \neq 0$,
+                \item $\sin{(bx+c)}$, where $b$ and $c$ are constants, and $b \neq 0$,
+                \item $\cos{(bx+c)}$, where $b$ and $c$ are constants, and $b \neq 0$,
+            \end{enumerate}
+        \item or a function defined as a finite product of two or more functions of these four types.
+    \end{enumerate}
+\end{definition}
 
+\begin{definition}{UC set}{}
+    Consider a UC fucntion $f$. The set of functions consisting of $f$ itself and all linearly independent UC functions of which the successive derivatives of $f$ are either constant multiples or linear combinations will be called the UC set of $f$.
+\end{definition}
 
+\begin{example}{}{}
+    The function $f$ defined for all real $x$ by $f(x)=x^3$ is a UC function. Computing derivatives of $f$, we find \[
+        f'(x) = 3x^2, f''(x) = 6x, f'''(x) = 6, f^{(n)}(x) = 0 \text{ for } n>3
+    \]
+    The linearly independent UC functions of which the successive derivatives of $f$ are either constant multiples or linear combinations are those given by \[
+        x^2, x, 1
+    \]
+    Thus the UC set of $x^3$ is the set \[
+        S = {x^3, x^2, x, 1}
+    \]
+\end{example}
 
+\bgroup
+% \def\arraystretch{1.5}
+\begin{table}[h]
+\centering
+\begin{tabular}{l | p{0.21\linewidth} | p{0.5\linewidth}}
+      & UC function & UC set \\\hline\hline
+    1 & $x^n$ & $\left\{  x^n, x^{n-1}, x^{n-2}, \cdots, x, 1 \right\} $ \\\hline
+    2 & $e^{ax}$ & $\left\{ e^{ax} \right\}$ \\\hline
+    3 & $\sin{(bx+c)}$ or $\cos{(bx+c)}$ & $\left\{ \sin{(bx+c)}, \cos{(bx+c)}\right\} $ \\\hline
+    4 & $x^ne^{ax}$ & $\left\{ x^ne^{ax}, x^{n-1}e^{ax}, x^{n-2}e^{ax}, \cdots, xe^{ax}, e^{ax} \right\}$ \\\hline
+    5 & $x^n\sin{(bx+c)}$ or $x^n\cos{(bx+x)}$ & $\{ x^n\sin{(bx+c)}, x^n\cos{(bx+c)},$ $x^{n-1}\sin{(bx+c)}, x^{n-1}\cos{(bx+c)},$ $\cdots, x\sin{(bx+c)}, x\cos{(bx+c)},$ $\sin{(bx+c)}, \cos{(bx+c)} \} $ \\\hline
+    6 & $e^{ax}\sin{(bx+c)}$ or $e^{ax}\cos{(bx+c)}$ & $\left\{ e^{ax}\sin{(bx+c)}, e^{ax}\cos{(bx+c)} \right\}$ \\\hline
+    7 & $x^ne^{ax}\sin{(bx+c)}$ or $x^ne^{ax}\cos{(bx+x)}$ & $\{ x^ne^{ax}\sin{(bx+c)}, x^ne^{ax}\cos{(bx+c)},$ $x^{n-1}e^{ax}\sin{(bx+c)}, x^{n-1}e^{ax}\cos{(bx+c)},$ $\cdots, xe^{ax}\sin{(bx+c)}, xe^{ax}\cos{(bx+c)},$ $e^{ax}\sin{(bx+c)}, e^{ax}\cos{(bx+c)} \} $ \\\hline
+\end{tabular}
+\end{table}
 
 
 

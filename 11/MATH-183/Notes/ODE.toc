@@ -35,3 +35,4 @@
 \contentsline {subsubsection}{\numberline {E}An Initial-Value Problem}{52}{subsubsection.3.2.5}%
 \contentsline {subsection}{\numberline {3.3}The Method of Undetermined Coefficients}{52}{subsection.3.3}%
 \contentsline {subsubsection}{\numberline {A}Introduction; An Illustrative Example}{52}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {B}The Method}{55}{subsubsection.3.3.2}%
