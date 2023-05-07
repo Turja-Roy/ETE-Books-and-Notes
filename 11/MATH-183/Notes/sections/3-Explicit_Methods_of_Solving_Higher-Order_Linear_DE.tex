@@ -859,21 +859,45 @@ And general solution \[
 \end{example}
 
 \bgroup
-% \def\arraystretch{1.5}
+\def\arraystretch{1.33}
 \begin{table}[h]
 \centering
-\begin{tabular}{l | p{0.21\linewidth} | p{0.5\linewidth}}
+\begin{tabular}{p{0.05\linewidth} | p{0.21\linewidth} | p{0.45\linewidth}}
       & UC function & UC set \\\hline\hline
-    1 & $x^n$ & $\left\{  x^n, x^{n-1}, x^{n-2}, \cdots, x, 1 \right\} $ \\\hline
+    1 & $x^n$ & $\left\{ x^k : 0 \le k \le n , k \in \mathbb{N} \right\}$ \\\hline
     2 & $e^{ax}$ & $\left\{ e^{ax} \right\}$ \\\hline
-    3 & $\sin{(bx+c)}$ or $\cos{(bx+c)}$ & $\left\{ \sin{(bx+c)}, \cos{(bx+c)}\right\} $ \\\hline
-    4 & $x^ne^{ax}$ & $\left\{ x^ne^{ax}, x^{n-1}e^{ax}, x^{n-2}e^{ax}, \cdots, xe^{ax}, e^{ax} \right\}$ \\\hline
-    5 & $x^n\sin{(bx+c)}$ or $x^n\cos{(bx+x)}$ & $\{ x^n\sin{(bx+c)}, x^n\cos{(bx+c)},$ $x^{n-1}\sin{(bx+c)}, x^{n-1}\cos{(bx+c)},$ $\cdots, x\sin{(bx+c)}, x\cos{(bx+c)},$ $\sin{(bx+c)}, \cos{(bx+c)} \} $ \\\hline
+    3 & $\sin{(bx+c)}$ or $\cos{(bx+c)}$ & $\left\{ \sin{(bx+c)}, \cos{(bx+c)}\right\}$ \\\hline
+    4 & $x^ne^{ax}$ & $\left\{ x^ke^{ax} : 0 \le k \le n \right\}$ \\\hline
+    5 & $x^n\sin{(bx+c)}$ or $x^n\cos{(bx+x)}$ & $ \left\{ x^k\sin{(bx+c)} : 0 \le k \le n , k \in \mathbb{N} \right\} \cup \left\{ x^k\cos{(bx+c)} : 0 \le k \le n , k \in \mathbb{N} \right\} $ \\\hline
     6 & $e^{ax}\sin{(bx+c)}$ or $e^{ax}\cos{(bx+c)}$ & $\left\{ e^{ax}\sin{(bx+c)}, e^{ax}\cos{(bx+c)} \right\}$ \\\hline
-    7 & $x^ne^{ax}\sin{(bx+c)}$ or $x^ne^{ax}\cos{(bx+x)}$ & $\{ x^ne^{ax}\sin{(bx+c)}, x^ne^{ax}\cos{(bx+c)},$ $x^{n-1}e^{ax}\sin{(bx+c)}, x^{n-1}e^{ax}\cos{(bx+c)},$ $\cdots, xe^{ax}\sin{(bx+c)}, xe^{ax}\cos{(bx+c)},$ $e^{ax}\sin{(bx+c)}, e^{ax}\cos{(bx+c)} \} $ \\\hline
+    7 & $x^ne^{ax}\sin{(bx+c)}$ or $x^ne^{ax}\cos{(bx+x)}$ & $ \left\{ x^ke^{ax}\sin{(bx+c)} : 0 \le k \le n , k \in \mathbb{N} \right\} \cup $ $ \left\{ x^ke^{ax}\cos{(bx+c)} : 0 \le k \le n , k \in \mathbb{N} \right\} $ \\\hline
 \end{tabular}
 \end{table}
 
+\begin{example}{$f(x)=x^2\sin{x}$}{}
+    Here, $f$ is a product of two UC functions $x^2$ and $\sin{x}$. Computing derivatives, we find
+    \begin{align*}
+        f'(x) &= 2x\sin{x} + x^2\cos{x} \\
+        f''(x) &= 2\sin{x} + 4x\cos{x} - x^2\sin{x} \\
+        f'''(x) &= 6\cos{x} - 6x\sin{x} - x^2\cos{x}
+    \end{align*}
+    Thus the UC set \[
+        S = \left\{ x^2\sin{x}, x^2\cos{x}, x\sin{x}, x\cos{x}, \sin{x}, \cos{x} \right\}
+    \]
+    Also notice that the UC sets of $x^2$ and $\sin{x}$ are the following respectively:
+    \[ S_{x^2} = \left\{ x^2, x, 1 \right\} \]
+    \[ S_{\sin{x}} = \left\{ \sin{x}, \cos{x} \right\} \]
+\end{example}
+
+\begin{example}{$f(x) = x^3\cos{2x}$}{}
+    UC set of $x^3$ : \[
+        \left\{ x^3, x^2, x, 1 \right\}
+    \] UC set of $\cos{2x}$: \[
+        \left\{ \sin{2x}, \cos{2x} \right\}
+    \] Hence, the UC set of $f(x) = x^3\cos{2x}$: \[
+        S = \left\{ x^3\sin{2x}, x^3\cos{2x}, x^2\sin{2x}, x^2\cos{2x}, x\sin{2x}, x\cos{2x}, \sin{2x}, \cos{2x} \right\}
+    \]
+\end{example}
 
 
 
