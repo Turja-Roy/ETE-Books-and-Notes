@@ -442,7 +442,7 @@ We also observe that $g$ and $f$ are linearly independent, since \[
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  The Homogeneous Linear Equation with Constant Coefficients  %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{20pt}
+\vspace{20pt}\rule{3in}{1pt}
 \subsection{The Homogeneous Linear Equation with Constant Coefficients}
 
 %%%%%%%%%%%%%%%%%%
@@ -610,7 +610,7 @@ Thus the general solution of (3.2.3) may be written as \[
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  Case 3: Conjugate Complex Roots  %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\vspace{20pt}
 \subsubsection{Case 3: Conjugate Complex Roots}
 
 Now we suppose that the auxiliary equation has the complex number $a + bi$ as a nonrepeated root. Since the coefficients are real, the conjugate complex number $a - bi$ is also a nonrepeated root. The corresponding part of the solution is \[
@@ -702,8 +702,125 @@ Thus the part of the general solution corresponding to the nonrepeated conjugate
 \end{example}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  The Method of Undetermined Coefficients  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{20pt}\rule{3in}{1pt}
+\subsection{The Method of Undetermined Coefficients}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Introduction; An Illustrative Example  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\subsubsection{Introduction; An Illustrative Example}
+
+Now we consider the nonhomogeneous differential equation
+\begin{equation}
+    a_0y^{(n)} + a_1y^{(n-1)} + \cdots + a_{n-1}y' + a_ny = F(x)
+\end{equation}
+where the coefficients $a_0, a_1, \cdots, a_n$ are constants, but the nonhomogeneous term $F(x)$ is (in general) a nonconstant function of $x$.\\
+General solution \[
+    y = y_c + y_p
+\]
+
+\begin{example}{Introductory Example}{}
+    \begin{equation}
+        y'' - 2y' - 3y = 2e^{4x}
+    \end{equation}
+    We proceed to seek a particular integral $y_p$. Since the derivatives of $e^{4x}$ are constant multiples of $e^{4x}$, it seemsreasonable that the desired particular integral might also be constant multiple of $e^{4x}$ so that the 2nd derivative and 1st derivative of it and the function itself multiplied by the constants is equal to $2e^{4x}$.\\
+Let's assume
+\begin{equation}
+    y_p = Ae^{4x}
+\end{equation}
+Here $A$ is the undetermined coefficient to be determined. \[
+    y_p' = 4Ae^{4x}, y_p'' = 16Ae^{4x}
+\] Substituting into (3.3.2), we obtain
+\begin{align*}
+    16Ae^{4x} - 8Ae^{4x} - 3Ae^{4x} &= 2e^{4x} \\
+    5Ae^{4x} &= 2e^{4x} \\
+    A &= \frac{2}{5}
+\end{align*}
+\[ \therefore y_p = \frac{2}{5}e^{4x} \]
+
+\rule{4in}{0.25pt}
+
+Now consider the differential equation
+\begin{equation}
+    y'' - 2y' - 3y = 2e^{3x}
+\end{equation}
+Here if we assume
+\begin{equation}
+    y_p = Ae^{3x}
+\end{equation}
+Then \[
+    y_p' = 3Ae^{3x}, y_p'' = 9Ae^{3x}
+\]
+Substituting into (3.3.4), we obtain
+\begin{align*}
+    9Ae^{3x} - 2(3Ae^{3x}) - 3(Ae^{3x}) &= 2e^{3x} \\
+    0 \cdot Ae^{3x} &= 2e^{3x} \\
+    0 &= 2e^{3x}
+\end{align*}
+which is not possible, and hence there is no particular integral of the form (3.3.5).
+
+\rule{4in}{0.25pt}
+
+Let's examine the homogeneous equation 
+\begin{equation}
+    y'' - 2y' - 3y = 0
+\end{equation}
+Auxiliary equation: \[
+    m^2 - 2m - 3 = 0
+\] \[ m = 3, -1 \]
+$\therefore e^{-1}$ and $e^{3x}$ are linearly independent solutions.\\
+The failure to obtain a solution of the form (3.3.5) is due to the fact that  $e^{3x}$ is a solution of the corresponding homogeneous equation of (3.3.4). Since $e^{3x}$ satisfies the homogeneous equation, it reduces the left member of the equation to 0, not $2e^{3x}$.
+
+\rule{4in}{0.25pt}
+
+So, now what form of solution should we seek? Recall that in case of double root of the AE, a solution linearly independent of the basis solution $e^{mx}$ was $xe^{mx}$. Let's seek a PI in this form now:
+\begin{equation}
+    y_p = Axe^{3x}
+\end{equation}
+Then \[
+    y_p' = 3Axe^{3x} + Ae^{3x}, y_p'' = 9Axe^{3x} + 6Ae^{3x}
+\]
+Substituting into (3.3.4), we obtain
+\begin{align*}
+    (9Axe^{3x} + 6Ae^{3x}) - 2(3Axe^{3x} + Ae^{3x}) - 3Axe^{3x} &= 2e^{3x} \\
+    0 \cdot xe^{3x} + 4Ae^{3x} &= 2e^{3x} \\
+    A &= \frac{1}{2}
+\end{align*}
+\[ \therefore y_p = \frac{1}{2}xe^{3x} \]
+\end{example}
+
+The differential equation
+\begin{equation}\tag{3.3.2}
+    y'' - 2y' - 3y = 2e^{4x}
+\end{equation}
+\begin{equation}\tag{3.3.4}
+    \text{ and } y'' - 2y' - 3y = 2e^{4x}
+\end{equation}
+each have the same corresponding homogeneous DE
+\begin{equation}\tag{3.3.6}
+    y'' - 2y' - 3y = 0
+\end{equation}
+Equation (3.3.6) has solutions $e^{3x}$ and $e^{-1}$ \[
+    \therefore y_c = c_1e^{3x} _ e^{-1}
+\]
+The right member of (3.3.2), $2e^{4x}$, is not a solution of (3.3.6)
+\begin{equation}
+    \therefore y_{p,(3.3.2)} = Ae^{4x}
+\end{equation}
+And general solution \[
+    y_{(3.3.2)} = c_1e^{3x} + e^{-1} + \frac{2}{5}e^{4x}
+\]
+The right member of (3.3.4), $e^{2e^{3x}}$ is a solution of (3.3.6)
+\begin{equation}
+    \therefore y_{p, (3.3.4)} = Axe^{3x}
+\end{equation}
+And general solution \[
+    y_{(3.3.4)} = c_1e^{3x} + e^{-1} + \frac{1}{2}xe^{4x}
+\]
 
 
 

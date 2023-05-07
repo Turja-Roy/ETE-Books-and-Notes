@@ -1,35 +1,37 @@
-\contentsline {section}{\numberline {1}Differential Equations and Their Solutions}{2}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Classification of Differential Equations}{2}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Solutions}{3}{subsection.1.2}%
-\contentsline {subsubsection}{\numberline {A}Nature of Solutions}{3}{subsubsection.1.2.1}%
-\contentsline {subsubsection}{\numberline {B}Methods of Solution}{4}{subsubsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.3}Initial-Value and Boundary-Value Problems, and Existence of Solutions}{5}{subsection.1.3}%
-\contentsline {subsubsection}{\numberline {A}Initial-value Problems and Boundary-value Problems}{5}{subsubsection.1.3.1}%
-\contentsline {subsubsection}{\numberline {B}Existence of Solutions}{6}{subsubsection.1.3.2}%
-\contentsline {section}{\numberline {2}First Order Equations for Which Exact Solutions Are Obtainable}{9}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Exact Differential Equations and Integrating Factors}{9}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {A}Standard Forms of First-Order Differential Equations}{9}{subsubsection.2.1.1}%
-\contentsline {subsubsection}{\numberline {B}Exact Differential Equations}{9}{subsubsection.2.1.2}%
-\contentsline {subsubsection}{\numberline {C}The Solution of Exact Differential Equations}{11}{subsubsection.2.1.3}%
-\contentsline {subsubsection}{\numberline {D}Integrating Factors}{12}{subsubsection.2.1.4}%
-\contentsline {subsection}{\numberline {2.2}Separable Equations and Equations Reducible to this Form}{14}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {A}Separable Equations}{14}{subsubsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {B}Homogeneous Equations}{15}{subsubsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.3}Linear Equations and Bernoulli Equations}{24}{subsection.2.3}%
-\contentsline {subsubsection}{\numberline {A}Linear Equation}{24}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {B}Bernoulli Equations}{27}{subsubsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.4}Special Integrating Factors and Transformations}{29}{subsection.2.4}%
-\contentsline {subsubsection}{\numberline {A}Finding Integrating Factors}{30}{subsubsection.2.4.1}%
-\contentsline {subsubsection}{\numberline {B}A Special Transformation}{32}{subsubsection.2.4.2}%
-\contentsline {section}{\numberline {3}Explicit Methods of Solving Higher-Order Linear Differential Equations}{34}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Basic Theory of Linear Differential Equations}{34}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {A}Definition and Basic Existence Theorem}{34}{subsubsection.3.1.1}%
-\contentsline {subsubsection}{\numberline {B}The Homogeneous Equation}{35}{subsubsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {C}Reduction of Order}{39}{subsubsection.3.1.3}%
-\contentsline {subsubsection}{\numberline {D}The Nonhomogeneous Equation}{42}{subsubsection.3.1.4}%
-\contentsline {subsection}{\numberline {3.2}The Homogeneous Linear Equation with Constant Coefficients}{44}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {A}Introduction}{44}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {B}Case 1: Distinct Real Roots}{45}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {C}Case 2: Repeated Real Roots}{46}{subsubsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {D}Case 3: Conjugate Complex Roots}{48}{subsubsection.3.2.4}%
-\contentsline {subsubsection}{\numberline {E}An Initial-Value Problem}{49}{subsubsection.3.2.5}%
+\contentsline {section}{\numberline {1}Differential Equations and Their Solutions}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Classification of Differential Equations}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Solutions}{4}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {A}Nature of Solutions}{4}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {B}Methods of Solution}{5}{subsubsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.3}Initial-Value and Boundary-Value Problems, and Existence of Solutions}{6}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {A}Initial-value Problems and Boundary-value Problems}{6}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {B}Existence of Solutions}{8}{subsubsection.1.3.2}%
+\contentsline {section}{\numberline {2}First Order Equations for Which Exact Solutions Are Obtainable}{11}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Exact Differential Equations and Integrating Factors}{11}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {A}Standard Forms of First-Order Differential Equations}{11}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {B}Exact Differential Equations}{11}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {C}The Solution of Exact Differential Equations}{13}{subsubsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {D}Integrating Factors}{14}{subsubsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.2}Separable Equations and Equations Reducible to this Form}{16}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {A}Separable Equations}{16}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {B}Homogeneous Equations}{18}{subsubsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.3}Linear Equations and Bernoulli Equations}{27}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {A}Linear Equation}{27}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {B}Bernoulli Equations}{29}{subsubsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.4}Special Integrating Factors and Transformations}{32}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {A}Finding Integrating Factors}{32}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {B}A Special Transformation}{34}{subsubsection.2.4.2}%
+\contentsline {section}{\numberline {3}Explicit Methods of Solving Higher-Order Linear Differential Equations}{37}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Basic Theory of Linear Differential Equations}{37}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {A}Definition and Basic Existence Theorem}{37}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {B}The Homogeneous Equation}{38}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {C}Reduction of Order}{42}{subsubsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {D}The Nonhomogeneous Equation}{45}{subsubsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.2}The Homogeneous Linear Equation with Constant Coefficients}{47}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {A}Introduction}{47}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {B}Case 1: Distinct Real Roots}{47}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {C}Case 2: Repeated Real Roots}{49}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {D}Case 3: Conjugate Complex Roots}{50}{subsubsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {E}An Initial-Value Problem}{52}{subsubsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.3}The Method of Undetermined Coefficients}{52}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {A}Introduction; An Illustrative Example}{52}{subsubsection.3.3.1}%
