@@ -715,7 +715,7 @@ Thus the part of the general solution corresponding to the nonrepeated conjugate
 \subsubsection{Introduction; An Illustrative Example}
 
 Now we consider the nonhomogeneous differential equation
-\begin{equation}
+\begin{equation} \label{eq5}
     a_0y^{(n)} + a_1y^{(n-1)} + \cdots + a_{n-1}y' + a_ny = F(x)
 \end{equation}
 where the coefficients $a_0, a_1, \cdots, a_n$ are constants, but the nonhomogeneous term $F(x)$ is (in general) a nonconstant function of $x$.\\
@@ -898,6 +898,155 @@ And general solution \[
         S = \left\{ x^3\sin{2x}, x^3\cos{2x}, x^2\sin{2x}, x^2\cos{2x}, x\sin{2x}, x\cos{2x}, \sin{2x}, \cos{2x} \right\}
     \]
 \end{example}
+
+\vspace{10pt}
+\begin{note}{}
+    Now we outline the method of undetermined coefficients for finding the particular integral $y_p$ of
+    \begin{equation} \tag{3.3.1}
+        a_0y^{(n)} + a_1y^{(n-1)} + \cdots + a_{n-1}y' + a_ny = F(x)
+    \end{equation}
+    where $F(x)$ is a finite linear combination \[
+        F = A_1u_1 + A_2u_2 + \cdots + A_mu_m
+    \] of UC functions $u_1, u_2, \cdots, u_m$, the $A_i$ being unknown constants. Assuming that $y_c$ is already been obtained, we proceed as follows:
+    \begin{enumerate}
+        \item For each of UC function $u_1, u_2, \cdots, u_m$, form the corresponding UC set $S_1, S_2, \cdots, S_m$.
+        \item Suppose one of the UC sets $S_j$ is a subset of another UC set $S_k$. We omit $S_j$ from further calculations.
+        \item Now, suppose among the remaining UC sets, one set $S_l$ includes solutions of the corresponding homogeneous equation. We multiply each member of $S_l$ by the lowest positive integral power of $x$. We repeat the process if needed.
+        \item Now form a linear combination of all the sets remaining after Step 2 and Step 3, with unknown constants (undetermined coefficients).
+        \item Determine the unknown coefficients by substituting the linear combination into the differential equation (\ref{eq5})
+    \end{enumerate}
+\end{note}
+
+\begin{example}{Solve the differential equation \[
+    y'' - 2y' + y = x^2e^{x}
+\]}{}\vspace{-20pt}
+    UC set of $x^2e^{x}$ is \[
+        S = \left\{ x^2e^{x}, xe^{x}, e^{x} \right\}
+    \]
+    Now corresponding homogeneous DE: \[
+        y'' - 3y' + y = 0
+    \]
+    \[ \text{ AE: } m^2 - 2m + 2 = 0 \]
+    \[ m = 1, 1 \]
+    \[ \therefore y_c = (c_1 + c_2x)e^{x} \]
+    Hence the UC set have to be processed.
+    \[ S' = \left\{ x^3e^{x}, x^2e^{x}, xe^{x} \right\} \]
+    \[ S'' = \left\{ x^4e^{x}, x^3e^{x}, x^2e^{x} \right\} \]
+    Hence the complimentary function, \[
+        y_p = Ax^4e^{x} + Bx^3e^{x} + Cx^2e^{x}
+    \]
+    Differentiating it, we obtain \[
+        y_p' = Ax^4e^{x} + (4A+B)x^3e^{x} + (3B+C)x^2e^{x} + 2Cxe^{x}
+    \] \[
+        y_p'' = Ax^4e^{x} + (8A+B)x^3e^{x} + (12A+6B+C)x^2e^{x} + (6B+4C)xe^{x} + 2Ce^{x}
+    \]
+    Substituting them into the given DE, we obtain \[
+        \left[ Ax^4e^{x} + (8A+B)x^3e^{x} + (12A+6B+C)x^2e^{x} + (6B+4C)xe^{x} + 2Ce^{x} \right] \]\[- 2 \left[ Ax^4e^{x} + (4A+B)x^3e^{x} + (3B+C)x^2e^{x} + 2Cxe^{x} \right] \]\[+ \left[ Ax^4e^{x} + Bx^3e^{x} + Cx^2e^{x} \right] = x^2e^{x}
+    \]
+    or \[ 12Ax^2 + 6Bx + 2C = x^2 \]
+    Equating the coefficients, we obtain \[
+        A = \frac{1}{12}, B = 0, C = 0
+    \]
+    Hence, the general solution is \[
+        y = y_c + y_p
+    \] \[
+        \boxed{ y = (c_1 + c_2x)e^{x} + \frac{1}{12}x^4e^{x} }
+    \]
+\end{example}
+
+\begin{example}{Solve the differential equation \[
+    y'' - 2y' - 3y = 2e^{x} - 10\sin{x}
+\]}{}
+    The corresponding homogeneous equation: \[
+        y'' - 2y' - 3y = 0
+    \] AE : \[
+        m^2 - 2m - 3 = 0 \text{ or, } m = 3, -1
+    \] Complimentary function, \[
+        y_c = c_1e^{3x} + c_2e^{-x}
+    \]
+    Now, UC sets of $e^{x}$ and $\sin{x}$ are respectively: \[
+        S_1 = \{ e^{x} \}, S_2 = \{ \sin{x}, \cos{x} \}
+    \]
+    Therefore, the linear combination \[
+        y_p = Ae^{x} + B\sin{x} + C\cos{x}
+    \] \[ y_p' = Ae^{x} + B\cos{x} - C\sin{x} \]
+    \[ y_p'' = Ae^{x} - B\sin{x} - C\cos{x} \]
+    Substituting into the given DE, \[
+        ( Ae^{x} - B\sin{x} - C\cos{x} ) - 2( Ae^{x} + B\cos{x} - C\sin{x} ) - 3( Ae^{x} + B\sin{x} + C\cos{x} ) = 2e^{x} - 10\sin{x}
+    \] \[
+        -4Ae^{x} + ( -4B+2C )\sin{x} + ( -4C-2B )\cos{x} = 2e^{x} - 10\sin{x}
+    \]
+    Equating the coefficients, we obtain \[
+        A = -\frac{1}{2}, B = 2, C = -1
+    \]
+    Hence, the PI, \[
+        y_p = -\frac{1}{2}e^{x} + 2\sin{x} - \cos{x}
+    \]
+    Finally, the general solution of the equation is \[
+        y = y_c + y_p
+    \] \[
+        \boxed{ y = c_1e^{3x} + c_2e^{-x} - \frac{1}{2}e^{x} + 2\sin{x} - \cos{x} }
+    \]
+\end{example}
+
+\begin{example}{Solve the differential equation \[
+    y'' + 4y = 12x^2 - 16x\cos{2x}
+\]}{}\vspace{-20pt}
+    Corresponding homogeneous equation: \[
+        y'' + 4y = 0
+    \] Auxiliary equation: \[
+        m^2 + 4 = 0 \quad \therefore m = \pm 2i
+    \] Therefore, the complimentary function: \[
+        y_c = c_1\sin{2x} + c_2\cos{2x}
+    \]
+    Now, UC sets of $x^2$ and $x\cos{2x}$ are
+    \[ S_1 = \{ x^2, x, 1 \} \]
+    \[ S_2 = \{ x\sin{2x}, x\cos{2x}, \sin{2x}, \cos{2x} \} \]
+    \[ S_2' = \{ x^2\sin{2x}, x^2\cos{2x}, x\sin{2x}, x\cos{2x} \} \]
+    $\therefore$ Particular integral: \[
+        y_p = Ax^2 + Bx + C + Dx^2\sin{2x} + Ex^2\cos{2x} + Fx\sin{2x} + Gx\cos{2x}
+    \]
+    \begin{equation*}
+        \begin{split}
+            y_p' =& 2Ax + B + 2Dx^2\cos{2x} + 2Dx\sin{2x} - 2Ex^2\sin{2x}\\
+            &+ 2Ex\cos{2x} + 2Fx\cos{2x} + F\sin{2x} - 2Gx\sin{2x} + G\cos{2x}
+        \end{split}
+    \end{equation*}
+    \begin{equation*}
+        \begin{split}
+            y_p'' =& 2A - 4Dx^2\sin{2x} - 4Ex^2\cos{2x} - (8E+4F)x\sin{2x}\\
+            &+ (8D-4G)x\cos{2x} + (2D-4G)\sin{2x} + (2E+4F)\cos{2x}
+        \end{split}
+    \end{equation*}
+    Substituting $y_p''$ and $y_p$ into the given equation, we obtain \[
+        y_p'' + 4y_p = 12x^2 - 16x\cos{2x}
+    \]
+    \begin{equation*}
+        \begin{split}
+            \left[ 2A &- 4Dx^2\sin{2x} -4Ex^2\cos{2x} - (8E+4F)x\sin{2x}\\
+                      &+ (8D-4G)x\cos{2x} + (2D-4G)\sin{2x} + (2E+4F)\cos{2x} \right] + 4 \left[ Ax^2 + Bx\\
+                      &+ C + Dx^2\sin{2x} + Ex^2\cos{2x} + Fx\sin{2x} + Gx\cos{2x} \right] = 12x^2 - 16x\cos{2x}
+        \end{split}
+    \end{equation*}
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
