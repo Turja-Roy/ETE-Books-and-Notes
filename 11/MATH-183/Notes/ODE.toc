@@ -36,3 +36,5 @@
 \contentsline {subsection}{\numberline {3.3}The Method of Undetermined Coefficients}{52}{subsection.3.3}%
 \contentsline {subsubsection}{\numberline {A}Introduction; An Illustrative Example}{52}{subsubsection.3.3.1}%
 \contentsline {subsubsection}{\numberline {B}The Method}{55}{subsubsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.4}Variationg of Parameters}{59}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {A}The Method}{59}{subsubsection.3.4.1}%

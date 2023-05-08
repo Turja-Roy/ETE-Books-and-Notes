@@ -1045,6 +1045,121 @@ And general solution \[
 \end{example}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Variation of Parameters  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{20pt}\rule{3in}{1pt}
+\subsection{Variationg of Parameters}
+
+%%%%%%%%%%%%%%%%
+%  The Method  %
+%%%%%%%%%%%%%%%%
+
+\subsubsection{The Method}
+
+The method of undetermined coefficients is quite straightforward, but its application is also restricted. Thus we seek a general method that applies in all cases. Let a nonhomogeneous linear differential equation be
+\begin{equation}
+    a_0(x)y'' + a_1(x)y' + a_2(x)y = F(x)
+\end{equation}
+The corresponding homogeneous equation is
+\begin{equation}
+    a_0(x)y'' + a_1(x)y' + a_2(x)y = 0
+\end{equation}
+Suppose the complimentary functions \[
+    y_c = c_1y_1(x) + c_2y_2(x)
+\]
+Now, if we replace $c_1$ and $c_2$ by functions $v_1$ and $v_2$ respectively, which will be determined such that the function
+\begin{equation}
+    v_1(x)y_1(x) + v_2(x)y_2(x)
+\end{equation}
+will be a particular integral of (3.4.1). We can write \[
+    y_p(x) = v_1(x)y_1(x) + v_2(x)y_2(x)
+\] \[
+    y_p'(x) = v_1(x)y_1'(x) + v_2(x)y_2'(x) + v_1'(x)y_1(x) + v_2'(x)y_2(x)
+\] Assuming \[
+    v_1'(x)y_1(x) + v_2'(x)y_2(x) = 0
+\], we get \[
+    y_p'(x) = v_1(x)y_1'(x) + v_2(x)y_2'(x)
+\] \[
+    y_p''(x) = v_1(x)y_1''(x) + v_2(x)y_2''(x) + v_1'(x)y_1'(x) + v_2'(x)y_2'(x)
+\]
+Substituting into (3.4.1),
+\begin{equation*}
+    \begin{split}
+        a_0(x)  &[ v_1(x)y_1''(x) + v_2(x)y_2''(x) + v_1'(x)y_1'(x) + v_2'(x)y_2'(x) ]\\
+                & + a_1(x)[ v_1(x)y_1'(x) + v_2(x)y_2'(x) ]\\
+                & + a_2(x)[ v_1(x)y_1(x) + v_2(x)y_2(x) ] = F(x)
+    \end{split}
+\end{equation*} or,
+\begin{equation*}
+    \begin{split}
+        v_1(x)  &[a_0(x)y_1'' + a_1(x)y_1' + a_2(x)y_1]\\
+                & + v_1(x)[a_0(x)y_2'' + a_1(x)y_2' + a_2(x)y_2]\\
+                & + a_0(x)[ v_1'(x)y_1'(x) + v_2'(x)y_2'(x) ] = F(x)
+    \end{split}
+\end{equation*}
+Since $y_1$ and $y_2$ are solutions of (3.4.2), we get \[
+     v_1(x)y_1(x) + v_2(x)y_2(x) = \frac{F(x)}{a_0(x)}
+\]
+Now, $v_1$ and $v_2$ have to be chosen such that the following system of equation is satisfied:
+\begin{align*}
+    y_1(x)v_1'(x) + y_2(x)v_2'(x) &= 0 \\
+    y_1'(x)v_1'(x) + y_2'(x)v_2'(x) &= \frac{F(x)}{a_0(x)}
+\end{align*}
+Now,
+\[
+    \begin{bmatrix}
+        y_1(x) & y_2(x) \\
+        y_1'(x) & y_2'(x)
+    \end{bmatrix}
+    \begin{bmatrix}
+        v_1'(x) \\
+        v_2'(x)
+    \end{bmatrix} = 
+    \begin{bmatrix}
+        0 \\
+        \frac{F(x)}{a_0(x)}
+    \end{bmatrix} 
+\] \[
+    \begin{bmatrix}
+        v_1'(x) \\
+        v_2'(x)
+    \end{bmatrix} = 
+    \frac{
+        \begin{bmatrix}
+            y_2'(x) & -y_2(x) \\
+            -y_1'(x) & y_1(x)
+        \end{bmatrix}
+    }{
+        \begin{vmatrix}
+            y_1(x) & y_2(x) \\
+            y_1'(x) & y_2'(x)
+        \end{vmatrix}
+    }
+    \begin{bmatrix}
+        0 \\
+        \frac{F(x)}{a_0(x)}
+    \end{bmatrix} = 
+    \frac{
+        \begin{bmatrix}
+            - F(x)y_2(x) \\
+            F(x)y_1(x)
+        \end{bmatrix}
+    }{
+        a_0(x)W[ y_1(x), y_2(x) ]
+    }
+\] Thus we obtain $v_1$ and $v_2$ defined by
+\begin{equation}
+    \boxed{ 
+    \begin{split}
+        v_1(x) &= - \int^{x} { \frac{F(t)y_2(t)}{a_0(t)W[y_1(t),y_2(t)]} } \: d{t} \\
+        v_2(x) &= \int^{x} { \frac{F(t)y_1(t)}{a_0(t)W[y_1(t),y_2(t)]} } \: d{t}
+    \end{split}
+    }
+\end{equation}
+Therefore, a particular integral $y_p$ of (3.4.1) is defined by \[
+    y_p = v_1(x)y_1(x) + v_2(x)y_2(x)
+\] where $v_1$ and $v_2$ are defined by (3.4.4).
 
 
 
