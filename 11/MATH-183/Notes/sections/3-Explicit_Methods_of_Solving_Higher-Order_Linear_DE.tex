@@ -1020,14 +1020,28 @@ And general solution \[
     \end{equation*}
     Substituting $y_p''$ and $y_p$ into the given equation, we obtain \[
         y_p'' + 4y_p = 12x^2 - 16x\cos{2x}
-    \]
+    \] or
     \begin{equation*}
         \begin{split}
-            \left[ 2A &- 4Dx^2\sin{2x} -4Ex^2\cos{2x} - (8E+4F)x\sin{2x}\\
-                      &+ (8D-4G)x\cos{2x} + (2D-4G)\sin{2x} + (2E+4F)\cos{2x} \right] + 4 \left[ Ax^2 + Bx\\
-                      &+ C + Dx^2\sin{2x} + Ex^2\cos{2x} + Fx\sin{2x} + Gx\cos{2x} \right] = 12x^2 - 16x\cos{2x}
+            [ 4Ax^2 &+ 4Bx + (2A+4C) - 8Ex\sin{2x} + 8Dx\cos{2x}\\
+            &+ (2D-4G)\sin{2x} + (2E+4F)\cos{2x} ] = 12x^2 - 16x\cos{2x}
         \end{split}
     \end{equation*}
+    Equating the coefficients, we obtain
+    \begin{align*}
+        4A &= 12 && A = 3 \\
+        4B &= 0 && B = 0 \\
+        2A+4C &= 0 && C = -\frac{3}{2} \\
+        8D &= -16 && D = -2 \\
+        8E &= 0 && E = 0 \\
+        2E + 4F &= 0 && F = 0 \\
+        2D - 4G &= 0 && G = -1
+    \end{align*}
+    Hence, the general solution is \[
+        y = y_c + y_p
+    \] \[
+        \boxed{ y = c_1\sin{2x} + c_2\cos{2x} + 3x^2 - \frac{3}{2} - 2x^2\sin{2x} - x\cos{2x} }
+    \]
 \end{example}
 
 
