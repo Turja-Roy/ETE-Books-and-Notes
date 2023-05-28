@@ -102,8 +102,7 @@ The denominator of these fractions are getting larger and fast approaching $0 = 
 
 \subsection{Continuity}
 \begin{definition}{Continuity}
-    
-    \\ A function $f(x)$ is said to be continuous at $x=a$ if,
+    A function $f(x)$ is said to be continuous at $x=a$ if,
     \begin{enumerate}[(i)]
         \item $\lim_{x \to a^-} f(x)$ exists
         \item $\lim_{x \to a^+} f(x)$ exists
@@ -113,14 +112,12 @@ The denominator of these fractions are getting larger and fast approaching $0 = 
 \end{definition}
 
 \begin{definition}{Cauchy's Definition of Continuity}
-    
     A function $f:A \to \mathbb{R}$ is continuous at a point $c\in A$ if \[
         \forall \epsilon>0, \exists\delta>0 : \forall x\in A, |x-c|<\delta \implies |f(x)-f(c)|<\epsilon
     \]
 \end{definition}
 
 \begin{theorem}{Properties of Continuous Functions}
-    
     Let $f(x)$ and $g(x)$ be two functions of $x$ each being continuous at $x=a$. For $\lim_{x \to a} f(x) = l$ and $\lim_{x \to a} g(x) = m$, the following statements are true:
     \begin{enumerate}[(i)]
         \item $ \lim_{x \to a} \{ f(x)\pm g(x) \} = \lim_{x \to a} f(x) \pm \lim_{x \to a} g(x) = f(a)\pm g(a) $
@@ -141,7 +138,6 @@ The denominator of these fractions are getting larger and fast approaching $0 = 
 \subsection{Discontinuity}
 
 \begin{definition}{Discontinuous Function}
-    
     A function $f(x)$ is said to be discontinuous for $x=a$ if $f(x)$ does not satisfy at least one of the conditions of continuity in Definition 2.1.1. \\~\\
 
     \underline{\textbf{Discontinuities are:}}
@@ -193,8 +189,7 @@ A function $f(x)$ having a discontinuity at a point $x=a$ may oscillate finitely
             -3-2x, & \text{ if } x \ge \frac{3}{2}
         \end{cases}
     \end{equation*}
-    }
-    
+    }{}
     \[ \text{LHL } \lim_{x \to \frac{3}{2}^-} f(x) = \lim_{x \to \frac{3}{2}^-} \left\{ 3-2 \left( \frac{3}{2} \right) \right\} = 0 \]
     \[ \text{RHL } \lim_{x \to \frac{3}{2}^+} f(x) = \lim_{x \to \frac{3}{2}^+} \left\{ -3-2 \left( \frac{3}{2} \right) \right\} = -6 \]
     \[ f \left( \frac{3}{2} \right) = -3-2 \left( \frac{3}{2} \right)) = -6 \]
@@ -204,8 +199,7 @@ A function $f(x)$ having a discontinuity at a point $x=a$ may oscillate finitely
 
 \begin{example}{Show that the function \[
     f(x) = \frac{x-2}{x-1}
-\] has an infinite discontinuity at $x=1$.}
-    
+\] has an infinite discontinuity at $x=1$.}{}
     $f(x)$ has an infinite discontinuity at $x=a$, if \(lim_{x \to 0} \{ L_R - L_L \} = \infty\). Here,
     \[ f(1) = -\frac{1}{0} \text{ is undefined } \] Hence $f(x)$ is discontinuous at $x=1$. Now,
     \begin{align*}
@@ -216,14 +210,12 @@ A function $f(x)$ having a discontinuity at a point $x=a$ may oscillate finitely
     Hence, the discontinuity at $x=1$ is infinite.
 \end{example}
 
-\begin{example}{Discontinuity of the function $f(x) = \frac{1}{x-a}\sin{\frac{1}{x-a}}$}
-    
+\begin{example}{Discontinuity of the function $f(x) = \frac{1}{x-a}\sin{\frac{1}{x-a}}$}{}
     As $x \to a$, $(x-a) \to 0$. Hence, the function oscillates infinitely as $x \to a$.
 \end{example}
 
 
-\begin{theorem}{Continuity of some elementary functions}
-    
+\begin{theorem}{Continuity of some elementary functions}{}
     The following functions are continuous for all values of $x$ 
     \begin{enumerate}[(i)]
         \item $f(x) = x^n$ when $n$ is any rational number except at $x=a$ when $n$ is negative.

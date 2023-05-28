@@ -1,10 +1,10 @@
-\contentsline {section}{\numberline {1}Limit}{2}{}%
-\contentsline {subsection}{\numberline {1.1}Limit of a Sequence}{2}{}%
-\contentsline {subsection}{\numberline {1.2}Functional Limit}{4}{}%
-\contentsline {subsubsection}{\numberline {1.2.1}Left hand limit and Right hand limit}{6}{}%
-\contentsline {subsubsection}{\numberline {1.2.2}Asymptotes}{8}{}%
-\contentsline {subsubsection}{\numberline {1.2.3}End Behavior Model}{8}{}%
-\contentsline {section}{\numberline {2}Continuity and Discontinuity}{10}{}%
-\contentsline {subsection}{\numberline {2.1}Discussion: Examples of Dirichlet and Thomae}{10}{}%
-\contentsline {subsection}{\numberline {2.2}Continuity}{12}{}%
-\contentsline {subsection}{\numberline {2.3}Discontinuity}{12}{}%
+\contentsline {section}{\numberline {1}Limit}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Limit of a Sequence}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Functional Limit}{5}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Left hand limit and Right hand limit}{7}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Asymptotes}{9}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.3}End Behavior Model}{10}{subsubsection.1.2.3}%
+\contentsline {section}{\numberline {2}Continuity and Discontinuity}{13}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Discussion: Examples of Dirichlet and Thomae}{13}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Continuity}{15}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Discontinuity}{16}{subsection.2.3}%

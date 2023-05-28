@@ -6,6 +6,7 @@
 \usepackage{caption}
 \usepackage{xcolor}
 \usepackage[most]{tcolorbox}
+\usepackage{hyperref}
 \usepackage{cleveref}
 
 
@@ -15,9 +16,10 @@
 \tcbuselibrary{theorems,skins,hooks}
 \newtcbtheorem[number within=subsection]{definition}{Definition}%
 {
-    theorem style=definition,
+    % theorem style=definition,
     enhanced,
-	before skip=5mm,after skip=2mm, colback=cyan!5,colframe=cyan!80!black,boxrule=0.5mm,
+    % breakable,
+	before skip=2mm,after skip=2mm, colback=cyan!5,colframe=cyan!80!black,boxrule=0.5mm,
 	attach boxed title to top left={xshift=1cm,yshift*=1mm-\tcboxedtitleheight},
 	boxed title style={frame code={
 					\path[fill=cyan]
@@ -38,16 +40,23 @@
 	title={#2},#1
 }{def}
 
+% \newcommand{\definition}[2]{
+% \begin{definition}{#1}{}
+%     #2
+% \end{definition}
+% }
+
 
 %%%%%%%%%%%%%
 %  Theorem  %
 %%%%%%%%%%%%%
 \tcbuselibrary{theorems,skins,hooks}
-\newtcbtheorem[use counter from=definition]{theorem}{Theorem}%
+\newtcbtheorem[number within=subsection]{theorem}{Theorem}%
 {
     theorem style=plain,
     enhanced,
-    colframe=geen,
+    breakable,
+    colframe=green!50!black,
     boxrule=1pt,
     titlerule=0mm,
     toptitle=1mm,
@@ -64,33 +73,33 @@
 %%%%%%%%%%%%%%%
 %  Corollary  %
 %%%%%%%%%%%%%%%
-% \tcbuselibrary{theorems,skins}
-% \newtcbtheorem[use counter from=theorem]{corollary}{Corollary}%
-% {
-%     theorem style=definition,
-%     enhanced,
-%     colframe=geen,
-%     boxrule=1pt,
-%     titlerule=0mm,
-%     toptitle=1mm,
-%     bottomtitle=1mm,
-%     fonttitle=\bfseries,
-%     % fontupper=\normalsize,
-%     coltitle=cyan!50!black,
-%     colbacktitle=cyan!15!white,
-%     colback=gray!10,
-% }{corl}
+\tcbuselibrary{theorems,skins}
+\newtcbtheorem[number within=tcb@cnt@theorem]{corollary}{Corollary}%
+{
+    theorem style=plain,
+    enhanced,
+    colframe=green,
+    frame hidden,
+    titlerule=0mm,
+    toptitle=1mm,
+    bottomtitle=1mm,
+    fonttitle=\bfseries,
+    fontupper=\mdseries\itshape,
+    coltitle=green!30!black,
+    colbacktitle=cyan!15!white,
+    colback=green!10,
+    description font=\bfseries\sffamily
+}{corl}
 
 
 %%%%%%%%%%%%%
 %  Example  %
 %%%%%%%%%%%%%
 \tcbuselibrary{theorems,skins,hooks}
-\newtcbtheorem[number within=section]{example}{Example}%
+\newtcbtheorem[number within=subsection]{example}{Example}%
 {
 	enhanced,
 	breakable,
-    before skip=5mm, after skip=2mm,
 	colback = gray!5,
 	frame hidden,
 	boxrule = 0sp,
@@ -111,17 +120,22 @@
 \tcbuselibrary{theorems,skins,hooks}
 \newtcbtheorem[number within=section]{exercise}{Exercise}%
 {
-    enhanced,
-    breakable,
-    colback=black!5,
-    colframe=black!30,
-    left=0.5em,
-    before skip=3mm, after skip=2mm,
-    boxrule=0pt,
-    boxsep=0pt,
-    arc=0pt,
-    outer arc=0pt,
-    borderline west={3pt}{0pt}{black!30},
+	enhanced,
+	breakable,
+	colback = gray!15,
+	frame hidden,
+	boxrule = 0sp,
+	borderline west = {2pt}{0pt}{black},
+    borderline north = {4pt}{0pt}{black},
+	sharp corners,
+	% detach title,
+	before upper = \tcbtitle\par\smallskip,
+    toptitle = 15pt,
+    bottomtitle = 10pt,
+    coltitle = white,
+    colbacktitle = gray!60!black,
+	fonttitle = \bfseries\sffamily,
+	description font = \mdseries\bfseries
 }{exc}
 
 %%%%%%%%%%

@@ -22,7 +22,6 @@
 \end{minipage} \\~\\
 
 \begin{definition*}{Function}
-
     A rule associating a unique output to a given input.
 \end{definition*}
 
@@ -42,12 +41,11 @@
 \end{tikzpicture}
 \end{center}
 
-\begin{definition*}{Limit of variable}
-
+\begin{definition}{Limit of variable}
     A constant $a$ is said to be the limit of the variable $x$, if \[
         0 < |x-a| < \delta
     \] where $\delta$ is a pre-assigned positive quantity as small as we please.
-\end{definition*}
+\end{definition}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -57,13 +55,11 @@
 \subsection{Limit of a Sequence}
 
 \begin{definition}{Sequence}
-
     A \textit{sequence} is a function whose domain is $N$.\\
     Given a function $f:N \to \mathbb{R}$, $f(n)$ is the $n$th term on the list. The notation for sequences reinforces this familiar Understanding.
 \end{definition}
 
-\begin{example}{Each of the following are common ways to describe a sequence}.
-
+\begin{example}{Each of the following are common ways to describe a sequence}{}
     \begin{enumerate}[(i)]
         \item $ \left( 1,\frac{1}{2},\frac{1}{3},\frac{1}{4},\cdots \right)  $
         \item $ \left( \frac{1+n}{n} \right)_{n=1}^{\infty} = \left( \frac{2}{1},\frac{3}{2},\frac{4}{3},\cdots \right)  $
@@ -73,14 +69,12 @@
 \end{example}
 
 \begin{definition}{Convergence of a Sequence}
-    
     A sequence $(a_n)$ \textit{converges} to a real number $a$ if \[
         \forall\epsilon,\exists N\in\mathbb{N} : n \ge N \implies |a_n-a|<\epsilon
     \] To indicate that $(a_n)$ converges to $a$, we write either $\lim a_n=a $ or $(a_n) \to a$.
 \end{definition}
 
 \begin{definition}{$\epsilon$-neighbourhood and $\delta$-neighbourhood}
-    
 \textbf{$\epsilon$-neighbourhood:}
     \[ \forall \epsilon > 0, U_\epsilon (a) = \{ x\in\mathbb{R} : |x-a| < \epsilon \} = (a-\epsilon, a+\epsilon) \]
     \textbf{$\delta$-neighbourhood:}
@@ -89,7 +83,6 @@
 \end{definition}
 
 \begin{definition}{Convergence of a Sequence: Topological Version}
-    
     A sequence $(a_n)$ converges to $a$ if, given any $\epsilon$-neighbourhood $U_\epsilon(a)$ of $a$, there exists a point in the sequence after which all of the terms are in $U_\epsilon(a)$. In other words, every $\epsilon$-neighbourhood contains all but a finite number of the terms $(a_n)$.
 \end{definition}
 \begin{center}
@@ -99,15 +92,13 @@
 
 The natural number $N$ in the original version of the definition is the point where the sequence $(a_n)$ enters $U_\epsilon(a)$, never to leave. It should be apparent that \textit{the value of $N$ depends on the choice of $\epsilon$}. The smaller the $\epsilon$-neighbourhood, the larger the $N$ may have to be.
 
-\begin{example}{Prove that \[ \lim \left( \frac{n+1}{n} \right) =1 \]}
-    
+\begin{example}{Prove that \[ \lim \left( \frac{n+1}{n} \right) =1 \]}{}
     Let's consider an arbitrary $\epsilon>0$. Choose $N\in \mathbb{N}$ with $N>\frac{1}{\epsilon}$. To verify that the choice of $N$ is appropriate, let $n\in\mathbb{N}$ satisfy $n \ge N$. Then, $n \ge N$ implies $n>\frac{1}{\epsilon}$, which is the same as saying $\frac{1}{n}<\epsilon$. Finally this means \[
         \left| \frac{n+1}{n} - 1 \right| < \epsilon \text{ \quad as desired. } \qed
     \] 
 \end{example}
 
 \begin{note}
-    
     To prove the previous example, let's work in the backward direction. To prove the convergence, we have to make sure (according to the definition) $|a_n-a|<\epsilon$, i.e \[
         \left| \frac{n+1}{n}-1 \right| < \epsilon \text{ or, } \frac{1}{n}<\epsilon \text{ or, } n>\frac{1}{\epsilon}
     \] So, we have to find out when or where $n>\frac{1}{\epsilon}$ is true. If we choose $N > \frac{1}{\epsilon}$, our statement holds, and thus we prove the convergence.
@@ -118,8 +109,7 @@ The natural number $N$ in the original version of the definition is the point wh
         \item $\lim \frac{1}{6n^2+1}=0$ 
         \item $\lim \frac{3n+1}{2n+5}=\frac{3}{2}$
         \item $\lim \frac{2}{\sqrt{n+3}}=0$
-    \end{enumerate}}
-    
+    \end{enumerate}}{}
     \textbf{(a)} Let's consider $\varepsilon>0$. Choose $N\in\mathbb{N}$ with $N>\frac{1}{\sqrt{6\varepsilon}}$. For any $n \ge N$ \[
         n>\frac{1}{\sqrt{6\varepsilon}} \text{ or, } 6n^2>\frac{1}{\varepsilon} \text{ or, } \varepsilon>\frac{1}{6n^2}
     \] which finally gives \[ \left| \frac{1}{6n^2+1}-0 \right| <\varepsilon \qed \] 
@@ -145,8 +135,7 @@ The natural number $N$ in the original version of the definition is the point wh
     \] 
 \end{example}
 
-\begin{note}[Scratch]
-
+\begin{note}
     \textbf{Scratch works for solving previous examples} \\
     \begin{minipage}{0.3\textwidth}
         \textbf{(a)}
@@ -177,15 +166,13 @@ The natural number $N$ in the original version of the definition is the point wh
     \end{minipage}
 \end{note}
 
-\begin{definition}{Bounded Sequence}
-    
+\begin{definition}{Bounded Sequence}{}
     A sequence $(x_n)$ is bounded if \[
         \exists M>0 : \forall n\in \mathbb{N}, |x_n|\le M
     \] Geometrically, this means that we can find and interval $[-M,M]$ that contains every term in the sequence $(x_n)$.
 \end{definition}
 
-\begin{theorem}{}
-
+\begin{theorem}{}{}
     Every convergent sequence is bounded
 \end{theorem}
 
@@ -202,8 +189,7 @@ Considering a function $f:A \to R$, a limit point $c$ of $A$ is a point with the
     \caption{\small Definition of Functional Limit}
 \end{figure}
 
-\begin{definition}{$\epsilon-\delta$ Version}
-
+\begin{definition}{$\epsilon-\delta$ Version}{}
 Let $f: A \to \mathbb{R}$ and let c be a limit point of the domain $A$. \[
     \lim_{x \to c} f(x) = L \iff (\forall \epsilon>0, \exists\delta>0 : \forall x \in A, 0 < |x-c| < \delta \implies |f(x)-L| < \epsilon)
 \]
@@ -215,8 +201,7 @@ Likewise, \[
 \]
 \end{definition}
 
-\begin{definition}{Topological Version}
-
+\begin{definition}{Topological Version}{}
     Let $f : A \to \mathbb{R}$ and let c be a limit point of the domain of A. We can say, \[
         \lim_{x \to c} f(x)=L \iff ( \forall U_\epsilon(L), \exists U_\delta(c) : \forall x \in A, x \in U_\delta(c) \land x \neq c \implies f(x) \in U_\epsilon(L) )
     \] \\
@@ -224,8 +209,7 @@ Likewise, \[
 
 
 \begin{example}{(i) If $f(x) = 3x+1$, prove that $ \lim_{x \to 2} f(x) = 7 $ \\
-    (ii) Show that $\lim_{x \to 2} g(x) = 4$ where $g(x)=x^2$.}
-
+    (ii) Show that $\lim_{x \to 2} g(x) = 4$ where $g(x)=x^2$.}{}
     \textbf{(i)} Let $\epsilon>0$. The definition requires we produce a $\delta>0$ so that $0<|x-2|<\delta$ leads to the conclusion $|f(x)-7|<\epsilon$ \[
         |f(x)-7| = |(3x+1)-7| = |3x-6| = 3|x-2|
     \]
@@ -239,8 +223,7 @@ Likewise, \[
     \] and hence, the limit is proved. \\~\\
 \end{example}
 
-\begin{example}{From the definition of $(\delta,\epsilon)$ show that $\lim_{x \to 3} (2x^3-3x^2-18x+29)=2$}
-
+\begin{example}{From the definition of $(\delta,\epsilon)$ show that $\lim_{x \to 3} (2x^3-3x^2-18x+29)=2$}{}
     Let for a given $\epsilon>0$, however small $0<|x-3|<\lambda<1$ ------(1)
     \begin{align*}
         \therefore |2x^3-3x^2-18x+29 - 2| &= |2x^3-3x^2-18x+27| \\
@@ -268,12 +251,10 @@ Informally speaking, we can say $L^-$ is the LHL of the function $f$ at a point 
     \lim_{x \to a^+} f(x) = L^+
 \]
 
-\begin{definition}{Left Hand Limit}
-
+\begin{definition}{Left Hand Limit}{}
     \[ L^- = \lim_{x \to a^-} f(x) \iff \left( \forall\epsilon>0,\exists\delta : \forall x, 0<(a-x)<\delta \implies |f(x)-L^-|<\epsilon \right) \]
 \end{definition}
-\begin{definition}{Right Hand Limit}
-
+\begin{definition}{Right Hand Limit}{}
 \[
     L^+ = \lim_{x \to a^+} f(x) \iff \left( \forall\epsilon>0,\exists\delta : \forall x, 0<(x-a)<\delta \implies |f(x)-L^+|<\epsilon \right) 
 \]
@@ -288,8 +269,7 @@ Informally speaking, we can say $L^-$ is the LHL of the function $f$ at a point 
 \[ -\epsilon < x-5 < \epsilon \]
 \[ 5-\epsilon < x < 5+\epsilon \]
 
-\begin{theorem}{Relation between one-sided and two-sided limits}
-    
+\begin{theorem}{Relation between one-sided and two-sided limits}{}
     Limit of a function at point $a$ exists if:
     \begin{enumerate}[(i)]
         \item $\lim_{x \to a^-} f(x)$ exists
@@ -299,7 +279,7 @@ Informally speaking, we can say $L^-$ is the LHL of the function $f$ at a point 
     That is, \[
         \lim_{x \to a} f(x) = L \iff \lim_{x \to a^-} f(x) = \lim_{x \to a^+} f(x) = L 
     \]
-\end{theorem} \\~\\
+\end{theorem}\vspace{10pt}
 
 \begin{minipage}{0.6\textwidth}
     \begin{alignat*}{2}
@@ -333,22 +313,20 @@ Informally speaking, we can say $L^-$ is the LHL of the function $f$ at a point 
                 -1+2x &\text{ for }x>\frac{1}{2}
             \end{cases}
         \end{equation*}
-    }
+    }{}
+    For $x=0$ :
+    \[ \text{LHL} = \lim_{x \to 0^-} f(x) = \lim_{x \to 0^-} \{ 1 + 2 \times 0 \} = 1 \]
+    \[ \text{RHL} = \lim_{x \to 0^+} f(x) = \lim_{x \to 0^+} \{ 1 - 2 \times 0 \} = 1 \]
+    \[ f(0) = 1-2\times0 = 1 \]
+    Thus we get, $\lim_{x \to 0} f(x) = 1 = f(0)$. i.e The function is continuous at $x=0$ \\~\\
 
-        For $x=0$ :
-        \[ \text{LHL} = \lim_{x \to 0^-} f(x) = \lim_{x \to 0^-} \{ 1 + 2 \times 0 \} = 1 \]
-        \[ \text{RHL} = \lim_{x \to 0^+} f(x) = \lim_{x \to 0^+} \{ 1 - 2 \times 0 \} = 1 \]
-        \[ f(0) = 1-2\times0 = 1 \]
-        Thus we get, $\lim_{x \to 0} f(x) = 1 = f(0)$. i.e The function is continuous at $x=0$ \\~\\
-
-        For $x=\frac{1}{2}$ :
-        \[ \text{LHL} = \lim_{x \to \frac{1}{2}^-} f(x) = \lim_{x \to \frac{1}{2}^-} \left\{ 1 - 2\left( \frac{1}{2} \right)  \right\} = 0 \]
-        \[ \text{RHL} = \lim_{x \to \frac{1}{2}^+} f(x) = \lim_{x \to \frac{1}{2}^+} \left\{ -1 + 2\left( \frac{1}{2} \right)  \right\} = 0 \]
-        As LHL=RHL, we can say that limit exists at $x=\frac{1}{2}$. However, the function is discontinuous at $x=\frac{1}{2}$ since $f\left( \frac{1}{2} \right) $ doesn't exist.
+    For $x=\frac{1}{2}$ :
+    \[ \text{LHL} = \lim_{x \to \frac{1}{2}^-} f(x) = \lim_{x \to \frac{1}{2}^-} \left\{ 1 - 2\left( \frac{1}{2} \right)  \right\} = 0 \]
+    \[ \text{RHL} = \lim_{x \to \frac{1}{2}^+} f(x) = \lim_{x \to \frac{1}{2}^+} \left\{ -1 + 2\left( \frac{1}{2} \right)  \right\} = 0 \]
+    As LHL=RHL, we can say that limit exists at $x=\frac{1}{2}$. However, the function is discontinuous at $x=\frac{1}{2}$ since $f\left( \frac{1}{2} \right) $ doesn't exist.
 \end{example}
 
-\begin{theorem}{Fundamental Theorems on Limits}
-    
+\begin{theorem}{Fundamental Theorems on Limits}{}
     If $\lim_{x \to a} f(x) = l$ and $\lim_{x \to a} g(x) = m$, where $l$ and $m$ are finite quantities and $c$ is a constant,
     \begin{enumerate}[(i)]
         \item $ \lim_{x \to a} \{ f(x) \pm g(x) \} = l \pm m $
@@ -361,8 +339,7 @@ Informally speaking, we can say $L^-$ is the LHL of the function $f$ at a point 
     \end{enumerate}
 \end{theorem}
 
-\begin{theorem}{Sequential Criterion for Functional Limits}
-    
+\begin{theorem}{Sequential Criterion for Functional Limits}{}
     Given a function $f:A \to \mathbb{R}$ and a limit point $c$ of $A$, the following two statements are equivalent:
     \begin{enumerate}[(i)]
         \item $\lim_{x \to c} f(x) = L$ 
@@ -370,8 +347,7 @@ Informally speaking, we can say $L^-$ is the LHL of the function $f$ at a point 
     \end{enumerate}
 \end{theorem}
 
-\begin{theorem}{The Squeeze/Sandwitch Theorem}
-   
+\begin{theorem}{The Squeeze/Sandwitch Theorem}{}
     If there is a $c>0$ such that \[
         f(x)\le g(x)\le h(x)
     \] for all $x\in(a-c,a)\cup(a,a+c)$ (i.e $x$ in a deleted neighbourhood of $c$), if \[
@@ -381,7 +357,7 @@ Informally speaking, we can say $L^-$ is the LHL of the function $f$ at a point 
         \includegraphics[scale=0.5]{SqueezeTheorem.png}
         \captionof{figure}{\small Squeeze Theorem}
     \end{center}
-\end{theorem} \\~\\
+\end{theorem}\vspace{10pt}
 
 
 %%%%%%%%%%%%%%%%
@@ -391,8 +367,7 @@ Informally speaking, we can say $L^-$ is the LHL of the function $f$ at a point 
 \subsubsection{Asymptotes}
 Greek \textit{asymptotos} means `nonintersecting'. Asymptote is infinitesimally close to a curve, but never touches it.
 
-\begin{definition}{Asymptote}
-
+\begin{definition}{Asymptote}{}
     An asymptote of a curve $f(x)$ is a line such that the distance between the curve and the line approaches zero as one or both of the $x$ and $y$ coordinates approach infinity. \\
     There are 3 types of asymptotes:
     \begin{enumerate}
@@ -402,25 +377,23 @@ Greek \textit{asymptotos} means `nonintersecting'. Asymptote is infinitesimally 
     \end{enumerate}
 \end{definition}
 
+
 \begin{center}
     \includegraphics[scale=0.4]{Types of asymptotes.png}
     \captionof{figure}{\small Types of asymptotes}
 \end{center}
 
-\begin{definition}{Vertical asymptote}
-    
+\begin{definition}{Vertical asymptote}{}
     The line $x=a$ is a vertical asymptote of the function $f(x)$ if $f$ approaches infinity as $x$ approaches $a$. That is, either \[
         \lim_{x \to a^-} f(x) = \pm \infty, \text{ or } \lim_{x \to a^+} f(x) = \pm \infty, \text{ or both. }
     \]
 \end{definition}
-\begin{definition}{Horizontal asymptote}
-
+\begin{definition}{Horizontal asymptote}{}
     The horizontal line $y=c$ is a horizontal asymptote of the function $g(x)$ if \[
         \lim_{x \to -\infty} g(x) = c, \text{ or } \lim_{x \to +\infty} g(x) = c
     \]
 \end{definition}
-\begin{definition}{Oblique asymptote}
-
+\begin{definition}{Oblique asymptote}{}
     A function $f(x)$ is asymptotic to the straight line $y=mx+b$ $(m \neq 0)$ if \[
         \lim_{x \to +\infty} [ f(x) - (mx+b) ] = 0, \text{ or } \lim_{x \to -\infty} [ f(x) - (mx+b) ] = 0
     \]
@@ -452,8 +425,7 @@ Greek \textit{asymptotos} means `nonintersecting'. Asymptote is infinitesimally 
 \subsubsection{End Behavior Model}
 For numerically large values of $x$, we can sometimes model the behavior of a complicated function by a simpler one that acts virtually in the same way.
 
-\begin{example}{Let $f(x) = 3x^4 - 2x^3 + 3x^2 - 5x + 6$ and $g(x) = 3x^4$. Show that while $f$ and $g$ are quite different for numerically small values of $x$, they are virtually identical for $|x|$ large.}
-    
+\begin{example}{Let $f(x) = 3x^4 - 2x^3 + 3x^2 - 5x + 6$ and $g(x) = 3x^4$. Show that while $f$ and $g$ are quite different for numerically small values of $x$, they are virtually identical for $|x|$ large.}{}
     We can test the claim that $g(x)$ models $f(x)$ for numerically large values of $x$ by taking the ratio of the functions as $x \to \pm \infty$. \\
     \begin{align*}
         \lim_{x \to \pm\infty} \frac{f(x)}{g(x)} &= \lim_{x \to \pm\infty} \frac{3x^4-2x^3+3x^2-5x+6}{3x^4} \\
@@ -463,8 +435,7 @@ For numerically large values of $x$, we can sometimes model the behavior of a co
     convincing evidence that $f$ and $g$ behave alike for $|x|$ large.
 \end{example}
 
-\begin{definition}{End Behavior Model}
-
+\begin{definition}{End Behavior Model}{}
     The function $g(x)$ is a
     \begin{enumerate}[(a)]
         \item left end behavior model for f(x) if and only if \[ \lim_{x \to -\infty} \frac{f(x)}{g(x)} = 1 \]
@@ -477,8 +448,7 @@ For numerically large values of $x$, we can sometimes model the behavior of a co
     \begin{enumerate}[(a)]
         \item $f(x) = \frac{2x^5+x^4-x^2+1}{3x^2-5x+7}$
         \item $g(x) = \frac{2x^3-x^2+x-1}{5x^3+x^2+x-5}$
-    \end{enumerate}}
-    
+    \end{enumerate}}{}
     \textbf{(a)} $2x^5$ is an end behavior model for the numerator of $f$, and $3x^2$ for the denominator. This makes \[
         \frac{2x^5}{3x^2} = \frac{2}{3}x^2
     \] an end behavior model for $f$. \\~\\
@@ -487,8 +457,7 @@ For numerically large values of $x$, we can sometimes model the behavior of a co
     \] an end behavior model for $g$.
 \end{example}
 
-\begin{example}{Let $f(x)=x+e^{-x}$. Show that $g(x)=x$ is a right end behavior model for $f$ while $h(x)=e^{-x}$ is a left end behavior model for $f$.}
-    
+\begin{example}{Let $f(x)=x+e^{-x}$. Show that $g(x)=x$ is a right end behavior model for $f$ while $h(x)=e^{-x}$ is a left end behavior model for $f$.}{}
     On the right, \[
         \lim_{x \to \infty} \frac{f(x)}{g(x)} = \lim_{x \to \infty} \frac{x+e^{-x}}{x} = \lim_{x \to \infty} \left( 1+\frac{e^{-x}}{x} \right) = 1
     \] On the left, \[
