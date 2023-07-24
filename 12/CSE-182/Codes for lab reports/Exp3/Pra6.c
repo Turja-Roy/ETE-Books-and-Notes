@@ -12,7 +12,7 @@ int main()
     }
     else if ( a==b && a==c ){
         printf("The triangle is equilateral.\n");
-    } else if ( a==b || a==c ) {
+    } else if ( (a==b || a==c) || b==c ) {
         printf("The triangle is isosceles.\n");
     } else {
         printf("The triangle is scalene.\n");

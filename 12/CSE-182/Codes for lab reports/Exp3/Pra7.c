@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 int main()
 {
@@ -13,12 +14,12 @@ int main()
         printf("The equation has no real root.\n");
     }
     else if ( D == 0 ) {
-        double x = -b / 2.0;
+        double x = -b / (2.0*a);
 
         printf("The root of the equation is %lf\n", x);
     } else {
-        double x1 = (-b + D)/2.0;
-        double x2 = (-b - D)/2.0;
+        double x1 = (-b + sqrt(D))/(2.0*a);
+        double x2 = (-b - sqrt(D))/(2.0*a);
         
         printf("The roots of the equation are %lf and %lf\n", x1, x2);
     }
