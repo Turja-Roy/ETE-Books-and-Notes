@@ -23,7 +23,7 @@ int main()
         printf("The electricity bill is Rs. %.2lf\n", bill);
     }
     else {
-        bill = 50*0.5 + 100*0.75 + 100*1.2 + (unit-250)*1.5;
+        bill = unit*1.5;
         bill += bill * (0.2);
         printf("The electricity bill is Rs. %.2lf\n", bill);
     }
