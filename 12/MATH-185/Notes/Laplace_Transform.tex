@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=0.75in]{geometry}
+\usepackage[document]{ragged2e}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\input{preamble.tex}
+\usepackage[scr]{rsfso}
+
+\newcommand{\Lap}{\mathscr{L}}
+
+\title{
+    \textbf{Laplace Transform}
+}
+
+\author{
+    Turja Roy\\
+    ID: 2108052
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Definition, Existence, and Basic Properties  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Definition, Existence, and Basic Properties of the Laplace Transform}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Definition and Existence  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Definition and Existence}
+
+\begin{definition}{Laplace Transform}{}
+    Let $F$ be a real-valued function of the real variable $t$, defined for $t>0$. Let $s$ be a variable that we shall assume to be real, and consider the function $f$ defined by
+    \begin{equation} \label{eq1}
+        f(s) = \int_{0}^{\infty} {e^{-st} F(t)} \: d{t} 
+    \end{equation}
+    for all values of $s$ for which this integral exists. The function $f$ defined by the integral \eqref{eq1} is called the Laplace Transform of the function $F$. We shall denote the Laplace transform of $F$ by $\Lap\{F(t)\}$.\\
+    Thus the Laplace transform of a function $f$ is given by
+    \begin{equation} \label{eq2}
+        \Lap\{ F(t) \} = f(s) = \int_{0}^{\infty} {e^{-st} F(t)} \: d{t}  = \lim_{R \to \infty} \int_{0}^{R} {e^{-st} F(t)} \: d{t} 
+    \end{equation}
+\end{definition}
+
+Some ways to write Laplace transforms:\\
+\[ \Lap{F(t)} = f(s) = \int_{0}^{\infty} { e^{-st} F(t) } \: d{t} \]
+\[ \Lap{G(t)} = g(s) \]
+\[ \Lap{u(t)} = \tilde{u}(s) \]
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
