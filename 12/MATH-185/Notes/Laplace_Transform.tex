@@ -5,6 +5,7 @@
 \graphicspath{ {./images/} }
 \input{preamble.tex}
 \usepackage[scr]{rsfso}
+\renewcommand{\arraystretch}{2.5}
 
 \newcommand{\Lap}{\mathscr{L}}
 
@@ -49,6 +50,35 @@ Some ways to write Laplace transforms:\\
 \[ \Lap{F(t)} = f(s) = \int_{0}^{\infty} { e^{-st} F(t) } \: d{t} \]
 \[ \Lap{G(t)} = g(s) \]
 \[ \Lap{u(t)} = \tilde{u}(s) \]
+
+\begin{table}[htpb]
+    \centering
+    \caption{Functions and their Laplace Transform}
+    \label{LapTable}
+
+    \begin{tabular}{c | c}
+        $F(t)$ &  $\Lap\{ F(t) \} = f(s)$ \\
+        \hline\hline
+        $1$ & $\dfrac{1}{s}$ \\\hline
+        $t$ & $\dfrac{1}{s^2}$ \\\hline
+        $e^{at}$ & $\dfrac{1}{s-a}$ \\\hline
+        $\sin{at}$ & $\dfrac{a}{s^2+a^2}$ \\\hline
+        $\cos{at}$ & $\dfrac{s}{s^2+a^2}$ \\
+        \hline
+    \end{tabular} \mid
+    \begin{tabular}{c | c}
+        $F(t)$ &  $\Lap\{ F(t) \} = f(s)$ \\
+        \hline\hline
+        $n$ & $\dfrac{n}{s}$ \\\hline
+        $t^n$ &  $\dfrac{n!}{s^{n+1}}$ \\\hline
+        $e^{-at}$ & $\dfrac{1}{s+a}$ \\\hline
+        $\sinh{at}$ & $\dfrac{a}{s^2-a^2}$ \\\hline
+        $\cosh{at}$ &  $\dfrac{s}{s^2-a^2}$ \\
+        \hline
+    \end{tabular}
+\end{table}
+
+
 
 
 
