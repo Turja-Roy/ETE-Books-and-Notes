@@ -165,25 +165,46 @@ Then\\
 
 
 \vspace{30pt}
-\begin{definition}{Piecewise continuous or Sectionally continuous Function}{}
-    A function $f$ is said to be piecewise continuous on a finite interval $a \le t \le b$ if this interval can be divided into a finite number of subintervals such that
+\begin{theorem}{}{}
+    \textbf{Hypothesis: } Let $F$ be a real function that has the following properties:
     \begin{enumerate}
-        \item $f$ is continuous in the interior of each of these subintervals, and
-        \item $f(t)$ approaches finite limits as $t$ approaches either endpoint of each of the subintervals from its interior
+        \item $F$ is a piecewise continuous in every finite closed interval $0 \le t \le a \: (b>0)$.
+        \item $F$ is of exponential order, i.e, there exists $\alpha$, $M>0$, and $t_0>0$ such that
     \end{enumerate}
-\end{definition}
-
-\begin{example}{Consider the function $f$ defined by\\
-    \[ f(t) = \begin{cases}
-        -1, &\text{ if }0<t<2\\
-        1, & \text{ if }t>2
-    \end{cases} \]}{}
-    $f$ is piecewise continuous on every finite interval $0 \le t \le b$, for every positive number $b$. At $t=2$, we have
-    \[ f(2-) = \lim_{t \to 2-} f(t) = -1 \]
-    \[ f(2+) = \lim_{t \to 2+} f(t) = +1 \]
-\end{example}
+    \[ e^{-\alpha t}|F(t)| < M \text{ for } t>t_0 \]
+    
+    \textbf{Conclusion: } The Laplace transform of $F$ exists for $s>\alpha$.
+    \[
+        \Lap \{ F(t) \} = \int_{0}^{\infty} {e^{-s t}F(t)} \: d{t}
+    \] 
+\end{theorem}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Basic Properties of the Laplace Transform  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{30pt}
+\subsection{Basic Properties of the Laplace Transform}
+
+\begin{theorem}{The Linear Property}{}
+    \\Let $F_1$ and $F_2$ be functions whose Laplace transform exist, and let $c_1$ and $c_2$ be constants. Then
+    \[
+        \Lap \{ c_1F_1(t) + c_2F_2(t) \} = c_1 \Lap \{ F_1(t) \} + c_2 \Lap \{ F_2(t) \}
+    \]
+\end{theorem}
+
+\begin{theorem}{}{}
+    \textbf{Hypothesis: }
+    \begin{enumerate}
+        \item Let $F$ be a real function that is continuous for $t \ge 0$ and of exponential order $e^{\alpha t}$.
+        \item Let $F'$ be piecewise continuous in ever finite closed interval $0 \le t \le a$.
+    \end{enumerate}
+
+    \textbf{Conclusion: } Then $\Lap \{ F' \}$ exists for $s>\alpha$ ; and
+    \[
+        \Lap \{ F'(t) \} = s \Lap \{ F(t) \} - F(o)
+    \]
+\end{theorem}
 
 
 

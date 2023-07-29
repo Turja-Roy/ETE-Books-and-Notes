@@ -1,2 +1,3 @@
 \contentsline {section}{\numberline {1}Definition, Existence, and Basic Properties of the Laplace Transform}{2}{}%
 \contentsline {subsection}{\numberline {1.1}Definition and Existence}{2}{}%
+\contentsline {subsection}{\numberline {1.2}Basic Properties of the Laplace Transform}{4}{}%
