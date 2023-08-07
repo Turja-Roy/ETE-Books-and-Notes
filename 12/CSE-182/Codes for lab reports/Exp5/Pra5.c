@@ -7,8 +7,9 @@ int main ()
     printf("Enter a number: ");
     scanf("%d", &n);
 
+    printf("Prime numbers from 1 to %d:", n);
     if (n >= 2) {
-        printf("2\n");
+        printf(" 2");
     }
     for (int i=3 ; i<=n ; i++) {
         flag = 1;
@@ -19,9 +20,10 @@ int main ()
             }
         }
         if (flag) {
-            printf("%d\n", i);
+            printf(" %d", i);
         }
     }
+    printf("\n");
 
     return 0;
 }

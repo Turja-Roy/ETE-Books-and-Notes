@@ -17,10 +17,11 @@ int main ()
         fib[i] = fib[i-1] + fib[i-2] ;
     }
 
-    printf("The first n fibonacci numbers:");
+    printf("The first %d fibonacci numbers:\n", n);
     for (int i=1 ; i<=n ; i++) {
-        printf(" %lld", fib[i]);
+        printf("%lld ", fib[i]);
     }
+    printf("\n");
 
     free(fib);
     return 0;

@@ -7,9 +7,7 @@ int main ()
     printf("Enter a number: ");
     scanf("%d", &num);
 
-    if (num >= 2) {
-        printf("2\n");
-    }
+    printf("Prime factors of %d:", num);
     for (int i=2 ; i <= num ; i++) {
         if (num % i == 0) {
             flag = 1;
@@ -20,10 +18,11 @@ int main ()
                 }
             }
             if (flag) {
-                printf("%d\n", i);
+                printf(" %d", i);
             }
         }
     }
+    printf("\n");
 
     return 0;
 }

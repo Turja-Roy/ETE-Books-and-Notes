@@ -23,7 +23,7 @@ int main ()
         }
     }
 
-    printf("Sum = %d\n", sum);
+    printf("Sum of prime numbers from 1 to %d is %d\n", n, sum);
 
     return 0;
 }
