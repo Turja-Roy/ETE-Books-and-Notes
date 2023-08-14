@@ -23,5 +23,6 @@ int main ()
     }
     printf("Sum of first %d elements of the arary = %d\n", cnt, sum);
 
+    free(ara);
     return 0;
 }

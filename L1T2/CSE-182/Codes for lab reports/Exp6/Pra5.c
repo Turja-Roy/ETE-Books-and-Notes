@@ -31,5 +31,7 @@ int main ()
     }
     printf("\n");
 
+    free(ara1);
+    free(ara2);
     return 0;
 }

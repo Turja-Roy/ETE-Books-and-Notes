@@ -25,5 +25,6 @@ int main ()
     printf("Number of even components = %d\n", even);
     printf("Number of odd components = %d\n", odd);
 
+    free(ara);
     return 0;
 }
