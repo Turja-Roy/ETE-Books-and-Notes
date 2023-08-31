@@ -1,22 +1,13 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 int main ()
 {
-    char **name;
-    char *name_part;
-    int n;
-
-    printf("How many parts do you have in your name?\n");
-    scanf("%d", &n);
+    char name[100];
 
     printf("Enter your name: ");
-    for (int i=0 ; i<n ; i++) {
-        scanf("%s", name_part);
-        name = name + *name_part;
-    }
+    fgets(name, 100, stdin);
 
-    printf("%s\n", *name);
+    printf("%s\n", name);
 
     return 0;
 }
