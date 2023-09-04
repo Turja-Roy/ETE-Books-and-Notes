@@ -15,19 +15,15 @@ int main ()
         for (int j=0; j<c; j++) cin >> A[i][j];
     }
 
-    if ( r != c ) {
-        cout << "Can\'t find upper triangle, the matrix isn\'t square" << endl;
-        return 0;
-    } 
+    int zero=0, non_zero=0;
 
-    int sum = 0;
     for (int i=0; i<r; i++) {
         for (int j=0; j<c; j++) {
-            if ( j >= i ) sum += A[i][j];
+            A[i][j] == 0 ? zero++ : non_zero++;
         }
     }
 
-    cout << "The sum of the upper triangular elements = " << sum << endl;
+    zero > non_zero ? cout << "The matrix is a sparse matrix" << endl : cout << "The matrix is not a sparse matrix" << endl;
 
     return 0;
 }

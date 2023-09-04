@@ -17,6 +17,7 @@ int main ()
 
     if ( r != c ) {
         cout << "Can\'t find the trace, the matrix isn\'t a square matrix" << endl;
+        return 0;
     } 
 
     int trace = 0;

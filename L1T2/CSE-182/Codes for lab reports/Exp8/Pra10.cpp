@@ -16,18 +16,20 @@ int main ()
     }
 
     if ( r != c ) {
-        cout << "Can\'t find upper triangle, the matrix isn\'t square" << endl;
+        cout << "The matrix isn\'t a square matrix" << endl;
         return 0;
     } 
 
-    int sum = 0;
     for (int i=0; i<r; i++) {
         for (int j=0; j<c; j++) {
-            if ( j >= i ) sum += A[i][j];
+            if ( ( i == j && A[i][j] != 1 ) || ( i != j && A[i][j] != 0 ) ) {
+                cout << "The matrix is not an identity matrix." << endl;
+                return 0;
+            }
         }
     }
 
-    cout << "The sum of the upper triangular elements = " << sum << endl;
+    cout << "The matrix is an identity matrix." << endl;
 
     return 0;
 }

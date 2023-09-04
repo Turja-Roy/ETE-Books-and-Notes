@@ -17,6 +17,7 @@ int main ()
 
     if ( r != c ) {
         cout << "Can\'t find lower triangle, the matrix isn\'t square" << endl;
+        return 0;
     } 
 
     cout << "The lower triangle of the matrix:" << endl;

@@ -24,13 +24,12 @@ int main ()
         for (int j=0; j<c2; j++) cin >> B[i][j];
     }
 
-    vector<vector<int>> C(r1, vector<int> (c2, 0));
-
     if ( c1 != r2 ) {
         cout << "Dimension error: These vectors can\'t be added" << endl;
-        C.clear();
         return 0;
     } 
+
+    vector<vector<int>> C(r1, vector<int> (c2, 0));
 
     for (int i=0; i<r1 ; i++) {
         for (int j=0; j<c2; j++) {
