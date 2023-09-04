@@ -25,7 +25,7 @@ int main ()
     }
 
     if ( r1 != r2 || c1 != c2 ) {
-        cout << "Dimension error: These vectors can\'t be added" << endl;
+        cout << "Dimension error: The matrices can\'t be added" << endl;
         return 0;
     }
 
