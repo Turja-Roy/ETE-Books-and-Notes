@@ -382,8 +382,10 @@ Then\\
         \Lap \{ F''(t) \} = s^2F(s) - sF(0) - F'(0)
     \] \[
         \Lap \{ F'''(t) = s^3f(s) - s^2F(0) - sF'(0) - F''(0) \}
-    \]\[
-        \Lap \{ F^{(n)}(t) \} = s^nf(s) - s^{n-1}F(0) - s^{n-2}F'(0) - \cdots - F^{(n-1)}(0)
+    \] \[
+        \boxed{ \Lap \{ F^{(n)}(t) \} = s^nf(s) - s^{n-1}F(0) - s^{n-2}F'(0) - \cdots - F^{(n-1)}(0) }
+    \] \[
+        \boxed{ \Lap \{ F^{(n)}(t) \} = s^nf(s) - \sum_{i=n-1}^{0}\sum_{j=0}^{n-1} s^i F^{(j)}(0) }
     \]
 \end{theorem}
 
