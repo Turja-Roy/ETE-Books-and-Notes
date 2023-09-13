@@ -5,6 +5,7 @@
 \graphicspath{ {./images/} }
 \input{preamble.tex}
 \usepackage[scr]{rsfso}
+\usepackage{physics}
 \usepackage{multicol}
 \renewcommand{\arraystretch}{2.5}
 
@@ -193,20 +194,202 @@ Then\\
     \]
 \end{theorem}
 
-\begin{theorem}{}{}
-    \textbf{Hypothesis: }
-    \begin{enumerate}
-        \item Let $F$ be a real function that is continuous for $t \ge 0$ and of exponential order $e^{\alpha t}$.
-        \item Let $F'$ be piecewise continuous in ever finite closed interval $0 \le t \le a$.
-    \end{enumerate}
+\begin{example}{
+        $$ \Lap \{ 4t^2 - 3\cos{2t} + 5e^{-t} \} $$
+    }{}
+    \begin{align*}
+        \Lap \{ 4t^2 - 3\cos{2t} + 5e^{-t} \} &= 4 \Lap \{ t^2 \} - 3 \Lap \{ \cos{2t} \} + 5 \Lap \{ e^{-t} \} \\
+        &= 4 \cdot \frac{2!}{s^3} - 3 \cdot \frac{s}{s^2+4} + 5 \cdot \frac{1}{s+1} \\
+        &= \frac{8}{s^3} - \frac{3s}{s^2+4} + \frac{5}{s+1}
+    \end{align*}
+\end{example}
 
-    \textbf{Conclusion: } Then $\Lap \{ F' \}$ exists for $s>\alpha$ ; and
+\begin{theorem}{First translation of Shifting property}{}
+    \\If \[
+        \Lap \{ F(t) \} = f(s)
+    \] then
+    \[ \Lap \{ e^{at}F(t) \} = f(s-a) \]
+\end{theorem}
+
+\begin{example}{\[
+    \Lap \{ e^{-t}\cos{2t} \}
+\]}{}
+    Since $\Lap \{ \cos{2t} \} = \dfrac{s}{s^2+4}$, we have
     \[
-        \Lap \{ F'(t) \} = s \Lap \{ F(t) \} - F(o)
+        \Lap \{ e^{-t}\cos{2t} = \frac{s+1}{(s+1)^2 + 4} = \frac{s+1}{s^2+2s+5} \}
+    \]
+\end{example}
+
+\begin{theorem}{Second translation or Shifting property}{}
+    \\If \[
+        \Lap \{ F(t) \} = f(s)
+    \] and \[
+        G(t) = 
+        \begin{cases}
+            F(t-a) & \text{for } t>a \\
+            0 & \text{for } t < a
+        \end{cases}
+    \] then
+    \[
+        \Lap \{ G(t) \} = e^{-as}f(s)
+    \]
+
+\end{theorem}
+
+\begin{example}{
+        Find $\Lap \{ G(t) \}$ where $
+        G(t) = 
+        \begin{cases}
+            \cos{t - \frac{2\pi}{3}} & \text{for } t > \frac{2\pi}{3} \\
+            0 & \text{for } t < \frac{2\pi}{3}
+        \end{cases}
+        $
+    }{}
+    \begin{align*}
+        \Lap \{ G(t) \} &= e^{-\frac{2\pi}{3}s} \cdot \Lap \{ \cos{t} \} \\
+        &= e^{-\frac{2\pi}{3}s} \cdot \frac{s}{s^2+1} \\
+        &= \frac{s e^{-\frac{2\pi}{3}s}}{s^2+1} \\
+    \end{align*}
+\end{example}
+
+\begin{theorem}{Change of scale property}{}
+    \\If \[
+        \Lap \{ F(t) \} = f(s)
+    \] then \[
+        \Lap \{ F(at) \} = \frac{1}{a} f \left( \frac{s}{a} \right)
     \]
 \end{theorem}
 
+\begin{example}{Evaluate $\Lap \{ \sin{3t} \}$}{}
+    \begin{align*}
+        \Lap \{ \sin{3t} \} &= \frac{1}{3} \cdot \frac{1}{\left( \frac{s}{3} \right) + 1} \\
+        &= \frac{1}{3} \cdot \frac{3^2}{s^2+3^2}\\
+        &= \frac{3}{s^2+9}
+    \end{align*}
+\end{example}
 
+\begin{theorem}{Multiplication by $t^n$}{}
+    \\If \[
+        \Lap \{ F(t) \} = f(s)
+    \] then \[
+        \Lap \{ t^nF(t) \} = (-1)^n \frac{d^n}{ds^n} f(s)
+    \]
+\end{theorem}
+
+\begin{example}{Find $\Lap \{ t^2 \cos{at} \}$}{}
+    \begin{align*}
+        \Lap \{ t^2 \cos{at} \} &= (-1)^2 \cdot \frac{d^2}{d{x^2}} \: \left( \frac{s}{s^2 + a^2} \right) \\
+        &= \dv{ \left[ \frac{s^2 + a^2 - 2s^2}{ (s^2 + a^2)^2 } \right] }{s} \\
+        &= \dv{ \left[ \frac{a^2 - s^2}{(s^2 + a^2)^2} \right] }{s} \\
+        &= \frac{(s^2+a^2)^2(-2s) - (-s^2+a^2)2(s^2+a^2)\cdot2s}{(s^2+a^2)^4} \\
+        &= \frac{2s^3 - 6a^2s}{(s^2+a^2)^3}
+    \end{align*}
+\end{example}
+
+\begin{theorem}{Division by $t$}{}
+    \\If \[
+        \Lap \{ F(t) \} = f(s)
+    \] then \[
+        \Lap \left\{ \frac{F(t)}{t} \right\} = \int_{s}^{\infty} {f(x)} \: d{x}
+    \]
+\end{theorem}
+
+\begin{example}{Find $\Lap \{ \frac{\sin{t}}{t} \}$}{}
+    \begin{align*}
+        \Lap \left\{ \frac{\sin{t}}{t} \right\} &= \int_{s}^{\infty} {\frac{1}{s^2+1}} \: d{u} \\
+        &= \tan^{-1}{u} \bigg|_s^\infty \\
+        &= \frac{\pi}{2} - \tan^{-1}{s} = \cot^{-1}{s} \\
+        &= \tan^{-1}{\frac{1}{s}}
+    \end{align*}
+\end{example}
+
+\begin{theorem}{Laplace transform of Integral}{}
+    \\If \[
+        \Lap \{ F(t) \} = f(s)
+    \] then \[
+        \Lap \left\{ \int_{0}^{t} {F(x)} \: d{x} \right\} = \frac{1}{s} f(s)
+    \]
+\end{theorem}
+
+\begin{example}{Evaluate $\Lap \{ \int_{0}^{t} {\frac{\sin{u}}{u}} \: d{u} \}$}{}
+\[ \Lap \left\{ \frac{\sin{u}}{u} \right\} = \tan^{-1}{\frac{1}{s}} \]
+    \[
+        \Lap \left\{ \int_{0}^{t} {\frac{\sin{u}}{u}} \: d{u} \right\} = \frac{f(s)}{s} = \frac{1}{s} \tan^{-1}{\frac{1}{s}}
+    \]
+\end{example}
+
+\begin{example}{Evaluate $\Lap \{ \int_{0}^{t} {\frac{\sin{u}}{u}} \: d{u} \}$}{}
+    Let $F(t) = \frac{\sin{t}}{t}$
+    \begin{align*}
+        \Lap \left\{ \frac{\sin{t}}{t} \right\} &= \int_{s}^{\infty} {\frac{1}{u^2+1}} \: d{u} \\
+         &= \tan^{-1}{u} \bigg|_s^\infty \\
+         &= \tan^{-1}{\frac{1}{s}}
+    \end{align*}
+    \[
+        \therefore \Lap \left\{ \int_{0}^{t} {\frac{\sin{u}}{u}} \: d{u} \right\} &= \frac{1}{s} \cdot \tan^{-1}{\frac{1}{s}} \\
+        
+    \]
+\end{example}
+
+\begin{example}{Evaluate $\Lap \{ \int_{0}^{t} {\sin{2u}} \: d{u} \}$}{}
+    \[ \Lap \{ \sin{2t} \} = \frac{2}{s^2+4} \]
+    \[ \therefore \Lap \left\{ \int_{0}^{t} {\sin{2u}} \: d{u} \right\} = \frac{2}{s^3 + 4s} \]
+\end{example}
+
+\begin{theorem}{Periodic functions}{}
+    \\If \[
+        \Lap \{ F(t) \} = f(s)
+    \] then \[
+        \Lap \{ F(t) \} = \frac{1}{1-e^{-Ts}} \int_{0}^{T} {e^{-st}F(t)} \: d{t}
+    \] where $T$ is the period of $F(t)$.
+\end{theorem}
+
+\begin{example}{
+        Find $\Lap \{ F(t) \}$ for \[
+            F(t) = 
+            \begin{cases}
+                \sin{t} & \text{for } 0 < t < \pi \\
+                0 & \text{for } \pi < t < 2\pi
+            \end{cases}
+        \]
+    }{}
+    \begin{align*}
+        \Lap \{ F(t) \} &= \frac{1}{1 - e^{-2\pi s}} \int_{0}^{2\pi} { e^{st} \sin{t} } \: d{t} \\
+        &= \frac{1}{1-e^{-2\pi s}} \int_{0}^{\pi} {e^{-st} \sin{t}} \: d{t}
+    \end{align*}
+\end{example}
+
+\begin{example}{Find $\Lap \{ F(t) \}$ for \[
+    F(t) =
+    \begin{cases}
+        t & \text{for } 0 < t < 1 \\
+        0 & \text{for } 1 < t < 2
+    \end{cases}
+\]}{}
+    \begin{align*}
+        \Lap \{ F(t) \} &= \frac{1}{1-e^{-2s}} \int_{0}^{1} {t} \: d{t} \\
+        &= \frac{t^2 \bigg|_0^1}{2 - 2e^{-2s}} \\
+        &= \frac{1}{2 - 2e^{-2s}}
+    \end{align*}
+\end{example}
+
+\begin{theorem}{Laplace transform of derivatives}{}
+    \\If \[
+        \Lap \{ F(t) \} = f(s)
+    \] then \[
+        \Lap \{ F'(t) \} = sf(s) - F(0)
+    \] \[
+        \Lap \{ F''(t) \} = s^2F(s) - sF(0) - F'(0)
+    \] \[
+        \Lap \{ F'''(t) = s^3f(s) - s^2F(0) - sF'(0) - F''(0) \}
+    \]\[
+        \Lap \{ F^{(n)}(t) \} = s^nf(s) - s^{n-1}F(0) - s^{n-2}F'(0) - \cdots - F^{(n-1)}(0)
+    \]
+\end{theorem}
+
+\begin{example}{}{}
+    
+\end{example}
 
 
 
