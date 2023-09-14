@@ -187,6 +187,8 @@ Then\\
 \vspace{30pt}
 \subsection{Basic Properties of the Laplace Transform}
 
+
+%%%%% Linearity Property %%%%%
 \begin{theorem}{The Linear Property}{}
     \\Let $F_1$ and $F_2$ be functions whose Laplace transform exist, and let $c_1$ and $c_2$ be constants. Then
     \[
@@ -204,7 +206,9 @@ Then\\
     \end{align*}
 \end{example}
 
-\begin{theorem}{First translation of Shifting property}{}
+
+%%%%% First Translation %%%%%
+\begin{theorem}{First Translation of Shifting Property}{}
     \\If \[
         \Lap \{ F(t) \} = f(s)
     \] then
@@ -216,11 +220,13 @@ Then\\
 \]}{}
     Since $\Lap \{ \cos{2t} \} = \dfrac{s}{s^2+4}$, we have
     \[
-        \Lap \{ e^{-t}\cos{2t} = \frac{s+1}{(s+1)^2 + 4} = \frac{s+1}{s^2+2s+5} \}
+    \Lap \{ e^{-t}\cos{2t} \} = \frac{s+1}{(s+1)^2 + 4} = \frac{s+1}{s^2+2s+5} \}
     \]
 \end{example}
 
-\begin{theorem}{Second translation or Shifting property}{}
+
+%%%%% Second Translation %%%%%
+\begin{theorem}{Second Translation or Shifting Property}{}
     \\If \[
         \Lap \{ F(t) \} = f(s)
     \] and \[
@@ -252,7 +258,9 @@ Then\\
     \end{align*}
 \end{example}
 
-\begin{theorem}{Change of scale property}{}
+
+%%%%% Change of Scale %%%%%
+\begin{theorem}{Change of Scale Property}{}
     \\If \[
         \Lap \{ F(t) \} = f(s)
     \] then \[
@@ -268,6 +276,8 @@ Then\\
     \end{align*}
 \end{example}
 
+
+%%%%% Multiplication by t %%%%%
 \begin{theorem}{Multiplication by $t^n$}{}
     \\If \[
         \Lap \{ F(t) \} = f(s)
@@ -279,13 +289,15 @@ Then\\
 \begin{example}{Find $\Lap \{ t^2 \cos{at} \}$}{}
     \begin{align*}
         \Lap \{ t^2 \cos{at} \} &= (-1)^2 \cdot \frac{d^2}{d{x^2}} \: \left( \frac{s}{s^2 + a^2} \right) \\
-        &= \dv{ \left[ \frac{s^2 + a^2 - 2s^2}{ (s^2 + a^2)^2 } \right] }{s} \\
-        &= \dv{ \left[ \frac{a^2 - s^2}{(s^2 + a^2)^2} \right] }{s} \\
+        &= \dv{}{s} { \left[ \frac{s^2 + a^2 - 2s^2}{ (s^2 + a^2)^2 } \right] } \\
+        &= \dv{}{s} { \left[ \frac{a^2 - s^2}{(s^2 + a^2)^2} \right] } \\
         &= \frac{(s^2+a^2)^2(-2s) - (-s^2+a^2)2(s^2+a^2)\cdot2s}{(s^2+a^2)^4} \\
         &= \frac{2s^3 - 6a^2s}{(s^2+a^2)^3}
     \end{align*}
 \end{example}
 
+
+%%%%% Division by t %%%%%
 \begin{theorem}{Division by $t$}{}
     \\If \[
         \Lap \{ F(t) \} = f(s)
@@ -303,6 +315,8 @@ Then\\
     \end{align*}
 \end{example}
 
+
+%%%%% Integral %%%%%
 \begin{theorem}{Laplace transform of Integral}{}
     \\If \[
         \Lap \{ F(t) \} = f(s)
@@ -318,7 +332,6 @@ Then\\
     \]
 \end{example}
 
-\begin{example}{Evaluate $\Lap \{ \int_{0}^{t} {\frac{\sin{u}}{u}} \: d{u} \}$}{}
     Let $F(t) = \frac{\sin{t}}{t}$
     \begin{align*}
         \Lap \left\{ \frac{\sin{t}}{t} \right\} &= \int_{s}^{\infty} {\frac{1}{u^2+1}} \: d{u} \\
@@ -326,16 +339,16 @@ Then\\
          &= \tan^{-1}{\frac{1}{s}}
     \end{align*}
     \[
-        \therefore \Lap \left\{ \int_{0}^{t} {\frac{\sin{u}}{u}} \: d{u} \right\} &= \frac{1}{s} \cdot \tan^{-1}{\frac{1}{s}} \\
-        
+        \therefore \Lap \left\{ \int_{0}^{t} {\frac{\sin{u}}{u}} \: d{u} \right\} = \frac{1}{s} \cdot \tan^{-1}{\frac{1}{s}}
     \]
-\end{example}
 
 \begin{example}{Evaluate $\Lap \{ \int_{0}^{t} {\sin{2u}} \: d{u} \}$}{}
     \[ \Lap \{ \sin{2t} \} = \frac{2}{s^2+4} \]
     \[ \therefore \Lap \left\{ \int_{0}^{t} {\sin{2u}} \: d{u} \right\} = \frac{2}{s^3 + 4s} \]
 \end{example}
 
+
+%%%%% Periodic Functions %%%%%
 \begin{theorem}{Periodic functions}{}
     \\If \[
         \Lap \{ F(t) \} = f(s)
@@ -373,6 +386,8 @@ Then\\
     \end{align*}
 \end{example}
 
+
+%%%%% Laplace Transform of Derivatives %%%%%
 \begin{theorem}{Laplace transform of derivatives}{}
     \\If \[
         \Lap \{ F(t) \} = f(s)
@@ -389,9 +404,6 @@ Then\\
     \]
 \end{theorem}
 
-\begin{example}{}{}
-    
-\end{example}
 
 
 
