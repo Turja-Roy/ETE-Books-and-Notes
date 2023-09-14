@@ -17,8 +17,8 @@ int main ()
     p = bubble_sort(ara, l);
 
     cout << "Sorted array:" << endl;
-    // for (int *pnt=ara ; pnt!=(ara+l) ; pnt++) cout << *pnt << " ";
-    for (int i : ara) cout << i << " ";
+    for (int *pnt=p ; pnt!=(p+l) ; pnt++) cout << *pnt << " ";
+    // for (int i : ara) cout << i << " ";
 
     return 0;
 }
