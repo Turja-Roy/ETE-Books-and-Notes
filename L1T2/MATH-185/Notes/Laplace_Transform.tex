@@ -1,5 +1,5 @@
 \documentclass[12pt]{article}
-\usepackage[a4paper, margin=0.75in]{geometry}
+\usepackage[legalpaper, margin=0.75in]{geometry}
 \usepackage[document]{ragged2e}
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
@@ -26,11 +26,11 @@
 \tableofcontents
 \newpage
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%  Definition, Existence, and Basic Properties  %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Definition and Existence  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Definition, Existence, and Basic Properties of the Laplace Transform}
+\section{Definition and Existence}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  Definition and Existence  %
@@ -55,7 +55,27 @@ Some ways to write Laplace transforms:\\
 \[ \Lap{G(t)} = g(s) \]
 \[ \Lap{u(t)} = \tilde{u}(s) \]
 
-\vspace{20pt}
+\vspace{30pt}
+\begin{theorem}{}{}
+    \textbf{Hypothesis: } Let $F$ be a real function that has the following properties:
+    \begin{enumerate}
+        \item $F$ is a piecewise continuous in every finite closed interval $0 \le t \le a \: (b>0)$.
+        \item $F$ is of exponential order, i.e, there exists $\alpha$, $M>0$, and $t_0>0$ such that
+    \end{enumerate}
+    \[ e^{-\alpha t}|F(t)| < M \text{ for } t>t_0 \]
+    
+    \textbf{Conclusion: } The Laplace transform of $F$ exists for $s>\alpha$.
+    \[
+        \Lap \{ F(t) \} = \int_{0}^{\infty} {e^{-s t}F(t)} \: d{t}
+    \] 
+\end{theorem}
+
+% \newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Some Functions and Their Laplace Transforms  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Some Functions and Their Laplace Transforms}
+
 \begin{table}[htpb]
     \centering
 
@@ -86,11 +106,11 @@ Some ways to write Laplace transforms:\\
     \label{LapTable}
 \end{table}
 
-\newpage
 \begin{multicols}{2}
     [
     \underline{\textbf{Proofs :}}\\
     ]
+    \[ \Lap \{ n \} = \frac{n}{s} \]
     Let $F(t) = n$, for $t>0$\\
     Then\\
     \begin{align*}
@@ -100,6 +120,7 @@ Some ways to write Laplace transforms:\\
     \end{align*}\\
     \columnbreak
 
+    \[ \Lap \{ t \} = \frac{1}{s^2} \]
     Let $F(t) = t$, for $t>0$\\
     Then\\
     \begin{align*}
@@ -110,7 +131,7 @@ Some ways to write Laplace transforms:\\
     \end{align*}
 \end{multicols}
 
-\vspace{20pt}
+\[ \Lap \{ t^n \} = \frac{n!}{s^{n+1}} \]
 Let $F(t) = t^{n}$, for $t>0$ \\
 Then\\
 \begin{align*}
@@ -165,36 +186,30 @@ Then\\
 \end{multicols}
 
 
-\vspace{30pt}
-\begin{theorem}{}{}
-    \textbf{Hypothesis: } Let $F$ be a real function that has the following properties:
-    \begin{enumerate}
-        \item $F$ is a piecewise continuous in every finite closed interval $0 \le t \le a \: (b>0)$.
-        \item $F$ is of exponential order, i.e, there exists $\alpha$, $M>0$, and $t_0>0$ such that
-    \end{enumerate}
-    \[ e^{-\alpha t}|F(t)| < M \text{ for } t>t_0 \]
-    
-    \textbf{Conclusion: } The Laplace transform of $F$ exists for $s>\alpha$.
-    \[
-        \Lap \{ F(t) \} = \int_{0}^{\infty} {e^{-s t}F(t)} \: d{t}
-    \] 
-\end{theorem}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  Basic Properties of the Laplace Transform  %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{30pt}
-\subsection{Basic Properties of the Laplace Transform}
-
+\section{Basic Properties of the Laplace Transform}
 
 %%%%% Linearity Property %%%%%
-\begin{theorem}{The Linear Property}{}
+\subsection{Linearity Property}
+\begin{theorem*}{The Linearity Property}{}
     \\Let $F_1$ and $F_2$ be functions whose Laplace transform exist, and let $c_1$ and $c_2$ be constants. Then
     \[
         \Lap \{ c_1F_1(t) + c_2F_2(t) \} = c_1 \Lap \{ F_1(t) \} + c_2 \Lap \{ F_2(t) \}
     \]
-\end{theorem}
+\end{theorem*}
+
+\underline{\textbf{Proof :}}\\
+Let $F(t) = c_1F_1(t) + c_2F_2(t)$, for $t>0$\\
+Then\\
+\begin{align*}
+    \Lap \{ c_1F_1(t) + c_2F_2(t) \} &= \int_{0}^{\infty} { e^{-st} \left[ c_1F_1(t) + c_2F_2(t) \right] } \: d{t} \\
+    &= c_1 \int_{0}^{\infty} { e^{-st} F_1(t) } \: d{t} + c_2 \int_{0}^{\infty} { e^{-st} F_2(t) } \: d{t} \\
+    &= c_1 \Lap \{ F_1(t) \} + c_2 \Lap \{ F_2(t) \}\qed
+\end{align*}
 
 \begin{example}{
         $$ \Lap \{ 4t^2 - 3\cos{2t} + 5e^{-t} \} $$
@@ -206,14 +221,54 @@ Then\\
     \end{align*}
 \end{example}
 
+\begin{example}{Find $\Lap \{ F(w) \}$, when \(F(t) =
+    \begin{cases}
+        5 & \text{for } 0 < t < 3 \\
+        0 & \text{for } t > 3
+    \end{cases}\)}{}
+    \begin{align*}
+        \Lap \{ F(t) \} &= \int_{0}^{\infty} {e^{-st}F(t)} \: d{t}
+        = \int_{0}^{3} {e^{-st} \cdot 5} \: d{t} + \int_{3}^{\infty} {0} \: d{t} \\
+        &= \int_{0}^{3} {e^{-st} \cdot 5} \: d{t} \\
+        &= \eval{ \frac{5e^{-st}}{s} }_{0}^{3} \\
+        &= \frac{5}{s} \left( 1 - e^{-3s} \right)
+    \end{align*}
+\end{example}
+
+\begin{example}{Find $\Lap \{ F(t) \}$, when \(F(t =
+    \begin{cases}
+        (t-1)^2 & \text{for } t > 1 \\
+        0 & \text{for } 0 < t < 1
+    \end{cases})\)}{}
+    \begin{align*}
+        \Lap \{ F(t) \} &= \int_{0}^{\infty} {e^{-s t}F(t)} \: d{t}
+        = \int_{0}^{1} {0} \: d{t} + \int_{1}^{\infty} {e^{-s t}(t-1)^2} \: d{t} \\
+        &= \int_{1}^{\infty} {e^{-s t}(t^2 -2t + 1)} \: d{t}  \\
+        &= { - t^2 \frac{e^{-s t}}{s}\bigg|_1^\infty } - 2 \int_{1}^{\infty} { t \cdot \frac{e^{-s t}}{s} } \: d{t} - 2 \int_{1}^{\infty} { t \cdot e^{-s t} } \: d{t} - \frac{e^{-s t}}{s} \\
+        &= \frac{e^{-s}}{s} + 2 \left[ -\frac{t}{s} \left( \frac{e^{-s t}}{s} \right) \bigg|_1^\infty + \int_{1}^{\infty} { \frac{e^{-s t}}{s^2} } \: d{t} + 2 t \frac{e^{-s t}}{s}\bigg|_1^\infty - \int_{1}^{\infty} {\frac{e^{-s t}}{s}} \: d{t}\right] + \frac{e^{-s t}}{s} \\
+        &= \frac{e^{-s}}{s} - 2 \frac{e^{-s}}{s^2} + 2 \frac{e^{-s}}{s^2} - 2 \frac{e^{-s t}}{s} + 2 \frac{e^{-s}}{s^2} + \frac{e^{-s t}}{s} \\
+        &= 2 \frac{e^{-s}}{s^3}
+    \end{align*}
+\end{example}
 
 %%%%% First Translation %%%%%
+\subsection{First Translation Property}
 \begin{theorem}{First Translation of Shifting Property}{}
     \\If \[
         \Lap \{ F(t) \} = f(s)
     \] then
     \[ \Lap \{ e^{at}F(t) \} = f(s-a) \]
 \end{theorem}
+
+\underline{\textbf{Proof: }} \\
+Let $G(t) = e^{at}F(t)$, for $t>0$\\
+Then\\
+\begin{align*}
+    \Lap \{ e^{at}F(t) \} &= \int_{0}^{\infty} {e^{-st}e^{at}F(t)} \: d{t} \\
+    &= \int_{0}^{\infty} {e^{-(s-a)t}F(t)} \: d{t} \\
+    &= \Lap \{ F(t) \} \bigg|_{s-a} \\
+    &= f(s-a)\qed
+\end{align*}
 
 \begin{example}{\[
     \Lap \{ e^{-t}\cos{2t} \}
@@ -224,8 +279,22 @@ Then\\
     \]
 \end{example}
 
+\begin{example}{Evaluate $\Lap \{ e^{-2t} (3\cos{6t} - 5\sin{6t}) \}$}{}
+    Now,
+    \begin{align*}
+        f(s) &= \Lap \{ 3\cos{6t} - 5\sin{6t} \} \\
+        &= \frac{3s}{s^2+36} - \frac{30}{s^2+36} \\
+        &= \frac{3s-30}{s^2+36}
+    \end{align*}
+    \begin{align*}
+        \therefore \Lap \{ e^{-2t} (3\cos{6t} - 5\sin{6t}) \} &= f(s+2) \\
+        &= \frac{3(s+2)-30}{(s+2)^2+36} \\
+        &= \frac{3s-24}{s^2 + 4s + 40}
+    \end{align*}
+\end{example}
 
 %%%%% Second Translation %%%%%
+\subsection{Second Translation Property}
 \begin{theorem}{Second Translation or Shifting Property}{}
     \\If \[
         \Lap \{ F(t) \} = f(s)
@@ -242,11 +311,27 @@ Then\\
 
 \end{theorem}
 
+\underline{\textbf{Proof: }} \\
+Let \( G(t) =
+\begin{cases}
+    F(t-a) & \text{for } t>a \\
+    0 & \text{for } t < a
+\end{cases}\)\\
+Then\\
+\begin{align*}
+    \Lap \{ G(t) \} &= \int_{0}^{\infty} {e^{-st}F(t-a)} \: d{t} \\
+    &= \int_{a}^{\infty} {e^{-st}F(t-a)} \: d{t} \\
+    &= \int_{0}^{\infty} {e^{-s(u+a)}F(u)} \: d{u} \quad \text{where } u=t-a \\
+    &= e^{-as} \int_{0}^{\infty} {e^{-su}F(u)} \: d{u} \\
+    &= e^{-as} \Lap \{ F(t) \} \\
+    &= e^{-as} f(s)\qed
+\end{align*}
+
 \begin{example}{
         Find $\Lap \{ G(t) \}$ where $
         G(t) = 
         \begin{cases}
-            \cos{t - \frac{2\pi}{3}} & \text{for } t > \frac{2\pi}{3} \\
+            \cos{\left( t - \frac{2\pi}{3} \right)} & \text{for } t > \frac{2\pi}{3} \\
             0 & \text{for } t < \frac{2\pi}{3}
         \end{cases}
         $
@@ -258,8 +343,26 @@ Then\\
     \end{align*}
 \end{example}
 
+\begin{example}{Find $\Lap \{ F(t) \}$, if \( F(t) =
+    \begin{cases}
+        (t-1)^2 & \text{for } t > 1 \\
+        0 & \text{for } t < 0
+    \end{cases}\)}{}
+    Let \[
+        G(t) = t^2
+    \] \[ \therefore \Lap \{ G(t) \} = \frac{2!}{s^3} \]
+    Now, \[
+        F(t) =
+        \begin{cases}
+            G(t-1) & \text{for } t > 0 \\
+            0 & \text{for } t < 0
+        \end{cases}
+    \]
+    \[ \therefore \Lap \{ F(t) \} = \frac{e^{-s} \cdot 2!}{s^3} = \frac{2e^{-s}}{s^3} \]
+\end{example}
 
 %%%%% Change of Scale %%%%%
+\subsection{Change of Scale Property}
 \begin{theorem}{Change of Scale Property}{}
     \\If \[
         \Lap \{ F(t) \} = f(s)
@@ -267,6 +370,17 @@ Then\\
         \Lap \{ F(at) \} = \frac{1}{a} f \left( \frac{s}{a} \right)
     \]
 \end{theorem}
+
+\underline{\textbf{Proof: }} \\
+Let $G(t) = F(at)$, for $t>0$\\
+Then\\
+\begin{align*}
+    \Lap \{ G(t) \} &= \int_{0}^{\infty} {e^{-st}F(at)} \: d{t} \\
+    &= \int_{0}^{\infty} {e^{-\frac{s}{a}u}F(u)} \: d{(u/a)} \quad \text{where } u=at \\
+    &= \frac{1}{a} \int_{0}^{\infty} {e^{-\frac{s}{a}u}F(u)} \: d{u} \\
+    &= \frac{1}{a} \Lap \{ F(t) \} \\
+    &= \frac{1}{a} f \left( \frac{s}{a} \right)\qed
+\end{align*}
 
 \begin{example}{Evaluate $\Lap \{ \sin{3t} \}$}{}
     \begin{align*}
@@ -276,8 +390,18 @@ Then\\
     \end{align*}
 \end{example}
 
+\begin{example}{If $\Lap \{ \frac{\sin{t}}{t} = \tan^{-1}{\frac{1}{s}} = f(s) \}$, then evaluate $\Lap \{ \frac{\sin{at}}{t} \}$}{}
+    \begin{align*}
+        \Lap \{ \frac{\sin{at}}{t} \} &= \Lap \left\{ a \cdot \frac{\sin{at}}{t} \right\} \\
+        &= a \cdot \Lap \left\{ \frac{\sin{at}}{at} \right\} \\
+        &= a \cdot \frac{1}{a} f\left(\frac{s}{a}\right) \\
+        &= \tan^{-1}{\frac{a}{s}}
+    \end{align*}
+\end{example}
+
 
 %%%%% Multiplication by t %%%%%
+\subsection{Multiplication by $t$}
 \begin{theorem}{Multiplication by $t^n$}{}
     \\If \[
         \Lap \{ F(t) \} = f(s)
@@ -285,6 +409,48 @@ Then\\
         \Lap \{ t^nF(t) \} = (-1)^n \frac{d^n}{ds^n} f(s)
     \]
 \end{theorem}
+
+\underline{\textbf{Proof: }} \\
+Let $G(t) = t^nF(t)$, for $t>0$\\
+Then\\
+\begin{align*}
+    \Lap \{ G(t) \} &= \int_{0}^{\infty} {e^{-st}t^nF(t)} \: d{t} \\
+    &= (-1)^n \int_{0}^{\infty} {e^{-st} \frac{d^n}{ds^n} F(t)} \: d{t} \\
+    &= (-1)^n \frac{d^n}{ds^n} \int_{0}^{\infty} {e^{-st} F(t)} \: d{t} \\
+    &= (-1)^n \frac{d^n}{ds^n} f(s)\qed
+\end{align*}
+
+\underline{\textbf{Alternative Proof: }} \\
+We have \[
+    f(s) = \int_{0}^{\infty} {e^{-st}F(t)} \: d{t}
+\]
+Then by Leibnitz's rule for differentiating under the integral sign, we have
+\begin{align*}
+    \dv{f}{s} = f'(s) &= \dv{s} \int_{0}^{\infty} {e^{-st}F(t)} \: d{t} \\
+    &= \int_{0}^{\infty} {\dv{s} \left( e^{-st}F(t) \right)} \: d{t} \\
+    &= \int_{0}^{\infty} {e^{-st} \left( -te^{-st}F(t) + F'(t) \right)} \: d{t} \\
+    &= - \int_{0}^{\infty} {e^{-st} \{ tF(t) \}} \: d{t} \\
+    &= - \Lap \{ tF(t) \}
+\end{align*}
+\[
+    \therefore \Lap \{ tF(t) \} = -\dv{s}f(s) = f'(s)
+\]
+This proves the theorem for $n=1$.\\
+To establish the theorem in general, we use mathematical induction. Suppose that the theorem is true for $n=k$, i.e 
+\begin{equation} \tag{2.5.1}
+    \int_{0}^{\infty} {e^{-st} \{ t^k F(t) \}} \: d{t} = (-1)^k f^{(k)}(s)
+\end{equation}
+Then \[
+    \dv{s} \left[ \int_{0}^{\infty} {e^{-st} \{ t^k F(t) \}} \: d{t} \right] = (-1)^k f^{(k+1)}(s)
+\]
+Or by Leibnitz's rule, \[
+    - \int_{0}^{\infty} {\dv{s} \left( e^{-st} \{ t^{k+1} F(t) \} \right)} \: d{t} = (-1)^{(k)} f^{(k+1)}(s)
+\]
+i.e 
+\begin{equation} \tag{2.5.2}
+    \int_{0}^{\infty} {e^{-st} \{ t^{k+1} F(t) \}} \: d{t} = (-1)^{(k+1)} f^{(k+1)}(s)
+\end{equation}
+If follows that if (2.5.1) is true for $n=k$, then (2.5.2) is true for $n=k+1$. Since (2.5.1) is true for $n=1$, it follows that (2.5.1) is true for all positive integers $n$.\qed\\~\\
 
 \begin{example}{Find $\Lap \{ t^2 \cos{at} \}$}{}
     \begin{align*}
@@ -298,6 +464,7 @@ Then\\
 
 
 %%%%% Division by t %%%%%
+\subsection{Division by $t$}
 \begin{theorem}{Division by $t$}{}
     \\If \[
         \Lap \{ F(t) \} = f(s)
@@ -305,6 +472,19 @@ Then\\
         \Lap \left\{ \frac{F(t)}{t} \right\} = \int_{s}^{\infty} {f(x)} \: d{x}
     \]
 \end{theorem}
+
+\underline{\textbf{Proof: }} \\
+Let $G(t) = \dfrac{F(t)}{t}$, for $t>0$. Then $F(t) = t G(t)$. Taking the Laplace Transform of both sides, we get
+\begin{align*}
+    \Lap \{ F(t) \} &= \Lap \{ t G(t) \} \\
+    f(s) &= -\dv{s} \Lap \{ G(t) \} = - \dv{s} g(s)
+\end{align*}
+Then integrating, we have
+\begin{align*}
+    g(s) &= - \int_{\infty}^{s} {f(u)} \: d{u} \\
+    \Lap \{ G(t) \} &= \int_{s}^{\infty} {f(u)} \: d{u} \\
+    \Lap \left\{ \frac{F(t)}{t} \right\} &= \int_{s}^{\infty} {f(u)} \: d{u} \qed
+\end{align*}
 
 \begin{example}{Find $\Lap \{ \frac{\sin{t}}{t} \}$}{}
     \begin{align*}
@@ -316,7 +496,8 @@ Then\\
 \end{example}
 
 
-%%%%% Integral %%%%%
+%%%%% Laplace Transform of Integral %%%%%
+\subsection{Laplace Transform of Integral}
 \begin{theorem}{Laplace transform of Integral}{}
     \\If \[
         \Lap \{ F(t) \} = f(s)
@@ -325,6 +506,17 @@ Then\\
     \]
 \end{theorem}
 
+\underline{\textbf{Proof: }} \\
+Let $G(t) = \displaystyle \int_{0}^{t} {F(x)} \: d{x}$, for $t>0$. Then $G'(t) = F(t)$ and $G(0) = 0$. Taking the Laplace Transform of both sides, we have
+\begin{align*}
+    \Lap \{ G'(t) \} &= \Lap \{ F(t) \} \\
+    s \Lap \{ G(t) \} - G(0) &= f(s) \\
+    s \Lap \{ G(t) \} &= f(s) \\
+    \Lap \{ G(t) \} &= \frac{f(s)}{s} \\
+    \Lap \left\{ \int_{0}^{t} {F(u)} \: d{u} \right\} &= \frac{f(s)}{s} \qed
+\end{align*}
+
+
 \begin{example}{Evaluate $\Lap \{ \int_{0}^{t} {\frac{\sin{u}}{u}} \: d{u} \}$}{}
 \[ \Lap \left\{ \frac{\sin{u}}{u} \right\} = \tan^{-1}{\frac{1}{s}} \]
     \[
@@ -332,23 +524,26 @@ Then\\
     \]
 \end{example}
 
+\begin{example}{Evaluate $\Lap \{ \int_{0}^{t} {\frac{\sin{u}}{u}} \: d{u} \}$}{}
     Let $F(t) = \frac{\sin{t}}{t}$
     \begin{align*}
         \Lap \left\{ \frac{\sin{t}}{t} \right\} &= \int_{s}^{\infty} {\frac{1}{u^2+1}} \: d{u} \\
-         &= \tan^{-1}{u} \bigg|_s^\infty \\
-         &= \tan^{-1}{\frac{1}{s}}
+                                                &= \tan^{-1}{u} \bigg|_s^\infty \\
+                                                &= \tan^{-1}{\frac{1}{s}}
     \end{align*}
     \[
         \therefore \Lap \left\{ \int_{0}^{t} {\frac{\sin{u}}{u}} \: d{u} \right\} = \frac{1}{s} \cdot \tan^{-1}{\frac{1}{s}}
     \]
+
+\end{example}
 
 \begin{example}{Evaluate $\Lap \{ \int_{0}^{t} {\sin{2u}} \: d{u} \}$}{}
     \[ \Lap \{ \sin{2t} \} = \frac{2}{s^2+4} \]
     \[ \therefore \Lap \left\{ \int_{0}^{t} {\sin{2u}} \: d{u} \right\} = \frac{2}{s^3 + 4s} \]
 \end{example}
 
-
-%%%%% Periodic Functions %%%%%
+%%%%% Laplace Transform of Periodic Functions %%%%%
+\subsection{Laplace Transform of Periodic Functions}
 \begin{theorem}{Periodic functions}{}
     \\If \[
         \Lap \{ F(t) \} = f(s)
@@ -356,6 +551,20 @@ Then\\
         \Lap \{ F(t) \} = \frac{1}{1-e^{-Ts}} \int_{0}^{T} {e^{-st}F(t)} \: d{t}
     \] where $T$ is the period of $F(t)$.
 \end{theorem}
+
+\underline{\textbf{Proof: }} \\
+Let $F(t)$ has period $T$. Then $F(t) = F(t+T)$ for all $t$. Then
+\begin{align*}
+    \Lap \{ F(t) \} &= \int_{0}^{\infty} {e^{-st}F(t)} \: d{t} \\
+    &= \int_{0}^{T} {e^{-st}F(t)} \: d{t} + \int_{T}^{2T} {e^{-st}F(t)} \: d{t} + \int_{2T}^{3T} {e^{-st}F(t)} \: d{t} + \cdots \\
+    &= \int_{0}^{T} {e^{-st}F(t)} \: d{t} + \int_{0}^{T} {e^{-s(t+T)}F(t+T)} \: d{t} + \int_{0}^{T} {e^{-s(t+2T)}F(t+2T)} \: d{t} + \cdots \\
+    &= \int_{0}^{T} {e^{-st}F(t)} \: d{t} + e^{-sT} \int_{0}^{T} {e^{-st}F(t)} \: d{t} + e^{-2sT} \int_{0}^{T} {e^{-st}F(t)} \: d{t} + \cdots \\
+    &= \left[ 1 + e^{-sT} + e^{-2sT} + \cdots \right] \int_{0}^{T} {e^{-st}F(t)} \: d{t} \\
+    &= \frac{1}{1-e^{-sT}} \int_{0}^{T} {e^{-st}F(t)} \: d{t} \qed
+\end{align*}
+\begin{note}{}
+    Sum of an infinite series $1 + r + r^2 + \cdots = \dfrac{1}{1-r}$ for $|r|<1$.
+\end{note}
 
 \begin{example}{
         Find $\Lap \{ F(t) \}$ for \[
@@ -388,6 +597,7 @@ Then\\
 
 
 %%%%% Laplace Transform of Derivatives %%%%%
+\subsection{Laplace Transform of Derivatives}
 \begin{theorem}{Laplace transform of derivatives}{}
     \\If \[
         \Lap \{ F(t) \} = f(s)
@@ -404,8 +614,45 @@ Then\\
     \]
 \end{theorem}
 
+\underline{\textbf{Proof: }} \\
+Using integration by parts, we have
+\begin{align*}
+    \Lap \{ F'(t) \} &= \int_{0}^{\infty} {e^{-st}F'(t)} \: d{t} \\
+    &= e^{-st}F(t)\bigg|_{0}^{\infty} + s \int_{0}^{\infty} {e^{-st}F(t)} \: d{t}  \\
+    &= - F(0) + s \int_{0}^{\infty} {e^{-st}F(t)} \: d{t} \\
+    &= sf(s) - F(0) \qed
+\end{align*}
+Similarly,
+\begin{align*}
+    \Lap \{ F''(t) \} &= s \Lap \{ F'(t) \} - F'(0) \\
+    &= s \left[ sf(s) - F(0) \right] - F'(0) \\
+    &= s^2f(s) - sF(0) - F'(0)
+\end{align*}
+Thus using mathematical induction, we get
+\begin{align*}
+    \Lap \{ F^{(n)}(t) \} &= s \Lap \{ F^{(n-1)}(t) \} - F^{(n-1)}(0) \\
+    &= s \left[ s \Lap \{ F^{(n-2)}(t) \} - F^{(n-2)}(0) \right] - F^{(n-1)}(0) \\
+    &= s^2 \Lap \{ F^{(n-2)}(t) \} - sF^{(n-2)}(0) - F^{(n-1)}(0) \\
+    &= s^2 \left[ s \Lap \{ F^{(n-3)}(t) \} - F^{(n-3)}(0) \right] - sF^{(n-2)}(0) - F^{(n-1)}(0) \\
+    &= s^3 \Lap \{ F^{(n-3)}(t) \} - s^2F^{(n-3)}(0) - sF^{(n-2)}(0) - F^{(n-1)}(0) \\
+    &= \cdots \\
+    &= s^n \Lap \{ F(t) \} - s^{n-1}F(0) - s^{n-2}F'(0) - \cdots - F^{(n-1)}(0) \\
+    &= s^nf(s) - \sum_{i=n-1}^{0}\sum_{j=0}^{n-1} s^i F^{(j)}(0) \qed
+\end{align*}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Inverse Laplace Transform  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Inverse Laplace Transform}
 
+\begin{theorem}{Inverse Laplace Transform}{}
+    \\If \[
+        \Lap \{ F(t) \} = f(s)
+    \] then \[
+        \Lap^{-1} \{ f(s) \} = F(t)
+    \]
+\end{theorem}
 
 
 

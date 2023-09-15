@@ -1,3 +1,14 @@
-\contentsline {section}{\numberline {1}Definition, Existence, and Basic Properties of the Laplace Transform}{2}{}%
+\contentsline {section}{\numberline {1}Definition and Existence}{2}{}%
 \contentsline {subsection}{\numberline {1.1}Definition and Existence}{2}{}%
-\contentsline {subsection}{\numberline {1.2}Basic Properties of the Laplace Transform}{4}{}%
+\contentsline {subsection}{\numberline {1.2}Some Functions and Their Laplace Transforms}{2}{}%
+\contentsline {section}{\numberline {2}Basic Properties of the Laplace Transform}{4}{}%
+\contentsline {subsection}{\numberline {2.1}Linearity Property}{4}{}%
+\contentsline {subsection}{\numberline {2.2}First Translation Property}{5}{}%
+\contentsline {subsection}{\numberline {2.3}Second Translation Property}{6}{}%
+\contentsline {subsection}{\numberline {2.4}Change of Scale Property}{7}{}%
+\contentsline {subsection}{\numberline {2.5}Multiplication by $t$}{7}{}%
+\contentsline {subsection}{\numberline {2.6}Division by $t$}{9}{}%
+\contentsline {subsection}{\numberline {2.7}Laplace Transform of Integral}{9}{}%
+\contentsline {subsection}{\numberline {2.8}Laplace Transform of Periodic Functions}{10}{}%
+\contentsline {subsection}{\numberline {2.9}Laplace Transform of Derivatives}{11}{}%
+\contentsline {section}{\numberline {3}Inverse Laplace Transform}{13}{}%
