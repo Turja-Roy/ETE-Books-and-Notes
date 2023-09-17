@@ -892,6 +892,24 @@ Thus using mathematical induction, we get
     \end{align*}
 \end{example}
 
+\begin{example}{Find $\displaystyle \Lapinv \left\{ \frac{s}{(s^2+a^2)^2} \right\}$}{}
+    Let 
+    \begin{align*}
+        f(s) &= \frac{s}{s^2+a^2} &&\text{ and } &&&g(s) = \frac{1}{s^2+a^2} \\
+        \Lapinv \{ f(s) \} &= \cos{at} &&\text{ and } &&&\Lapinv \{ g(s) \} = \frac{\sin{at}}{a}
+    \end{align*}
+    \begin{align*}
+        F*G &= \frac{1}{a}\int_{0}^{t} {\cos{au} \cdot \sin{au(t-u)}} \: d{u} \\
+        &= \frac{1}{a} \int_{0}^{t} {\cos{au} (\sin{at}\cos{au} - \cos{at}\sin{au})} \: d{u} \\
+        &= \frac{1}{a}\int_{0}^{t} {\sin{at}\cos^2{au}} \: d{u} - \frac{1}{a}\int_{0}^{t} {\sin{au}\cos{au}} \: d{u} \\
+        &= \frac{1}{2a}\sin{at}\int_{0}^{t} {(\cos{2au}+1)} \: d{u} - \frac{1}{2a}\cos{at}\int_{0}^{t} {\sin{2au}} \: d{u} \\
+        &= \frac{1}{2a} \left[ -\frac{1}{2}\sin{2au} + u \right]_0^t - \frac{1}{2a} \left[ \frac{1}{2}\cos{2au} \right]_0^t \\
+        &= -\frac{1}{2a}\sin{at}\cdot\sin{2at} - \frac{1}{2a}\cos{at}\cdot\frac{1}{2}(\cos{2at}-1) + \frac{1}{2a}\sin{at}\cdot t \\
+        &= \frac{1}{4a} \left[ \cos{at} - \cos{(at - 2at)} \right] + \frac{t\sin{at}}{2a} \\
+        &= \frac{1}{4a} \left[ \cos{at} - \cos{at} \right] + \frac{t\sin{at}}{2a} \\
+        &= \frac{t\sin{at}}{2a}
+    \end{align*}
+\end{example}
 
 
 
