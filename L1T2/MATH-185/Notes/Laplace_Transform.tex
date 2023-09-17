@@ -796,6 +796,82 @@ Thus using mathematical induction, we get
 \end{example}
 
 
+\subsection{Inverse Laplace Transform of Integrals}
+
+\begin{theorem}{Inverse Laplace Transform of Integrals}{}
+    \\If \[
+        \Lapinv \{ f(s) \} = F(t)
+    \] then \[
+        \Lapinv \left\{ \int_{s}^{\infty} {f(u)} \: d{u} \right\} = \frac{F(t)}{t}
+    \]
+\end{theorem}
+
+\begin{example}{Find $\displaystyle \Lapinv \left\{ \int_{s}^{\infty} {\left( \frac{1}{u} - \frac{1}{u+1} \right)} \: d{u} \right\}$}{}
+    Let \[
+        f(s) = \frac{1}{s} - \frac{1}{s+1}
+    \]
+    \begin{align*}
+        \Lapinv \{ f(s) \} &= \Lapinv \left\{ \frac{1}{s - \frac{1}{s+1}} \right\} \\
+        &= 1 - e^{-t} = F(t) \\
+        \therefore \Lapinv \left\{ \int_{s}^{\infty} {f(u)} \: d{u} \right\} &= \frac{F(t)}{t} \\
+        &= \frac{1-e^{-t}}{t}
+    \end{align*}
+\end{example}
+
+
+\subsection{Division by s}
+
+\begin{theorem}{Division by $s$}{}
+    \\If \[
+        \Lapinv \{ f(s) \} = F(t)
+    \] then \[
+        \Lapinv \left\{ \frac{f(s)}{s} \right\} = \int_{0}^{t} {F(u)} \: d{u}
+    \]
+\end{theorem}
+
+\begin{example}{Evaluate $\displaystyle \Lapinv \left\{ \frac{1}{s^3(s^2+1)} \right\}$}{}
+    Let \[
+        f(s) = \frac{1}{s^2+1}
+    \]
+    \begin{align*}
+        \therefore \Lapinv \{ f(s) \} &= \sin{t} \\
+        \therefore \Lapinv \left\{ \frac{1}{s(s^2+1)} \right\} &= \int_{0}^{t} {\sin{u}} \: d{u} &&= 1-\cos{t}\\
+        \therefore \Lapinv \left\{ \frac{1}{s^2(s^2+1)} \right\} &= \int_{0}^{t} {(1-\cos{u})} \: d{u} &&= t - \sin{t} \\
+        \therefore \Lapinv \left\{ \frac{1}{s^3(s^2+1)} \right\} &= \int_{0}^{t} {(u-\sin{u})} \: d{u} &&= \frac{t^2}{2} + \cos{t} - 1
+    \end{align*}\\~\\
+    
+    \underline{\textbf{Alternative approach: }}
+    \\Let \[
+        f(s) = \frac{1}{s^4 + s^2} = \frac{1}{s^2} - \frac{1}{s^2+1}
+    \]
+    \begin{align*}
+        \Lapinv \left\{ \frac{1}{s^2(s^2+1)} \right\} &= \Lapinv \left\{ \frac{1}{s^2} - \frac{1}{s^2+1} \right\} \\
+        &= t - \sin{t} \\
+        &= F(t) \\
+        \therefore \Lapinv \left\{ \frac{1}{s^3(s^2+1)} \right\} &= \int_{0}^{t} {F(u)} \: d{u} \\
+        &= \int_{0}^{t} {(u-\sin{u})} \: d{u} \\
+        &= \frac{t^2}{2} + \cos{t} - 1
+    \end{align*}
+\end{example}
+
+
+\subsection{Inverse Laplace Transform by Partial Fraction}
+
+\begin{example}{Find $\displaystyle \Lapinv \left\{ \frac{5^2 - 15s - 11}{(s+1)(s-2)^2} \right\}$}{}
+    \[
+        \frac{5^2 - 15s - 11}{(s+1)(s-2)^2} = \frac{-\frac{1}{3}}{ss+1} - \frac{7}{(s-2)^3} + \frac{4}{(s-2)^2} + \frac{\frac{1}{3}}{s-2}
+    \] \[
+        \therefore \Lapinv \left\{ \frac{5^2 - 15s - 11}{(s+1)(s-2)^2} \right\} = -\frac{1}{e}e^{-t} - 7 \frac{t^2}{2} e^{2t} + 4te^{2t} + \frac{1}{3}e^{2t}
+    \]
+\end{example}
+
+
+
+
+
+
+
+
 
 
 \end{document}

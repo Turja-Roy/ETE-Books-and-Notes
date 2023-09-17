@@ -19,3 +19,6 @@
 \contentsline {subsection}{\numberline {4.2}First Translation or Shifting Property}{14}{}%
 \contentsline {subsection}{\numberline {4.3}Second Translation or Shifting Property}{14}{}%
 \contentsline {subsection}{\numberline {4.4}Inverse Laplace Transform of Derivatives}{14}{}%
+\contentsline {subsection}{\numberline {4.5}Inverse Laplace Transform of Integrals}{15}{}%
+\contentsline {subsection}{\numberline {4.6}Division by s}{15}{}%
+\contentsline {subsection}{\numberline {4.7}Inverse Laplace Transform by Partial Fraction}{16}{}%
