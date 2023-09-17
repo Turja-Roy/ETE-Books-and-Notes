@@ -1,4 +1,4 @@
-\contentsline {section}{\numberline {1}Definition and Existence}{2}{}%
+\contentsline {section}{\numberline {1}Laplace Transform}{2}{}%
 \contentsline {subsection}{\numberline {1.1}Definition and Existence}{2}{}%
 \contentsline {subsection}{\numberline {1.2}Some Functions and Their Laplace Transforms}{2}{}%
 \contentsline {section}{\numberline {2}Basic Properties of the Laplace Transform}{4}{}%
@@ -12,3 +12,10 @@
 \contentsline {subsection}{\numberline {2.8}Laplace Transform of Periodic Functions}{10}{}%
 \contentsline {subsection}{\numberline {2.9}Laplace Transform of Derivatives}{11}{}%
 \contentsline {section}{\numberline {3}Inverse Laplace Transform}{13}{}%
+\contentsline {subsection}{\numberline {3.1}Definition and Existence}{13}{}%
+\contentsline {subsection}{\numberline {3.2}Some Functions and their Inverse Laplace Transforms}{13}{}%
+\contentsline {section}{\numberline {4}Basic Properties of Inverse Laplace Transform}{13}{}%
+\contentsline {subsection}{\numberline {4.1}Linearity Property}{13}{}%
+\contentsline {subsection}{\numberline {4.2}First Translation or Shifting Property}{14}{}%
+\contentsline {subsection}{\numberline {4.3}Second Translation or Shifting Property}{14}{}%
+\contentsline {subsection}{\numberline {4.4}Inverse Laplace Transform of Derivatives}{14}{}%

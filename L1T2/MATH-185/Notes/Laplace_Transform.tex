@@ -10,6 +10,7 @@
 \renewcommand{\arraystretch}{2.5}
 
 \newcommand{\Lap}{\mathscr{L}}
+\newcommand{\Lapinv}{\mathscr{L}^{-1}}
 
 \title{
     \textbf{Laplace Transform}
@@ -30,7 +31,7 @@
 %  Definition and Existence  %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Definition and Existence}
+\section{Laplace Transform}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  Definition and Existence  %
@@ -646,21 +647,153 @@ Thus using mathematical induction, we get
 \newpage
 \section{Inverse Laplace Transform}
 
-\begin{theorem}{Inverse Laplace Transform}{}
-    \\If \[
+\subsection{Definition and Existence}
+
+\begin{definition}{Inverse Laplace Transform}{}
+    If the Laplace Transform of a function $F(t)$ is $f(s)$, i.e
+    \[
         \Lap \{ F(t) \} = f(s)
-    \] then \[
-        \Lap^{-1} \{ f(s) \} = F(t)
+    \] 
+    then the Inverse Laplace Transform is defined as
+    \[
+        \Lapinv \{ f(s) \} = F(t)
+    \]
+\end{definition}
+
+\subsection{Some Functions and their Inverse Laplace Transforms}
+
+\begin{table}[htpb]
+
+    \centering
+    \begin{tabular}{c|c}
+        \hline
+        $f(s)$ & $\Lap^{-1} \{ f(s) \} = F(t)$ \\
+        \hline\hline
+        $\dfrac{1}{s}$ & $1$ \\
+        \hline
+        $\dfrac{1}{s^2}$ & $t$ \\
+        \hline
+        $\dfrac{1}{s-a}$ & $e^{at}$ \\
+        \hline
+        $\dfrac{1}{s^2+a^2}$ & $\dfrac{\sin{at}}{a}$ \\
+        \hline
+        $\dfrac{s}{s^2+a^2}$ & $\cos{at}$ \\
+        \hline
+    \end{tabular}
+    \begin{tabular}{c | c}
+        \hline
+        $f(s)$ & $\Lap^{-1} \{ f(s) \} = F(t)$ \\
+        \hline\hline
+        $\dfrac{n}{s}$ & $n$ \\
+        \hline
+        $\dfrac{1}{s^n}$ & $\dfrac{t^{n-1}}{(n-1)!}$ \\
+        \hline
+        $\dfrac{1}{s+a}$ & $e^{-at}$ \\
+        \hline
+        $\dfrac{1}{s^2-a^2}$ & $\dfrac{\sinh{at}}{a}$ \\
+        \hline
+        $\dfrac{s}{s^2-a^2}$ & $\cosh{at}$ \\
+        \hline
+    \end{tabular}
+
+    \caption{Functions and their Inverse Laplace Transform}
+    \label{InvLapTable}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Basic Properties of Inverse Laplace Transform  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Basic Properties of Inverse Laplace Transform}
+
+\subsection{Linearity Property}
+
+\begin{theorem}{Linearity Property}{}
+    \\If \[
+        \Lapinv \{ f(s) \} = F(t) \quad \text{ and } \quad
+        \Lapinv \{ g(s) \} = G(t)
+    \] Then, \[
+        \Lapinv \{ c_1f(s) + c_2g(s) \} = c_1 \Lapinv \{ f(s) \} + c_2 \Lapinv \{ g(s) \}
     \]
 \end{theorem}
 
+\begin{example}{Evaluate $\Lapinv \left\{ \frac{4}{s-2} - \frac{3s}{s^2+16} + \frac{s}{s^2+4} \right\}$}{}
+    \begin{align*}
+        \Lapinv \left\{ \frac{4}{s-2} - \frac{3s}{s^2+16} + \frac{s}{s^2+4} \right\} &= 4\Lapinv \left\{ \frac{1}{s-2} \right\} - 3\Lapinv \left\{ \frac{s}{s^2+4^2} \right\} + 5\Lapinv \left\{ \frac{1}{s^2+2^2} \right\} \\
+        &= 4e^{2t} - 3\cos{4t} + \frac{5}{2}\sin{2t}
+    \end{align*}
+\end{example}
 
 
+\subsection{First Translation or Shifting Property}
+
+\begin{theorem}{First Translation or Shifting Property}{}
+    \\If \[
+        \Lapinv \{ f(s) \} = F(t)
+    \] then \[
+        \Lapinv \{ f(s-a) \} = e^{at}F(t)
+    \]
+\end{theorem}
+
+\begin{example}{Evaluate $\displaystyle \Lapinv \left\{ \frac{6s-4}{s^2-4s+20} \right\}$}{}
+    \begin{align*}
+        \Lapinv \left\{ \frac{6s-4}{s^2-4s+20} \right\} &= \Lapinv \left\{ \frac{6(s-2)+8}{(s-2)^2+16} \right\} \\
+        &= 6\Lapinv \left\{ \frac{(s-2)}{(s-2)^2+16} \right\} + 2\Lapinv \left\{ \frac{4}{(s-2)^2+16} \right\} \\
+        &= 6e^{2t}\cos{4t} + 2e^{2t}\sin{4t}
+    \end{align*}
+\end{example}
 
 
+\subsection{Second Translation or Shifting Property}
+
+\begin{theorem}{Second Translation or Shifting Property}{}
+    \\If \[
+        \Lapinv \{ f(s) \} = F(t)
+    \] then \[
+        \Lapinv \{ e^{-as}f(s) \} = 
+        \begin{cases}
+            F(t-a) & \text{for } t > a \\
+            0 & \text{for } t < a
+        \end{cases}
+    \]
+\end{theorem}
+
+\begin{example}{Evaluate $\displaystyle \frac{e^{-5t}}{(s-2)^4}$}{}
+    Here \[
+        \Lapinv \left\{ \frac{1}{(s-2)^4} \right\} = e^{2t}\frac{t^3}{3!} = \frac{e^{2t}}{6} t^3
+    \] \[
+        \therefore \Lapinv \left\{ \frac{e^{-5s}}{(s-2)^4} \right\} = \frac{e^{2(t-5)}}{6} (t-5)^3 \text{, when } t > 5
+    \] \[
+        \Lapinv \left\{ \frac{e^{-5s}}{(s-2)^4} \right\} = 0 \text{, when } t < 5
+    \]
+\end{example}
 
 
+\subsection{Inverse Laplace Transform of Derivatives}
 
+\begin{theorem}{Inverse Laplace Transform of Derivatives}{}
+    \\If \[
+        \Lapinv \{ f(s) \} = F(t)
+    \] then \[
+        \Lapinv \{ f^(n)(s) \} = \Lapinv \left\{ \dv[n]{s} f(s) \right\} = (-1)^n t^n F(t)
+    \]
+\end{theorem}
+
+\begin{example}{Evaluate $\displaystyle \Lapinv \left\{ \ln{\left( 1+\frac{1}{s^2} \right) } \right\}$}{}
+    Here
+    \begin{align*}
+        f(s) &= \ln{\left( 1 + \frac{1}{s^2} \right) } = \Lap \{ F(t) \} \\
+        f'(s) &= \frac{-\frac{2}{s^3}}{1+\frac{1}{s^2}} \\
+        &= -2 \left\{ \frac{1}{s(s^2+1)} \right\} \\
+        &= -2 \left( \frac{1}{s - \frac{s}{s^2+1}} \right)
+    \end{align*}
+    \begin{align*}
+        \Lapinv \{ f'(s) \} &= -2 (1-\cos{t}) \\
+        t F(t) &= -2 (1-\cos{t}) \\
+        F(t) &= \frac{2(1-\cos{t})}{t} \\
+        \therefore \Lapinv \left\{ \ln{\left( 1 + \frac{1}{s^2} \right)} \right\} &= \frac{2(1-\cos{t})}{t}
+    \end{align*}
+\end{example}
 
 
 
