@@ -866,6 +866,31 @@ Thus using mathematical induction, we get
 \end{example}
 
 
+\subsection{The Convolution Theorem}
+
+\begin{theorem}{The Convolution Theorem}{}
+    \\If \[
+        \Lapinv \{ f(s) \} = F(t) \quad \text{ and } \quad \Lapinv \{ g(s) \} = G(t)
+    \] then \[
+        \Lapinv \{ f(s)g(s) \} = \int_{0}^{t} {F(u)G(t-u)} \: d{u} = F * G
+    \] \[
+        G*F = \int_{0}^{t} {G(u)F(t-u)} \: d{u} = F*G
+    \]
+\end{theorem}
+
+\begin{example}{Find $\displaystyle \Lapinv \left\{ \frac{1}{s^2(s^2+1)^2} \right\}$}{}
+    Here, \[
+        \Lapinv \left\{ \frac{1}{s^2} \right\} = t = F(t)
+    \] \[
+        \Lapinv \left\{ \frac{1}{(s+1)^2} \right\} = e^{-t}t = G(t)
+    \]
+    \begin{align*}
+        \therefore \Lapinv \left\{ \frac{1}{s^2(s+1)^2} \right\} &= G*F \\
+        &= \int_{0}^{t} {ue^{-u} (t-u)} \: d{u} \\
+        &= \int_{0}^{t} {(ut - u^2)e^{-u}} \: d{u}  \\
+        &= -(ut-u^2) \cdot e^{-u} \bigg|_{0}^{t} + \int_{0}^{t} {(t - 2u)e^{-u}} \: d{u}
+    \end{align*}
+\end{example}
 
 
 
