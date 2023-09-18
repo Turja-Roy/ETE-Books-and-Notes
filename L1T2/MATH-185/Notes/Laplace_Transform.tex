@@ -700,6 +700,26 @@ Thus using mathematical induction, we get
     \label{InvLapTable}
 \end{table}
 
+\begin{note}{}
+    \underline{\textbf{The Unit Impulse Function or Dirac Delta Function :}}\\~\\
+    Consider the function \[
+        F_\epsilon(t) = 
+        \begin{cases}
+            \dfrac{1}{\epsilon} & \text{for } 0 \le t \le \epsilon \\
+            0 & \text{for } t > \epsilon
+        \end{cases}
+    \] where $\epsilon > 0$. Then \[
+        \int_{0}^{\infty} {F_\epsilon(t)} \: d{t} = 1
+    \] This idea has led some engineers and physicists to think of a limiting function, denoted by $\delta(t)$, approached by $F_{\epsilon}(t)$ as $\epsilon \to 0$. This limiting function they have called the unit impulse function or Dirac delta function.\\
+    Some properties of $\delta(t)$ are
+    \begin{enumerate}
+        \item $\displaystyle \int_{0}^{\infty} {\delta(t)} \: d{t} = 1$ \\
+        \item $\displaystyle \int_{0}^{\infty} {\delta(t)G(t)} \: d{t} = G(0)$ \\
+        \item $\displaystyle \int_{0}^{\infty} {\delta(t-a)G(t)} \: d{t} = G(a)$
+    \end{enumerate}
+    Although mathematically speaking such a function does not exist, manipulations or operations using it can be made rigorous.
+\end{note}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  Basic Properties of Inverse Laplace Transform  %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
