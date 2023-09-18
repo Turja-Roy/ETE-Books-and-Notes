@@ -18,8 +18,12 @@
 \contentsline {subsection}{\numberline {4.1}Linearity Property}{13}{}%
 \contentsline {subsection}{\numberline {4.2}First Translation or Shifting Property}{14}{}%
 \contentsline {subsection}{\numberline {4.3}Second Translation or Shifting Property}{14}{}%
-\contentsline {subsection}{\numberline {4.4}Inverse Laplace Transform of Derivatives}{14}{}%
-\contentsline {subsection}{\numberline {4.5}Inverse Laplace Transform of Integrals}{15}{}%
-\contentsline {subsection}{\numberline {4.6}Division by s}{15}{}%
-\contentsline {subsection}{\numberline {4.7}Inverse Laplace Transform by Partial Fraction}{16}{}%
-\contentsline {subsection}{\numberline {4.8}The Convolution Theorem}{16}{}%
+\contentsline {subsection}{\numberline {4.4}Change of Scale Property}{14}{}%
+\contentsline {subsection}{\numberline {4.5}Inverse Laplace Transform of Derivatives}{15}{}%
+\contentsline {subsection}{\numberline {4.6}Inverse Laplace Transform of Integrals}{15}{}%
+\contentsline {subsection}{\numberline {4.7}Division by s}{16}{}%
+\contentsline {subsection}{\numberline {4.8}Multiplication by $s^n$}{16}{}%
+\contentsline {subsection}{\numberline {4.9}The Convolution Theorem}{17}{}%
+\contentsline {subsection}{\numberline {4.10}Methods of Finding Inverse Laplace Transforms}{18}{}%
+\contentsline {subsubsection}{\numberline {4.10.1}Partial Franctions Method}{18}{}%
+\contentsline {subsubsection}{\numberline {4.10.2}Series Method}{18}{}%

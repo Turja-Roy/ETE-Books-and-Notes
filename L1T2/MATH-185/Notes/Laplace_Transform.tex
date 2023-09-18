@@ -669,7 +669,7 @@ Thus using mathematical induction, we get
         \hline
         $f(s)$ & $\Lap^{-1} \{ f(s) \} = F(t)$ \\
         \hline\hline
-        $\dfrac{1}{s}$ & $1$ \\
+        $1$ & $\delta(t)$ \\
         \hline
         $\dfrac{1}{s^2}$ & $t$ \\
         \hline
@@ -706,6 +706,7 @@ Thus using mathematical induction, we get
 
 \section{Basic Properties of Inverse Laplace Transform}
 
+%%%%% Linearity Property %%%%%
 \subsection{Linearity Property}
 
 \begin{theorem}{Linearity Property}{}
@@ -725,6 +726,7 @@ Thus using mathematical induction, we get
 \end{example}
 
 
+%%%%% First Translation or Shifting Property %%%%%
 \subsection{First Translation or Shifting Property}
 
 \begin{theorem}{First Translation or Shifting Property}{}
@@ -744,6 +746,7 @@ Thus using mathematical induction, we get
 \end{example}
 
 
+%%%%% Second Translation or Shifting Property %%%%%
 \subsection{Second Translation or Shifting Property}
 
 \begin{theorem}{Second Translation or Shifting Property}{}
@@ -769,6 +772,27 @@ Thus using mathematical induction, we get
 \end{example}
 
 
+%%%%% Change of Scale Property %%%%%
+\subsection{Change of Scale Property}
+
+\begin{theorem}{Change of Scale Property}{}
+    \\If \[
+        \Lapinv \{ f(s) \} = F(t)
+    \] then \[
+        \Lapinv \{ f(ks) \} = \frac{1}{k}F\left( \frac{t}{k} \right)
+    \]
+\end{theorem}
+
+\begin{example}{Find $\displaystyle \Lapinv \left\{ \frac{2s}{(2s)^2+16} \right\}$}{}
+    Since \[
+        \Lapinv \left\{ \frac{s}{s^2+4^2} \right\} = \cos{4t}
+    \] we have \[
+        \Lapinv \left\{ \frac{2s}{(2s)^2+16} \right\} = \frac{1}{2} \cos{\frac{4t}{2}} = \frac{1}{2}\cos{2t}
+    \]
+\end{example}
+
+
+%%%%% Inverse Laplace Transform of Derivatives %%%%%
 \subsection{Inverse Laplace Transform of Derivatives}
 
 \begin{theorem}{Inverse Laplace Transform of Derivatives}{}
@@ -796,6 +820,7 @@ Thus using mathematical induction, we get
 \end{example}
 
 
+%%%%% Inverse Laplace Transform of Integrals %%%%%
 \subsection{Inverse Laplace Transform of Integrals}
 
 \begin{theorem}{Inverse Laplace Transform of Integrals}{}
@@ -819,6 +844,7 @@ Thus using mathematical induction, we get
 \end{example}
 
 
+%%%%% Division by s %%%%%
 \subsection{Division by s}
 
 \begin{theorem}{Division by $s$}{}
@@ -854,18 +880,27 @@ Thus using mathematical induction, we get
     \end{align*}
 \end{example}
 
+%%%%% Multiplication by s^n %%%%%
+\subsection{Multiplication by $s^n$}
 
-\subsection{Inverse Laplace Transform by Partial Fraction}
+\begin{theorem}{Multiplication by $s^n$}{}
+    \\If \[
+        \Lapinv \{ f(s) \} = F(t)
+    \] then \[
+        \Lapinv \{ s f(s) \} = F'(t) + F(0)\delta(t)
+    \]
+\end{theorem}
 
-\begin{example}{Find $\displaystyle \Lapinv \left\{ \frac{5^2 - 15s - 11}{(s+1)(s-2)^2} \right\}$}{}
-    \[
-        \frac{5^2 - 15s - 11}{(s+1)(s-2)^2} = \frac{-\frac{1}{3}}{s+1} - \frac{7}{(s-2)^3} + \frac{4}{(s-2)^2} + \frac{\frac{1}{3}}{s-2}
-    \] \[
-        \therefore \Lapinv \left\{ \frac{5^2 - 15s - 11}{(s+1)(s-2)^2} \right\} = -\frac{1}{e}e^{-t} - 7 \frac{t^2}{2} e^{2t} + 4te^{2t} + \frac{1}{3}e^{2t}
+\begin{example}{Find $\displaystyle \Lapinv \left\{ \frac{s}{s^2+1} \right\}$}{}
+    Since \[
+        \Lapinv \left\{ \frac{1}{s^2+1} \right\} = \sin{t} \quad \text{ and } \quad \sin{0} = 0
+    \] then \[
+        \Lapinv \left\{ \frac{s}{s^2+1} \right\} = \dv{t} \sin{t} = \cos{t}
     \]
 \end{example}
 
 
+%%%%% Inverse Laplace Transform of Convolution %%%%%
 \subsection{The Convolution Theorem}
 
 \begin{theorem}{The Convolution Theorem}{}
@@ -910,5 +945,40 @@ Thus using mathematical induction, we get
         &= \frac{t\sin{at}}{2a}
     \end{align*}
 \end{example}
+
+
+%%%%% Methods of Finding Inverse Laplace Transforms %%%%%
+\subsection{Methods of Finding Inverse Laplace Transforms}
+
+%%%%% Inverse Laplace Transform by Partial Fraction %%%%%
+\subsubsection{Partial Franctions Method}
+
+\begin{theorem}{Partial Fractions Method}{}
+    \\Any rational function $\displaystyle \frac{P(s)}{Q(s)}$ where $P(s)$ and $Q(s)$ are polynomials, with degree of  $P(s)$ less than that of $Q(s)$, can be written as the sum of rational functions (partial fractions) having the form
+    \[
+        \frac{A}{(as + b)^r} \quad \text{ or } \quad \frac{As + B}{(as^2 + bs + c)^r}
+    \]
+    where $r \in \mathbb{N}$ and $A, B, a, b, c \in \mathbb{R}$.\\
+    By finding the inverse Laplace transform of each of the partial fractions, we can find $\displaystyle \Lapinv \left\{ \frac{P(s)}{Q(s)} \right\}$
+\end{theorem}
+
+\begin{example}{Find $\displaystyle \Lapinv \left\{ \frac{5^2 - 15s - 11}{(s+1)(s-2)^2} \right\}$}{}
+    \[
+        \frac{5^2 - 15s - 11}{(s+1)(s-2)^2} = \frac{-\frac{1}{3}}{s+1} - \frac{7}{(s-2)^3} + \frac{4}{(s-2)^2} + \frac{\frac{1}{3}}{s-2}
+    \] \[
+        \therefore \Lapinv \left\{ \frac{5^2 - 15s - 11}{(s+1)(s-2)^2} \right\} = -\frac{1}{e}e^{-t} - 7 \frac{t^2}{2} e^{2t} + 4te^{2t} + \frac{1}{3}e^{2t}
+    \]
+\end{example}
+
+%%%%% Series Methods %%%%%
+\subsubsection{Series Method}
+
+\begin{theorem}{Series Method}{}
+    \\If $f(s)$ has a series expansion in inverse powers of $s$ given by \[
+        f(s) = \frac{a_0}{s} + \frac{a_1}{s^2} + \frac{a_2}{s^3} + \cdots = \sum_{n=0}^{\infty} {a_n s^{-n}}
+    \] then under suitable conditions we can invert them by term to obtain \[
+        F(t) = a_0 + a_1t + a_2\frac{t^2}{2!} + a_3\frac{t^3}{3!} + \cdots = \sum_{n=0}^{\infty} {a_n \frac{t^n}{n!}}
+    \]
+\end{theorem}
 
 \end{document}
