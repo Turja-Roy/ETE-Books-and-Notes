@@ -811,7 +811,7 @@ Thus using mathematical induction, we get
         f(s) = \frac{1}{s} - \frac{1}{s+1}
     \]
     \begin{align*}
-        \Lapinv \{ f(s) \} &= \Lapinv \left\{ \frac{1}{s - \frac{1}{s+1}} \right\} \\
+        \Lapinv \{ f(s) \} &= \Lapinv \left\{ \frac{1}{s} - \frac{1}{s+1} \right\} \\
         &= 1 - e^{-t} = F(t) \\
         \therefore \Lapinv \left\{ \int_{s}^{\infty} {f(u)} \: d{u} \right\} &= \frac{F(t)}{t} \\
         &= \frac{1-e^{-t}}{t}
