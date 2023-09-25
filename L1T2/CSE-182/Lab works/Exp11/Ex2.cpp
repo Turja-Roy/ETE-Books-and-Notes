@@ -13,8 +13,9 @@ int main ()
     if (num > 0) {
         cout << "Fibonacci series till " << num << "th element:" << endl;
         printfib(num);
-    } else if (num <= 0) {
+    } else {
         cout << "Error! Enter an integer." << endl;
+        return 0;
     }
 
     cout << "The second approach:" << endl;
