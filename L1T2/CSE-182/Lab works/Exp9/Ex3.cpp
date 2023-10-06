@@ -12,9 +12,9 @@ int main()
 {
     int var1, var2;
 
-    cout << "Enter number 1: " << endl;
+    cout << "Enter number 1: ";
     cin >> var1;
-    cout << "Enter number 2: " << endl;
+    cout << "Enter number 2: ";
     cin >> var2;
 
     addition(var1, var2);

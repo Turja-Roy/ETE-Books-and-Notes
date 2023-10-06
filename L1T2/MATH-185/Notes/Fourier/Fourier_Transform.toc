@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Periodic Functions}{2}{}%
+\contentsline {subsection}{\numberline {1.2}Piecewise Continuous Functions}{2}{}%
+\contentsline {section}{\numberline {2}Fourier Expansion}{3}{}%
+\contentsline {subsection}{\numberline {2.1}Definition and Derivation}{3}{}%
+\contentsline {subsubsection}{\numberline {2.1.1}Definition}{3}{}%
+\contentsline {subsubsection}{\numberline {2.1.2}Some pre-derivations}{3}{}%
+\contentsline {subsubsection}{\numberline {2.1.3}Derivation of $a_0$}{4}{}%
+\contentsline {subsubsection}{\numberline {2.1.4}Derivation of $a_n$}{4}{}%
+\contentsline {subsubsection}{\numberline {2.1.5}Derivation of $b_n$}{5}{}%

@@ -24,12 +24,11 @@ int main ()
 
     { // Function 2
         cout << "Calling the function with no argument passed and returning a value..." << endl << endl;
-        char op;
 
-        cout << "a + b = " << narg_ret_add() << endl;
-        cout << "a - b = " << narg_ret_sub() << endl;
-        cout << "a * b = " << narg_ret_mul() << endl;
-        cout << "a / b = " << narg_ret_div() << endl;
+        cout << narg_ret_add() << " = a + b" << endl;
+        cout << narg_ret_sub() << " = a - b" << endl;
+        cout << narg_ret_mul() << " = a * b" << endl;
+        cout << narg_ret_div() << " = a / b" << endl;
     }
 
     { // Function 3
@@ -64,7 +63,7 @@ void narg_nret () {
     cout << "a + b = " << a+b << endl;
     cout << "a - b = " << a-b << endl;
     cout << "a * b = " << a*b << endl;
-    cout << "a / b = " << a/b << endl;
+    cout << "a / b = " << (double) a/b << endl;
 }
 
 int narg_ret_add () {
@@ -100,7 +99,7 @@ void args_nret (int a, int b) {
     cout << "a + b = " << a+b << endl;
     cout << "a - b = " << a-b << endl;
     cout << "a * b = " << a*b << endl;
-    cout << "a / b = " << a/b << endl;
+    cout << "a / b = " << (double) a/b << endl;
 }
 
 int args_ret_add (int a, int b) {

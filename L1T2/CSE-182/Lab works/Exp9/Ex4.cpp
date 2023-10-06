@@ -3,7 +3,6 @@ using namespace std;
 
 int addition(int num1, int num2)
 {
-    int sum;
     return num1 + num2;
 }
 
