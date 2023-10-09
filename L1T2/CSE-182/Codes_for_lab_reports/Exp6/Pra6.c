@@ -3,8 +3,7 @@
 
 int main ()
 {
-    int *ara;
-    int len, even=0, odd=0;
+    int *ara; int len;
 
     printf("Enter the intended length of your array: ");
     scanf("%d", &len);

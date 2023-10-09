@@ -16,7 +16,7 @@ int main()
     for (int i=0; i<n; i++) cin >> arr[i];
 
     set<int> arr2(arr.begin(), arr.end());
-    cout << "Number of duplicate items in the array = " << arr.size() - arr2.size() << endl;
+    cout << "Number of duplicate items in the array = " << 2 * (arr.size() - arr2.size()) << endl;
 
     return 0;
 }

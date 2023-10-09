@@ -20,7 +20,6 @@ int main ()
         for(j=0 ; j<c ; j++) cin >> b[i][j];
     }
 
-    cout << "Multiply of the matrix =" << endl;
     for(i=0 ; i<r ; i++) {
         for(j=0 ; j<c ; j++) {
             result[i][j]=0;
@@ -31,6 +30,7 @@ int main ()
         }
     }
 
+    cout << "Product of the matrices =" << endl;
     for(i=0 ; i<r ; i++) {
         for(j=0 ; j<c ; j++) cout << multiplied[i][j]<<" ";
         cout << endl;

@@ -15,7 +15,7 @@ int main()
     vector<int> ara1(l1);
     for (int i=0 ; i<l1 ; i++) cin >> ara1[i];
 
-    cout << "Enter the length of array 1: ";
+    cout << "Enter the length of array 2: ";
     cin >> l2;
     cout << "Enter the array:" << endl;
 
@@ -28,7 +28,7 @@ int main()
     }
 
     vector<int> sum = vect_add(ara1, ara2);
-
+    cout << "Sum:" << endl;
     for (int x : sum) {
         cout << x << " ";
     } 

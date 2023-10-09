@@ -14,6 +14,7 @@ int main ()
     cin >> l;
 
     vector<int> ara(l);
+    for (int i=0 ; i<l ; i++) cin >> ara[i];
 
     cout << "Maximum element = " << maximum(ara);
 

@@ -33,7 +33,6 @@ int main ()
 
     for (int i=0; i<r1 ; i++) {
         for (int j=0; j<c1; j++) C[i][j] = A[i][j] + B[i][j];
-
     }
 
     cout << "A + B = C =" << endl;
