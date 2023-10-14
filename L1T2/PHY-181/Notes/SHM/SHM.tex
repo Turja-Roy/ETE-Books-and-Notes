@@ -208,6 +208,187 @@ Hence, average potential energy is
     \boxed{ \overline{U} = \frac{1}{4} m \omega^2 r^2 = \frac{1}{4}k r^2 = \frac{1}{2} E }
 \end{equation}
 
+\section{Composition of Two SHMs of Same Frequency}
+\subsection{Same Direction}
+
+Let $y_1$ and $y_2$ be the displacements of two SHM of same frequency $\omega$, amplitude $r_1$ and $r_2$, and phases $\alpha_1$ and $\alpha_2$ respectively. \\
+\begin{align}
+    y_1 &= r_1 \sin{(\omega t + \alpha_1)} \\
+    y_2 &= r_2 \sin{(\omega t + \alpha_2)}
+\end{align}
+
+If the two SHMs are in the same direction, then the resultant displacement is
+\begin{align*}
+    y &= y_1 + y_2 \\
+    &= r_1 \sin{(\omega t + \alpha_1)} + r_2 \sin{(\omega t + \alpha_2)} \\
+    &= r_1 \sin{\omega t} \cos{\alpha_1} + r_1 \cos{\omega t} \sin{\alpha_1} + r_2 \sin{\omega t} \cos{\alpha_2} + r_2 \cos{\omega t} \sin{\alpha_2}
+\end{align*}
+\begin{equation}
+    \therefore y = (r_1 \cos{\alpha_1} + r_2 \cos{\alpha_2}) \sin{\omega t} + (r_1 \sin{\alpha_1} + r_2 \sin{\alpha_2}) \cos{\omega t}
+\end{equation}
+
+In equation (18), let
+\begin{align}
+    r_1\cos{\alpha_1} + r_2\cos{\alpha_2} &= A\cos{\varphi} \\
+    r_1\sin{\alpha_1} + r_2\sin{\alpha_2} &= A\sin{\varphi}
+\end{align}
+
+Then, equation (18) becomes
+\begin{align}
+    y &= A\cos{\varphi} \sin{\omega t} + A\sin{\varphi} \cos{\omega t} \\
+    y &= A \sin{(\omega t + \varphi)}
+\end{align}
+
+Here, $A$ is the amplitude of the resultant SHM and $\varphi$ is the phase of the resultant SHM. \\
+
+From equations (19) and (20), we get
+\begin{align*}
+    A^2 &= A^2 \sin^2{\varphi} + A^2 \cos^2{\varphi} \\
+    A^2 &= 
+    \begin{aligned}[t]
+        & r_1^2 \sin^2{\alpha_1} + r_2^2 \sin^2{\alpha_2} + 2r_1r_2 \sin{\alpha_1} \sin{\alpha_2} \\
+            & + r_1^2 \cos^2{\alpha_1} + r_2^2 \cos^2{\alpha_2} + 2r_1r_2 \cos{\alpha_1} \cos{\alpha_2}
+    \end{aligned}\\
+    A^2 &= r_1^2 + r_2^2 + 2r_1r_2(\sin{\alpha_1} \sin{\alpha_2} + \cos{\alpha_1} \cos{\alpha_2}) \\
+    A^2 &= r_1^2 + r_2^2 + 2r_1r_2 \cos{(\alpha_1 - \alpha_2)}
+\end{align*}
+
+\begin{equation}
+    \boxed{ A = \sqrt{r_1^2 + r_2^2 + 2r_1r_2 \cos{(\alpha_1 - \alpha_2)}} }
+\end{equation}
+
+And,
+\begin{equation}
+    \boxed{ \varphi = \tan^{-1}{\frac{r_1 \sin{\alpha_1} + r_2 \sin{\alpha_2}}{r_1 \cos{\alpha_1} + r_2 \cos{\alpha_2}}} }
+\end{equation}
+
+\subsubsection{Special Cases}
+\textbf{(I) Same phase : $\alpha_1 = \alpha_2$}\\~\\
+
+In this case, equation (21) becomes \[
+    A = \sqrt{r_1^2 + r_2^2 + 2r_1r_2 \cos{0}} = \sqrt{(r_1 + r_2)^2} = r_1 + r_2
+\]
+\begin{equation}
+    \boxed{ A = r_1 + r_2 }
+\end{equation}
+
+And, \[
+    \varphi = \tan^{-1}{\frac{r_1 \sin{\alpha} + r_2 \sin{\alpha}}{r_1 \cos{\alpha} + r_2 \cos{\alpha}}} = \tan^{-1}{\left( \frac{r_1 + r_2}{r_1 + r_2} \tan{\alpha} \right)} = \tan^{-1}{(\tan{\alpha})}
+\]
+\begin{equation}
+    \boxed{ \varphi = \alpha }
+\end{equation}
+
+\textbf{(II) Opposite phase : $\alpha_1 - \alpha_2 = (2n+1)\pi \text{, where } n=0,1,2,\cdots$}
+
+In this case, equation (21) becomes \[
+    A = \sqrt{r_1^2 + r_2^2 + 2r_1r_2 \cos{(\alpha_2 + \pi - \alpha_2)}} = \sqrt{(r_1 - r_2)^2} = r_1 - r_2
+\]
+\begin{equation}
+    \boxed{ A = r_1 - r_2 }
+\end{equation}
+
+And, \[
+    \varphi = \tan^{-1}{\frac{r_1 \sin{(\alpha + \pi)} + r_2 \sin{\alpha}}{r_1 \cos{(\alpha + \pi)} + r_2 \cos{\alpha}}} = \tan^{-1}{\left( \frac{r_1 \sin{\alpha} - r_2 \sin{\alpha}}{r_1 \cos{\alpha} - r_2 \cos{\alpha}} \right)} = \tan^{-1}{(-\tan{\alpha})}
+\]
+\begin{equation}
+    \boxed{ \varphi = \alpha + \pi }
+\end{equation}
+
+
+\subsection{Right Angle}
+Let $x$ and $y$ be the displacements of two SHM of same frequency $\omega$, amplitude $a$ and $b$ respectively, and phase difference $\alpha$, acting at right angle to each other. \\
+\begin{align}
+    x &= a \sin{(\omega t + \alpha)} \\
+    y &= b \sin{(\omega t)}
+\end{align}
+Or,
+\begin{align}
+    \frac{x}{a} &= \sin{(\omega t + \alpha)} \\
+    \frac{y}{b} &= \sin{(\omega t)}
+\end{align}
+
+Thus, we get
+\begin{align*}
+    \frac{x}{a} &= \sin{\omega t}\cos{\alpha} + \cos{\omega t}\sin{\alpha} \\
+    \frac{x}{a} &= \frac{y}{b} \sqrt{1 - \sin^2{\alpha}} + \sqrt{1 - \frac{y^2}{b^2}} \sin{\alpha} \\
+    \frac{x}{a} - \frac{y}{b} \sqrt{1 - \sin^2{\alpha}} &= \sqrt{1 - \frac{y^2}{b^2}} \sin{\alpha} \\
+    \frac{x^2}{a^2} + \frac{y^2}{b^2} (1 - \sin^2{\alpha}) - \frac{2xy}{ab} \sqrt{1 - \sin^2{\alpha}} &= \left( 1 - \frac{y^2}{b^2} \right) \sin^2{\alpha}
+\end{align*}
+\begin{equation}
+    \boxed{ \frac{x^2}{a^2} + \frac{y^2}{b^2} - \frac{2xy}{ab} \sqrt{1 - \sin^2{\alpha}} = \sin^2{\alpha} }
+\end{equation}
+
+Equation (33) represents the general equation of the resultant SHM of the two perpendicular SHMs.
+
+\subsubsection{Special Cases}
+\textbf{(I) If $\alpha=0$ or $2\pi$}\\~\\
+\[ \cos{\alpha} = 1, \qquad \sin{\alpha} = 0 \]
+Then equation (33) becomes \[
+    \frac{x^2}{a^2} + \frac{y^2}{b^2} - \frac{2xy}{ab} = 0
+\]
+Or, \[
+    \frac{x}{a} = \frac{y}{b}
+\]
+This represents a straight line passing through the origin.\\~\\
+
+
+\textbf{(II) If $\alpha=\pi$}\\~\\
+\[ \cos{\alpha} = -1, \qquad \sin{\alpha} = 0 \]
+Then equation (33) becomes \[
+    \frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{2xy}{ab} = 0
+\]
+Or, \[
+    \frac{x}{a} = -\frac{y}{b}
+\]
+This represents a straight line with negative slope passing through the origin.\\~\\
+
+
+\textbf{(III) If $\alpha=\pi/2$ or, $3\pi/2$}\\~\\
+\[ \cos{\alpha} = 0, \qquad \sin{\alpha} = 1 \]
+Then equation (33) becomes \[
+    \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1
+\]
+This represents an ellipse.\\~\\
+
+\textbf{(IV) If $\alpha=\pi/2$ or, $3\pi/2$, and $a=b$}\\~\\
+\[ \cos{\alpha} = 0, \qquad \sin{\alpha} = 1 \]
+Then equation (33) becomes \[
+    \frac{x^2}{a^2} + \frac{y^2}{a^2} = 1
+\]
+Or, \[
+    x^2 + y^2 = a^2
+\]
+This represents a circle of radius $a$.\\~\\
+
+\textbf{(V) If $\alpha=\pi/4$ or, $7\pi/4$}\\~\\
+\[ \cos{\alpha} = \frac{1}{\sqrt{2}}, \qquad \sin{\alpha} = \frac{1}{\sqrt{2}} \]
+Then equation (33) becomes \[
+    \frac{x^2}{a^2} + \frac{y^2}{b^2} - \frac{2xy}{ab} \frac{1}{\sqrt{2}} = \frac{1}{2}
+\]
+Or, \[
+    \left( \frac{x}{a} - \frac{y}{b} \right)^2 = \frac{1}{2}
+\]
+This represents an oblique ellipse.\\~\\
+
+\textbf{(VI) If $\alpha=3\pi/4$ or, $5\pi/4$, and $a=b$}\\~\\
+\[ \cos{\alpha} = -\frac{1}{\sqrt{2}}, \qquad \sin{\alpha} = \frac{1}{\sqrt{2}} \]
+Then equation (33) becomes \[
+    \frac{x^2}{a^2} + \frac{y^2}{a^2} + \frac{2xy}{a^2} \frac{1}{\sqrt{2}} = \frac{1}{2}
+\]
+Or, \[
+    \left( \frac{x}{a} + \frac{y}{a} \right)^2 = \frac{1}{2}
+\]
+This represents an oblique ellipse (mirrored).\\~\\
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Lissajous.png}
+    \caption{Lissajous figures}
+    \label{fig:Lissajous-png}
+\end{figure}
+
+
 
 
 
