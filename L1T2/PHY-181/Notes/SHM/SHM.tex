@@ -1,0 +1,217 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=0.75in]{geometry}
+\usepackage[document]{ragged2e}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\input{preamble.tex}
+\usepackage{makecell}
+\allowdisplaybreaks
+
+\title{
+    \textbf{Simple Harmonic Motion}
+}
+
+\author{
+    Turja Roy\\
+    ID: 2108052
+}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Oscillation and Vibration}
+\subsection{Oscillation}
+\begin{itemize}
+    \item Oscillation is the repetitive variation, typically in time, of some measure about a central value (often a point of equilibrium) or between two or more different states.
+    \item The term vibration is precisely used to describe mechanical oscillation.
+    \item Familiar examples of oscillation include a swinging pendulum and alternating current.
+\end{itemize}
+
+\subsection{Vibration}
+\begin{itemize}
+    \item Vibration is a mechanical phenomenon whereby oscillations occur about an equilibrium point.
+    \item The word comes from Latin vibrationem ("shaking, brandishing").
+    \item The oscillations may be periodic, such as the motion of a pendulum—or random, such as the movement of a tire on a gravel road.
+\end{itemize}
+
+\subsection{Differences between Oscillation and Vibration}
+\begin{itemize}
+    \item Oscillation is the definite displacement of a body in terms of distance or time, whereas vibration is the movement brought about in a body due to oscillation.
+    \item Oscillation takes place in physical, biological systems, and often in our society, but vibrations is associated with mechanical systems only.
+    \item Oscillation is about a single body, whereas vibration is the result of collective oscillation of atoms in the body.
+    \item All vibrations are oscillations, but not all oscillations are vibrations.
+\end{itemize}
+
+\section{Simple Harmonic Motion}
+\subsection{Definition}
+
+\begin{definition}{Simple Harmonic Motion}{}
+    Simple harmonic motion is a type of periodic motion where the restoring force is directly proportional to the displacement and acts in the direction opposite to that of displacement.
+\end{definition}
+
+A particle is said to execute SHM when it will
+\begin{enumerate}[(a)]
+    \item Trace and retrace the same path over and over again.
+    \item Change direction at a regular interval of time.
+    \item Move along a straight line.
+    \item Have acceleration proportional to its displacement from the mean position.
+\end{enumerate}
+
+A particle which satisfies the condition (a) only is said to execute \textbf{periodic motion}. A particle which satisfies condition (a) and (b) is said to execute \textbf{vibratory motion}. \\~\\
+
+Let $P$ be a particle moving on the circumference of a circle of radius $r$ with a uniform velocity $v$. Let angular velocity be $\omega = v/r$.
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.5\textwidth]{1.png}
+\end{figure}
+
+\vspace{20pt}
+Displacement of the particle from the mean position is given by $\displaystyle y = r \sin{\omega t}$\\
+So, velocity of the particle is given by $\displaystyle v = \frac{dy}{dt} = \omega r \cos{\omega t}$\\
+And acceleration of the particle is given by $\displaystyle a = \frac{dv}{dt} = -\omega^2 r \sin{\omega t} = -\omega^2 y$
+
+\vspace{20pt}
+\begin{center}
+    \begin{tabular}{c | c | c | c | c}
+        Angle & \makecell{Position of \\ vibrating particle} & \makecell{Displacement \\ $y = r \sin{\omega t}$} & \makecell{Velocity \\ $\displaystyle \dv{y}{t} = \omega r \cos{\omega t}$} & \makecell{Acceleration \\ $-\omega^2 r \sin{\omega t} = -\omega^2 y$} \\\hline\hline
+        0 & O & 0 & $\omega r$ & 0 \\\hline
+        $\pi/2$ & X & $r$ & 0 & $-\omega^2 a$ \\\hline
+        $\pi$ & O & 0 & $-\omega r$ & 0 \\\hline
+        $3\pi/2$ & Y & $-r$ & 0 & $\omega^2 r$ \\\hline
+        $2\pi$ & O & 0 & $\omega r$ & 0
+    \end{tabular}
+\end{center}
+
+\subsection{Differential Equation of SHM}
+Let $y$ be the displacement of the particle from the mean position at time $t$, $r$ be the amplitude, and $\alpha$ be the epoch of the vibrating particle \\
+\begin{equation}
+    y = r \sin{(\omega t + \alpha)}
+\end{equation}
+\begin{equation}
+    \dv{y}{t} = r \omega \cos{(\omega t + \alpha)}
+\end{equation}
+\begin{equation}
+    \dv[2]{y}{t} = -r \omega^2 \sin{(\omega t + \alpha)}
+\end{equation}
+
+Hence the differential equation of SHM is
+\begin{equation}
+    \dv[2]{y}{t} + \omega^2 y = 0
+\end{equation}
+
+\subsection{Solution of the Differential Equation of SHM}
+\begin{equation}
+    \dv[2]{y}{t} + \omega^2 y = 0
+\end{equation}
+
+Here, \[
+    \dv[2]{y}{t} = \dv{v}{t} = \dv{v}{y} \dv{y}{t} = v \dv{v}{y}
+\]
+\begin{align*}
+    v \: d{v} + \omega^2y \: d{y} &= 0 \\
+    \int{v} \: d{v} + \omega^2 \int{y} \: d{y} &= 0 \\
+    \frac{v^2}{2} + \frac{\omega^2 y^2}{2} &= C' \\
+    \left( \dv{y}{t} \right) ^2 + \omega^2 y^2 &= C^2
+\end{align*}
+
+At maximum displacement, $y = r$ and $\displaystyle \dv{y}{t} = 0$ \\
+So, $C^2 = \omega^2 r^2$ \\
+\begin{align*}
+    \left( \dv{y}{t} \right)^2 &= \omega^2(r^2 - y^2) \\
+    \dv{y}{t} &= \omega \sqrt{r^2 - y^2} \\
+    \int{\frac{1}{\sqrt{r^2-y^2}}} \: d{y} &= \int{\omega} \: d{t} \\
+    \sin^{-1}{\frac{y}{r}} &= \omega t + \alpha
+\end{align*}
+\begin{equation}
+    \boxed{ y = r \sin{(\omega t + \alpha)} }
+\end{equation}
+
+By expanding equation (6), we get
+\begin{equation}
+    y = r \sin{\omega t} \cos{\alpha} + r \cos{\omega t} \sin{\alpha}
+\end{equation}
+If $y = 0$ at $t = 0$, then $\alpha = 0$ \\
+\begin{equation}
+    y = r \sin{\omega t}
+\end{equation}
+If $y = r$ at $t = 0$, then $\alpha = \pi/2$ \\
+\begin{equation}
+    y = r \cos{\omega t}
+\end{equation}
+
+Hence, the general solution of the differential equation of SHM is
+\begin{equation}
+    \boxed{ y = A \sin{\omega t} + B \cos{\omega t} }
+\end{equation}
+
+\section{Energy in SHM}
+\subsection{Total Energy of a Vibrating Particle}
+\begin{align*}
+    \text{Kinetic Energy} &= \frac{1}{2} m \left( \dv{y}{t} \right)^2 \\
+    &= \frac{1}{2} m \omega^2 r^2 \cos^2{(\omega t + \alpha)} \\
+    \text{Potential Energy} &= \frac{1}{2} k y^2 \\
+    &= \frac{1}{2} m \omega^2 r^2 \\
+    &= \frac{1}{2} m \omega^2 r^2 \sin^2{(\omega t + \alpha)}
+\end{align*}
+
+Thus, the total energy of the vibrating particle is
+\begin{equation}
+    \boxed{ E = \frac{1}{2} k r^2 = \frac{1}{2} m \omega^2 r^2 }
+\end{equation}
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.5\textwidth]{2.png}
+\end{figure}
+
+\subsection{Average Kinetic Energy}
+Kinetic energy of the particle is given by
+\begin{equation}
+    K = \frac{1}{2} m \left( \dv{y}{t} \right)^2 = \frac{1}{2} m \omega^2 r^2 \cos^2{(\omega t + \alpha)}
+\end{equation}
+Hence, average kinetic energy is
+\begin{align*}
+    \overline{K} &= \frac{1}{T} \int_{0}^{T} K \: dt \\
+    &= \frac{1}{T} \int_{0}^{T} \frac{1}{2} m \omega^2 r^2 \cos^2{(\omega t + \alpha)} \: dt \\
+    &= \frac{1}{2} m \omega^2 r^2 \frac{1}{T} \int_{0}^{T} \cos^2{(\omega t + \alpha)} \: dt \\
+    &= \frac{1}{2} m \omega^2 r^2 \frac{1}{T} \int_{0}^{T} \frac{1 + \cos{2(\omega t + \alpha)}}{2} \: dt \\
+    &= \frac{1}{2} m \omega^2 r^2 \frac{1}{T} \left[ \frac{t}{2} + \frac{\sin{2(\omega t + \alpha)}}{4\omega} \right]_{0}^{T} \\
+    &= \frac{1}{2} m \omega^2 r^2 \frac{1}{T} \left[ \frac{T}{2} + \frac{\sin{2(\omega T + \alpha)}}{4\omega} - \frac{\sin{2\alpha}}{4\omega} \right] \\
+    &= \frac{1}{2} m \omega^2 r^2 \frac{1}{T} \left[ \frac{T}{2} + \frac{\sin{2\alpha}}{4\omega} - \frac{\sin{2\alpha}}{4\omega} \right] \\
+    &= \frac{1}{4} m \omega^2 r^2
+\end{align*}
+\begin{equation}
+    \boxed{ \overline{K} = \frac{1}{4} m \omega^2 r^2 = \frac{1}{4}k r^2 = \frac{1}{2} E }
+\end{equation}
+
+\subsection{Average Potential Energy}
+Potential energy of the particle is given by
+\begin{equation}
+    U = \frac{1}{2} k y^2 = \frac{1}{2} m \omega^2 r^2 \sin^2{(\omega t + \alpha)}
+\end{equation}
+Hence, average potential energy is
+\begin{align*}
+    \overline{U} &= \frac{1}{T} \int_{0}^{T} U \: dt \\
+    &= \frac{1}{T} \int_{0}^{T} \frac{1}{2} m \omega^2 r^2 \sin^2{(\omega t + \alpha)} \: dt \\
+    &= \frac{1}{2} m \omega^2 r^2 \frac{1}{T} \int_{0}^{T} \sin^2{(\omega t + \alpha)} \: dt \\
+    &= \frac{1}{2} m \omega^2 r^2 \frac{1}{T} \int_{0}^{T} \frac{1 - \cos{2(\omega t + \alpha)}}{2} \: dt \\
+    &= \frac{1}{2} m \omega^2 r^2 \frac{1}{T} \left[ \frac{t}{2} - \frac{\sin{2(\omega t + \alpha)}}{4\omega} \right]_{0}^{T} \\
+    &= \frac{1}{2} m \omega^2 r^2 \frac{1}{T} \left[ \frac{T}{2} - \frac{\sin{2(\omega T + \alpha)}}{4\omega} + \frac{\sin{2\alpha}}{4\omega} \right] \\
+    &= \frac{1}{2} m \omega^2 r^2 \frac{1}{T} \left[ \frac{T}{2} + \frac{\sin{2\alpha}}{4\omega} - \frac{\sin{2\alpha}}{4\omega} \right] \\
+    &= \frac{1}{4} m \omega^2 r^2
+\end{align*}
+\begin{equation}
+    \boxed{ \overline{U} = \frac{1}{4} m \omega^2 r^2 = \frac{1}{4}k r^2 = \frac{1}{2} E }
+\end{equation}
+
+
+
+
+
+
+
+\end{document}

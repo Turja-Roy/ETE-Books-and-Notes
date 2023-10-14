@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}Oscillation and Vibration}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Oscillation}{2}{}%
+\contentsline {subsection}{\numberline {1.2}Vibration}{2}{}%
+\contentsline {subsection}{\numberline {1.3}Differences between Oscillation and Vibration}{2}{}%
+\contentsline {section}{\numberline {2}Simple Harmonic Motion}{2}{}%
+\contentsline {subsection}{\numberline {2.1}Definition}{2}{}%
+\contentsline {subsection}{\numberline {2.2}Differential Equation of SHM}{3}{}%
+\contentsline {subsection}{\numberline {2.3}Solution of the Differential Equation of SHM}{3}{}%
+\contentsline {section}{\numberline {3}Energy in SHM}{4}{}%
+\contentsline {subsection}{\numberline {3.1}Total Energy of a Vibrating Particle}{4}{}%
+\contentsline {subsection}{\numberline {3.2}Average Kinetic Energy}{5}{}%
+\contentsline {subsection}{\numberline {3.3}Average Potential Energy}{5}{}%
