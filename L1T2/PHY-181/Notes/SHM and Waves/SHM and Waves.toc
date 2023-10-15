@@ -33,4 +33,21 @@
 \contentsline {subsection}{\numberline {7.2}Types of Waves}{17}{}%
 \contentsline {subsubsection}{\numberline {7.2.1}Mechanical Waves}{17}{}%
 \contentsline {subsubsection}{\numberline {7.2.2}Electromagnetic Waves}{17}{}%
-\contentsline {subsection}{\numberline {7.3}Equation of Wave Motion}{17}{}%
+\contentsline {subsection}{\numberline {7.3}Equation of Motion}{17}{}%
+\contentsline {subsection}{\numberline {7.4}Velocity, Slope, and Acceleration}{18}{}%
+\contentsline {subsubsection}{\numberline {7.4.1}Velocity of Wave and Velocity of Particle}{18}{}%
+\contentsline {subsubsection}{\numberline {7.4.2}Slope of the wave curve}{18}{}%
+\contentsline {subsubsection}{\numberline {7.4.3}Relation between Velocity and Slope}{18}{}%
+\contentsline {subsubsection}{\numberline {7.4.4}Acceleration of the particle}{18}{}%
+\contentsline {subsection}{\numberline {7.5}Wave Packet, Phase Velocity, and Group Velocity}{18}{}%
+\contentsline {subsubsection}{\numberline {7.5.1}Definitions}{18}{}%
+\contentsline {subsubsection}{\numberline {7.5.2}Relation between Phase Velocity and Group Velocity}{19}{}%
+\contentsline {subsection}{\numberline {7.6}Differential Equation of Wave Motion}{19}{}%
+\contentsline {subsection}{\numberline {7.7}Energy Density and Energy Current (Intensity)}{20}{}%
+\contentsline {subsubsection}{\numberline {7.7.1}Kinetic Energy Density}{20}{}%
+\contentsline {subsubsection}{\numberline {7.7.2}Potential Energy Density}{20}{}%
+\contentsline {subsubsection}{\numberline {7.7.3}Total Energy Density}{20}{}%
+\contentsline {subsubsection}{\numberline {7.7.4}Energy Current (Intensity)}{21}{}%
+\contentsline {section}{\numberline {8}Stationary Wave}{21}{}%
+\contentsline {subsection}{\numberline {8.1}Definition}{21}{}%
+\contentsline {subsection}{\numberline {8.2}Stationary Waves in Vibrating Strings}{21}{}%

@@ -9,7 +9,7 @@
 \numberwithin{equation}{subsection}
 
 \title{
-    \textbf{Simple Harmonic Motion}
+    \textbf{Simple Harmonic Motion and Waves}
 }
 
 \author{
@@ -617,16 +617,261 @@ Or,
     An electromagnetic wave is a wave that is produced by oscillating electric charges and propagated by the periodic variation of intensities of, usually, perpendicular electric and magnetic fields.
 \end{definition}
 
-\subsection{Equation of Wave Motion}
+\subsection{Equation of Motion}
 Let $y$ be the displacement of a particle of a medium from its mean position at time $t$. \\
 
 Then the equation of wave motion is
 \begin{equation}
     \boxed{ y = r \sin{(\omega t - \varphi)} }
 \end{equation}
+Here, $r$ is the amplitude of the wave, $\omega$ is the angular frequency of the wave, and $\varphi$ is the phase of the wave. \\
+We can also rewrite equation (7.3.1) substituting the values $\displaystyle \varphi = \frac{2\pi}{\lambda}x$, $\displaystyle \omega = \frac{2\pi}{T} = 2\pi n = \frac{2\pi}{\lambda} v$, and $\displaystyle k = \frac{2\pi}{\lambda}$, where $k$ is known as the propagation constant or the angular wave number. \\
+Hence, equation (7.3.1) becomes
+\begin{align*}
+    y &= r \sin{\left( \omega t - \frac{2\pi}{\lambda}x \right)} \\
+    y &= r \sin{\left( \frac{2\pi}{T}t - \frac{2\pi}{\lambda}x \right)}
+\end{align*}
+\begin{equation}
+    \boxed{ y = r \sin{\frac{2\pi}{\lambda} \left( vt - x \right)} }
+\end{equation}
+
+Wave travelling in the negative $x$ direction:
+\begin{equation}
+    \boxed{ y = r \sin{\frac{2\pi}{\lambda} \left( vt + x \right)} }
+\end{equation}
+
+\subsection{Velocity, Slope, and Acceleration}
+\subsubsection{Velocity of Wave and Velocity of Particle}
+The velocity of the wave is given by
+\begin{equation}
+    \boxed{ v = \frac{\lambda}{T} = \lambda f = \frac{\omega}{k} }
+\end{equation}
+
+The velocity of the particle is given by
+\begin{equation}
+    \boxed{ V = \dv{y}{t} = \omega r \cos{(\omega t - \varphi)} = \frac{2\pi v}{\lambda} r \cos{\frac{2\pi}{\lambda}(vt - x)}}
+\end{equation}
+
+\subsubsection{Slope of the wave curve}
+The slope of the wave curve is given by
+\begin{equation}
+    \boxed{ S = \dv{y}{x} = - \frac{2\pi}{\lambda} r \cos{\frac{2\pi}{\lambda}(vt - x)} }
+\end{equation}
+
+\subsubsection{Relation between Velocity and Slope}
+From equations (7.4.2) and (7.4.3), we get
+\begin{equation}
+    \boxed{ \frac{V}{S} = -v }
+\end{equation}
+That is, \\
+\begin{equation*}
+    \boxed{ \text{Velocity of the particle} = - \text{Velocity of the wave} \times \text{Slope of the wave curve} }
+\end{equation*}
+
+\subsubsection{Acceleration of the particle}
+The acceleration of the particle is given by
+\begin{equation}
+    \boxed{ A = \dv{V}{t} = - \frac{4\pi^2 v^2}{\lambda} r \sin{\frac{2\pi}{\lambda}(vt - x)} }
+\end{equation}
+Maximum acceleration,
+\begin{equation}
+    A_{\text{max}} = \frac{4\pi^2 v^2}{\lambda} r = 4\pi^2 f^2 r
+\end{equation}
+
+\subsection{Wave Packet, Phase Velocity, and Group Velocity}
+\subsubsection{Definitions}
+\begin{definition}{Wave packet}{}
+    A wave packet is a short burst or envelope of localized wave action that travels as a unit. \\
+    In other words, a wave packet is a group of waves consisting of slightly different frequencies superimposed upon each other.
+\end{definition}
+
+\begin{definition}{Phase velocity}{}
+    The phase velocity is the velocity of each individual wave in the wave packet.
+    \begin{equation}
+        \boxed{ v_p = \frac{\omega}{k} = \frac{\omega\lambda}{2\pi} = \lambda f }
+    \end{equation}
+\end{definition}
+
+\begin{definition}{Group velocity}{}
+    The group velocity is the velocity of the wave packet.
+    \begin{equation}
+        \boxed{ v_g = \dv{\omega}{k} }
+    \end{equation}
+\end{definition}
+
+\subsubsection{Relation between Phase Velocity and Group Velocity}
+From equations (7.5.1) and (7.5.2), we get
+\begin{align*}
+    v_g &= \dv{\omega}{k} = \dv{(k v_p)}{k} \\
+    &= v_p + k \dv{v_p}{k} \\
+    &= v_p + k \dv{v_p}{\lambda} \dv{\lambda}{k} \\
+    &= v_p + \frac{2\pi}{\lambda} \cdot \frac{1}{\dv{}{\lambda} \left( \frac{2\pi}{\lambda} \right)} \\
+    &= v_p - \frac{2\pi}{\lambda}\frac{\lambda^2}{2\pi}\dv{v_p}{\lambda}
+\end{align*}
+\begin{equation}
+    \boxed{ v_g = v_p - \lambda \dv{v_p}{\lambda} }
+\end{equation}
+
+\subsection{Differential Equation of Wave Motion}
+Let $y$ be the displacement of a particle of a medium from its mean position at time $t$, and $x$ be the displacement of the particle from its mean position at time $t$. \\
+Then we get,
+\begin{equation}
+    y = r \sin{\frac{2\pi}{\lambda}\left( vt - x \right)}
+\end{equation}
+\begin{equation*}
+    \dv{y}{t} = \frac{2\pi v}{\lambda} r \cos{\frac{2\pi}{\lambda}\left( vt - x \right)}
+\end{equation*}
+\begin{equation}
+    \boxed{ \dv[2]{y}{t} = -r \left( \frac{2\pi v}{\lambda} \right)^2 \sin{\frac{2\pi}{\lambda}\left( vt - x \right)} }
+\end{equation}
+
+From (7.6.1), we also get
+\begin{equation*}
+    \dv{y}{x} = - \frac{2\pi}{\lambda} r \cos{\frac{2\pi}{\lambda}\left( vt - x \right)}
+\end{equation*}
+\begin{equation}
+    \boxed{ \dv[2]{y}{x} = \left( \frac{2\pi}{\lambda} \right)^2 r \sin{\frac{2\pi}{\lambda}\left( vt - x \right)} }
+\end{equation}
+
+From equations (7.6.2) and (7.6.3), we get
+\begin{equation}
+    \boxed{ \dv[2]{y}{t} = v^2 \dv[2]{y}{x} }
+\end{equation}
+
+\subsection{Energy Density and Energy Current (Intensity)}
+\begin{definition}{Energy Density}{}
+    Energy density is the total energy per unit volume passed through a medium
+\end{definition}
+
+\subsubsection{Kinetic Energy Density}
+\begin{align*}
+    \rho_K &= \frac{1}{2}(\text{mass density})(\text{velocity})^2 \\
+    &= \frac{1}{2} \rho V^2 \\
+    &= \frac{1}{2} \rho \left[ \frac{2\pi v}{\lambda} r \cos{\frac{2\pi}{\lambda} (vt - x)} \right]^2
+\end{align*}
+\begin{equation}
+    \boxed{ \rho_K = \frac{1}{2} \rho \left( \frac{2\pi v}{\lambda} \right)^2 r^2 \cos^2{\frac{2\pi}{\lambda} (vt - x)} }
+\end{equation}
+
+\subsubsection{Potential Energy Density}
+\begin{align*}
+    \rho_U &= \int_{0}^{y} {\text{Force density} y} \: d{y} \\
+    &= \int_{0}^{y} {(\text{mass density})(\text{acceleration}) y} \: d{y} \\
+    &= \int_{0}^{y} {\rho \left[ \left(\frac{2\pi v}{\lambda}\right)^2 r \sin{\frac{2\pi}{\lambda}(vt-x)} \right] y} \: d{y}  \\
+    &= \rho \left[ \left(\frac{2\pi v}{\lambda}\right)^2 r \sin{\frac{2\pi}{\lambda}(vt-x)} \right] \frac{y^2}{2}
+\end{align*}
+\begin{equation}
+    \boxed{ \rho_U = \frac{1}{2} \rho \left( \frac{2\pi v}{\lambda} \right)^2 r^2 \sin^2{\frac{2\pi}{\lambda} (vt - x)} }
+\end{equation}
+
+\subsubsection{Total Energy Density}
+From equations (7.7.1) and (7.7.2), we get the total energy density as \[
+    \rho = \rho_K + \rho_U
+\]
+\begin{equation}
+    \boxed{ \rho = \frac{1}{2} \rho \left( \frac{2\pi v}{\lambda} \right)^2 r^2 }
+\end{equation}
+
+\subsubsection{Energy Current (Intensity)}
+\begin{definition}{Energy current}{}
+    The ratio of flow of energy through unit cross-sectional area of the wave front along the direction of the wave propagation is knows as the Energy Current
+
+    \begin{equation}
+        \boxed{ C = \rho_E v = 2\pi^2f^2r^2\rho v }
+    \end{equation}
+\end{definition}
+
+\begin{definition}{Intensity}{}
+    The intensity is known as the incident energy per unit area of the wave front per unit time
+
+    \begin{equation}
+        \boxed{ I = 2\pi^2f^2r^2\rho v }
+    \end{equation}
+\end{definition}
 
 
+\section{Stationary Wave}
+\subsection{Definition}
+\begin{definition}{Stationary Wave}{}
+    When two exactly similar progressive wave trains travelling with the same velocity along the same straight line, but in opposite directions are superimposed upon each other, the resultant wave remains confined to the region in which it's produces, and is no more progressive. Such wave is known as stationary wave. \\
+    In a nutshell, a stationary wave is a wave in which the particles of the medium vibrate in the opposite phase.
+\end{definition}
 
+\subsection{Stationary Waves in Vibrating Strings}
+Let $y_1$ and $y_2$ be two progressive waves travelling in opposite directions. \\
+Then, the equation of the two progressive waves are
+\begin{align*}
+    y_1 &= r \sin{\frac{2\pi}{\lambda}(vt - x)} \\
+    y_2 &= - r \sin{\frac{2\pi}{\lambda}(vt + x)}
+\end{align*}
+
+Hence the equation of the stationary wave is
+\begin{align*}
+    y &= y_1 + y_2 \\
+    &= r \sin{\frac{2\pi}{\lambda}(vt - x)} - r \sin{\frac{2\pi}{\lambda}(vt + x)} \\
+    &= r \left[ \sin{\frac{2\pi}{\lambda}(vt - x)} - \sin{\frac{2\pi}{\lambda}(vt + x)} \right] \\
+    &= 2r \cos{\left( \frac{2\pi}{\lambda}vt \right)} \sin{\left( -\frac{2\pi}{\lambda}x \right)}
+\end{align*}
+\begin{equation}
+    \boxed{ y = - 2r \cos{\frac{2\pi}{\lambda}vt} \sin{\frac{2\pi}{\lambda}x} }
+\end{equation}
+
+Now, consider (8.2.1) be
+\begin{equation}
+    y = \left[ - 2r \cos{\frac{2\pi}{\lambda}vt} \right] \sin{\frac{2\pi}{\lambda}x}
+\end{equation}
+
+\begin{minipage}{0.45\textwidth}
+    For zero amplitude:
+    \begin{align*}
+        \cos{\frac{2\pi}{\lambda}vt} &= 0 \\
+        \frac{2\pi}{\lambda}vt &= \frac{\pi}{2}, \frac{3\pi}{2}, \frac{5\pi}{2}, \cdots \\
+        \frac{2\pi t}{T} &= \left(n + \frac{1}{2}\right)\pi
+    \end{align*}
+    \begin{equation}
+        \boxed{ t = \left( n + \frac{1}{2} \right) \frac{T}{2} }
+    \end{equation}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+    For maximum amplitude:
+    \begin{align*}
+        \cos{\frac{2\pi}{\lambda}vt} &= \pm 1 \\
+        \frac{2\pi}{\lambda}vt &= 0, \pi, 2\pi, \cdots \\
+        \frac{2\pi t}{T} &= n\pi
+    \end{align*}
+    \begin{equation}
+        \boxed{ t = n \frac{T}{2} }
+    \end{equation}
+\end{minipage}
+
+\vspace{30pt}
+Again, consider (8.2.1) be
+\begin{equation}
+    y = \left[ \sin{\frac{2\pi}{\lambda}x} \right] - 2r \cos{\frac{2\pi}{\lambda}vt}
+\end{equation}
+
+\begin{minipage}{0.45\textwidth}
+    For maximum amplitude:
+    \begin{align*}
+        \sin{\frac{2\pi}{\lambda}x} &= \pm 1 \\
+        \frac{2\pi}{\lambda}x &= \frac{\pi}{2}, \frac{3\pi}{2}, \frac{5\pi}{2}, \cdots \\
+        \frac{2\pi}{\lambda} x &= \left( n + \frac{1}{2} \right) \pi
+    \end{align*}
+    \begin{equation}
+        \boxed{ x = \left( n + \frac{1}{2} \right) \frac{\lambda}{2} }
+    \end{equation}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+    For zero amplitude:
+    \begin{align*}
+        \sin{\frac{2\pi}{\lambda}x} &= 0 \\
+        \frac{2\pi}{\lambda}x &= 0, \pi, 2\pi, \cdots \\
+        \frac{2\pi}{\lambda} x &= n\pi
+    \end{align*}
+    \begin{equation}
+        \boxed{ x = n \frac{\lambda}{2} }
+    \end{equation}
+\end{minipage}
 
 
 
