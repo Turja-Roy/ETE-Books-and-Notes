@@ -6,6 +6,7 @@
 \input{preamble.tex}
 \usepackage{makecell}
 \allowdisplaybreaks
+\numberwithin{equation}{subsection}
 
 \title{
     \textbf{Simple Harmonic Motion}
@@ -130,7 +131,7 @@ So, $C^2 = \omega^2 r^2$ \\
     \boxed{ y = r \sin{(\omega t + \alpha)} }
 \end{equation}
 
-By expanding equation (6), we get
+By expanding equation (2.3.2), we get
 \begin{equation}
     y = r \sin{\omega t} \cos{\alpha} + r \cos{\omega t} \sin{\alpha}
 \end{equation}
@@ -227,13 +228,13 @@ If the two SHMs are in the same direction, then the resultant displacement is
     \therefore y = (r_1 \cos{\alpha_1} + r_2 \cos{\alpha_2}) \sin{\omega t} + (r_1 \sin{\alpha_1} + r_2 \sin{\alpha_2}) \cos{\omega t}
 \end{equation}
 
-In equation (18), let
+In equation (4.1.3), let
 \begin{align}
     r_1\cos{\alpha_1} + r_2\cos{\alpha_2} &= A\cos{\varphi} \\
     r_1\sin{\alpha_1} + r_2\sin{\alpha_2} &= A\sin{\varphi}
 \end{align}
 
-Then, equation (18) becomes
+Then, equation (4.1.3) becomes
 \begin{align}
     y &= A\cos{\varphi} \sin{\omega t} + A\sin{\varphi} \cos{\omega t} \\
     y &= A \sin{(\omega t + \varphi)}
@@ -241,7 +242,7 @@ Then, equation (18) becomes
 
 Here, $A$ is the amplitude of the resultant SHM and $\varphi$ is the phase of the resultant SHM. \\
 
-From equations (19) and (20), we get
+From equations (4.1.4) and (4.1.5), we get
 \begin{align*}
     A^2 &= A^2 \sin^2{\varphi} + A^2 \cos^2{\varphi} \\
     A^2 &= 
@@ -265,7 +266,7 @@ And,
 \subsubsection{Special Cases}
 \textbf{(I) Same phase : $\alpha_1 = \alpha_2$}\\~\\
 
-In this case, equation (21) becomes \[
+In this case, equation (4.1.8) becomes \[
     A = \sqrt{r_1^2 + r_2^2 + 2r_1r_2 \cos{0}} = \sqrt{(r_1 + r_2)^2} = r_1 + r_2
 \]
 \begin{equation}
@@ -281,7 +282,7 @@ And, \[
 
 \textbf{(II) Opposite phase : $\alpha_1 - \alpha_2 = (2n+1)\pi \text{, where } n=0,1,2,\cdots$}
 
-In this case, equation (21) becomes \[
+In this case, equation (4.1.8) becomes \[
     A = \sqrt{r_1^2 + r_2^2 + 2r_1r_2 \cos{(\alpha_2 + \pi - \alpha_2)}} = \sqrt{(r_1 - r_2)^2} = r_1 - r_2
 \]
 \begin{equation}
@@ -319,12 +320,12 @@ Thus, we get
     \boxed{ \frac{x^2}{a^2} + \frac{y^2}{b^2} - \frac{2xy}{ab} \sqrt{1 - \sin^2{\alpha}} = \sin^2{\alpha} }
 \end{equation}
 
-Equation (33) represents the general equation of the resultant SHM of the two perpendicular SHMs. The resulting curves are also known as Lissajous firgures.
+Equation (4.2.5) represents the general equation of the resultant SHM of the two perpendicular SHMs. The resulting curves are also known as Lissajous firgures.
 
 \subsubsection{Special Cases}
 \textbf{(I) If $\alpha=0$ or $2\pi$}\\~\\
 \[ \cos{\alpha} = 1, \qquad \sin{\alpha} = 0 \]
-Then equation (33) becomes \[
+Then equation (4.2.5) becomes \[
     \frac{x^2}{a^2} + \frac{y^2}{b^2} - \frac{2xy}{ab} = 0
 \]
 Or, \[
@@ -335,7 +336,7 @@ This represents a straight line passing through the origin.\\~\\
 
 \textbf{(II) If $\alpha=\pi$}\\~\\
 \[ \cos{\alpha} = -1, \qquad \sin{\alpha} = 0 \]
-Then equation (33) becomes \[
+Then equation (4.2.5) becomes \[
     \frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{2xy}{ab} = 0
 \]
 Or, \[
@@ -346,14 +347,14 @@ This represents a straight line with negative slope passing through the origin.\
 
 \textbf{(III) If $\alpha=\pi/2$ or, $3\pi/2$}\\~\\
 \[ \cos{\alpha} = 0, \qquad \sin{\alpha} = 1 \]
-Then equation (33) becomes \[
+Then equation (4.2.5) becomes \[
     \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1
 \]
 This represents an ellipse.\\~\\
 
 \textbf{(IV) If $\alpha=\pi/2$ or, $3\pi/2$, and $a=b$}\\~\\
 \[ \cos{\alpha} = 0, \qquad \sin{\alpha} = 1 \]
-Then equation (33) becomes \[
+Then equation (4.2.5) becomes \[
     \frac{x^2}{a^2} + \frac{y^2}{a^2} = 1
 \]
 Or, \[
@@ -363,14 +364,14 @@ This represents a circle of radius $a$.\\~\\
 
 \textbf{(V) If $\alpha=\pi/4$ or, $7\pi/4$}\\~\\
 \[ \cos{\alpha} = \frac{1}{\sqrt{2}}, \qquad \sin{\alpha} = \frac{1}{\sqrt{2}} \]
-Then equation (33) becomes \[
+Then equation (4.2.5) becomes \[
     \frac{x^2}{a^2} + \frac{y^2}{b^2} - \frac{2xy}{ab} \frac{1}{\sqrt{2}} = \frac{1}{2}
 \]
 This represents an oblique ellipse.\\~\\
 
 \textbf{(VI) If $\alpha=3\pi/4$ or, $5\pi/4$}\\~\\
 \[ \cos{\alpha} = -\frac{1}{\sqrt{2}}, \qquad \sin{\alpha} = \frac{1}{\sqrt{2}} \]
-Then equation (33) becomes \[
+Then equation (4.2.5) becomes \[
     \frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{2xy}{ab} \frac{1}{\sqrt{2}} = \frac{1}{2}
 \]
 This represents an oblique ellipse (negative slope).\\~\\
@@ -381,5 +382,163 @@ This represents an oblique ellipse (negative slope).\\~\\
     \caption{Lissajous figures}
     \label{fig:Lissajous-png}
 \end{figure}
+\newpage
+
+\section{Damped Harmonic Motion}
+\subsection{Definition}
+
+\begin{definition}{Damped Harmonic Motion}{}
+    Damped harmonic motion is a type of periodic motion where the amplitude of the motion decreases over time.
+\end{definition}
+
+\begin{definition}{Damping and Damped Oscillation}{}
+    Damping is an influence within or upon an oscillatory system that has the effect of reducing, restricting or preventing its oscillations. In physical systems, damping is produced by processes that dissipate the energy stored in the oscillation. \\
+    In other words, the reduction in amplitude (or energy) of an oscillator is called damping, and the oscillation is said to be damped
+\end{definition}
+
+\begin{definition}{Damping Force}{}
+    Damping force is a force, that opposes the motion of the vibrating particle and is directly proportional to the velocity of the particle.
+    \begin{itemize}
+        \item The damping force is always directed opposite to the direction of motion of the particle.
+        \item The magnitude of the damping force is directly proportional to the velocity of the particle.
+        \item The direction of the damping force is opposite to the direction of the velocity of the particle.
+        \item Damping force is defined as $F_d = -bv$, where $b$ is the damping constant, and $v$ is the velocity of the object.
+    \end{itemize}
+\end{definition}
+
+\subsection{Differential Equation of Damped Harmonic Motion}
+The damping force can be represented as \[
+    F_d = -bv = -b \dv{y}{t}
+\]
+
+Thus, the differential equation can be written as
+\begin{align*}
+    m \dv[2]{y}{t} &= -ky -b\dv{y}{t} \\
+    m \dv[2]{y}{t} + b\dv{y}{t} + ky &= 0 \\
+    \dv[2]{y}{t} + \frac{b}{m}\dv{y}{t} + \frac{k}{m}y &= 0
+\end{align*}
+\begin{equation}
+    \boxed{ \dv[2]{y}{t} + 2\lambda \dv{y}{t} + \omega^2 y = 0 }
+\end{equation}
+
+Here, $\displaystyle \lambda = \frac{b}{2m}$ and $\displaystyle \omega = \sqrt{\frac{k}{m}}$ \\
+
+
+
+\subsection{Solution of the Differential Equation}
+Equation (5.1.1) is a second order linear differential equation with constant coefficients. So, it must have at least one solution of the form \[
+    y = A e^{kt}
+\]
+, where $A$ and $k$ are arbitrary constants.\\
+Hence, the auxiliary equation would be
+\begin{equation}
+    k^2 + 2\lambda k + \omega^2 = 0
+\end{equation}
+Equation (5.1.2) is a quadratic equation in $k$. So, it has two roots \[
+    k = -\lambda \pm \sqrt{\lambda^2 - \omega^2}
+\]
+
+Thus, the general solution of the differential equation is
+\begin{equation}
+    \boxed{ y = A_1 e^{(-\lambda + \sqrt{\lambda^2 - \omega^2})t} + A_2 e^{(-\lambda - \sqrt{\lambda^2 - \omega^2})t} }
+\end{equation}
+Here, $A_1$ and $A_2$ are arbitrary constants. \\
+Differentiating equation (5.1.3) with respect to $t$, we get
+\begin{equation}
+    \dv{y}{t} = (-\lambda + \sqrt{\lambda^2 - \omega^2})A_1 e^{(-\lambda + \sqrt{\lambda^2 - \omega^2})t} + (-\lambda - \sqrt{\lambda^2 - \omega^2})A_2 e^{(-\lambda - \sqrt{\lambda^2 - \omega^2})t}
+\end{equation}
+
+Let $y_{max} = a_0$ at $t=0$. Then, equation (5.3.3) becomes
+\begin{equation}
+    y_{max} = a_0 = A_1 + A_2
+\end{equation}
+Again, the velocity is zero at maximum displacement. So, equation (5.3.3) becomes
+\begin{align*}
+    \left( -\lambda + \sqrt{\lambda^2-\omega^2} \right) A_1 + \left( -\lambda - \sqrt{\lambda^2-\omega^2} \right) &= 0 \\
+    - \lambda (A_1+A_2) + \sqrt{\lambda^2-\omega^2} (A_1-A_2) &= 0 \\
+    - \lambda a_0 + \sqrt{\lambda^2-\omega^2} (A_1-A_2) &= 0 \\
+    \sqrt{\lambda^2-\omega^2} (A_1-A_2) &= \lambda a_0
+\end{align*}
+\begin{equation}
+    A_1 - A_2 = \frac{\lambda a_0}{\sqrt{\lambda^2-\omega^2}}
+\end{equation}
+
+From equations (5.3.4) and (5.3.5), we get
+\begin{align}
+    A_1 &= \frac{a_0}{2} \left( 1 + \frac{\lambda}{\sqrt{\lambda^2-\omega^2}} \right) \\
+    \text{And}, \quad A_2 &= \frac{a_0}{2} \left( 1 - \frac{\lambda}{\sqrt{\lambda^2-\omega^2}} \right)
+\end{align}
+
+Substituting the values of $A_1$ and $A_2$ in equation (5.1.3), we get
+\begin{equation}
+    \boxed{ y = \frac{a_0}{2} e^{-\lambda t} \left[ \left( 1 + \frac{\lambda}{\sqrt{\lambda^2-\omega^2}} \right) e^{\sqrt{\lambda^2-\omega^2}t} + \left( 1 - \frac{\lambda}{\sqrt{\lambda^2-\omega^2}} \right) e^{-\sqrt{\lambda^2-\omega^2}t} \right] }
+\end{equation}
+
+\subsection{Over Damping, Critical Damping, and Under Damping}
+\subsubsection{Over Damping}
+When $\lambda > \omega$, then $\sqrt{\lambda^2-\omega^2}$ is a positive value, less than $\lambda$. Thus, each of the two terms on the RHS of equation (5.3.8) has exponential terms with negative power. In this case, the equation has no oscillating terms. So, the displacement falls asymptotically to zero without oscillating.
+
+\subsubsection{Critical Damping}
+When $\lambda = \omega$, then $\sqrt{\lambda^2-\omega^2} = 0$. Thus, the two terms on the RHS of equation (5.3.8) become \[
+    \frac{a_0}{2} e^{-\lambda t} \left[ \left( 1 + \frac{\lambda}{\sqrt{\lambda^2-\omega^2}} \right) + \left( 1 - \frac{\lambda}{\sqrt{\lambda^2-\omega^2}} \right) \right] = a_0 e^{-\lambda t}
+\]
+In this case, the displacement falls asymptotically to zero without oscillating in the shortest possible time. \\~\\
+
+Let's consider, however, that $\lambda^2 \to \omega^2$. Let $\sqrt{\lambda^2-\omega^2} = h$, a very small quantity. Then we have
+\begin{align*}
+    y &= A_1e^{(-\lambda+h)t} + A_2e^{(-\lambda-h)t} \\
+    &= e^{-\lambda t} \left[ A_1e^{ht} + A_2e^{-ht} \right] \\
+    &= e^{-\lambda t} \left[ A_1(1+ht+\frac{h^2t^2}{2!}+\cdots) + A_2(1-ht+\frac{h^2t^2}{2!}-\cdots) \right] \\
+    &= e^{-\lambda t} \left[ (A_1+A_2) + (A_1-A_2)ht + \frac{h^2t^2}{2!}(A_1+A_2) + \cdots \right]
+\end{align*}
+We have $A_1 + A_2 = a_0$ and $\displaystyle A_1 - A_2 = \frac{\lambda a_0}{h} \qquad \text{[From equation (5.3.5)]}$ \\
+Neglecting the higher powers of $h$, we get
+\begin{equation}
+    \boxed{ y = a_0 e^{-\lambda t} (1 + \lambda t) }
+\end{equation}
+
+This is the equation of motion of a critically damped oscillator. \\
+
+\subsubsection{Under Damping}
+When $\lambda < \omega$, then $\sqrt{\lambda^2-\omega^2}$ is an imaginary value. Let $i=\sqrt{-1}$ and $g=\sqrt{\omega^2-\lambda^2}$. So, equation (5.3.8) becomes
+\begin{align*}
+    y &= A_1e^{(-\lambda+ig)t} + A_2e^{(-\lambda-ig)t} \\
+    &= e^{-\lambda t} (A_1e^{igt} + A_2e^{-igt}) \\
+    &= e^{-\lambda t} \left[ A_1(\cos{gt}+i\sin{gt}) + A_2(\cos{gt}-i\sin{gt}) \right] \\
+    &= e^{-\lambda t} \left[ (A_1+A_2)\cos{gt} + i(A_1-A_2)\sin{gt}\right ] \\
+    y &= e^{-\lambda t} \left[ A \cos{gt} + B \sin{gt} \right]
+\end{align*}
+
+If $A$ and $B$ can be related to $a_0$ as $A = a_0\sin{\theta}$ and $B = a_0\cos{\theta}$ then we get
+\begin{align*}
+    y &= e^{-\lambda t} \left[ a_0\cos{gt}\frac{A}{a_0} + a_0\sin{gt}\frac{B}{a_0} \right] \\
+    &= a_0 e^{-\lambda t} \left[ \cos{gt}\sin{\theta} + \sin{gt}\cos{\theta} \right]
+\end{align*}
+\begin{equation}
+    \boxed{ y = a_0 e^{-\lambda t} \sin{(gt+\theta)} }
+\end{equation}
+
+This is the equation of a damped harmonic oscillator with amplitude $a_0e^{-\lambda t}$ and frequency $\displaystyle f = \frac{g}{2\pi} = \frac{\sqrt{\omega^2-\lambda^2}}{2\pi}$.
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Damping.png}
+    \caption{Over Damping, Critical Damping, and Under Damping}
+    \label{fig:Damping-png}
+\end{figure}
+
+
+\section{Forced Oscillation and Resonance}
+\subsection{Forced Oscillation}
+\begin{definition}{Forced Oscillation}{}
+    When a vibrating system is subjected to an external periodic force, the system is said to be under forced oscillation.
+\end{definition}
+
+
+
+
+
+
+
 
 \end{document}
