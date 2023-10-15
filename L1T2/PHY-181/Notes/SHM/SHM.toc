@@ -24,4 +24,7 @@
 \contentsline {subsubsection}{\numberline {5.4.2}Critical Damping}{13}{}%
 \contentsline {subsubsection}{\numberline {5.4.3}Under Damping}{13}{}%
 \contentsline {section}{\numberline {6}Forced Oscillation and Resonance}{14}{}%
-\contentsline {subsection}{\numberline {6.1}Forced Oscillation}{14}{}%
+\contentsline {subsection}{\numberline {6.1}Definition}{14}{}%
+\contentsline {subsection}{\numberline {6.2}Differential Equation of Forced Oscillation}{14}{}%
+\contentsline {subsection}{\numberline {6.3}Solution of the Differential Equation}{15}{}%
+\contentsline {subsection}{\numberline {6.4}Resonance}{15}{}%

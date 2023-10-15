@@ -529,10 +529,64 @@ This is the equation of a damped harmonic oscillator with amplitude $a_0e^{-\lam
 
 
 \section{Forced Oscillation and Resonance}
-\subsection{Forced Oscillation}
+\subsection{Definition}
 \begin{definition}{Forced Oscillation}{}
-    When a vibrating system is subjected to an external periodic force, the system is said to be under forced oscillation.
+    When a vibrating system is subjected to an external periodic force, the system is said to be under forced oscillation. \\
+    The external periodic force is called the driving force, and the external agent is called a driver.
 \end{definition}
+
+\subsection{Differential Equation of Forced Oscillation}
+The differential equation for damping harmonic motion can be written as \[
+    \dv[2]{y}{t} + 2\lambda \dv{y}{t} + \omega^2 y = 0
+\] Or, \[
+    m \dv[2]{y}{t} + b \dv{y}{t} + ky = 0
+\]
+
+For forced oscillation, the differential equation is modified in the form
+\begin{equation}
+    m \dv[2]{y}{t} + b \dv{y}{t} + ky = F_0 \sin{\omega t}
+\end{equation}
+
+\subsection{Solution of the Differential Equation}
+The general solution of the differential equation is
+\begin{equation}
+    \boxed{ y = y_h + y_p }
+\end{equation}
+Here, $y_h$ is the solution of the homogeneous equation, and $y_p$ is the particular integral of the non-homogeneous equation. \\
+The solution of the homogeneous equation is
+\begin{equation}
+    \boxed{ y_h = A_1 e^{(-\lambda + \sqrt{\lambda^2 - \omega^2})t} + A_2 e^{(-\lambda - \sqrt{\lambda^2 - \omega^2})t} }
+\end{equation}
+Here, $A_1$ and $A_2$ are arbitrary constants. \\
+The particular integral of the non-homogeneous equation is
+\begin{equation}
+    \boxed{ y_p = \frac{F_0}{m(\omega_0^2 - \omega^2)} \sin{\omega t} }
+\end{equation}
+
+Thus, the general solution of the differential equation is
+\begin{equation}
+    \boxed{ y = A_1 e^{(-\lambda + \sqrt{\lambda^2 - \omega^2})t} + A_2 e^{(-\lambda - \sqrt{\lambda^2 - \omega^2})t} + \frac{F_0}{m(\omega_0^2 - \omega^2)} \sin{\omega t} }
+\end{equation}
+Or,
+\begin{equation}
+    \boxed{ y = A_1 e^{-\lambda t} \sin{(\omega t + \theta)} + \frac{F_0}{m(\omega_0^2 - \omega^2)} \sin{\omega t} }
+\end{equation}
+
+\subsection{Resonance}
+\begin{definition}{Resonance}{}
+    The phenomenon of the increase in amplitude of oscillation of a system when the frequency of the driving force is equal to the natural frequency of the system is called resonance.
+\end{definition}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
