@@ -3,6 +3,7 @@
 \usepackage[document]{ragged2e}
 \usepackage{graphicx}
 \usepackage{siunitx}
+\usepackage{physics}
 \graphicspath{ {./images/} }
 \input{preamble.tex}
 \numberwithin{equation}{subsection}
@@ -345,11 +346,25 @@ Hence, the rest mass of a proton is \[
 \begin{definition}{Heisenberg's Uncertainty Principle}{}
     The principle states that for a particle of atomic magnitude, in motion, it is impossible to determine both the position and the momentum simultaneously with perfect accuracy.
 \end{definition}
+
+\subsection{Uncertainty in Position and Momentum}
 Quantitative statement of the principle is given by
 \begin{equation}
     \boxed{ \Delta x \Delta p \geq \frac{\hbar}{2} }
 \end{equation}
 where $\Delta x$ is the uncertainty in the position of the particle and $\Delta p$ is the uncertainty in the momentum of the particle. And $\displaystyle \hbar = \frac{h}{2\pi}$ \\
+
+\subsection{Uncertainty in Energy and Time}
+The uncertainty principle can also be stated in terms of energy and time as
+\begin{equation}
+    \boxed{ \Delta E \Delta t \geq \frac{\hbar}{2} }
+\end{equation}
+
+\subsection{Uncertainty in Angular Position and Angular Momentum}
+The uncertainty principle can also be stated in terms of angular position and angular momentum as
+\begin{equation}
+    \boxed{ \Delta \theta \Delta L \geq \frac{\hbar}{2} }
+\end{equation}
 
 \subsection{Application: Absence of Electrons in the Nucleus}
 The radius of the nucleus is of the order of $10^{-15}$ m. If an electron is present in the nucleus, then the uncertainty in its position is of the order of $10^{-15}$ m. Hence, the uncertainty in its momentum is given by \[
@@ -359,6 +374,143 @@ Thus, the momentum of the electron must be \textit{at least} equal to the above 
     v = \frac{p}{m_e} = \frac{5.3 \times 10^{-20}}{9.1 \times 10^{-31}} = 5.8 \times 10^{10} \: \si{m s}^{-1}
 \]
 Here, $v > c$, which is not possible. Hence, we can conclude that, an electron can't exist inside the nucleus of an atom.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Schrodinger's Wave Equation  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Schrodinger's Wave Equation}
+\subsection{Schrodinger's One-Dimensional Time-Dependent Wave Equation}
+\subsubsection{Wave Function for a Free Particle}
+Let a particle of mass $m$ be in motion in the positive $x$ direction with velocity $v$, accurately known momentum $p_x$ and total energy $E$. The position of the particle would be completely undetermined. The wave associated with such a particle should be a plane continuous simple harmonic wave travelling in the positive $x$ direction.\\~\\
+In wave mechanics, the wave function $\psi$ is a function of $x$ and $t$. Thus, the wave function of the particle is given by
+\begin{equation}
+    \boxed{ \psi(x, t) = A e^{i(kx - \omega t)} }
+\end{equation}
+where $A$ is the amplitude of the wave, $k$ is the wave number, and $\omega$ is the angular frequency of the wave. \\~\\
+
+The momentum of the particle is given by
+\begin{align*}
+    p_x &= \frac{h}{\lambda} = \frac{h}{2\pi}\frac{2\pi}{\lambda} \\
+    &= \hbar k \\
+    &= \hbar \frac{2\pi\nu}{v}
+\end{align*}
+\begin{equation}
+    \frac{\omega}{v} = \frac{p_x}{\hbar}
+\end{equation}
+Energy of the particle is given by
+\begin{align*}
+    E &= h\nu = \frac{h}{2\pi}2\pi\nu \\
+    &= \hbar \omega
+\end{align*}
+\begin{equation}
+    \omega = \frac{E}{\hbar}
+\end{equation}
+
+Substituting the expressions in equation (4.1.1), we get
+\begin{equation}
+    \boxed{ \psi(x, t) = A e^{\frac{i}{\hbar}\left( p_{x}x - Et \right)} }
+\end{equation}
+
+\subsubsection{One-Dimensional Time-Dependent Wave Equation}
+If the speed of the particle is small compared to that of light, the total energy is
+\begin{equation}
+    E = E_K + E_P = \frac{p_{x}^2}{2m} + V
+\end{equation}
+If the motion of the particle is due to the action of a force $F(x)$ which is a function of $x$, then $V$ will be a function only of $x$. Multiplying both sides of equation (4.1.5) by the wave function $\psi(x,t)$, we get
+\begin{equation}
+    \frac{p_x^2 \psi}{2m} + V\psi = E\psi
+\end{equation}
+
+Differentiating equation (4.1.4) with respect to $t$, we get
+\begin{align*}
+    \pdv{\psi}{x} &= A \left( \frac{i}{\hbar} \right)p_x e^{i/\hbar (p_x x - Et)} \\
+    &= \left( \frac{i}{\hbar} \right) p_x A e^{i/\hbar (p_x x - Et)}
+\end{align*}
+\begin{equation}
+    \pdv{\psi}{t} = \left( \frac{i}{\hbar} \right) p_x \psi
+\end{equation}
+\begin{align*}
+    \pdv[2]{\psi}{x} &= \left( \frac{i}{\hbar} \right) p_x \pdv{\psi}{x} \\
+    &= \left( \frac{i}{\hbar} \right) p_x \left( \frac{i}{\hbar} \right) p_x \psi \\
+    &= -\frac{1}{\hbar^2} p_x^2 \psi
+\end{align*}
+Thus we have
+\begin{equation}
+    p_{x}^2 \psi = -\hbar^2 \pdv[2]{\psi}{x}
+\end{equation}\\~\\
+
+Now, differentiating equation (4.1.4) with respect to $t$, we get
+\begin{align*}
+    \pdv{\psi}{t} &= A \left( \frac{i}{\hbar} \right) E e^{i/\hbar (p_x x - Et)} \\
+    &= \left( \frac{i}{\hbar} \right) (-E) A e^{i/\hbar (p_x x - Et)} \\
+    &= -\frac{i}{\hbar} E \psi
+\end{align*}
+\begin{equation}
+    E\psi = -\frac{\hbar}{i} \pdv{\psi}{t}
+\end{equation}
+
+Substituting these expressions for $p_{x}^2\psi$ and $E\psi$ in equation (4.1.6), we get
+\begin{equation}
+    \boxed{ -\frac{\hbar^2}{2m} \pdv[2]{\psi}{x} + V\psi = -\frac{\hbar}{i} \pdv{\psi}{t} }
+\end{equation}
+This is the one-dimensional time-dependent wave equation. \\~\\
+
+In three dimensions, the wave equation is given by
+\begin{equation}
+    \boxed{ \left[ -\frac{\hbar^2}{2m} \nabla^2 + V \right] \psi = -\frac{\hbar}{i} \pdv{\psi}{t} }
+\end{equation}
+where $\displaystyle \nabla^2 = \left( \pdv[2]{\psi}{x} + \pdv[2]{\psi}{y} + \pdv[2]{\psi}{z} \right)$ is the Laplacian operator.
+
+
+\subsection{Schrodinger's One-Dimensional Time-Independent Wave Equation}
+The one-dimensional time-dependent wave equation is given by
+\begin{equation}
+    -\frac{\hbar^2}{2m} \pdv[2]{\psi}{x} + V\psi = -\frac{\hbar}{i} \pdv{\psi}{t} 
+\end{equation}
+Equation (4.2.1) is a partial differential equation in two variables $(x,t)$. The equation is separable into the time-independent part and time-dependent part, if the potential energy $V$ is a function of $x$ only, and the total energy $E$ is constant.\\
+Let $u(x)$ and $f(t)$ be the time-independent and time-dependent parts respectively. Then
+\begin{equation}
+    \psi(x,t) = u(x)f(t)
+\end{equation}
+
+Substituting this in equation (4.2.1), we get
+\begin{equation}
+    -\frac{\hbar^2}{2m} f \dv[2]{u}{x} + Vuf = -\frac{\hbar}{i} u \dv{f}{t}
+\end{equation}
+
+Dividing both sides by $uf$, we get
+\begin{equation}
+    -\frac{\hbar^2}{2m} \frac{1}{u} \dv[2]{u}{x} + V = -\frac{\hbar}{i} \frac{1}{f} \dv{f}{t}
+\end{equation}
+
+The RHS of this equation is a function of only time $t$, and the LHS is a function of only $x$. \\
+Now, we can make use of equation (4.1.9) to write
+\begin{equation}
+    -\frac{\hbar}{i} \frac{1}{f} \dv{f}{t} = E
+\end{equation}
+This is the time-dependent part of Schrodinger's equation.\\~\\
+Now, from equations (4.2.3) and (4.2.4), we get
+\begin{equation}
+    -\frac{\hbar^2}{2m} \frac{1}{u} \dv[2]{u}{x} + V = E
+\end{equation}
+Multiphying both sides by $u$, and rearranging, we get
+\begin{equation}
+    \boxed{ \dv[2]{u}{x} + \frac{2m}{\hbar^2} (E-V)u = 0 }
+\end{equation}
+This is the one-dimentional time-dependent Schrodinger's equation.\\~\\
+In three dimensions, the time-independent Schrodinger's equation is given by
+\begin{equation}
+    \boxed{ \nabla^2 u + \frac{2m}{\hbar^2} (E-V)u = 0 }
+\end{equation}
+
+
+
+
+
+
 
 
 

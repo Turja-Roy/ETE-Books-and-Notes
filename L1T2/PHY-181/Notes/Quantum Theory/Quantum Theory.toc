@@ -21,4 +21,12 @@
 \contentsline {subsection}{\numberline {2.2}De Broglie's Hypothesis}{8}{}%
 \contentsline {subsubsection}{\numberline {2.2.1}Rest Mass of a Photon}{9}{}%
 \contentsline {section}{\numberline {3}Heisenberg's Uncertainty Principle}{10}{}%
-\contentsline {subsection}{\numberline {3.1}Application: Absence of Electrons in the Nucleus}{10}{}%
+\contentsline {subsection}{\numberline {3.1}Uncertainty in Position and Momentum}{10}{}%
+\contentsline {subsection}{\numberline {3.2}Uncertainty in Energy and Time}{10}{}%
+\contentsline {subsection}{\numberline {3.3}Uncertainty in Angular Position and Angular Momentum}{10}{}%
+\contentsline {subsection}{\numberline {3.4}Application: Absence of Electrons in the Nucleus}{10}{}%
+\contentsline {section}{\numberline {4}Schrodinger's Wave Equation}{11}{}%
+\contentsline {subsection}{\numberline {4.1}Schrodinger's One-Dimensional Time-Dependent Wave Equation}{11}{}%
+\contentsline {subsubsection}{\numberline {4.1.1}Wave Function for a Free Particle}{11}{}%
+\contentsline {subsubsection}{\numberline {4.1.2}One-Dimensional Time-Dependent Wave Equation}{11}{}%
+\contentsline {subsection}{\numberline {4.2}Schrodinger's One-Dimensional Time-Independent Wave Equation}{13}{}%
