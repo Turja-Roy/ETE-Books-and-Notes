@@ -1,32 +1,39 @@
-\contentsline {section}{\numberline {1}Origin of Quantum Theory}{2}{}%
-\contentsline {subsection}{\numberline {1.1}Black Body Radiation}{2}{}%
-\contentsline {subsubsection}{\numberline {1.1.1}Distribution of Energy in the Spectrum of a Black Body}{2}{}%
-\contentsline {subsection}{\numberline {1.2}Failure of Classical Physics to Explain Black Body Radiation}{3}{}%
-\contentsline {subsubsection}{\numberline {1.2.1}Wien's Radiation Formula}{3}{}%
-\contentsline {subsubsection}{\numberline {1.2.2}Rayleigh-Jeans Law}{3}{}%
-\contentsline {subsection}{\numberline {1.3}Planck's Quantum Hypothesis}{4}{}%
-\contentsline {subsubsection}{\numberline {1.3.1}Planck's Radiation Law}{4}{}%
-\contentsline {subsubsection}{\numberline {1.3.2}Consequences of Planck's Law}{5}{}%
-\contentsline {subsection}{\numberline {1.4}Photoelectric Effect}{5}{}%
-\contentsline {subsubsection}{\numberline {1.4.1}Experimental Study of Photoelectric Effect}{5}{}%
-\contentsline {subsubsection}{\numberline {1.4.2}Failure of Classical Physics to Explain Photoelectric Effect}{7}{}%
-\contentsline {subsection}{\numberline {1.5}Einstein's Explanation of Photoelectric Effect}{7}{}%
-\contentsline {subsubsection}{\numberline {1.5.1}Einstein's Photoelectric Equation}{7}{}%
-\contentsline {subsubsection}{\numberline {1.5.2}Threshold Frequency}{8}{}%
-\contentsline {subsection}{\numberline {1.6}Bohr's Quantization of Angular Momentum and Theory of Hydrogen Atom}{8}{}%
-\contentsline {subsubsection}{\numberline {1.6.1}Bohr's Postulates}{8}{}%
-\contentsline {subsubsection}{\numberline {1.6.2}Limitations of Bohr's Theory}{8}{}%
-\contentsline {section}{\numberline {2}Wave Properties of Matter}{9}{}%
-\contentsline {subsection}{\numberline {2.1}Wave Particle Duality}{9}{}%
-\contentsline {subsection}{\numberline {2.2}De Broglie's Hypothesis}{9}{}%
-\contentsline {subsubsection}{\numberline {2.2.1}Rest Mass of a Photon}{10}{}%
-\contentsline {section}{\numberline {3}Heisenberg's Uncertainty Principle}{10}{}%
-\contentsline {subsection}{\numberline {3.1}Uncertainty in Position and Momentum}{10}{}%
-\contentsline {subsection}{\numberline {3.2}Uncertainty in Energy and Time}{11}{}%
-\contentsline {subsection}{\numberline {3.3}Uncertainty in Angular Position and Angular Momentum}{11}{}%
-\contentsline {subsection}{\numberline {3.4}Application: Absence of Electrons in the Nucleus}{11}{}%
-\contentsline {section}{\numberline {4}Schrodinger's Wave Equation}{11}{}%
-\contentsline {subsection}{\numberline {4.1}Schrodinger's One-Dimensional Time-Dependent Wave Equation}{11}{}%
-\contentsline {subsubsection}{\numberline {4.1.1}Wave Function for a Free Particle}{11}{}%
-\contentsline {subsubsection}{\numberline {4.1.2}One-Dimensional Time-Dependent Wave Equation}{12}{}%
-\contentsline {subsection}{\numberline {4.2}Schrodinger's One-Dimensional Time-Independent Wave Equation}{13}{}%
+\contentsline {section}{\numberline {1}Origin of Quantum Theory}{3}{}%
+\contentsline {subsection}{\numberline {1.1}Black Body Radiation}{3}{}%
+\contentsline {subsubsection}{\numberline {1.1.1}Distribution of Energy in the Spectrum of a Black Body}{3}{}%
+\contentsline {subsection}{\numberline {1.2}Failure of Classical Physics to Explain Black Body Radiation}{4}{}%
+\contentsline {subsubsection}{\numberline {1.2.1}Wien's Radiation Formula}{4}{}%
+\contentsline {subsubsection}{\numberline {1.2.2}Rayleigh-Jeans Law}{4}{}%
+\contentsline {subsection}{\numberline {1.3}Planck's Quantum Hypothesis}{5}{}%
+\contentsline {subsubsection}{\numberline {1.3.1}Planck's Radiation Law}{5}{}%
+\contentsline {subsubsection}{\numberline {1.3.2}Consequences of Planck's Law}{6}{}%
+\contentsline {subsection}{\numberline {1.4}Photoelectric Effect}{6}{}%
+\contentsline {subsubsection}{\numberline {1.4.1}Experimental Study of Photoelectric Effect}{6}{}%
+\contentsline {subsubsection}{\numberline {1.4.2}Failure of Classical Physics to Explain Photoelectric Effect}{8}{}%
+\contentsline {subsection}{\numberline {1.5}Einstein's Explanation of Photoelectric Effect}{8}{}%
+\contentsline {subsubsection}{\numberline {1.5.1}Einstein's Photoelectric Equation}{8}{}%
+\contentsline {subsubsection}{\numberline {1.5.2}Threshold Frequency}{9}{}%
+\contentsline {subsection}{\numberline {1.6}Bohr's Quantization of Angular Momentum and Theory of Hydrogen Atom}{9}{}%
+\contentsline {subsubsection}{\numberline {1.6.1}Bohr's Postulates}{9}{}%
+\contentsline {subsubsection}{\numberline {1.6.2}Limitations of Bohr's Theory}{9}{}%
+\contentsline {subsection}{\numberline {1.7}Compton Effect}{10}{}%
+\contentsline {subsubsection}{\numberline {1.7.1}Classical Explanation of Compton Effect}{10}{}%
+\contentsline {subsubsection}{\numberline {1.7.2}Quantum Theory Explanation of Compton Effect}{10}{}%
+\contentsline {section}{\numberline {2}Wave Properties of Matter}{10}{}%
+\contentsline {subsection}{\numberline {2.1}Wave Particle Duality}{10}{}%
+\contentsline {subsection}{\numberline {2.2}De Broglie's Hypothesis}{11}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}Rest Mass of a Photon}{12}{}%
+\contentsline {section}{\numberline {3}Heisenberg's Uncertainty Principle}{12}{}%
+\contentsline {subsection}{\numberline {3.1}Uncertainty in Position and Momentum}{12}{}%
+\contentsline {subsection}{\numberline {3.2}Uncertainty in Energy and Time}{12}{}%
+\contentsline {subsection}{\numberline {3.3}Uncertainty in Angular Position and Angular Momentum}{12}{}%
+\contentsline {subsection}{\numberline {3.4}Application: Absence of Electrons in the Nucleus}{13}{}%
+\contentsline {section}{\numberline {4}Schrodinger's Wave Equation}{13}{}%
+\contentsline {subsection}{\numberline {4.1}Schrodinger's One-Dimensional Time-Dependent Wave Equation}{13}{}%
+\contentsline {subsubsection}{\numberline {4.1.1}Wave Function for a Free Particle}{13}{}%
+\contentsline {subsubsection}{\numberline {4.1.2}One-Dimensional Time-Dependent Wave Equation}{14}{}%
+\contentsline {subsection}{\numberline {4.2}Schrodinger's One-Dimensional Time-Independent Wave Equation}{15}{}%
+\contentsline {subsection}{\numberline {4.3}The Infinite Square Well Potential}{16}{}%
+\contentsline {subsubsection}{\numberline {4.3.1}Wave Function}{16}{}%
+\contentsline {subsubsection}{\numberline {4.3.2}Evaluation of $A$ and Normalization of the Wave Function}{17}{}%
+\contentsline {subsection}{\numberline {4.4}Potential Step}{17}{}%

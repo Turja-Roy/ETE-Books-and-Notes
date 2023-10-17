@@ -275,6 +275,26 @@ The threshold frequency $\nu_0$ is the minimum frequency of the incident light f
 \end{enumerate}
 
 
+\subsection{Compton Effect}
+\begin{definition}{Compton Effect}{}
+    The phenomenon of change in wavelength of X-rays when scattered by a material medium is called Compton effect.
+\end{definition}
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.4\textwidth]{compton.png}
+\end{figure}
+
+\subsubsection{Classical Explanation of Compton Effect}
+According to classical physics, the wavelength of the scattered X-rays should be the same as that of the incident X-rays. But in reality, the wavelength of the scattered X-rays is greater than that of the incident X-rays.
+
+\subsubsection{Quantum Theory Explanation of Compton Effect}
+Compton explained his experimental results by postulating that incident X-ray beam is an assembly of photons having energy  $E=h\nu$. These photons collide with free electrons in the scattering target. The scattered radiation consists of recoiling photons emerging from the target. The incident photon transfers some of its energy to the free electron, so the scattered photon has less energy than the incident photon. Thus the frequency reduces and wavelength increases.
+\begin{equation}
+    \boxed{ \Delta \lambda = \lambda' - \lambda = \frac{h}{m_e c} (1 - \cos \theta) }
+\end{equation}
+where $\theta$ is the angle between the incident and scattered X-rays. \\~\\
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  Wave Properties of Matter  %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -517,19 +537,142 @@ In three dimensions, the time-independent Schrodinger's equation is given by
     \boxed{ \nabla^2 u + \frac{2m}{\hbar^2} (E-V)u = 0 }
 \end{equation}
 
+\subsection{The Infinite Square Well Potential}
+Consider a particle of mass $m$ moving inside a box along the $x$ direction. The particle is bouncing back and forth between the walls of the box. The box has insurmountable potential barriers at $x=0$ and $x=L$.\\
+The potential energy $V$ of the particle is infinite on both sides of the box, and $V=0$ between $x=0$ and $x=L$.\\~\\
 
+Within the box, the Schrodinger's equation is given by
+\begin{equation}
+    \dv[2]{\psi}{x} + \frac{2m}{\hbar^2} E\psi = 0
+\end{equation}
 
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.3\textwidth]{potential well.png}
+\end{figure}
 
+The general solution of this equation is
+\begin{equation}
+    \psi = A \sin{\frac{\sqrt{2mE}}{\hbar}x} + B \cos{\frac{\sqrt{2mE}}{\hbar}x}
+\end{equation}
+where $A$ and $B$ are constants to be evaluated.\\~\\
 
+The boundary conditions are
+\begin{enumerate}[(i)]
+    \item $\psi=0$ at $x=0$. Hence, $B=0$.
+    \item $\psi=0$ at $x=L$. Hence, $\displaystyle \sin{\frac{\sqrt{2mE}}{\hbar}L} = 0$.\\
+\end{enumerate}
+Thus
+\begin{equation}
+    \frac{\sqrt{2mE}}{\hbar}L = n\pi \qquad n=1,2,3,\cdots
+\end{equation}
 
+Thus, the energy of the particle is given by
+\begin{equation}
+    \boxed{ E_n = \frac{n^2\pi^2\hbar^2}{2mL^2} }
+\end{equation}
 
+\subsubsection{Wave Function}
+The wave function of the particle inside the box is, where energies are $E_n$ is given by
+\begin{equation}
+    \psi_n = A \sin{\frac{\sqrt{2mE_n}}{\hbar}x}
+\end{equation}
+Substituting the value of $E_n$ in equation (4.3.4), we get
+\begin{equation}
+    \boxed{ \psi_n = A \sin{\frac{n\pi x}{L}} }
+\end{equation}
 
+\subsubsection{Evaluation of $A$ and Normalization of the Wave Function}
+It is certain that the particle is somwhere inside the box. Hence, for a normalised wave function
+\begin{minipage}{0.45\textwidth}
+    \begin{align*}
+        \int_{0}^{L} {\psi\cdot\psi^{*}} \: d{x} &= 1 \\
+        A^2 \int_{0}^{L} {\sin^2{\left( \frac{n\pi x}{L} \right)}} \: d{x} &= 1 \\
+        A^2 \int_{0}^{L} {\left( \frac{1 - \cos{\left( \frac{2n\pi x}{L} \right)}}{2} \right)} \: d{x} &= 1 \\
+        A^2 \frac{L}{2} &= 1 \\
+        A &= \sqrt{\frac{2}{L}}
+    \end{align*}
 
+\end{minipage}
+\begin{minipage}{0.6\textwidth}
+    \includegraphics[width=0.8\textwidth]{potential well2.png}
+\end{minipage}\\~\\
 
+The normalised wave function thus is given by
+\begin{equation}
+    \boxed{ \psi_n = \sqrt{\frac{2}{L}} \sin{\frac{n\pi x}{L}} } \qquad n=1,2,3,\cdots
+\end{equation}
 
+\subsection{Potential Step}
+The potential function of a potential step is defined by
+\begin{equation}
+    V(x) = \begin{cases}
+        0 & \text{if } x < 0 \\
+        V_0 & \text{if } x > 0
+    \end{cases}
+\end{equation}
 
+The time-independent Schrodinger's equation is given by
+\begin{equation}
+    \dv[2]{\psi}{x} + \frac{2m}{\hbar^2} (E-V)\psi = 0
+\end{equation}
+For region (I), $V=0$. Hence, the equation is given by
+\begin{equation}
+    \dv[2]{\psi}{x} + \frac{2mE}{\hbar^2} \psi = 0
+\end{equation}
 
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.3\textwidth]{potential step.png}
+\end{figure}
 
+The solution of equation (4.4.3) is
+\begin{equation}
+    \psi_1 = A e^{ip_1x/\hbar} + B e^{-ip_1x/\hbar}
+\end{equation}
+where $A$ and $B$ are constants. And \[
+    p_1 = \sqrt{2mE}
+\]
+Some particles may be reflected by the potential barrier and some transmitted. The first and second terms represent the \textit{incident} and \textit{reflected} particles. \\~\\
 
+The Schrodinger's wave equation for region (II) is given by
+\begin{equation}
+    \dv[2]{\psi}{x} + \frac{2m}{\hbar^2} (E-V_0)\psi = 0
+\end{equation}
+The solution of equation (4.4.5) is
+\begin{equation}
+    \psi_2 = C e^{ip_2x/\hbar} + D e^{-ip_2x/\hbar}
+\end{equation}
+where $C$ and $D$ are constants. And \[
+    p_2 = \sqrt{2m(E-V_0)}
+\]
+In equation (4.4.6), the first term represents the \textit{transmitted wave}, and the second term represents a wave coming from $+\infty$ in the negative direction. For $x>0$, no particle can flow to the left and $D$ must be zero. Therefore equation (4.4.6) becomes
+\begin{equation}
+    \psi_2 = C e^{ip_2x/\hbar}
+\end{equation}
+The continuity of $\psi$ implies that $\psi_1=\psi_2$ at $x=0$. Hence,
+\begin{equation}
+    A + B = C
+\end{equation}
+Also, the continuity of $\psi$ implies that $\displaystyle \dv{\psi_1}{x} = \dv{\psi_2}{x}$ at $x=0$.\\
+Therefore,
+\begin{equation}
+    p_1(A-B) = p_2C
+\end{equation}
+Solving equations (4.4.8) and (4.4.9), we get
+\begin{align}
+    B &= \frac{p_1-p_2}{p_1+p_2} A \\
+    C &= \frac{2p_1}{p_1+p_2} A
+\end{align} \\~\\
+
+Now, two cases may arise:
+\begin{enumerate}[(i)]
+    \item $E > V_0$ :\\
+        $\psi$ is a travelling wave, but of differing wave number from the incident wave.
+    \item $E < V_0$ :\\
+        $\alpha$ is imaginary. Therefore $\psi$ is a decaying exponential. \[
+            \psi = Ce^{i\alpha x} = Ce^{-\frac{\sqrt{2m(V_0-E)}}{\hbar}x}
+        \]
+\end{enumerate}
 
 \end{document}
