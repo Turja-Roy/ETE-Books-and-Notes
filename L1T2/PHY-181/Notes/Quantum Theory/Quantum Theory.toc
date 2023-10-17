@@ -9,24 +9,24 @@
 \contentsline {subsubsection}{\numberline {1.3.2}Consequences of Planck's Law}{5}{}%
 \contentsline {subsection}{\numberline {1.4}Photoelectric Effect}{5}{}%
 \contentsline {subsubsection}{\numberline {1.4.1}Experimental Study of Photoelectric Effect}{5}{}%
-\contentsline {subsubsection}{\numberline {1.4.2}Failure of Classical Physics to Explain Photoelectric Effect}{6}{}%
+\contentsline {subsubsection}{\numberline {1.4.2}Failure of Classical Physics to Explain Photoelectric Effect}{7}{}%
 \contentsline {subsection}{\numberline {1.5}Einstein's Explanation of Photoelectric Effect}{7}{}%
 \contentsline {subsubsection}{\numberline {1.5.1}Einstein's Photoelectric Equation}{7}{}%
-\contentsline {subsubsection}{\numberline {1.5.2}Threshold Frequency}{7}{}%
-\contentsline {subsection}{\numberline {1.6}Bohr's Quantization of Angular Momentum and Theory of Hydrogen Atom}{7}{}%
-\contentsline {subsubsection}{\numberline {1.6.1}Bohr's Postulates}{7}{}%
+\contentsline {subsubsection}{\numberline {1.5.2}Threshold Frequency}{8}{}%
+\contentsline {subsection}{\numberline {1.6}Bohr's Quantization of Angular Momentum and Theory of Hydrogen Atom}{8}{}%
+\contentsline {subsubsection}{\numberline {1.6.1}Bohr's Postulates}{8}{}%
 \contentsline {subsubsection}{\numberline {1.6.2}Limitations of Bohr's Theory}{8}{}%
-\contentsline {section}{\numberline {2}Wave Properties of Matter}{8}{}%
-\contentsline {subsection}{\numberline {2.1}Wave Particle Duality}{8}{}%
-\contentsline {subsection}{\numberline {2.2}De Broglie's Hypothesis}{8}{}%
-\contentsline {subsubsection}{\numberline {2.2.1}Rest Mass of a Photon}{9}{}%
+\contentsline {section}{\numberline {2}Wave Properties of Matter}{9}{}%
+\contentsline {subsection}{\numberline {2.1}Wave Particle Duality}{9}{}%
+\contentsline {subsection}{\numberline {2.2}De Broglie's Hypothesis}{9}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}Rest Mass of a Photon}{10}{}%
 \contentsline {section}{\numberline {3}Heisenberg's Uncertainty Principle}{10}{}%
 \contentsline {subsection}{\numberline {3.1}Uncertainty in Position and Momentum}{10}{}%
-\contentsline {subsection}{\numberline {3.2}Uncertainty in Energy and Time}{10}{}%
-\contentsline {subsection}{\numberline {3.3}Uncertainty in Angular Position and Angular Momentum}{10}{}%
-\contentsline {subsection}{\numberline {3.4}Application: Absence of Electrons in the Nucleus}{10}{}%
+\contentsline {subsection}{\numberline {3.2}Uncertainty in Energy and Time}{11}{}%
+\contentsline {subsection}{\numberline {3.3}Uncertainty in Angular Position and Angular Momentum}{11}{}%
+\contentsline {subsection}{\numberline {3.4}Application: Absence of Electrons in the Nucleus}{11}{}%
 \contentsline {section}{\numberline {4}Schrodinger's Wave Equation}{11}{}%
 \contentsline {subsection}{\numberline {4.1}Schrodinger's One-Dimensional Time-Dependent Wave Equation}{11}{}%
 \contentsline {subsubsection}{\numberline {4.1.1}Wave Function for a Free Particle}{11}{}%
-\contentsline {subsubsection}{\numberline {4.1.2}One-Dimensional Time-Dependent Wave Equation}{11}{}%
+\contentsline {subsubsection}{\numberline {4.1.2}One-Dimensional Time-Dependent Wave Equation}{12}{}%
 \contentsline {subsection}{\numberline {4.2}Schrodinger's One-Dimensional Time-Independent Wave Equation}{13}{}%
