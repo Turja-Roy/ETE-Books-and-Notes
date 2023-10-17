@@ -2,6 +2,7 @@
 \usepackage[a4paper, margin=0.75in]{geometry}
 \usepackage[document]{ragged2e}
 \usepackage{graphicx}
+\usepackage{siunitx}
 \graphicspath{ {./images/} }
 \input{preamble.tex}
 \numberwithin{equation}{subsection}
@@ -20,6 +21,10 @@
 \maketitle
 \tableofcontents
 \newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Origin of Quantum Theory  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Origin of Quantum Theory}
 Certain phenomena such as spectral distribution of energy in black body radiation, photoelectric effect, particle properties, and phenomena involving distances in the order of $10^{-10}$ m can't be properly explained by classical physics. The failure of classical physics thus led to the development of quantum hypothesis in 1900 by Max Planck.
@@ -258,6 +263,9 @@ The threshold frequency $\nu_0$ is the minimum frequency of the incident light f
 \end{enumerate}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Wave Properties of Matter  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Wave Properties of Matter}
 \subsection{Wave Particle Duality}
@@ -265,9 +273,92 @@ The threshold frequency $\nu_0$ is the minimum frequency of the incident light f
     The concept that all matter and radiation exhibit both wave-like and particle-like properties is called wave-particle duality.
 \end{definition}
 
+\subsection{De Broglie's Hypothesis}
+\begin{definition}{De Broglie's Hypothesis}{}
+    The hypothesis that every material particle has a wavelength associated with it is called De Broglie's hypothesis.
+\end{definition}
+
+According to Planck-Einstein equation, the energy of a photon is given by
+\begin{equation}
+    E = h\nu
+\end{equation}
+According to theory of relativity,
+\begin{equation}
+    E^2 = (pc)^2 + (m_0c^2)^2
+\end{equation}
+where $p$ is the momentum of the photon, $m_0$ is the rest mass of the photon, and $c$ is the speed of light. \\
+Since the photon has no rest mass, equation (2.2.2) reduces to \[
+    E^2 = p^2c^2
+\]
+\begin{equation}
+    p = \frac{E}{c}
+\end{equation}
+Substituting equation (2.2.1) in equation (2.2.3), we get \[
+    p = \frac{h\nu}{\nu\lambda} = \frac{h}{\lambda}
+\]
+\begin{equation}
+    \boxed{ \lambda = \frac{h}{p} }
+\end{equation}
+This equation represents the wave-particle relation for photons. Here, $\lambda$ is the wavelength associated with photons of momentum $p$. \\
+Thus, the relativistic expression for the momentum of a photon can be given by
+\begin{equation}
+    \boxed{ p = \frac{m_0v}{\sqrt{1-\frac{v^2}{c^2}}} }
+\end{equation}
+According to De Broglie's hypothesis, every material particle has a wavelength associated with it. Hence, we can write 
+\begin{equation}
+    \boxed{ \lambda = \frac{h}{p} = \frac{h}{mv} }
+\end{equation}
+where $m$ is the mass of the particle and $v$ is its velocity. \\
+If $E_K$ is the kinetic energy of the particle, then \[
+    E_K = \frac{1}{2}mv^2 = \frac{p^2}{2m}
+\]
+Hence, the momentum of the particle is given by
+\begin{equation}
+    \boxed{ p = \sqrt{2mE_K} }
+\end{equation}
+Therefore, the wavelength associated with the particle is given by
+\begin{equation}
+    \boxed{ \lambda = \frac{h}{\sqrt{2mE_K}} }
+\end{equation}
+
+\subsubsection{Rest Mass of a Photon}
+The relativistic expression for the momentum of a photon is given by \[
+    p = \frac{m_0v}{\sqrt{1-\frac{v^2}{c^2}}}
+\]
+From quantum theory of radiation, \[
+    p = \frac{h}{\lambda}
+\]
+Therefore, \[
+    \frac{h}{\lambda} = \frac{m_0v}{\sqrt{1-\frac{v^2}{c^2}}}
+\]
+Hence, the rest mass of a proton is \[
+    m_0 = \frac{h}{v\lambda} \sqrt{1-\frac{v^2}{c^2}} = \frac{h}{c\lambda} \sqrt{1 - \frac{c^2}{c^2}} = 0
+\]
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Heisenberg's Uncertainty Principle  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\section{Heisenberg's Uncertainty Principle}
+
+\begin{definition}{Heisenberg's Uncertainty Principle}{}
+    The principle states that for a particle of atomic magnitude, in motion, it is impossible to determine both the position and the momentum simultaneously with perfect accuracy.
+\end{definition}
+Quantitative statement of the principle is given by
+\begin{equation}
+    \boxed{ \Delta x \Delta p \geq \frac{\hbar}{2} }
+\end{equation}
+where $\Delta x$ is the uncertainty in the position of the particle and $\Delta p$ is the uncertainty in the momentum of the particle. And $\displaystyle \hbar = \frac{h}{2\pi}$ \\
+
+\subsection{Application: Absence of Electrons in the Nucleus}
+The radius of the nucleus is of the order of $10^{-15}$ m. If an electron is present in the nucleus, then the uncertainty in its position is of the order of $10^{-15}$ m. Hence, the uncertainty in its momentum is given by \[
+    \Delta p \geq \frac{\hbar}{2\Delta x} = \frac{h}{4\pi\Delta x} = \frac{6.63 \times 10^{-34}}{4 \times 3.14 \times 10^{-15}} = 5.3 \times 10^{-20} \: \si{kg m s}^{-1}
+\]
+Thus, the momentum of the electron must be \textit{at least} equal to the above value. As we know, $p = m_e v$. Thus, for the electron to be inside the nucleus, the velocity would be \[
+    v = \frac{p}{m_e} = \frac{5.3 \times 10^{-20}}{9.1 \times 10^{-31}} = 5.8 \times 10^{10} \: \si{m s}^{-1}
+\]
+Here, $v > c$, which is not possible. Hence, we can conclude that, an electron can't exist inside the nucleus of an atom.
 
 
 

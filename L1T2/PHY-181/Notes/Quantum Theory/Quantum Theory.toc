@@ -18,3 +18,7 @@
 \contentsline {subsubsection}{\numberline {1.6.2}Limitations of Bohr's Theory}{8}{}%
 \contentsline {section}{\numberline {2}Wave Properties of Matter}{8}{}%
 \contentsline {subsection}{\numberline {2.1}Wave Particle Duality}{8}{}%
+\contentsline {subsection}{\numberline {2.2}De Broglie's Hypothesis}{8}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}Rest Mass of a Photon}{9}{}%
+\contentsline {section}{\numberline {3}Heisenberg's Uncertainty Principle}{10}{}%
+\contentsline {subsection}{\numberline {3.1}Application: Absence of Electrons in the Nucleus}{10}{}%
