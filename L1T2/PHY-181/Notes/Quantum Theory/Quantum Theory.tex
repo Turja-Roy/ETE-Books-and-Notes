@@ -1,0 +1,281 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=0.75in]{geometry}
+\usepackage[document]{ragged2e}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\input{preamble.tex}
+\numberwithin{equation}{subsection}
+
+\title{
+    \textbf{Quantum Theory}
+}
+
+\author{
+    Turja Roy \\
+    ID: 2108052
+}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Origin of Quantum Theory}
+Certain phenomena such as spectral distribution of energy in black body radiation, photoelectric effect, particle properties, and phenomena involving distances in the order of $10^{-10}$ m can't be properly explained by classical physics. The failure of classical physics thus led to the development of quantum hypothesis in 1900 by Max Planck.
+
+\subsection{Black Body Radiation}
+\begin{definition}{Black Body}{}
+    A black body is an ideal body that absorbs all the radiation incident on it and emits radiation of all wavelengths. Its coefficient of absorption or absorpitivity is $1$, and its coefficient of emission or emissivity is also $1$.
+\end{definition}
+
+\begin{definition}{Black Body Radiation}{}
+    The radiation emitted by a black body is called black body radiation.
+\end{definition}
+
+\subsubsection{Distribution of Energy in the Spectrum of a Black Body}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.6\textwidth]{bb_radiation_distribution.png}
+\end{figure}
+
+The emissive power $E_{\lambda}$ is defined as the energy radiated per unit area per unit time per unit wavelength interval. The total energy radiated per unit area per unit time is called the total emissive power $E$. Thus \[
+    E_{\lambda} = \frac{\text{Energy radiated per unit area per sec in the range $\lambda$ to $\lambda+d\lambda$}}{\text{Wavelength difference $d\lambda$}}
+\]
+The total radiation emitted per square meter per second over all wavelengths, i.e the bolometric flux, is represented by \[
+    E = \int_{0}^{\infty} E_{\lambda} d\lambda
+\]
+
+\subsection{Failure of Classical Physics to Explain Black Body Radiation}
+
+\subsubsection{Wien's Radiation Formula}
+\begin{equation}
+    E_{\lambda} d\lambda = \frac{C_1}{\lambda^5} \: e^{-C_2/\lambda T} d\lambda
+\end{equation}
+where $C_1$ and $C_2$ are constants and $T$ is the temperature of the black body. \\~\\
+
+\textbf{Assumptions:} \\
+\begin{enumerate}
+    \item The radiation inside a hollow enclosure is produced by the oscillation of electrons in the walls of the enclosure.
+    \item The frequency of the radiation is proportional to the kinetic energy of the resonator.
+    \item The intensity of radiation of a particular wavelength is proportional to the number of resonators having required amount of energy.
+    
+\end{enumerate}
+
+\textbf{Limitations of the Formula:} \\
+The formula explains the experimental results fairly well for short wavelengths, but fails to explain the experimental results for long wavelengths.
+
+
+\subsubsection{Rayleigh-Jeans Law}
+\begin{equation}
+    U_{\nu} d\nu = \frac{8\pi\nu^2}{c^3} kT d\nu
+\end{equation}
+where $U_{\nu}$ is the energy per unit volume per unit frequency range at frequency $\nu$, $k$ is Boltzmann's constant, and $c$ is the speed of light.\\
+The formula can also be written in the following form:
+\begin{equation}
+    U_{\lambda} d\lambda = \frac{8\pi kT}{\lambda^4} d\lambda
+\end{equation}
+
+\textbf{Limitations of the Law:} \\
+The law explains the experimental results fairly well for long wavelengths, but fails to explain the experimental results for short wavelengths. \\
+The law leads to an absurd result that the total energy radiated by a black body is infinite :
+\begin{align*}
+    U &= \int_{0}^{\infty} {U_{\lambda}} \: d{\lambda} \\
+    &= \int_{0}^{\infty} {\frac{8\pi kT}{\lambda^4}} \: d{\lambda} \\
+    &= \frac{8\pi kT}{3} \left[ -\frac{1}{3\lambda^3} \right]_{0}^{\infty} \\
+    &= \infty
+\end{align*}
+But experimentally, the total energy radiated by a black body is finite. And $U_{\lambda} d\lambda \to 0$ as $\lambda \to 0$.
+
+\subsection{Planck's Quantum Hypothesis}
+Planck assumed that the energy of the oscillators is not continuous, but is quantized. The energy of an oscillator can have only discrete values. The energy of an oscillator is an integral multiple of a basic unit of energy $h\nu$, where $h$ is a constant called Planck's constant and $\nu$ is the frequency of the oscillator. Thus, the energy of an oscillator is given by
+\begin{equation}
+    E = nh\nu
+\end{equation}
+As long as the oscillator has energy equal to one of the allowed values given by the relation $E=nh\nu$, it can't emit or absorb energy.
+
+\subsubsection{Planck's Radiation Law}
+On the basis of quantum theory, the formula for an average energy of an oscillator can be described as
+\begin{equation}
+    \boxed{ E = \frac{h\nu}{e^{h\nu/kT}-1} }
+\end{equation}
+
+Number of oscillatons or degrees of freedonm per unit volume having frequency between $\nu$ and $\nu+d\nu$ is given by
+\begin{equation}
+    N(\nu) d\nu = \frac{8\pi\nu^2}{c^3} d\nu
+\end{equation}
+
+Assuming that the average value of the energies of the various modes of oscillation in balck body is given by equation (1.3.2), Planck obtained the equation
+\begin{equation}
+    \boxed{ U_{\nu} d\nu = \frac{8\pi\nu^2}{c^3} \frac{h\nu}{e^{h\nu/kT}-1} d\nu }
+\end{equation}
+In terms of the wavelength of the radiation, the equation is
+\begin{equation}
+    \boxed{ U_{\lambda} d\lambda = \frac{8\pi hc}{\lambda^5} \frac{1}{e^{hc/\lambda kT}-1} d\lambda }
+\end{equation}
+
+Equations (1.3.4) and (1.3.5) are two forms of Planck's radiation law.
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.55\textwidth]{planck's law.png}
+\end{figure}
+
+\subsubsection{Consequences of Planck's Law}
+From Planck's law, the Rayleigh-Jeans law, Wien's law, and Stefan's law can be derived as mathematical consequences:
+
+\textbf{(I) Rayleigh-Jeans Law:} \\
+\begin{equation}
+    U_{\lambda} \: d\lambda = \frac{8\pi hc}{\lambda^5} \frac{1}{hc/\lambda kT} \: d\lambda = \frac{8\pi kT}{\lambda^4} \: d\lambda
+\end{equation}
+
+\textbf{(II) Wien's Law:} \\
+\begin{equation}
+    U_{\lambda} \: d\lambda = \frac{8\pi hc}{\lambda^5} e^{-hc /\lambda kT} \: d\lambda
+\end{equation}
+
+\textbf{(III) Wein'd Displacement Law:} \\
+\begin{equation}
+    U_{\lambda} = \frac{8\pi hc}{\lambda^5} \cdot \frac{1}{e^{hc /\lambda kT} - 1}
+\end{equation}
+
+\textbf{(IV) Stefan-Boltzmann Law:} \\
+\begin{equation}
+    U = \int_{0}^{\infty} U_{\lambda} \: d\lambda = \frac{8\pi^5 k^4}{15c^3 h^3} T^4
+\end{equation}
+Or,
+\begin{equation}
+    E = \sigma T^4
+\end{equation}
+where \[
+    \sigma = \frac{2\pi^5 k^4}{15c^2 h^3} = 5.67 \times 10^{-8} \: \text{W m}^{-2} \text{K}^{-4}
+\]
+
+
+\subsection{Photoelectric Effect}
+\begin{definition}{Photoelectric Effect}{}
+    The phenomenon of emission of electrons from the surface of a metal when light of suitable frequency is incident on it is called photoelectric effect.
+\end{definition}
+
+\subsubsection{Experimental Study of Photoelectric Effect}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.5\textwidth]{photoelectric effect.png}
+\end{figure}
+
+\begin{enumerate}
+    \item The photoelectric current is directly proportional to the intensity of the incident light.
+    \item The photoelectric current is directly proportional to the number of photons incident per unit area per unit time.
+    \item The photoelectric current is independent of the frequency of the incident light, provided the frequency is greater than a certain minimum value called the threshold frequency.
+    \item The maximum kinetic energy of the photoelectrons is independent of the intensity of the incident light.
+    \item The maximum kinetic energy of the photoelectrons is directly proportional to the frequency of the incident light.
+\end{enumerate}
+
+\textbf{(I) Effect of Frequency of Incident Light on Photoelectric Current:} \\
+For a given metal surface, the photoelectric current is zero for light of frequency less than a certain minimum value called the threshold frequency $\nu_0$. The threshold frequency depends on the nature of the metal surface. \\~\\
+
+\textbf{(II) Effect of Intensity of Incident Light on Photoelectric Current:} \\
+For a given frequency $\nu > \nu_0$, the photoelectric current is directly proportional to the intensity of the incident light. The number of photoelectrons emitted per second is directly proportional to the intensity of the incident light. \\~\\
+
+\textbf{(III) Effect of Potential Difference on Photoelectric Current:} \\
+The photoelectric current is zero for a given frequency $\nu > \nu_0$ if the potential difference between the cathode and the anode is less than a certain minimum value called the stopping potential $V_0$. The stopping potential depends on the frequency of the incident light. \[
+    \frac{1}{2}m_{e}\nu_{max}^2 = eV_0
+\] \\~\\
+
+\textbf{(IV) Effect of Frequency on the Stopping Potential:} \\
+For a given metal surface, the stopping potential is directly proportional to the frequency of the incident light. \[
+    V_0 \propto \nu
+\] \\~\\
+
+\subsubsection{Failure of Classical Physics to Explain Photoelectric Effect}
+\textbf{(I) The existence of the threshold frequency:} \\
+According to classical physics, the energy of the emitted electrons should depend on the intensity of the incident light and not on its frequency. Thus, the photoelectric effect can't be explained by classical physics. \\~\\
+
+\textbf{(II) The non-dependence of the maximum kinetic energy of the photoelectrons on the intensity of the incident light:} \\
+According to classical electromagnetism, oscillating electric vector of the incident radiation should cause an oscillation on the electrons of the metal. If the amplitude of the oscillation is sufficient, the electron is emitted from the surface. Thus, the kinetic energy of the electron must increase with increasing intensity, which doesn't happen in reality. Rather, the maximum kinetic energy of the electron remains the same if the intensity is increased.\\~\\
+
+\textbf{(III) Absence of time lag between the incidence of light and the emission of electrons:} \\
+According to wave theory, the electrons should absorb energy continuously from the incident light and should be emitted after a time lag. But in reality, there is no time lag between the incidence of light and the emission of electrons. \\~\\
+
+
+\subsection{Einstein's Explanation of Photoelectric Effect}
+\textbf{Assumptions:} \\
+\begin{enumerate}
+    \item Light consists of discrete photons or quanta of energy.
+    \item The energy of a photon is given by \[
+        E = h\nu
+    \]
+    where $h$ is Planck's constant and $\nu$ is the frequency of the photon.
+    \item The energy of a photon is absorbed by a single electron without any time lag. The probability of its absorbing more than one photons at the same time is negligible.
+\end{enumerate}
+
+\begin{definition}{Work Function}{}
+    The minimum energy required to remove an electron from the surface of a metal is called the work function of the metal. \\
+    This energy is taken up by the electron to overcome the attractive forces of the metal atoms.
+\end{definition}
+
+\subsubsection{Einstein's Photoelectric Equation}
+\begin{equation}
+    \boxed{ \frac{1}{2}m_ev_{max}^2 = eV_0 = h\nu - W_0 = h(\nu - \nu_0) }
+\end{equation}
+
+\subsubsection{Threshold Frequency}
+The threshold frequency $\nu_0$ is the minimum frequency of the incident light for which the photoelectric effect occurs. It is given by \[
+    0 = h\nu_0 - W_0
+\]
+\begin{equation}
+    \boxed{ \nu_0 = \frac{W_0}{h} }
+\end{equation}
+
+\subsection{Bohr's Quantization of Angular Momentum and Theory of Hydrogen Atom}
+\subsubsection{Bohr's Postulates}
+\begin{enumerate}
+    \item The electron in a hydrogen atom moves in circular orbits around the nucleus.
+    \item The electron in a particular orbit has a definite energy and hence a definite radius.
+    \item The electron in a particular orbit doesn't radiate energy and hence doesn't lose energy.
+    \item The electron can jump from one orbit to another by absorbing or emitting energy.
+    \item The angular momentum of the electron in a particular orbit is an integral multiple of $\hbar = h/2\pi$. That is,
+        \begin{equation}
+            L = mvr = n\hbar = nh/2\pi
+        \end{equation}
+    where $n = 1, 2, 3, \cdots$
+\end{enumerate}
+\begin{equation}
+    mv^2r = \frac{Ze^2}{4\pi\varepsilon_0}
+\end{equation}
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.3\textwidth]{Bohr's hydrogen.png}
+\end{figure}
+
+\subsubsection{Limitations of Bohr's Theory}
+\begin{enumerate}
+    \item Bohr’s model of an atom failed to explain the Zeeman Effect (effect of magnetic field on the spectra of atoms).
+    \item It also failed to explain the Stark effect (effect of electric field on the spectra of atoms).
+    \item It violates the Heisenberg Uncertainty Principle.
+    \item It could not explain the spectra obtained from larger atoms.
+\end{enumerate}
+
+
+
+\section{Wave Properties of Matter}
+\subsection{Wave Particle Duality}
+\begin{definition}{Wave Particle Duality}{}
+    The concept that all matter and radiation exhibit both wave-like and particle-like properties is called wave-particle duality.
+\end{definition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

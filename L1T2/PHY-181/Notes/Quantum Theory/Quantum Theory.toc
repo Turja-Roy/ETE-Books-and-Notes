@@ -1,0 +1,20 @@
+\contentsline {section}{\numberline {1}Origin of Quantum Theory}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Black Body Radiation}{2}{}%
+\contentsline {subsubsection}{\numberline {1.1.1}Distribution of Energy in the Spectrum of a Black Body}{2}{}%
+\contentsline {subsection}{\numberline {1.2}Failure of Classical Physics to Explain Black Body Radiation}{3}{}%
+\contentsline {subsubsection}{\numberline {1.2.1}Wien's Radiation Formula}{3}{}%
+\contentsline {subsubsection}{\numberline {1.2.2}Rayleigh-Jeans Law}{3}{}%
+\contentsline {subsection}{\numberline {1.3}Planck's Quantum Hypothesis}{4}{}%
+\contentsline {subsubsection}{\numberline {1.3.1}Planck's Radiation Law}{4}{}%
+\contentsline {subsubsection}{\numberline {1.3.2}Consequences of Planck's Law}{5}{}%
+\contentsline {subsection}{\numberline {1.4}Photoelectric Effect}{5}{}%
+\contentsline {subsubsection}{\numberline {1.4.1}Experimental Study of Photoelectric Effect}{5}{}%
+\contentsline {subsubsection}{\numberline {1.4.2}Failure of Classical Physics to Explain Photoelectric Effect}{6}{}%
+\contentsline {subsection}{\numberline {1.5}Einstein's Explanation of Photoelectric Effect}{7}{}%
+\contentsline {subsubsection}{\numberline {1.5.1}Einstein's Photoelectric Equation}{7}{}%
+\contentsline {subsubsection}{\numberline {1.5.2}Threshold Frequency}{7}{}%
+\contentsline {subsection}{\numberline {1.6}Bohr's Quantization of Angular Momentum and Theory of Hydrogen Atom}{7}{}%
+\contentsline {subsubsection}{\numberline {1.6.1}Bohr's Postulates}{7}{}%
+\contentsline {subsubsection}{\numberline {1.6.2}Limitations of Bohr's Theory}{8}{}%
+\contentsline {section}{\numberline {2}Wave Properties of Matter}{8}{}%
+\contentsline {subsection}{\numberline {2.1}Wave Particle Duality}{8}{}%
