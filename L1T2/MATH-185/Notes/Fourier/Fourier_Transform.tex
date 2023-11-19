@@ -215,7 +215,54 @@ Multiplying both sides of (1) by $\sin{\dfrac{m\pi x}{L}}$ and integrating from 
     \]
 \end{example}
 
-final test
+\begin{example}{
+    Find a fourier series to represent the function $f(x) = e^{x}$ for $-\pi<x<\pi$ and hence derive a series for $\displaystyle \frac{\pi}{\sinh{\pi}}$
+}{}
+    \[
+        f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty} \left( a_n \cos{nx} + b_n \sin{nx} \right)
+    \] where
+    \[
+        a_0 = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) dx = \frac{1}{\pi} \int_{-\pi}^{\pi} e^x dx = \frac{1}{\pi} \: e^x \Bigg|_{-\pi}^{\pi} = \frac{e^{\pi} - e^{-\pi}}{\pi} = \frac{2 \sinh{x}}{\pi}
+    \]
+    \begin{align*}
+        a_n &= \frac{1}{\pi} \int_{-\pi}^{\pi} {e^{x} \cos{nx}} \: d{x} \\
+        &= \frac{1}{\pi} \left[ e^{x}\frac{\sin{nx}}{n} - \frac{1}{n}\int{e^{x}\sin{nx}} \: d{x} \right]_{-\pi}^{\pi} \\
+        &= -\frac{1}{n\pi} \left[ -e^{x}\frac{\cos{nx}}{n} + \frac{1}{n} \int{e^{x}\cos{nx}} \: d{x} \right]_{-\pi}^{\pi} \\
+        a_n \left( 1+\frac{1}{n^2} \right) &= \frac{(-1)^n}{n^2\pi} \left( e^{\pi} - e^{-\pi} \right) \\
+        a_n &= \frac{(-1)^n}{n^2\pi} \left( e^{\pi} - e^{-\pi} \right) \left( 1+\frac{1}{n^2} \right)^{-1} \\
+        a_n &= 2 \: \frac{(-1)^n}{n^2\pi} \sinh{x} \left( 1+\frac{1}{n^2} \right)^{-1}
+    \end{align*}
+    \begin{align*}
+        b_n &= \frac{1}{\pi} \int_{-\pi}^{\pi} {e^{x}\sin{nx}} \: d{x} \\
+        &= \frac{1}{\pi} \left[ -e^{x}\frac{\cos{nx}}{n} + \frac{1}{n}\int{e^{x}\cos{nx}} \: d{x} \right]_{-\pi}^{\pi} \\
+        &= \frac{1}{\pi} \left[ -e^{x}\frac{\cos{nx}}{n} + \frac{1}{n} \left\{ e^{x}\frac{\sin{nx}}{n} - \frac{1}{n} \int{e^{x}\sin{nx}} \: d{x} \right\} \right]_{-\pi}^{\pi} \\
+        &= \frac{1}{\pi} \left[ -e^{x}\frac{\cos{nx}}{n} - \frac{1}{n^2} \int{e^{x}\sin{nx}} \: d{x} \right] \\
+        b_n &= - \frac{(-1)^n}{n\pi} \left( e^{\pi} - e^{-\pi} \right) \left( 1+\frac{1}{n^2} \right)^{-1} \\
+        b_n &= -2 \: \frac{(-1)^n}{n\pi} \sinh{x} \left( 1+\frac{1}{n^2} \right)^{-1}
+    \end{align*}
+
+    \[
+        \boxed{ f(x) = e^{x} = 2 \: \frac{\sinh{x}}{\pi} \left[ \frac{1}{2} + \sum_{n=1}^{\infty} \left( 1 + \frac{1}{n^2} \right)^{-1} \frac{(-1)^n}{n} \left( \frac{1}{n}\cos{nx} - \sin{nx} \right) \right] }
+    \]
+    For $x=0$, we get
+    \begin{align*}
+        \frac{\pi}{\sinh{x}} &= 1 + 2 \sum_{n=1}^{\infty} \left( 1 + \frac{1}{n^2} \right)^{-1} \frac{(-1)^n}{n^2} \\
+        &= 1 + 2 \sum_{n=1}^{\infty} \frac{(-1)^n}{n^2 + 1}
+    \end{align*}
+    \[
+        \boxed{ \frac{\pi}{\sinh{x}} = 1 + 2 \left[ -\frac{1}{2} + \frac{1}{5} - \frac{1}{10} + \cdots \right] }
+    \]
+\end{example}
+
+
+
+
+
+
+
+
+
+
 
 
 
