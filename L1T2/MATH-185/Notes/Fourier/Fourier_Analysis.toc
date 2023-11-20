@@ -14,3 +14,8 @@
 \contentsline {subsection}{\numberline {3.3}Alternative Derivation}{9}{}%
 \contentsline {subsection}{\numberline {3.4}Fourier Sine and Cosine Integrals}{10}{}%
 \contentsline {subsection}{\numberline {3.5}Complex Form of Fourier Integral}{10}{}%
+\contentsline {section}{\numberline {4}Fourier Transforms}{11}{}%
+\contentsline {subsection}{\numberline {4.1}Definition}{11}{}%
+\contentsline {subsection}{\numberline {4.2}Derivation}{11}{}%
+\contentsline {subsection}{\numberline {4.3}Fourier Sine and Cosine Transforms}{11}{}%
+\contentsline {subsection}{\numberline {4.4}Finite Fourier Sine and Cosine Transforms}{12}{}%

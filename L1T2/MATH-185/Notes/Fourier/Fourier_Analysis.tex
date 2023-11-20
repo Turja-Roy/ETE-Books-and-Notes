@@ -143,15 +143,15 @@ To summarize, we have
 \end{equation}
 
 \subsection{Derivation of $a_0$}
-Taking integral on both sides of (1) from $-L$ to $L$, we get
+Taking integral on both sides of (2.1.1) from $-L$ to $L$, we get
 \begin{align*}
     \int_{-L}^{L} {f(x)} \: d{x} &= \frac{a_0}{2} \int_{-L}^{L} {} \: d{x} + \sum_{n=1}^{\infty} \int_{-L}^{L} \left[ a_n \cos{\frac{m\pi x}{L}} + b_n \sin{\frac{n\pi x}{L}} \right] \: d{x} \\
-    &= \frac{a_0}{2} \cdot 2L \qquad \text{ [All the other terms are $0$ according to equation (4)] }
+    &= \frac{a_0}{2} \cdot 2L \qquad \text{ [All the other terms are $0$ according to equation (2.2.2)] }
 \end{align*}
 \[ \boxed{ a_0 = \frac{1}{L} \int_{-L}^{L} {f(x)} \: d{x} } \]
 
 \subsection{Derivation of $a_n$}
-Multiplying both sides of (1) by $\cos{\dfrac{m\pi x}{L}}$ and integrating from $-L$ to $L$, we get
+Multiplying both sides of (2.1.1) by $\cos{\dfrac{m\pi x}{L}}$ and integrating from $-L$ to $L$, we get
 
 \begin{align*}
     \int_{-L}^{L} {f(x) \cos{\frac{m\pi x}{L}}} \: d{x} &=
@@ -160,7 +160,7 @@ Multiplying both sides of (1) by $\cos{\dfrac{m\pi x}{L}}$ and integrating from 
         & + \sum_{n=1}^{\infty} \int_{-L}^{L} \left[ a_n \cos{\frac{m\pi x}{L}} \cos{\frac{n\pi x}{L}} + b_n \sin{\frac{n\pi x}{L}} \cos{\frac{m\pi x}{L}} \right] \: d{x}
     \end{aligned} \\
     &= a_n \int_{-L}^{L} {\cos^2{\frac{m\pi x}{L}}} \: d{x} \\
-    &= a_n \cdot L \qquad \text{ [All the other terms are $0$ according to equation (2)] }
+    &= a_n \cdot L \qquad \text{ [All the other terms are $0$ according to equation (2.1.2)] }
 \end{align*}
 \[ \boxed{ a_n = \frac{1}{L} \int_{-L}^{L} {f(x) \cos{\frac{m\pi x}{L}}} \: d{x} } \]
 
@@ -174,7 +174,7 @@ Multiplying both sides of (1) by $\sin{\dfrac{m\pi x}{L}}$ and integrating from 
         & + \sum_{n=1}^{\infty} \int_{-L}^{L} \left[ a_n \sin{\frac{m\pi x}{L}} \cos{\frac{n\pi x}{L}} + b_n \sin{\frac{n\pi x}{L}} \sin{\frac{m\pi x}{L}} \right] \: d{x}
     \end{aligned} \\
     &= a_n \int_{-L}^{L} {\sin^2{\frac{m\pi x}{L}}} \: d{x} \\
-    &= a_n \cdot L \qquad \text{ [All the other terms are $0$ according to equation (2)] }
+    &= a_n \cdot L \qquad \text{ [All the other terms are $0$ according to equation (2.1.2)] }
 \end{align*}
 \[ \boxed{ b_n = \frac{1}{L} \int_{-L}^{L} {f(x) \sin{\frac{m\pi x}{L}}} \: d{x} } \]
 
@@ -326,7 +326,7 @@ Thus, the limit of the first term in the Fourier series $\displaystyle \int_{-L}
 This is the Fourier integral of $f$ on the interval $(-\infty,\infty)$.
 
 \subsection{Alternative Derivation}
-Substituting the values of $a_0$, $a_n$ and $b_n$ in (7), we get
+Substituting the values of $a_0$, $a_n$ and $b_n$ in (3.1.1), we get
 \begin{align*}
     f(x) &= \frac{1}{2L} \int_{-L}^{L} {f(t)} \: d{t} + \frac{1}{L} \sum_{n=1}^{\infty} \left[ \int_{-L}^{L} {f(t) \cos{\frac{n\pi t}{L}} \cos{\frac{n\pi x}{L}}} \: d{t} + \int_{-L}^{L} {f(t) \sin{\frac{n\pi t}{L}} \sin{\frac{n\pi x}{L}}} \: d{t} \right] \\
     &= \frac{1}{2L} \int_{-L}^{L} {f(t)} \: d{t} + \frac{1}{L} \sum_{n=1}^{\infty} \left[ \int_{-L}^{L} {f(t) \left\{ \cos{\frac{n\pi t}{L}} \cos{\frac{n\pi x}{L}} + \sin{\frac{n\pi t}{L}} \sin{\frac{n\pi x}{L}} \right\}} \: d{t} \right]
@@ -335,10 +335,10 @@ Substituting the values of $a_0$, $a_n$ and $b_n$ in (7), we get
     f(x) = \frac{1}{2L} \int_{-L}^{L} {f(t)} \: d{t} + \frac{1}{L} \sum_{n=1}^{\infty} \int_{-L}^{L} {f(t) \cos{\frac{n\pi}{L}(t-x)}} \: d{t}
 \end{equation}
 
-Now, if we assume that $\displaystyle \int_{-\infty}^{\infty} {|f(x)|} \: d{x}$ converges, the first term on the right side of (11) approaches 0 as $L \to \infty$, since \[
+Now, if we assume that $\displaystyle \int_{-\infty}^{\infty} {|f(x)|} \: d{x}$ converges, the first term on the right side of (3.2.2) approaches 0 as $L \to \infty$, since \[
     \left| \frac{1}{2L}\int_{-L}^{L} {f(t)} \: d{t} \right|  \le \frac{1}{2L}\int_{-\infty}^{\infty} {|f(t)|} \: d{t} 
 \]
-The second term on the right side of (11) approaches
+The second term on the right side of (3.2.2) approaches
 \begin{align*}
     \lim_{L \to \infty} &\frac{1}{L} \sum_{n=1}^{\infty} { \int_{-\infty}^{\infty} {f(t) \cos{\frac{n\pi}{L}(t-x)}} \: d{t} }\\
     &= \lim_{\delta\lambda \to 0} \frac{1}{\pi} \sum_{n=1}^{\infty} \delta\lambda \int_{-\infty}^{\infty} { f(t) \cos{n\delta\lambda (t-x)} } \: d{t}
@@ -356,7 +356,7 @@ Thus we get
 This is another form of the Fourier integral.
 
 \subsection{Fourier Sine and Cosine Integrals}
-We can rewrite (7) as
+We can rewrite (3.1.1) as
 \begin{equation}
     f(x) = \frac{1}{\pi} \int_{0}^{\infty} { \cos{\lambda x} \int_{-\infty}^{\infty} { f(t) \cos{\lambda t} } \: d{t} } \: d{\lambda} + \frac{1}{\pi} \int_{0}^{\infty} { \sin{\lambda x} \int_{-\infty}^{\infty} { f(t) \sin{\lambda t} } \: d{t} } \: d{\lambda}
 \end{equation}
@@ -388,6 +388,98 @@ Now, multiplying (3.5.2) by $i$ and adding it to (3.5.1), we get
     \boxed{ f(x) = \frac{1}{2\pi} \int_{-\infty}^{\infty} { \int_{-\infty}^{\infty} { f(t) e^{i\lambda(t-x)} } \: d{t} } \: d{\lambda} }
 \end{equation}
 This is the complex form of the Fourier integral.
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%  Fourier Transforms  %
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Fourier Transforms}
+
+\subsection{Definition}
+\begin{definition}{Fourier Transform}{}
+    The Fourier transform of a function $f$ defined on the interval $(-\infty,\infty)$ is given by
+    \begin{equation}
+        F(\lambda) = \int_{-\infty}^{\infty} {f(x) e^{-i\lambda x}} \: d{x}
+    \end{equation}
+    The inverse Fourier transform is given by
+    \begin{equation}
+        f(x) = \frac{1}{2\pi} \int_{-\infty}^{\infty} {F(\lambda) e^{-i\lambda x}} \: d{\lambda}
+    \end{equation}
+\end{definition}
+
+\subsection{Derivation}
+We know that
+\begin{equation}
+    f(x) = \frac{1}{2\pi} \int_{-\infty}^{\infty} { \int_{-\infty}^{\infty} { f(t) e^{i\lambda(t-x)} } \: d{t} } \: d{\lambda}
+\end{equation}
+
+We can rewrite (4.2.1) as follows \[
+    f(x) = \frac{1}{2\pi} \int_{-\infty}^{\infty} {e^{-i\lambda x}} \: d{\lambda} \int_{-\infty}^{\infty} {f(t) e^{i\lambda t}} \: d{t}
+\]
+It follows that if
+\begin{equation}
+    \boxed{ F(\lambda) = \int_{-\infty}^{\infty} {f(t) e^{i\lambda t}} \: d{t} }
+\end{equation}
+then
+\begin{equation}
+    \boxed{ f(x) = \frac{1}{2\pi} \int_{-\infty}^{\infty} { F(\lambda) e^{-i\lambda x} } \: d{\lambda} }
+\end{equation}
+
+Here, $F(\lambda)$ is called the \textbf{Fourier transform} of $f(x)$ and $f(x)$ is called the \textbf{inverse Fourier transform} of $F(\lambda)$.
+
+\subsection{Fourier Sine and Cosine Transforms}
+We know
+\begin{equation}
+    f(x) = \frac{2}{\pi} \int_{0}^{\infty} { \sin{\lambda x} \int_{0}^{\infty} { f(t) \sin{\lambda t} } \: d{t} } \: d{\lambda}
+\end{equation}
+
+It follows that if
+\begin{equation}
+    F_s(\lambda) = \int_{0}^{\infty} { f(x) \sin{\lambda x} } \: d{x}
+\end{equation}
+then
+\begin{equation}
+    f(x) = \frac{2}{\pi} \int_{0}^{\infty} { F_s(\lambda) \sin{\lambda x} } \: d{\lambda} 
+\end{equation}
+Here, $F_s(\lambda)$ is called the \textbf{Fourier sine transform} of $f(x)$ in $0<x<\infty$. Also the function $f(x)$ is known as the \textbf{inverse Fourier sine transform} of $F_s(\lambda)$.\\~\\
+
+Again, we know
+\begin{equation}
+    f(x) = \frac{2}{\pi} \int_{0}^{\infty} { \cos{\lambda x} \int_{0}^{\infty} { f(t) \cos{\lambda t} } \: d{t} } \: d{\lambda}
+\end{equation}
+Similarly, if
+\begin{equation}
+    F_c(\lambda) = \int_{0}^{\infty} { f(x) \cos{\lambda x} } \: d{x}
+\end{equation}
+then
+\begin{equation}
+    f(x) = \frac{2}{\pi} \int_{0}^{\infty} { F_c(\lambda) \cos{\lambda x} } \: d{\lambda}
+\end{equation}
+
+Here, $F_c(\lambda)$ is called the \textbf{Fourier cosine transform} of $f(x)$ in $0<x<\infty$. Also the function $f(x)$ is known as the \textbf{inverse Fourier cosine transform} of $F_c(\lambda)$.
+
+\subsection{Finite Fourier Sine and Cosine Transforms}
+These transforms are usefor for BVPs where at least two of the boundaries are parallel and separated by a finite distance.\\
+
+The \textbf{finite Fourier sine transform} of $f(x)$ in $0<x<L$ is given by
+\begin{equation}
+    \boxed{ F_s(\lambda) = \int_{0}^{L} { f(x) \sin{\lambda x} } \: d{x} }
+\end{equation}
+and the \textbf{inverse finite Fourier sine transform} of $F_s(\lambda)$ is given by
+\begin{equation}
+    \boxed{ f(x) = \frac{2}{L} \sum_{n=1}^{\infty} { F_s(\lambda_n) \sin{\lambda_n x} } }
+\end{equation}
+
+The \textbf{finite Fourier cosine transform} of $f(x)$ in $0<x<L$ is given by
+\begin{equation}
+    \boxed{ F_c(\lambda) = \int_{0}^{L} { f(x) \cos{\lambda x} } \: d{x} }
+\end{equation}
+and the \textbf{inverse finite Fourier cosine transform} of $F_c(\lambda)$ is given by
+\begin{equation}
+    \boxed{ f(x) = \frac{2}{L} \sum_{n=1}^{\infty} { F_c(\lambda_n) \cos{\lambda_n x} } }
+\end{equation}
+
+
 
 
 
