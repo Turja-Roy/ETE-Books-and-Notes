@@ -13,6 +13,8 @@
 \newcommand{\Lap}{\mathscr{L}}
 \newcommand{\Lapinv}{\mathscr{L}^{-1}}
 
+\numberwithin{equation}{subsection}
+
 \title{
     \textbf{Fourier Analysis}
 }
@@ -286,7 +288,7 @@ Multiplying both sides of (1) by $\sin{\dfrac{m\pi x}{L}}$ and integrating from 
 
 Fourier series were used to represent a function $f$ defined on the finite interval $(-L,L)$ or $(0,L)$. It converged to $f$ and to its periodic extension. In this sense, Fourier series is assosiated with periodic functions.\\~\\
 
-Fourier integral represents a certain type of non-periodic functions that are defined on $(-\infty,\infty)$ or $(0,\infty)$.\\~\\
+Fourier integral represents a certain type of non-periodic functions that are defined on $(-\infty,\infty)$ or $(0,\infty)$.
 
 \subsection{Derivation}
 Let a function $f$ be defined on $(-L,L)$. The fourier series of the function is then
@@ -353,10 +355,39 @@ Thus we get
 \end{equation}
 This is another form of the Fourier integral.
 
+\subsection{Fourier Sine and Cosine Integrals}
+We can rewrite (7) as
+\begin{equation}
+    f(x) = \frac{1}{\pi} \int_{0}^{\infty} { \cos{\lambda x} \int_{-\infty}^{\infty} { f(t) \cos{\lambda t} } \: d{t} } \: d{\lambda} + \frac{1}{\pi} \int_{0}^{\infty} { \sin{\lambda x} \int_{-\infty}^{\infty} { f(t) \sin{\lambda t} } \: d{t} } \: d{\lambda}
+\end{equation}
 
+If $f(x)$ is an odd function, $f(t) \cos{\lambda t}$ is also an odd function while $f(t) \sin{\lambda t}$ is even. Then the first term on the right side of (3.4.1) vanishes and we get
+\begin{equation}
+    \boxed{ f(x) = \frac{2}{\pi} \int_{0}^{\infty} { \sin{\lambda x} \int_{0}^{\infty} { f(t) \sin{\lambda t} } \: d{t} } \: d{\lambda} }
+\end{equation}
+This is known as the Fourier sine integral.\\~\\
 
+Similarly, if $f(x)$ is an even function, (3.4.1) becomes
+\begin{equation}
+    \boxed{ f(x) = \frac{2}{\pi} \int_{0}^{\infty} { \cos{\lambda x} \int_{0}^{\infty} { f(t) \cos{\lambda t} } \: d{t} } \: d{\lambda} }
+\end{equation}
+This is known as the Fourier cosine integral.
 
+\subsection{Complex Form of Fourier Integral}
+Equation (3.1.3) can be written as
+\begin{equation}
+    f(x) = \frac{1}{2\pi} \int_{-\infty}^{\infty} { \int_{-\infty}^{\infty} { f(t) \cos{\lambda(t-x)} } \: d{t} } \: d{\lambda}
+\end{equation}
+because $\cos{\lambda(t-x)}$ is an even function f $\lambda$. Also, since $\sin{\lambda(t-x)}$ is an odd function of $\lambda$, we have
+\begin{equation}
+    0 = \frac{1}{2\pi} \int_{-\infty}^{\infty} { \int_{-\infty}^{\infty} { f(t) \sin{\lambda(t-x)} } \: d{t} } \: d{\lambda}
+\end{equation}
 
+Now, multiplying (3.5.2) by $i$ and adding it to (3.5.1), we get
+\begin{equation}
+    \boxed{ f(x) = \frac{1}{2\pi} \int_{-\infty}^{\infty} { \int_{-\infty}^{\infty} { f(t) e^{i\lambda(t-x)} } \: d{t} } \: d{\lambda} }
+\end{equation}
+This is the complex form of the Fourier integral.
 
 
 

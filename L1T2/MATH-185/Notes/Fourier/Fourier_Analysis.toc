@@ -12,3 +12,5 @@
 \contentsline {subsection}{\numberline {3.1}Definition}{8}{}%
 \contentsline {subsection}{\numberline {3.2}Derivation}{8}{}%
 \contentsline {subsection}{\numberline {3.3}Alternative Derivation}{9}{}%
+\contentsline {subsection}{\numberline {3.4}Fourier Sine and Cosine Integrals}{10}{}%
+\contentsline {subsection}{\numberline {3.5}Complex Form of Fourier Integral}{10}{}%
