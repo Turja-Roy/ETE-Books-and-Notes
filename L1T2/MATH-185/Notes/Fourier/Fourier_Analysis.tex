@@ -304,6 +304,20 @@ Thus, the limit of the first term in the Fourier series $\displaystyle \int_{-L}
 \end{equation}
 This is the Fourier integral of $f$ on the interval $(-\infty,\infty)$.
 
+\subsection{Definition}
+\begin{definition}{Fourier Integral}{}
+    The Fourier integral of a function $f$ defined on the interval $(-\infty,\infty)$ is given by
+    \begin{equation}
+        f(x) = \frac{1}{\pi} \int_{0}^{\infty} { \left[ A(\alpha) \cos{\alpha x} + B(\alpha) \sin{\alpha x} \right] } \: d{\alpha}
+    \end{equation}
+    where the coefficients $A(\alpha)$ and $B(\alpha)$ are given by
+    \begin{equation}
+        \begin{cases}
+            \displaystyle A(\alpha) = \int_{-\infty}^{\infty} {f(x) \cos{\alpha x}} \: d{x} \\\\
+            \displaystyle B(\alpha) = \int_{-\infty}^{\infty} {f(x) \sin{\alpha x}} \: d{x}
+        \end{cases}
+    \end{equation}
+\end{definition}
 
 
 
