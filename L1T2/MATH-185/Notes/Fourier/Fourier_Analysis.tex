@@ -84,8 +84,7 @@ Similarly, the left-hand limit of $f(x)$ is denoted by $\lim_{\epsilon \to 0} f(
 %%%%%%%%%%%%%%%%%%%%%%%
 \section{Fourier Expansion}
 
-\subsection{Definition and Derivation}
-\subsubsection{Definition}
+\subsection{Definition}
 \begin{definition}{Fourier Expansion}{}
     Let $f(x)$ be defined in the interval $(-L,L)$ and determined outside of this interval by $f(x+2L)=f(x)$, i.e. assume that $f(x)$ has the period $2L$. The \textit{Fourier series} or \textit{Fourier expansion} corresponding to $f(x)$ is defined to be
     \begin{equation}
@@ -104,7 +103,7 @@ Similarly, the left-hand limit of $f(x)$ is denoted by $\lim_{\epsilon \to 0} f(
     \end{equation}
 \end{definition}
 
-\subsubsection{Some pre-derivations}
+\subsection{Some pre-derivations}
 
 \begin{align*}
     I &= \int_{-L}^{L} {\sin^2{\frac{n\pi x}{L}}} \: d{x} \\
@@ -141,7 +140,7 @@ To summarize, we have
     \int_{-L}^{L} {\sin{\frac{n\pi x}{L}}\sin{\frac{m\pi x}{L}}} \: d{x} = \int_{-L}^{L} {\cos{\frac{n\pi x}{L}}\cos{\frac{m\pi x}{L}}} \: d{x} = 0 \qquad [m \neq n]
 \end{equation}
 
-\subsubsection{Derivation of $a_0$}
+\subsection{Derivation of $a_0$}
 Taking integral on both sides of (1) from $-L$ to $L$, we get
 \begin{align*}
     \int_{-L}^{L} {f(x)} \: d{x} &= \frac{a_0}{2} \int_{-L}^{L} {} \: d{x} + \sum_{n=1}^{\infty} \int_{-L}^{L} \left[ a_n \cos{\frac{m\pi x}{L}} + b_n \sin{\frac{n\pi x}{L}} \right] \: d{x} \\
@@ -149,7 +148,7 @@ Taking integral on both sides of (1) from $-L$ to $L$, we get
 \end{align*}
 \[ \boxed{ a_0 = \frac{1}{L} \int_{-L}^{L} {f(x)} \: d{x} } \]
 
-\subsubsection{Derivation of $a_n$}
+\subsection{Derivation of $a_n$}
 Multiplying both sides of (1) by $\cos{\dfrac{m\pi x}{L}}$ and integrating from $-L$ to $L$, we get
 
 \begin{align*}
@@ -163,7 +162,7 @@ Multiplying both sides of (1) by $\cos{\dfrac{m\pi x}{L}}$ and integrating from 
 \end{align*}
 \[ \boxed{ a_n = \frac{1}{L} \int_{-L}^{L} {f(x) \cos{\frac{m\pi x}{L}}} \: d{x} } \]
 
-\subsubsection{Derivation of $b_n$}
+\subsection{Derivation of $b_n$}
 Multiplying both sides of (1) by $\sin{\dfrac{m\pi x}{L}}$ and integrating from $-L$ to $L$, we get
 
 \begin{align*}
@@ -258,19 +257,38 @@ Multiplying both sides of (1) by $\sin{\dfrac{m\pi x}{L}}$ and integrating from 
 \end{example}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%
-%  Fourier Transforms  %
-%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%
+%  Fourier Integral  %
+%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Fourier Transforms}
+\section{Fourier Integral}
 
-\subsection{Fourier Integral}
-\subsubsection{From Fourier Series to Fourier Integral}
+\subsection{Definition}
+\begin{definition}{Fourier Integral}{}
+    The Fourier integral of a function $f$ defined on the interval $(-\infty,\infty)$ is given by
+    \begin{equation}
+        f(x) = \frac{1}{\pi} \int_{0}^{\infty} { \left[ A(\alpha) \cos{\alpha x} + B(\alpha) \sin{\alpha x} \right] } \: d{\alpha}
+    \end{equation}
+    where the coefficients $A(\alpha)$ and $B(\alpha)$ are given by
+    \begin{equation}
+        \begin{cases}
+            \displaystyle A(\alpha) = \int_{-\infty}^{\infty} {f(x) \cos{\alpha x}} \: d{x} \\\\
+            \displaystyle B(\alpha) = \int_{-\infty}^{\infty} {f(x) \sin{\alpha x}} \: d{x}
+        \end{cases}
+    \end{equation}
+
+    The Fourier integral can also be written in the form
+    \begin{equation}
+        f(x) = \frac{1}{\pi} \int_{0}^{\infty} \int_{-\infty}^{\infty} {f(t)\cos{\lambda(t-x)}} \: d{t} \: d{\lambda}
+    \end{equation}
+    where $\lambda = \dfrac{n\pi}{L}$
+\end{definition}
+
 Fourier series were used to represent a function $f$ defined on the finite interval $(-L,L)$ or $(0,L)$. It converged to $f$ and to its periodic extension. In this sense, Fourier series is assosiated with periodic functions.\\~\\
 
 Fourier integral represents a certain type of non-periodic functions that are defined on $(-\infty,\infty)$ or $(0,\infty)$.\\~\\
 
-\subsubsection{Derivation}
+\subsection{Derivation}
 Let a function $f$ be defined on $(-L,L)$. The fourier series of the function is then
 \begin{equation}
     f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty} \left( a_n \cos{\frac{n\pi x}{L}} + b_n \sin{\frac{n\pi x}{L}} \right)
@@ -305,7 +323,7 @@ Thus, the limit of the first term in the Fourier series $\displaystyle \int_{-L}
 \end{equation}
 This is the Fourier integral of $f$ on the interval $(-\infty,\infty)$.
 
-\subsubsection{Alternative Derivation}
+\subsection{Alternative Derivation}
 Substituting the values of $a_0$, $a_n$ and $b_n$ in (7), we get
 \begin{align*}
     f(x) &= \frac{1}{2L} \int_{-L}^{L} {f(t)} \: d{t} + \frac{1}{L} \sum_{n=1}^{\infty} \left[ \int_{-L}^{L} {f(t) \cos{\frac{n\pi t}{L}} \cos{\frac{n\pi x}{L}}} \: d{t} + \int_{-L}^{L} {f(t) \sin{\frac{n\pi t}{L}} \sin{\frac{n\pi x}{L}}} \: d{t} \right] \\
@@ -335,26 +353,6 @@ Thus we get
 \end{equation}
 This is another form of the Fourier integral.
 
-\subsection{Definition}
-\begin{definition}{Fourier Integral}{}
-    The Fourier integral of a function $f$ defined on the interval $(-\infty,\infty)$ is given by
-    \begin{equation}
-        f(x) = \frac{1}{\pi} \int_{0}^{\infty} { \left[ A(\alpha) \cos{\alpha x} + B(\alpha) \sin{\alpha x} \right] } \: d{\alpha}
-    \end{equation}
-    where the coefficients $A(\alpha)$ and $B(\alpha)$ are given by
-    \begin{equation}
-        \begin{cases}
-            \displaystyle A(\alpha) = \int_{-\infty}^{\infty} {f(x) \cos{\alpha x}} \: d{x} \\\\
-            \displaystyle B(\alpha) = \int_{-\infty}^{\infty} {f(x) \sin{\alpha x}} \: d{x}
-        \end{cases}
-    \end{equation}
-
-    The Fourier integral can also be written in the form
-    \begin{equation}
-        f(x) = \frac{1}{\pi} \int_{0}^{\infty} \int_{-\infty}^{\infty} {f(t)\cos{\lambda(t-x)}} \: d{t} \: d{\lambda}
-    \end{equation}
-    where $\lambda = \dfrac{n\pi}{L}$
-\end{definition}
 
 
 
