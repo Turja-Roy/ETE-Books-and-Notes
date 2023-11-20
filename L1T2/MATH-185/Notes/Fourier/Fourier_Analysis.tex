@@ -287,12 +287,22 @@ then $\displaystyle \Delta\alpha=\alpha_{n+1}-\alpha_n=\frac{\pi}{L}$\\~\\
 So, we get
 \begin{equation}
     \begin{split}
-        f(x) = \frac{1}{2\pi} \left( \int_{-L}^{L} {f(t)} \: d{t} \right) \Delta\alpha + \frac{1}{\pi} \sum_{n=1}^{\infty} \Bigg[ &\left( \int_{-L}^{L} {f(t) \cos{\alpha_n}t} \: d{t} \right) \cos{\alpha_n}x + \\
+        d{f(x)} = \frac{1}{2\pi} \left( \int_{-L}^{L} {f(t)} \: d{t} \right) \Delta\alpha + \frac{1}{\pi} \sum_{n=1}^{\infty} \Bigg[ &\left( \int_{-L}^{L} {f(t) \cos{\alpha_n}t} \: d{t} \right) \cos{\alpha_n}x + \\
           &\left( \int_{-L}^{L} {f(t) \sin{\alpha_n}t} \: d{t} \right) \sin{\alpha_n}x \Bigg] \Delta\alpha
     \end{split}
 \end{equation}
 
+We now expand the interval $(-L,L)$ by taking $L \to \infty$, which implies that $\Delta\alpha \to 0$.\\
+Consequently, we get
+\begin{equation}
+    \lim_{\Delta\alpha \to 0} \sum_{n=1}^{\infty} F(\alpha_n)\Delta\alpha  \to \int_{0}^{\infty} {F(\alpha)} \: d{\alpha} 
+\end{equation}
 
+Thus, the limit of the first term in the Fourier series $\displaystyle \int_{-L}^{L} {f(t)} \: d{t}$ vanishes, and the limit of the sum becomes
+\begin{equation}
+    f(x) = \frac{1}{\pi} \int_{0}^{\infty} { \left[ \left( \int_{-\infty}^{\infty} {f(t) \cos{\alpha t}} \: d{t} \right) \cos{\alpha x} + \left( \int_{-\infty}^{\infty} {f(t) \sin{\alpha t}} \: d{t} \right) \sin{\alpha x} \right] } \: d{\alpha}
+\end{equation}
+This is the Fourier integral of $f$ on the interval $(-\infty,\infty)$.
 
 
 
