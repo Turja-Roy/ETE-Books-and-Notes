@@ -258,13 +258,14 @@ Multiplying both sides of (1) by $\sin{\dfrac{m\pi x}{L}}$ and integrating from 
 \end{example}
 
 
-%%%%%%%%%%%%%%%%%%%%%%
-%  Fourier Integral  %
-%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%  Fourier Transforms  %
+%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Fourier Integral}
+\section{Fourier Transforms}
 
-\subsection{From Fourier Series to Fourier Integral}
+\subsection{Fourier Integral}
+\subsubsection{From Fourier Series to Fourier Integral}
 Fourier series were used to represent a function $f$ defined on the finite interval $(-L,L)$ or $(0,L)$. It converged to $f$ and to its periodic extension. In this sense, Fourier series is assosiated with periodic functions.\\~\\
 
 Fourier integral represents a certain type of non-periodic functions that are defined on $(-\infty,\infty)$ or $(0,\infty)$.\\~\\
@@ -276,9 +277,9 @@ Let a function $f$ be defined on $(-L,L)$. The fourier series of the function is
 \end{equation}
 where the coefficients are given by
 \begin{align*}
-    a_0 &= \frac{1}{L} \int_{-L}^{L} {f(x)} \: d{x} \\
-    a_n &= \frac{1}{L} \int_{-L}^{L} {f(x) \cos{\frac{n\pi x}{L}}} \: d{x} \\
-    b_n &= \frac{1}{L} \int_{-L}^{L} {f(x) \sin{\frac{n\pi x}{L}}} \: d{x}
+    a_0 &= \frac{1}{L} \int_{-L}^{L} {f(t)} \: d{t} \\
+    a_n &= \frac{1}{L} \int_{-L}^{L} {f(t) \cos{\frac{n\pi t}{L}}} \: d{t} \\
+    b_n &= \frac{1}{L} \int_{-L}^{L} {f(t) \sin{\frac{n\pi t}{L}}} \: d{t}
 \end{align*}
 
 Now, let $\displaystyle a_n = \frac{n\pi}{L}$,\\
@@ -287,7 +288,7 @@ then $\displaystyle \Delta\alpha=\alpha_{n+1}-\alpha_n=\frac{\pi}{L}$\\~\\
 So, we get
 \begin{equation}
     \begin{split}
-        d{f(x)} = \frac{1}{2\pi} \left( \int_{-L}^{L} {f(t)} \: d{t} \right) \Delta\alpha + \frac{1}{\pi} \sum_{n=1}^{\infty} \Bigg[ &\left( \int_{-L}^{L} {f(t) \cos{\alpha_n}t} \: d{t} \right) \cos{\alpha_n}x + \\
+        \Delta{f(x)} = \frac{1}{2\pi} \left( \int_{-L}^{L} {f(t)} \: d{t} \right) \Delta\alpha + \frac{1}{\pi} \sum_{n=1}^{\infty} \Bigg[ &\left( \int_{-L}^{L} {f(t) \cos{\alpha_n}t} \: d{t} \right) \cos{\alpha_n}x + \\
           &\left( \int_{-L}^{L} {f(t) \sin{\alpha_n}t} \: d{t} \right) \sin{\alpha_n}x \Bigg] \Delta\alpha
     \end{split}
 \end{equation}
@@ -300,9 +301,39 @@ Consequently, we get
 
 Thus, the limit of the first term in the Fourier series $\displaystyle \int_{-L}^{L} {f(t)} \: d{t}$ vanishes, and the limit of the sum becomes
 \begin{equation}
-    f(x) = \frac{1}{\pi} \int_{0}^{\infty} { \left[ \left( \int_{-\infty}^{\infty} {f(t) \cos{\alpha t}} \: d{t} \right) \cos{\alpha x} + \left( \int_{-\infty}^{\infty} {f(t) \sin{\alpha t}} \: d{t} \right) \sin{\alpha x} \right] } \: d{\alpha}
+    \boxed{ f(x) = \frac{1}{\pi} \int_{0}^{\infty} { \left[ \left( \int_{-\infty}^{\infty} {f(t) \cos{\alpha t}} \: d{t} \right) \cos{\alpha x} + \left( \int_{-\infty}^{\infty} {f(t) \sin{\alpha t}} \: d{t} \right) \sin{\alpha x} \right] } \: d{\alpha} }
 \end{equation}
 This is the Fourier integral of $f$ on the interval $(-\infty,\infty)$.
+
+\subsubsection{Alternative Derivation}
+Substituting the values of $a_0$, $a_n$ and $b_n$ in (7), we get
+\begin{align*}
+    f(x) &= \frac{1}{2L} \int_{-L}^{L} {f(t)} \: d{t} + \frac{1}{L} \sum_{n=1}^{\infty} \left[ \int_{-L}^{L} {f(t) \cos{\frac{n\pi t}{L}} \cos{\frac{n\pi x}{L}}} \: d{t} + \int_{-L}^{L} {f(t) \sin{\frac{n\pi t}{L}} \sin{\frac{n\pi x}{L}}} \: d{t} \right] \\
+    &= \frac{1}{2L} \int_{-L}^{L} {f(t)} \: d{t} + \frac{1}{L} \sum_{n=1}^{\infty} \left[ \int_{-L}^{L} {f(t) \left\{ \cos{\frac{n\pi t}{L}} \cos{\frac{n\pi x}{L}} + \sin{\frac{n\pi t}{L}} \sin{\frac{n\pi x}{L}} \right\}} \: d{t} \right]
+\end{align*}
+\begin{equation}
+    f(x) = \frac{1}{2L} \int_{-L}^{L} {f(t)} \: d{t} + \frac{1}{L} \sum_{n=1}^{\infty} \int_{-L}^{L} {f(t) \cos{\frac{n\pi}{L}(t-x)}} \: d{t}
+\end{equation}
+
+Now, if we assume that $\displaystyle \int_{-\infty}^{\infty} {|f(x)|} \: d{x}$ converges, the first term on the right side of (11) approaches 0 as $L \to \infty$, since \[
+    \left| \frac{1}{2L}\int_{-L}^{L} {f(t)} \: d{t} \right|  \le \frac{1}{2L}\int_{-\infty}^{\infty} {|f(t)|} \: d{t} 
+\]
+The second term on the right side of (11) approaches
+\begin{align*}
+    \lim_{L \to \infty} &\frac{1}{L} \sum_{n=1}^{\infty} { \int_{-\infty}^{\infty} {f(t) \cos{\frac{n\pi}{L}(t-x)}} \: d{t} }\\
+    &= \lim_{\delta\lambda \to 0} \frac{1}{\pi} \sum_{n=1}^{\infty} \delta\lambda \int_{-\infty}^{\infty} { f(t) \cos{n\delta\lambda (t-x)} } \: d{t}
+\end{align*}
+where $\lambda = \dfrac{n\pi}{L}$ which implies that $\delta\lambda = \dfrac{\pi}{L}$.\\~\\
+
+We know, \[
+    \lim_{\delta\lambda \to 0} \sum_{n=1}^{\infty} \delta\lambda F(\lambda_n) = \int_{0}^{\infty} {F(\lambda)} \: d{\lambda}
+\]
+
+Thus we get
+\begin{equation}
+    \boxed{ f(x) = \frac{1}{\pi} \int_{0}^{\infty} \int_{-\infty}^{\infty} {f(t)\cos{\lambda(t-x)}} \: d{t} \: d{\lambda} }
+\end{equation}
+This is another form of the Fourier integral.
 
 \subsection{Definition}
 \begin{definition}{Fourier Integral}{}
@@ -317,6 +348,12 @@ This is the Fourier integral of $f$ on the interval $(-\infty,\infty)$.
             \displaystyle B(\alpha) = \int_{-\infty}^{\infty} {f(x) \sin{\alpha x}} \: d{x}
         \end{cases}
     \end{equation}
+
+    The Fourier integral can also be written in the form
+    \begin{equation}
+        f(x) = \frac{1}{\pi} \int_{0}^{\infty} \int_{-\infty}^{\infty} {f(t)\cos{\lambda(t-x)}} \: d{t} \: d{\lambda}
+    \end{equation}
+    where $\lambda = \dfrac{n\pi}{L}$
 \end{definition}
 
 
