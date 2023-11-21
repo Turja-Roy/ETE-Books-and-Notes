@@ -399,7 +399,7 @@ This is the complex form of the Fourier integral.
 \begin{definition}{Fourier Transform}{}
     The Fourier transform of a function $f$ defined on the interval $(-\infty,\infty)$ is given by
     \begin{equation}
-        F(\lambda) = \int_{-\infty}^{\infty} {f(x) e^{-i\lambda x}} \: d{x}
+        F(\lambda) = \int_{-\infty}^{\infty} {f(x) e^{i\lambda x}} \: d{x}
     \end{equation}
     The inverse Fourier transform is given by
     \begin{equation}
@@ -530,6 +530,58 @@ and the \textbf{inverse finite Fourier cosine transform} of $F_c(\lambda)$ is gi
         \therefore f(x) = \frac{1}{\pi} \int_{0}^{\infty} { \left( \frac{4}{\lambda^3} \sin{\lambda} \cos{\lambda x} - \frac{4}{\lambda^2} \cos{\lambda} \cos{\lambda x} \right) } \: d{\lambda}
     \]
 \end{example}
+
+\begin{example}{
+        Find the Fourier transform of the function \\
+        (i) $\displaystyle f(x) = 
+        \begin{cases}
+            1, &\text{ if } |x|<a \\
+            0, &\text{ if } |x|>a
+        \end{cases}$ \\
+        Hence evaluate $\displaystyle \int_{-\infty}^{\infty} {\frac{\sin{ax}}{x}} \: d{x}$ \\
+        (ii) $\displaystyle f(x) =
+        \begin{cases}
+            x^2, &\text{ if } |x|<a \\
+            0, &\text{ if } |x|>a
+        \end{cases}$ \\~\\
+    }{}
+    \textbf{(i)} The fourier transform of $f(x)$ is given by
+    \begin{align*}
+        F \left\{ f(x) \right\} = F(x) &= \int_{-\infty}^{\infty} {f(x) e^{isx}} \: d{x} \\
+        &= \int_{-a}^{a} {e^{isx}} \: d{x} \\
+        &= \frac{e^{isa} - e^{-isa}}{is} \\
+        &= \frac{2}{s} \sin{as}
+    \end{align*}
+
+    Now, by inverse Fourier transform, we get
+    \begin{align*}
+        f(x) &= \frac{1}{2\pi} \int_{-\infty}^{\infty} {F(s)e^{-isx}} \: d{s} \\
+        &= \frac{1}{\pi} \int_{-\infty}^{\infty} { \frac{1}{s} \sin{as} \cdot e^{-isx} } \: d{s} \\
+    \end{align*}
+    For $x = 0$, we get
+    \begin{align*}
+        f(0) = 1 &= \frac{1}{\pi} \int_{-\infty}^{\infty} {\frac{\sin{as}}{s}} \: d{s} \\
+        \therefore \int_{-\infty}^{\infty} {\frac{\sin{ax}}{x}} \: d{x} &= \pi
+    \end{align*}
+
+    \textbf{(ii)} The Fourier transform of $f(x)$ is
+     \begin{align*}
+        F \left\{ f(x) \right\} = F(s) &= \int_{-\infty}^{\infty} {f(x) e^{isx}} \: d{x} \\
+        &= \int_{-a}^{a} {x^2e^{isx}} \: d{x} \\
+        &= \left[ x^2 \frac{e^{isx}}{is} \right]_{-a}^{a} - \frac{2}{is} \int_{-a}^{a} {x e^{isx}} \: d{x} \\
+        &= \frac{2a^2}{s}\sin{as} - \frac{2}{is} \left[ x \frac{e^{isx}}{is} - \frac{e^{isx}}{(is)^2} \right]_{-a}^{a} \\
+        &= \frac{2a^2}{s}\sin{as} - \frac{4a}{is^2}\sin{as} - \frac{2}{s^3}\sin{as}
+    \end{align*}
+
+\end{example}
+
+
+
+
+
+
+
+
 
 
 
