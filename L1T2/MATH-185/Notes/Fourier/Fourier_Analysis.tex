@@ -435,11 +435,11 @@ We know
 
 It follows that if
 \begin{equation}
-    F_s(\lambda) = \int_{0}^{\infty} { f(x) \sin{\lambda x} } \: d{x}
+    \boxed{ F_s(\lambda) = \int_{0}^{\infty} { f(x) \sin{\lambda x} } \: d{x} }
 \end{equation}
 then
 \begin{equation}
-    f(x) = \frac{2}{\pi} \int_{0}^{\infty} { F_s(\lambda) \sin{\lambda x} } \: d{\lambda} 
+    \boxed{ f(x) = \frac{2}{\pi} \int_{0}^{\infty} { F_s(\lambda) \sin{\lambda x} } \: d{\lambda} }
 \end{equation}
 Here, $F_s(\lambda)$ is called the \textbf{Fourier sine transform} of $f(x)$ in $0<x<\infty$. Also the function $f(x)$ is known as the \textbf{inverse Fourier sine transform} of $F_s(\lambda)$.\\~\\
 
@@ -449,11 +449,11 @@ Again, we know
 \end{equation}
 Similarly, if
 \begin{equation}
-    F_c(\lambda) = \int_{0}^{\infty} { f(x) \cos{\lambda x} } \: d{x}
+    \boxed{ F_c(\lambda) = \int_{0}^{\infty} { f(x) \cos{\lambda x} } \: d{x} }
 \end{equation}
 then
 \begin{equation}
-    f(x) = \frac{2}{\pi} \int_{0}^{\infty} { F_c(\lambda) \cos{\lambda x} } \: d{\lambda}
+    \boxed{ f(x) = \frac{2}{\pi} \int_{0}^{\infty} { F_c(\lambda) \cos{\lambda x} } \: d{\lambda} }
 \end{equation}
 
 Here, $F_c(\lambda)$ is called the \textbf{Fourier cosine transform} of $f(x)$ in $0<x<\infty$. Also the function $f(x)$ is known as the \textbf{inverse Fourier cosine transform} of $F_c(\lambda)$.
@@ -570,9 +570,8 @@ and the \textbf{inverse finite Fourier cosine transform} of $F_c(\lambda)$ is gi
         &= \int_{-a}^{a} {x^2e^{isx}} \: d{x} \\
         &= \left[ x^2 \frac{e^{isx}}{is} \right]_{-a}^{a} - \frac{2}{is} \int_{-a}^{a} {x e^{isx}} \: d{x} \\
         &= \frac{2a^2}{s}\sin{as} - \frac{2}{is} \left[ x \frac{e^{isx}}{is} - \frac{e^{isx}}{(is)^2} \right]_{-a}^{a} \\
-        &= \frac{2a^2}{s}\sin{as} - \frac{4a}{is^2}\sin{as} - \frac{2}{s^3}\sin{as}
+        &= \frac{2a^2}{s}\sin{as} - \frac{4a}{is^2}\cos{as} - \frac{2}{s^3}\sin{as}
     \end{align*}
-
 \end{example}
 
 
