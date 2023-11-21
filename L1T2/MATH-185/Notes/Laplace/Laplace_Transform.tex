@@ -52,9 +52,9 @@
 \end{definition}
 
 Some ways to write Laplace transforms:\\
-\[ \Lap{F(t)} = f(s) = \int_{0}^{\infty} { e^{-st} F(t) } \: d{t} \]
-\[ \Lap{G(t)} = g(s) \]
-\[ \Lap{u(t)} = \tilde{u}(s) \]
+\[ \Lap\{F(t)\} = f(s) = \int_{0}^{\infty} { e^{-st} F(t) } \: d{t} \]
+\[ \Lap\{G(t)\} = g(s) \]
+\[ \Lap\{u(t)\} = \tilde{u}(s) \]
 
 \vspace{30pt}
 \begin{theorem}{}{}
@@ -385,13 +385,13 @@ Then\\
 
 \begin{example}{Evaluate $\Lap \{ \sin{3t} \}$}{}
     \begin{align*}
-        \Lap \{ \sin{3t} \} &= \frac{1}{3} \cdot \frac{1}{\left( \frac{s}{3} \right) + 1} \\
+        \Lap \{ \sin{3t} \} &= \frac{1}{3} \cdot \frac{1}{\left( \frac{s}{3} \right)^2 + 1} \\
         &= \frac{1}{3} \cdot \frac{3^2}{s^2+3^2}\\
         &= \frac{3}{s^2+9}
     \end{align*}
 \end{example}
 
-\begin{example}{If $\Lap \{ \frac{\sin{t}}{t} = \tan^{-1}{\frac{1}{s}} = f(s) \}$, then evaluate $\Lap \{ \frac{\sin{at}}{t} \}$}{}
+\begin{example}{If $\Lap \{ \frac{\sin{t}}{t} \} = \tan^{-1}{\frac{1}{s}} = f(s)$, then evaluate $\Lap \{ \frac{\sin{at}}{t} \}$}{}
     \begin{align*}
         \Lap \{ \frac{\sin{at}}{t} \} &= \Lap \left\{ a \cdot \frac{\sin{at}}{t} \right\} \\
         &= a \cdot \Lap \left\{ \frac{\sin{at}}{at} \right\} \\
@@ -577,7 +577,7 @@ Let $F(t)$ has period $T$. Then $F(t) = F(t+T)$ for all $t$. Then
         \]
     }{}
     \begin{align*}
-        \Lap \{ F(t) \} &= \frac{1}{1 - e^{-2\pi s}} \int_{0}^{2\pi} { e^{st} \sin{t} } \: d{t} \\
+        \Lap \{ F(t) \} &= \frac{1}{1 - e^{-2\pi s}} \int_{0}^{2\pi} { e^{-st} \sin{t} } \: d{t} \\
         &= \frac{1}{1-e^{-2\pi s}} \int_{0}^{\pi} {e^{-st} \sin{t}} \: d{t}
     \end{align*}
 \end{example}
@@ -590,9 +590,10 @@ Let $F(t)$ has period $T$. Then $F(t) = F(t+T)$ for all $t$. Then
     \end{cases}
 \]}{}
     \begin{align*}
-        \Lap \{ F(t) \} &= \frac{1}{1-e^{-2s}} \int_{0}^{1} {t} \: d{t} \\
-        &= \frac{t^2 \bigg|_0^1}{2 - 2e^{-2s}} \\
-        &= \frac{1}{2 - 2e^{-2s}}
+        \Lap \{ F(t) \} &= \frac{1}{1-e^{-2s}} \int_{0}^{1} {e^{-2t}t} \: d{t} \\
+        &= \frac{1}{1 - e^{-2s}} \left[ -t \frac{e^{-2t}}{2} + \frac{1}{2}\int{e^{-2t}} \: d{t} \right]_{0}^{1} \\
+        &= \frac{1}{1 - e^{-2s}} \left\{ -\frac{e^{-2}}{2} - \frac{1}{4} (e^{-2} - 1) \right\} \\
+        &= \frac{1-3e^{-2}}{4(1-e^{-2})}
     \end{align*}
 \end{example}
 
@@ -607,7 +608,7 @@ Let $F(t)$ has period $T$. Then $F(t) = F(t+T)$ for all $t$. Then
     \] \[
         \Lap \{ F''(t) \} = s^2F(s) - sF(0) - F'(0)
     \] \[
-        \Lap \{ F'''(t) = s^3f(s) - s^2F(0) - sF'(0) - F''(0) \}
+        \Lap \{ F'''(t) \} = s^3f(s) - s^2F(0) - sF'(0) - F''(0)
     \] \[
         \boxed{ \Lap \{ F^{(n)}(t) \} = s^nf(s) - s^{n-1}F(0) - s^{n-2}F'(0) - \cdots - F^{(n-1)}(0) }
     \] \[
