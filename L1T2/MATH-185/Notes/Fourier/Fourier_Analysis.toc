@@ -19,3 +19,4 @@
 \contentsline {subsection}{\numberline {4.2}Derivation}{11}{}%
 \contentsline {subsection}{\numberline {4.3}Fourier Sine and Cosine Transforms}{11}{}%
 \contentsline {subsection}{\numberline {4.4}Finite Fourier Sine and Cosine Transforms}{12}{}%
+\contentsline {subsection}{\numberline {4.5}Examples}{12}{}%

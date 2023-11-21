@@ -326,7 +326,7 @@ Thus, the limit of the first term in the Fourier series $\displaystyle \int_{-L}
 This is the Fourier integral of $f$ on the interval $(-\infty,\infty)$.
 
 \subsection{Alternative Derivation}
-Substituting the values of $a_0$, $a_n$ and $b_n$ in (3.1.1), we get
+Substituting the values of $a_0$, $a_n$ and $b_n$ in (3.1.), we get
 \begin{align*}
     f(x) &= \frac{1}{2L} \int_{-L}^{L} {f(t)} \: d{t} + \frac{1}{L} \sum_{n=1}^{\infty} \left[ \int_{-L}^{L} {f(t) \cos{\frac{n\pi t}{L}} \cos{\frac{n\pi x}{L}}} \: d{t} + \int_{-L}^{L} {f(t) \sin{\frac{n\pi t}{L}} \sin{\frac{n\pi x}{L}}} \: d{t} \right] \\
     &= \frac{1}{2L} \int_{-L}^{L} {f(t)} \: d{t} + \frac{1}{L} \sum_{n=1}^{\infty} \left[ \int_{-L}^{L} {f(t) \left\{ \cos{\frac{n\pi t}{L}} \cos{\frac{n\pi x}{L}} + \sin{\frac{n\pi t}{L}} \sin{\frac{n\pi x}{L}} \right\}} \: d{t} \right]
@@ -480,7 +480,56 @@ and the \textbf{inverse finite Fourier cosine transform} of $F_c(\lambda)$ is gi
 \end{equation}
 
 
+\subsection{Examples}
 
+\begin{example}{
+        Find the fourier integral of the function $\displaystyle f(x) = \begin{cases}
+            1, &\text{ if }|x| \le 1 \\
+            0, & \text{ if } |x| > 1
+        \end{cases}$ Hence evaluate $\displaystyle \int_{0}^{\infty} { \frac{\sin{\lambda}\cos{\lambda x}}{\lambda} } \: d{\lambda} $
+    }{}
+    \begin{align*}
+        f(x) &= \frac{1}{\pi} \int_{0}^{\infty} { \int_{-\infty}^{\infty} { f(t) \cos{\lambda(t-x)} } \: d{t} } \: d{\lambda} \\
+        &= \frac{1}{\pi} \int_{0}^{\infty} { \int_{-\infty}^{\infty} { f(t) \left[ \cos{\lambda t}\cos{\lambda x} + \sin{\lambda t}\sin{\lambda x} \right] } \: d{t} } \: d{\lambda} \\
+        &= \frac{1}{\pi} \int_{0}^{\infty} { \int_{-1}^{1} { \cos{\lambda t}\cos{\lambda x} } \: d{t} } \: d{\lambda} \\
+        &= \frac{2}{\pi} \int_{0}^{\infty} { \cos{\lambda x} \int_{0}^{1} {\cos{\lambda t}} \: d{t} } \: d{\lambda} \\
+        \therefore f(x) &= \frac{2}{\pi} \int_{0}^{\infty} { \frac{\cos{\lambda x} \sin{\lambda}}{\lambda} } \: d{\lambda} \\
+    \end{align*}
+    \[
+        \therefore \int_{0}^{\infty} {\frac{\sin{\lambda}\cos{\lambda x}}{\lambda}} \: d{\lambda} = 
+        \begin{cases}
+            \pi/2, &\text{ if } |x| \le 1 \\
+            0, &\text{ if } |x| > 1
+        \end{cases}
+    \]
+\end{example}
+
+\begin{example}{
+        Find the fourier transform of the function\\
+        $\displaystyle f(x) = 
+        \begin{cases}
+            1-x^2, &\text{ if }|x| \le 1 \\
+            0, & \text{ if } |x| > 1
+        \end{cases}$
+    }{}
+    \begin{equation*}
+        f(x) = \frac{1}{\pi} \int_{0}^{\infty} { \left\{ A(\lambda) \cos{\lambda x} + B(\lambda) \sin{\lambda x} \right\} } \: d{x}
+    \end{equation*}
+    Here,
+    \begin{align*}
+        A(\lambda) &= \int_{-\infty}^{\infty} { f(x) \cos{\lambda x} } \: d{x} \\
+        &= \int_{-1}^{1} {\cos{\lambda x}} \: d{x} - \int_{-1}^{1} {x^2 \cos{\lambda x}} \: d{x} \\
+        &= 2 \frac{\sin{\lambda x}}{\lambda}\bigg|_{0}^{1} - 2 \left[ x^2 \frac{\sin{\lambda x}}{\lambda} - \frac{2}{\lambda} \int{ x \sin{\lambda x} } \: d{x} \right]_{0}^{1} \\
+        &= \frac{4}{\lambda} \left[ -x \frac{\cos{\lambda x}}{\lambda} + \frac{1}{\lambda} \int{\cos{\lambda x}} \: d{x} \right]_{0}^{1} \\
+        &= \frac{4}{\lambda^3} \sin{\lambda} - \frac{4}{\lambda^2} \cos{\lambda}
+    \end{align*}
+    \[
+        B(\lambda) = \int_{-\infty}^{\infty} { f(x) \sin{\lambda x} } \: d{x} = \int_{-1}^{1} {\sin{\lambda x}} \: d{x} - \int_{-1}^{1} {x^2 \sin{\lambda x}} \: d{x} = 0
+    \]
+    \[
+        \therefore f(x) = \frac{1}{\pi} \int_{0}^{\infty} { \left( \frac{4}{\lambda^3} \sin{\lambda} \cos{\lambda x} - \frac{4}{\lambda^2} \cos{\lambda} \cos{\lambda x} \right) } \: d{\lambda}
+    \]
+\end{example}
 
 
 
