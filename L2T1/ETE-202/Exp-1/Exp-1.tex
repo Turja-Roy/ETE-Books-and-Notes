@@ -1,0 +1,113 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=0.75in]{geometry}
+\usepackage[document]{ragged2e}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\input{preamble.tex}
+
+\title{
+    \textbf{Experiment 1}
+}
+
+\author{
+    \textbf{Turja Roy}\\
+    2108052
+}
+\date{20 December 2023}
+
+\begin{document}
+\maketitle
+
+\section{Objectives}
+\begin{enumerate}
+    \item To determine the value of a resistor using multimeter and resistor color chart.
+    \item To determine whether a transistor is n-p-n or p-n-p using multimeter.
+    \item To identify the emitter, base, and collector terminals of a transistor.
+\end{enumerate}
+
+\newpage
+\section{Figures}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Color-chart.png}
+    \caption{Resistor color chart}
+\end{figure}
+
+\vspace{40pt}
+\begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[width=0.8\textwidth]{npn.jpg}
+    \captionof{figure}{n-p-n transistor}
+\end{minipage}\hspace{30pt}
+\begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[angle=90, width=0.8\textwidth]{pnp.jpg}
+    \captionof{figure}{p-n-p transistor}
+\end{minipage}
+
+\begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[angle=90, width=0.7\textwidth]{Res1.1.jpg}
+    \captionof{figure}{462 $\Omega$ from multimeter}
+\end{minipage}\hspace{30pt}
+\begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[angle=90, width=0.7\textwidth]{Res1.2.jpg}
+    \captionof{figure}{460 $\Omega$ from color chart}
+\end{minipage}
+
+\begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[width=0.7\textwidth]{Res2.1.jpg}
+    \captionof{figure}{120 $\Omega$ from multimeter}
+\end{minipage}\hspace{30pt}
+\begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[angle=180, width=0.7\textwidth]{Res2.2.jpg}
+    \captionof{figure}{120 $\Omega$ from color chart}
+\end{minipage}
+
+\begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[width=0.7\textwidth]{Res3.1.jpg}
+    \captionof{figure}{546 $\Omega$ from multimeter}
+\end{minipage}\hspace{30pt}
+\begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[angle=180, width=0.7\textwidth]{Res3.2.jpg}
+    \captionof{figure}{560 $\Omega$ from color chart}
+\end{minipage}
+
+\newpage
+\section{Procedure}
+\subsection{Determining the value of a resistor}
+\begin{enumerate}[(a)]
+    \item A breadboard, multimeter, and three four colored resistors were taken in the first place. It was made sure that the multimeter was off and then the resistor was placed in the board.
+    \item After turning the meter on, the resistance mode was activated. The meter has two probes -- the red probe and the black probe. Both were connected to two terminals of the resistor. As a result, a value was displayed in the multimeter.
+    \item The first two colours of the resistor indicate the two leftmost digits of the resistance, whereas the 3rd one indicates the multiplier digit, and the 4th one declares the end of the calculation of resistor’s value.
+    \item After the value was done measuring via multimeter, it was again measured using color chart. Figure-1 gives idea about the colour chart.
+\end{enumerate}
+
+\subsection{Finding out the nature of the transistor}
+\begin{enumerate}[(a)]
+    \item A 2N-3904 B331 transistor was taken in the first place. Then the multimeter's continuity mode was turned on by rotating the knob.
+    \item The red probe was connected to the middle terminal of the transistor and the black probe was connected to one of the side terminals.
+    \item If the transistor is n-p-n, then the multimeter will show a value. If it is p-n-p, then the multimeter will not show any value.
+\end{enumerate}
+
+\subsection{Identifying the terminals of the transistor}
+\begin{enumerate}[(a)]
+    \item The transistor has three terminals -- emitter, base, and collector. The base terminal is always in the middle and the side terminals are emitter and collector.
+    \item A side terminal and the base terminal were connected to the multimeter. The same process was repeated for the other side terminal and the base terminal.
+    \item The side terminal connection showing the larger value is emitter terminal, and the other one is collector terminal.
+\end{enumerate}
+
+\section{Discussion}
+\begin{enumerate}
+    \item The motive of the experiment was to measure the value of the resistor using color code with bare eyes and via multimeter, and also to check if the resistor is n-p-n or p-n-p.
+    \item It was found that the value of the resistor was 462 $\Omega$ from multimeter and 460 $\Omega$ from color chart. The difference is negligible.
+    \item Both n-p-n and p-n-p transistors were identified using multimeter.
+    \item The measured values also matched with 2N-3904 n-p-n and other p-n-p transistor model. So, it can be said that the experiment was conducted properly.
+\end{enumerate}
+
+\end{document}
