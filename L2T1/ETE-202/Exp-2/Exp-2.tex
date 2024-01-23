@@ -53,9 +53,74 @@
 
 \newpage
 \section{Data Analysis}
-\subsection{Fixed Bias Configuration}
+\subsection{Theoretical Data}
 
-\subsubsection{Data Tables}
+\subsubsection{Fixed Bias Configuration}
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c||c|c|c|}
+        \hline
+        \multicolumn{3}{|c||}{$I_B = 0 \mu A$} & \multicolumn{3}{|c|}{$I_B = 11 \mu A$} \\
+        \hline
+        $V_{CC}$ (V) & $V_{CE}$ (V) & $I_C$ (mA) & $V_{CC}$ (V) & $V_{CE}$ (V) & $I_C$ (mA) \\ \hline
+        2.7 & 2.7 & 0.0 & 0.0 & 0.0 & 0.0 \\
+        5.7 & 5.7 & 0.0 & 2.7 & 1.6 & 1.1 \\
+        9.0 & 9.0 & 0.0 & 5.6 & 4.5 & 1.1 \\
+        11.1 & 11.1 & 0.0 & 9.0 & 7.9 & 1.1 \\
+        15.0 & 15.0 & 0.0 & 12.0 & 10.9 & 1.1 \\
+        18.0 & 18.0 & 0.0 & 15.3 & 14.2 & 1.1 \\
+        21.9 & 21.9 & 0.0 & 18.4 & 17.3 & 1.1 \\
+        25.2 & 25.2 & 0.0 & 21.8 & 20.7 & 1.1 \\
+        28.0 & 28.0 & 0.0 & 25.2 & 24.1 & 1.1 \\
+        \hline
+    \end{tabular}
+    \caption{caption}
+    \label{Theoretical Fixed Bias}
+\end{table}
+\egroup
+\vspace{-20pt}
+\[
+    I_C = \beta I_B
+\] \[
+    V_{CE} = V_{CC} - I_C R_C
+\]
+
+\subsubsection{Voltage Divider Bias Configuration}
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c||c|c|c|}
+        \hline
+        \multicolumn{3}{|c||}{$I_B = 0 \mu A$} & \multicolumn{3}{|c|}{$I_B = 0.14 \mu A$} \\
+        \hline
+        $V_{CC}$ (V) & $V_{CE}$ (V) & $I_C$ (mA) & $V_{CC}$ (V) & $V_{CE}$ (V) & $I_C$ (mA) \\ \hline
+        0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+        3.0 & 3.0 & 0.0 & 3.0 & 2.9831 & 0.014 \\
+        8.0 & 8.0 & 0.0 & 8.0 & 7.9831 & 0.014 \\
+        10.0 & 10.0 & 0.0 & 10.7 & 10.683 & 0.014 \\
+        14.0 & 14.0 & 0.0 & 14.7 & 14.683 & 0.014 \\
+        17.0 & 17.0 & 0.0 & 17.7 & 17.683 & 0.014 \\
+        20.0 & 20.0 & 0.0 & 20.7 & 20.683 & 0.014 \\
+        24.0 & 24.0 & 0.0 & 24.7 & 24.683 & 0.014 \\
+        27.0 & 27.0 & 0.0 & 27.6 & 27.583 & 0.014 \\
+        \hline
+    \end{tabular}
+    \caption{caption}
+    \label{Theoretical Voltage Divider Bias}
+\end{table}
+\egroup
+\vspace{-20pt}
+\[
+    I_C = \beta I_B
+\] \[
+    V_{CE} = V_{CC} - I_C (R_C + R_E)
+\]
+
+\subsection{Simulation Data and Practical Data}
+\subsubsection{Fixed Bias Configuration}
 \bgroup
 \def\arraystretch{1.5}
 \begin{table}[h!]
@@ -94,7 +159,7 @@
 \egroup
 
 \newpage
-\subsection{Voltage Divider Bias Configuration}
+\subsubsection{Voltage Divider Bias Configuration}
 \bgroup
 \def\arraystretch{1.5}
 \begin{table}[h!]
@@ -160,7 +225,7 @@
     \label{Voltage Divider Bias Graph}
 \end{figure}
 
-From the graphs, we can see that the simulation and the practical data are not exactly equal. This is due to some technical errors and precision errors. From the graph, a connecting line drawn between $V_{CE} = 0$ and $I_C = 0$ will intersect the output characteristic plot at a point called the Q-point or operational point. This Q-point can be modified by varying the values of $V_{CC}$ and $R_C$.
+From the graphs, we can see that the theoretical data, the simulation, and the practical data are not exactly equal. This is due to some technical errors and precision errors. From the graph, a connecting line drawn between $V_{CE} = 0$ and $I_C = 0$ will intersect the output characteristic plot at a point called the Q-point or operational point. This Q-point can be modified by varying the values of $V_{CC}$ and $R_C$.
 
 \newpage
 \section{Discussion}
