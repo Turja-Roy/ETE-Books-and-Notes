@@ -1,0 +1,209 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=0.75in]{geometry}
+\usepackage[document]{ragged2e}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{multicol}
+\graphicspath{ {./images/} }
+\input{preamble.tex}
+
+\title{
+    \textbf{Experiment 3}\\
+    \textbf{Observation of Transistor Amplifier Circuits}
+}
+
+\author{
+    Turja Roy\\
+    2108052
+}
+\date{January 28, 2024}
+
+\begin{document}
+\maketitle
+
+\section{Objective}
+\begin{enumerate}
+    \item To determine voltage, current, and power gain of common emitter amplifier configuration.
+    \item To determine voltage, current, and power gain of common base amplifier configuration.
+    \item To determine voltage, current, and power gain of common collector amplifier configuration.
+\end{enumerate}
+
+\section{Apparatus}
+\begin{enumerate}
+    \item Transistor (2N3904 n-p-n)
+    \item Resistors (1.2 k$\Omega$, 3.6 k$\Omega$, 10 k$\Omega$, 20 k$\Omega$, 220 $\Omega$, 2.2 k$\Omega$, 3.9 k$\Omega$, 3.3 k$\Omega$, 36 k$\Omega$, 1 k$\Omega$)
+    \item Capacitors (0.1 $\mu$F, 10 $\mu$F, 47 $\mu$F)
+    \item Function generator
+    \item DC power supply
+    \item Oscilloscope
+    \item Breadboard, Wires, Multimeter, etc.
+\end{enumerate}
+
+\newpage
+\section{Circuit Diagrams}
+Below are the circuit diagrams for the three amplifier configurations.
+\begin{enumerate}[(a)]
+    \item In common emitter amplifier, the input is applied between base and emitter, and the output is taken between collector and emitter. The emitter is common to both input and output.
+    \item In common base amplifier, the input is applied between base and emitter, and the output is taken between collector and base. The base is common to both input and output.
+    \item In common collector amplifier, the input is applied between base and emitter, and the output is taken between collector and base. The collector is common to both input and output.
+\end{enumerate}
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.9\linewidth]{CE.png}
+        \caption{Common Emitter Amplifier}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.9\linewidth]{CB.png}
+        \caption{Common Base Amplifier}
+    \end{subfigure} \\
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.6\linewidth]{CC.png}
+        \caption{Common Collector Amplifier}
+    \end{subfigure}
+    \caption{Amplifier Circuit Diagrams}
+\end{figure}
+
+\newpage
+\section{Result Analysis}
+\subsection{Common Emitter Amplifier}
+In common emitter amplifier, both voltage gain and current gain are obtained. The voltage gain is higher than the current gain. The amplified output is $180^{\circ}$ phase shifted with respect to the input signal. Below are given the data table (Table 1), the simulated output signal (Figure 2(a)), and the practical output signal (Figure 2(b)).
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[h!]
+    \centering
+    \caption{Data table for common emitter amplifier}
+    \label{tab:CE table}
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        \multicolumn{7}{|c|}{\textbf{Theoretical Data}} \\
+        \hline
+        $V_{in}$ (mV) & $V_{out}$ (V) & $I_{in}$ ($\mu$A) & $I_{out}$ ($\mu$A) & $A_V$ & $A_I$ & $A_P$ \\ \hline
+        100 & 2.244 & 22 & 222 & 22.44 & 10.09 & 226.44 \\ \hline\hline
+        \multicolumn{7}{|c|}{\textbf{Simulation Data}} \\
+        \hline
+        $V_{in}$ (mV) & $V_{out}$ (V) & $I_{in}$ ($\mu$A) & $I_{out}$ ($\mu$A) & $A_V$ & $A_I$ & $A_P$ \\ \hline
+        100 & 2.92 & 22 & 215 & 29.2 & 9.77 & 285.36 \\ \hline\hline
+        \multicolumn{7}{|c|}{\textbf{Practical Data}} \\
+        \hline
+        $V_{in}$ (mV) & $V_{out}$ (V) & $I_{in}$ ($\mu$A) & $I_{out}$ ($\mu$A) & $A_V$ & $A_I$ & $A_P$ \\ \hline
+        100 & 2.244 & 22 & 222 & 22.44 & 10.09 & 226.44 \\ \hline
+    \end{tabular}
+\end{table}
+\egroup
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{CE_sim.png}
+        \caption{Simulated output signal}
+        \label{fig:CE sim}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{CE_prac.png}
+        \caption{Practical output signal}
+        \label{fig:CE prac}
+    \end{subfigure}
+    \caption{Common emitter amplifier output signal}
+    \label{fig:CE signals}
+\end{figure}
+
+\subsection{Common Base Amplifier}
+In common base amplifier, the current gain is almost equal to 1. The voltage gain is almost same as the common emitter amplifier. Hence, the power gain of a common base amplifier is approximately equal to the voltage gain. Below are given the data table (Table 2), the simulated output signal (Figure 3(a)), and the practical output signal (Figure 3(b)).
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[h!]
+    \centering
+    \caption{Data table for common base amplifier}
+    \label{tab:CB table}
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        \multicolumn{7}{|c|}{\textbf{Theoretical Data}} \\
+        \hline
+        $V_{in}$ (mV) & $V_{out}$ (V) & $I_{in}$ (mA) & $I_{out}$ (mA) & $A_V$ & $A_I$ & $A_P$ \\ \hline
+        100 & 11.204 & 6.19 & 6.13 & 112.04 & 0.99 & 110.95 \\ \hline\hline
+        \multicolumn{7}{|c|}{\textbf{Simulation Data}} \\
+        \hline
+        $V_{in}$ (mV) & $V_{out}$ (V) & $I_{in}$ (mA) & $I_{out}$ (mA) & $A_V$ & $A_I$ & $A_P$ \\ \hline
+        100 & 2.65 & 1.42 & 1.39 & 26.5 & 0.98 & 25.97 \\ \hline\hline
+        \multicolumn{7}{|c|}{\textbf{Practical Data}} \\
+        \hline
+        $V_{in}$ (mV) & $V_{out}$ (V) & $I_{in}$ (mA) & $I_{out}$ (mA) & $A_V$ & $A_I$ & $A_P$ \\ \hline
+        100 & 2.18 & 1.07 & 1.01 & 21.8 & 0.94 & 20.49 \\ \hline
+    \end{tabular}
+\end{table}
+\egroup
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{CB_sim.png}
+        \caption{Simulated output signal}
+        \label{fig:CB sim}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{CB_prac.png}
+        \caption{Practical output signal}
+        \label{fig:CB prac}
+    \end{subfigure}
+    \caption{Common base amplifier output signal}
+    \label{fig:CB signals}
+\end{figure}
+
+\subsection{Common Collector Amplifier}
+In common collector amplifier, the voltage gain is less than 1. The current gain is very high. Hence, the power gain of a common collector amplifier is approximately equal to the current gain. Below are given the data table (Table 3), the simulated output signal (Figure 4(a)), and the practical output signal (Figure 4(b)).
+
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[h!]
+    \centering
+    \caption{Data table for common collector amplifier}
+    \label{tab:CC table}
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        \multicolumn{7}{|c|}{\textbf{Theoretical Data}} \\
+        \hline
+        $V_{in}$ (V) & $V_{out}$ (V) & $I_{in}$ ($\mu$A) & $I_{out}$ (mA) & $A_V$ & $A_I$ & $A_P$ \\ \hline
+        2.998 & 2.976 & 263.38 & 2.976 & 0.992 & 11.29 & 11.21 \\ \hline\hline
+        \multicolumn{7}{|c|}{\textbf{Simulation Data}} \\
+        \hline
+        $V_{in}$ (V) & $V_{out}$ (V) & $I_{in}$ ($\mu$A) & $I_{out}$ (mA) & $A_V$ & $A_I$ & $A_P$ \\ \hline
+        3 & 2.95 & 170 & 3.97 & 0.983 & 23.35 & 23.01 \\ \hline\hline
+        \multicolumn{7}{|c|}{\textbf{Practical Data}} \\
+        \hline
+        $V_{in}$ (V) & $V_{out}$ (V) & $I_{in}$ ($\mu$A) & $I_{out}$ (mA) & $A_V$ & $A_I$ & $A_P$ \\ \hline
+        3 & 2.35 & 135.56 & 4.37 & 0.783 & 32.22 & 25.25 \\ \hline
+    \end{tabular}
+\end{table}
+\egroup
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{CC_sim.png}
+        \caption{Simulated output signal}
+        \label{fig:CC sim}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{CC_prac.png}
+        \caption{Practical output signal}
+        \label{fig:CC prac}
+    \end{subfigure}
+    \caption{Common collector amplifier output signal}
+    \label{fig:CC signals}
+\end{figure}
+
+\section{Discussion}
+From the experiment results, it can be seen that while the common emitter configuration has both voltage and current gain, the common base and common collector configurations have only voltage gain and current gain respectively. The current gain of common base is nearly 1 and the voltage gain of common collector is nearly 1. The common emitter cofiguration has the highest power gain among the three, followed by common collector and common base configurations respectively.
+
+It was also observed that the output signal of common emitter amplifier is $180^{\circ}$ phase shifted with respect to the input signal. The output signal of common base amplifier is in phase with the input signal. The output signal of common collector amplifier is slightly out of phase with respect to the input signal.
+
+The discripancies between the theoretical, simulated, and practical data can be attributed to different reasons. The theoretical data was calculated using ideal values, while the practical data was obtained using real components that have some tolerances. Temperature plays a role in BJT circuits since BJTs are more susceptible to thermal runaway. The errors could have been minimized by performing the experiment under a much more controlled environment.
+
+\end{document}
