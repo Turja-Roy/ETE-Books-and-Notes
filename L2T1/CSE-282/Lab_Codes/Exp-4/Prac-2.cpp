@@ -14,11 +14,9 @@ int main ()
 {
     stack<int> num, fact;
 
-    cout << "Enter 6 values: ";
-    for (int i=0 ; i<6 ; i++) {
-        int x; cin >> x;
-        num.push(x);
-        fact.push(factorial(x));
+    for (int i=5 ; i>=0 ; i--) {
+        num.push(i);
+        fact.push(factorial(i));
     }
 
     while (!num.empty()) {
