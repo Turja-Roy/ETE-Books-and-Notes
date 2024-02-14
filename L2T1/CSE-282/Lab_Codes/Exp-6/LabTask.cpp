@@ -15,7 +15,7 @@ struct Node {
     }
 };
 
-pvi print_left_childs (Node *root) {
+pvi left_right_children (Node *root) {
     vi v_left_childs, v_right_childs;
     if (root == nullptr) cout << "Empty\n";
 
@@ -48,7 +48,7 @@ int main ()
     root->right = new Node(3);
     root->right->left = new Node(6);
 
-    pvi v_lefts = print_left_childs(root);
+    pvi v_lefts = left_right_children(root);
 
     cout << "Printing left childs only: ";
     for (auto i : v_lefts.first) cout << i << " ";
