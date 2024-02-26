@@ -1,0 +1,138 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+%  Analytic Functions  %
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Analytic Functions}
+\subsection{Definitions}
+
+\begin{definition}{Complex variable}{}
+    A \textbf{complex variable} is a variable that can take on complex values. A complex variable is usually denoted by $z$. \\~\\
+    
+    If $x$ and $y$ are real variables, then $z = x + iy$ is a complex variable, where $i$ is the imaginary unit.
+\end{definition}
+
+\begin{definition}{Complex Function}{}
+    A \textbf{complex function} is a function that takes complex variables as input and returns complex values. A complex function is usually denoted by $f(z)$. \\~\\
+
+    If $z = x + iy$ and $w = u + iv$ are complex variables, then $f(z) = u(x, y) + iv(x, y)$ is a complex function, where $u(x, y)$ and $v(x, y)$ are real functions.
+\end{definition}
+
+\begin{definition}{Single-valued Function}{}
+    A \textbf{single-valued function} is a function that returns a unique value for each input. \\~\\
+    
+    A complex function $f(z)$ is single-valued if and only if $f(z_1) = f(z_2)$ implies $z_1 = z_2$. In other words, if $z_1 \neq z_2$, then $f(z_1) \neq f(z_2)$.
+    \[
+        \forall z_1, z_2 \in \mathbb{C} \quad \text{s.t.} \quad z_1 \neq z_2 \quad \text{implies} \quad f(z_1) \neq f(z_2)
+    \] 
+\end{definition}
+
+\begin{definition}{Multiple-valued Function}{}
+    A \textbf{multiple-valued function} is a function that returns multiple values for each input. \\~\\
+    
+    A complex function $f(z)$ is multiple-valued if and only if $f(z_1) = f(z_2)$ for some $z_1 \neq z_2$.
+    \[
+        \exists z_1, z_2 \in \mathbb{C} \quad \text{s.t.} \quad z_1 \neq z_2 \quad \text{and} \quad f(z_1) = f(z_2)
+    \] 
+\end{definition}
+
+\begin{definition}{Derivative}{}
+    The \textbf{derivative} of a complex function $f(z)$ is defined as
+    \[
+        f'(z) = \lim_{\Delta z \to 0} \frac{f(z + \Delta z) - f(z)}{\Delta z}
+    \]
+    where $\Delta z$ is a complex number. \\~\\
+    
+    If the limit exists, then $f(z)$ is said to be \textbf{differentiable} at $z$. If $f(z)$ is differentiable at every point in a region $R$, then $f(z)$ is said to be \textbf{analytic} in $R$.
+\end{definition}
+
+\begin{definition}{Analytic Function}{}
+    A complex function $f(z)$ is \textbf{analytic} in a region $R$ if it is differentiable at every point in $R$. \\~\\
+    
+    If $f(z)$ is analytic in a region $R$, then $f(z)$ is also said to be \textbf{regular} or \textbf{holomorphic} in $R$.
+\end{definition}
+
+
+\subsection{Necessary Conditions for Analyticity}
+Let $f(z) = u(x,y) + iv(x,y)$ be an analytic function in a region $R$. \\~\\
+
+That means, $f(z)$ is differentiable at every point in $R$. \\~\\
+
+$\displaystyle\implies f'(z) = \lim_{\Delta z \to 0} \frac{f(z + \Delta z) - f(z)}{\Delta z}$ exists at every point in $R$. \\~\\
+
+Now, let $z = x+iy$ and $\Delta z = \Delta x + i\Delta y$.
+\[ z + \Delta z = (x + \Delta x) + i(y + \Delta y) \]
+
+Then,
+\begin{align*}
+    \displaystyle f'(z) &= \lim \limits_{%
+        \begin{subarray}{c}
+            \Delta x \to 0 \\
+            \Delta y \to 0
+    \end{subarray}}
+    \frac{f(x + \Delta x + i(y + \Delta y)) - f(x + iy)}{\Delta x + i\Delta y} \\
+    &= \lim \limits_{%
+        \begin{subarray}{c}
+            \Delta x \to 0 \\
+            \Delta y \to 0
+    \end{subarray}}
+    \frac{u(x + \Delta x, y + \Delta y) + iv(x + \Delta x, y + \Delta y) - u(x, y) - iv(x, y)}{\Delta x + i\Delta y} \\
+    &= \lim \limits_{%
+        \begin{subarray}{c}
+            \Delta x \to 0 \\
+            \Delta y \to 0
+    \end{subarray}}
+    \frac{u(x + \Delta x, y + \Delta y) - u(x, y)}{\Delta x + i\Delta y} + i\lim \limits_{%
+        \begin{subarray}{c}
+            \Delta x \to 0 \\
+            \Delta y \to 0
+    \end{subarray}}
+    \frac{v(x + \Delta x, y + \Delta y) - v(x, y)}{\Delta x + i\Delta y}
+\end{align*}
+
+Along the real axis, $\Delta y = 0$. Hence, the limit is
+\begin{equation*}
+    f'(z) = \lim \limits_{\Delta x \to 0} \frac{u(x + \Delta x, y) - u(x, y)}{\Delta x} + i\lim \limits_{\Delta x \to 0} \frac{v(x + \Delta x, y) - v(x, y)}{\Delta x}
+\end{equation*}
+\begin{equation}
+    f'(z) = \frac{\partial u}{\partial x} + i\frac{\partial v}{\partial x}
+\end{equation}
+
+Along the imaginary axis, $\Delta x = 0$. Hence, the limit is
+\begin{equation*}
+    f'(z) = \lim \limits_{\Delta y \to 0} \frac{u(x, y + \Delta y) - u(x, y)}{i\Delta y} + i\lim \limits_{\Delta y \to 0} \frac{v(x, y + \Delta y) - v(x, y)}{i\Delta y}
+\end{equation*}
+\begin{equation}
+    f'(z) = -i\frac{\partial u}{\partial y} + \frac{\partial v}{\partial y}
+\end{equation}
+
+
+\subsection{Cauchy-Riemann Equations}
+Since $f'(z)$ exists, (2.2.4) and (2.2.5) must be equal.
+\begin{equation}
+    \frac{\partial u}{\partial x} + i\frac{\partial v}{\partial x} = \frac{\partial v}{\partial y} - i\frac{\partial u}{\partial y}
+\end{equation}
+Comparing real and imaginary parts,
+\begin{equation}
+    \boxed{ \frac{\partial u}{\partial x} = \frac{\partial v}{\partial y} }
+    \quad \text{and} \quad 
+    \boxed{ \frac{\partial v}{\partial x} = -\frac{\partial u}{\partial y} }
+\end{equation}
+
+These are called the \textbf{Cauchy-Riemann equations}. \\~\\
+
+
+\subsection{Cauchy-Riemann Equations in Polar Form}
+Let \[
+    z = re^{i\theta}
+\] \[
+    f(z) = u(r,\theta) + iv(r,\theta)
+\] 
+Then
+\begin{equation}
+    f(re^{i\theta}) = u(r,\theta) + iv(r,\theta)
+\end{equation}
+
+Differentiating (2.4.1) with respect to $r$, we get
+\begin{equation}
+    \frac{\partial f}{\partial r} = \frac{\partial u}{\partial r} + i\frac{\partial v}{\partial r}
+\end{equation}

@@ -1,0 +1,89 @@
+%%%%%%%%%%%%%%%%%%%%%
+%  Comples Numbers  %
+%%%%%%%%%%%%%%%%%%%%%
+
+\section{Complex Numbers}
+\subsection{Definition}
+
+\begin{definition}{Complex Numbers}{}
+    A complex number is a number that can be expressed in the form $a + bi$, where $a$ and $b$ are real numbers, and $i$ is a solution of the equation $x^2 = -1$, or simply, $i=\sqrt{-1}$. Because no real number satisfies this equation, $i$ is called an imaginary number. For the complex number $a + bi$, $a$ is called the real part, and $b$ is called the imaginary part. 
+    \begin{itemize}
+        \item The set of all complex numbers is denoted by $\mathbb{C}$.
+        \item The set of all real numbers is denoted by $\mathbb{R}$.
+    \end{itemize}
+\end{definition}
+
+\begin{definition}{Modulus and Amplitude}{}
+    Let $z = a + bi$ be a complex number. The modulus of $z$ is the non-negative real number $|z| = \sqrt{a^2 + b^2}$. The amplitude of $z$ is the angle $\theta$ such that $\cos(\theta) = \frac{a}{|z|}$ and $\sin(\theta) = \frac{b}{|z|}$. \\~\\
+    If the polar form of the point $(a,b)$ be $(r,\theta)$, then $a = r\cos\theta$ and $b = r\sin\theta$.
+    \begin{equation}
+        r = |z| = \sqrt{a^2 + b^2} \quad \text{and} \quad \theta = \arctan\left(\frac{b}{a}\right)
+    \end{equation}
+    Here, $r$ is the modulus of $z$ and $\theta$ is the amplitude of $z$. \\
+    In symbols, we write
+    \begin{equation}
+        r = \text{mod} (z) = |a+ib| \quad \text{and} \quad \theta = \text{arg} (z) = \tan^{-1}\left(\frac{b}{a}\right)
+    \end{equation}
+\end{definition}
+
+
+\subsection{De Moivre's Theorem}
+\begin{theorem}{De Moivre's Theorem}{}
+    Let $z = r(\cos\theta + i\sin\theta)$ be a complex number. Then, for any positive integer $n$,
+    \begin{equation}
+        z^n = r^n(\cos n\theta + i\sin n\theta)
+    \end{equation}
+\end{theorem}
+
+\underline{\textbf{Proof:}} \\
+\textbf{Case 1:} $n \in \mathbb{Z_+}$ \\
+We have,
+\begin{align*}
+    z_1 z_2 \ldots z_n &= (\cos\theta_1 + i\sin\theta_1) (\cos\theta_2 + i\sin\theta_2) \ldots (\cos\theta_n + i\sin\theta_n) \\
+    &= \left\{ \cos(\theta_1 + \theta_2) + i\sin(\theta_1 + \theta_2) \right\} \ldots (\cos\theta_n + i\sin\theta_n) \\
+    &= \cos(\theta_1 + \theta_2 + \ldots + \theta_n) + i\sin(\theta_1 + \theta_2 + \ldots + \theta_n)
+\end{align*}
+Hence, we get
+\[
+    z^n = (\cos n\theta + i\sin n\theta) \qed
+\]
+
+\pagebreak
+\textbf{Case 2:} $n \in \mathbb{Z_-}$ \\
+Let $n=-m$. We have,
+\begin{align*}
+    z^n &= (\cos\theta + i\sin\theta)^{-m} \\
+    &= \frac{1}{(\cos\theta + i\sin\theta)^m} \\
+    &= \frac{1}{\cos m\theta + i\sin m\theta} \\
+    &= \frac{\cos m\theta - i\sin m\theta}{\cos^2 m\theta + \sin^2 m\theta} \\
+    &= \cos m\theta - i\sin m\theta \\
+    &= \cos n\theta + i\sin n\theta
+\end{align*}
+Hence, we get
+\[
+    z^n = (\cos n\theta + i\sin n\theta) \qed
+\] \\~\\
+
+\textbf{Case 3:} $n \in \mathbb{Q}$, i.e. $n = \frac{p}{q}$, where $p,q \in \mathbb{Z}$ and $q \neq 0$. \\
+Now,
+\begin{align*}
+    \left( \cos \frac{p}{q}\theta + i\sin \frac{p}{q}\theta \right)^q &= \cos \left( q \cdot \frac{p}{q} \theta \right) + i\sin \left( q \cdot \frac{p}{q}\theta \right) \\
+    &= \cos p\theta + i\sin p\theta \\
+    &= (\cos\theta + i\sin\theta)^p
+\end{align*}
+Taking the $q^{th}$ root of both sides, we get
+\[
+    \cos \frac{p}{q}\theta + i\sin \frac{p}{q}\theta = \left( \cos\theta + i\sin\theta \right)^{\frac{p}{q}} \qed
+\]
+
+\begin{note}{}{}
+    \underline{\textbf{Some Important Results:}}
+    \begin{enumerate}[(i)]
+        \item $1 = e^{i2n\pi} = \cos{2n\pi} + i\sin{2n\pi}$
+        \item $-1 = \cos\pi + i\sin\pi = e^{i\pi}$ 
+        \item $i = \cos\frac{\pi}{2} + i\sin\frac{\pi}{2} = e^{i\frac{\pi}{2}}$
+        \item $-i = \cos\frac{\pi}{2} - i\sin\frac{\pi}{2} = e^{-i\frac{\pi}{2}}$
+    \end{enumerate}
+\end{note}
+
+\vspace{20pt}\rule{3in}{1pt}

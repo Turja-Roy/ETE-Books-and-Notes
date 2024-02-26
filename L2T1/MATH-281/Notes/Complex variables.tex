@@ -3,7 +3,11 @@
 \usepackage[document]{ragged2e}
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
+\usepackage{import}
 \input{preamble.tex}
+
+\numberwithin{equation}{subsection}
+\renewcommand{\thesubsubsection}{\Alph{subsubsection}}
 
 \title{
     \textbf{MATH-281} \\
@@ -19,7 +23,13 @@
 \begin{document}
 \maketitle
 
-Hello world!
+\tableofcontents
+
+\newpage
+\import{./sections}{1-Complex_Numbers.tex}
+
+\newpage
+\import{./sections}{2-Analytic_Functions.tex}
 
 
 \end{document}

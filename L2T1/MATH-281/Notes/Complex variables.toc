@@ -1,0 +1,8 @@
+\contentsline {section}{\numberline {1}Complex Numbers}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Definition}{2}{}%
+\contentsline {subsection}{\numberline {1.2}De Moivre's Theorem}{2}{}%
+\contentsline {section}{\numberline {2}Analytic Functions}{4}{}%
+\contentsline {subsection}{\numberline {2.1}Definitions}{4}{}%
+\contentsline {subsection}{\numberline {2.2}Necessary Conditions for Analyticity}{5}{}%
+\contentsline {subsection}{\numberline {2.3}Cauchy-Riemann Equations}{5}{}%
+\contentsline {subsection}{\numberline {2.4}Cauchy-Riemann Equations in Polar Form}{6}{}%
