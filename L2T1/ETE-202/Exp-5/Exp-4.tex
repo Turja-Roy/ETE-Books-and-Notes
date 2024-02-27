@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=0.75in]{geometry}
+\usepackage[document]{ragged2e}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{placeins}
+\graphicspath{ {./images/} }
+\input{preamble.tex}
+
+\title{
+    \textbf{Experiment 5}\\
+    \textbf{\large Experiments on Class B, Class B push-pull, Class AB, and Class C Multistage Amplifier}
+}
+
+\author{
+    Turja Roy\\
+    2108052
+}
+\date{February 20, 2024}
+
+\begin{document}
+\maketitle
+
+\section{Objective}
+\begin{enumerate}
+    \item To study the working principle of a Class B Multistage Amplifier.
+    \item To study the working principle of a Class AB Multistage Amplifier.
+    \item To study the working principle of a Class B push-pull Multistage Amplifier.
+    \item To study the working principle of a Class C Multistage Amplifier.
+    \item To measure the voltage gain of the amplifiers.
+    \item To measure the current gain of the amplifiers.
+    \item To measure the power gain of the amplifiers.
+\end{enumerate}
+
+\section{Apparatus}
+\begin{enumerate}
+    \item Transistors (2N3904 npn) - 2
+    \item Resistors (220 $\Omega$, 1.2 k$\Omega$, 3.6 k$\Omega$, 20 k$\Omega$, 10 k$\Omega$)
+    \item Capacitors (10 $\mu$F) - 3
+    \item DC Power Supply (0-30V)
+    \item Function Generator
+    \item Oscilloscope
+    \item Multimeter
+    \item Breadboard, Connecting wires, etc.
+\end{enumerate}
+
+\section{Circuit Diagram}
+In the following page is given the circuit diagram for the Class A Amplifier. The multistage amplifier was built by connecting two amplifier circuits through the capacitor $C_5$. The output of the first amplifier ($Q_1$) acts as the input of the second amplifier ($Q_3$). The 10k $\Omega$ is the load resistor in the circuit. Oscilloscope has been connected in the shown way to get the input and output curves.
+
+\begin{figure}[!htpb]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Circuit Diagram.png}
+    \caption{Class A Amplifier Circuit Diagram}
+\end{figure}
+
+\FloatBarrier
+\section{Result Analysis}
+A multi stage amplifier amplifies a signal in multiple stages. The input of the first stage is amplified and collected at at the output terminal and that output becomes the input for the second stage. This is how a signal gets amplified in multiple stages. The overall voltage gain of the signal is going to be the multiplication of the voltage gain of each of these circuits.
+
+\subsection{Data Table for Class A Multistage Amplifier}
+\bgroup
+\def\arraystretch{1.5}
+\begin{table}[h!]
+    \centering
+    \caption{Data table for Class A multistage amplifier}
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        \multicolumn{7}{|c|}{\textbf{Theoretical Data}} \\
+        \hline
+        $V_{in}$ (mV) & $V_{out}$ (mV) & $I_{in}$ ($\mu$A) & $I_{out}$ ($\mu$A) & $A_V$ & $A_I$ & $A_P$ \\ \hline
+        50 & 620 & 19.2 & 61.81 & 12.4 & 3.22 & 39.93 \\ \hline\hline
+        \multicolumn{7}{|c|}{\textbf{Simulation Data}} \\
+        \hline
+        $V_{in}$ (mV) & $V_{out}$ (mV) & $I_{in}$ ($\mu$A) & $I_{out}$ ($\mu$A) & $A_V$ & $A_I$ & $A_P$ \\ \hline
+        50 & 617 & 19.2 & 61.7 & 12.34 & 3.21 & 39.61 \\ \hline\hline
+        \multicolumn{7}{|c|}{\textbf{Practical Data}} \\
+        \hline
+        $V_{in}$ (mV) & $V_{out}$ (mV) & $I_{in}$ ($\mu$A) & $I_{out}$ ($\mu$A) & $A_V$ & $A_I$ & $A_P$ \\ \hline
+        50 & 572 & 15.2 & 65.7 & 11.44 & 4.32 & 49.42 \\ \hline\hline
+        \multicolumn{7}{|c|}{\textbf{Error Analysis (Simulation vs Practical Data)}} \\
+        \hline
+        $V_{in}$ \% & $V_{out}$ \% & $I_{in}$ \% & $I_{out}$ \% & $A_V$ \% & $A_I$ \% & $A_P$ \% \\ \hline
+        0 & 10.86 & 20.83 & 6.48 & 0.38 & 34.58 & 24.77 \\ \hline
+    \end{tabular}
+\end{table}
+\egroup
+
+\subsection{Class A Multistage Amplifier Input and Output Graphs}
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\textwidth]{Simulated_graph.png}
+        \caption{Simulated Graph}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\textwidth]{Practical_graph.jpg}
+        \caption{Experimental Graph}
+    \end{subfigure}
+    \caption{Simulated and Practical Input and Output Graphs for Class A Multistage Amplifier}
+\end{figure}
+
+In the simulated graph (Figure 2-a), the yellow and the green dashed lines show the input and output curves respectively. In the practical graph (Figure 2-b), the shorter amplitide curve is input graph and the other one is output curve.
+
+
+\section{Discussion}
+The experiment was conducted to observe the amplification of a signal in multiple stages. Error had been measured between the simulated data and the practical data. The error analysis shows that the accuracy of the practical data is roughly within the range of 75\% to 90\%. The theoretical, simulation and practical data had some discripancies. One of the possible reason for this was that in the theoretical and simulated data, the internal resistance of wires and other equipments were considered negligible.
+
+\end{document}
