@@ -25,6 +25,15 @@ bool is_balanced(Node *root) {
     return (abs(lh - rh) <= 1 && is_balanced(root->left) && is_balanced(root->right));
 }
 
+bool is_BST(Node *root) {
+    if (root == NULL) return true;
+
+    if (root->left != NULL && root->left->key > root->key) return false;
+    if (root->right != NULL && root->right->key < root->key) return false;
+
+    return (is_BST(root->left) && is_BST(root->right));
+}
+
 bool is_perfect(Node *root) {
     if (root == NULL) return true;
 
@@ -76,6 +85,9 @@ int main ()
 
     if (is_balanced(root)) cout << "The tree is balanced." << endl;
     else cout << "The tree is not balanced." << endl;
+
+    if (is_BST(root)) cout << "The tree is a BST." << endl;
+    else cout << "The tree is not a BST." << endl;
 
     if (is_perfect(root)) cout << "The tree is perfect." << endl;
     else cout << "The tree is not perfect." << endl;
