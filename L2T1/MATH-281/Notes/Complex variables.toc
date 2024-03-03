@@ -6,3 +6,10 @@
 \contentsline {subsection}{\numberline {2.2}Necessary Conditions for Analyticity}{5}{}%
 \contentsline {subsection}{\numberline {2.3}Cauchy-Riemann Equations}{5}{}%
 \contentsline {subsection}{\numberline {2.4}Cauchy-Riemann Equations in Polar Form}{6}{}%
+\contentsline {section}{\numberline {3}Harmonic Function}{7}{}%
+\contentsline {subsection}{\numberline {3.1}Laplace's Equation}{7}{}%
+\contentsline {subsection}{\numberline {3.2}Harmonic Function}{7}{}%
+\contentsline {subsection}{\numberline {3.3}Velocity Potential}{8}{}%
+\contentsline {subsection}{\numberline {3.4}Method for Finding Conjugate Harmonic Function}{8}{}%
+\contentsline {subsubsection}{\numberline {A}Method 1: Real or Imaginary Part of an Analytic Function is Given}{8}{}%
+\contentsline {subsubsection}{\numberline {B}Method 2: Milne's Method/ Milne Thomson Method}{9}{}%

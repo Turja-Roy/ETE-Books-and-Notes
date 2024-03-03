@@ -1,0 +1,156 @@
+%%%%%%%%%%%%%%%%%%%%%%%
+%  Harmonic Function  %
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Harmonic Function}
+
+\subsection{Laplace's Equation}
+\begin{definition}{Laplace's Equation}{}
+    An equation of the form
+    \begin{equation}
+        \pdv[2]{\phi}{x} + \pdv[2]{\phi}{y} = 0
+        \quad \text{or} \quad
+        \nabla^2 \phi = 0
+    \end{equation}
+    is called \textbf{Laplace's equation} (in two dimentions). \\
+    Here, $\nabla^2$ is the Laplacian operator.
+\end{definition}
+
+\subsection{Harmonic Function}
+\begin{definition}{Harmonic Function}{}
+    A function $\phi(x,y)$ is called \textbf{harmonic} if it satisfies Laplace's equation
+    \begin{equation}
+        \nabla^2 \phi = 0
+    \end{equation}
+    where $\nabla^2$ is the Laplacian operator.
+\end{definition}
+
+\begin{theorem}{}{}
+    If $f(z) = u + iv$ is an analytic function, then $u$ and $v$ are both harmonic functions.
+\end{theorem}
+
+\underline{\textbf{Proof:}} \\
+Since $f(z)$ is analytic, it satisfies the Cauchy-Riemann equations
+\begin{align}
+    \pdv{u}{x} &= \pdv{v}{y} \\
+    \pdv{u}{y} &= -\pdv{v}{x}
+\end{align}
+
+Differentiating (3.2.2) w.r.t. $x$ and (3.2.3) w.r.t. $y$, we get
+\begin{align}
+    \pdv[2]{u}{x} &= \frac{\partial v}{\partial x \partial y} \\
+    \pdv[2]{u}{y} &= -\frac{\partial v}{\partial y \partial x}
+\end{align}
+
+Adding (3.2.4) and (3.2.5), we get
+\begin{equation}
+    \pdv[2]{u}{x} + \pdv[2]{u}{y} = 0
+\end{equation}
+
+Similarly,
+\begin{equation}
+    \pdv[2]{v}{x} + \pdv[2]{v}{y} = 0
+\end{equation}
+
+Hence, both $u$ and $v$ are harmonic functions. \hfill $\qed$ \\~\\
+
+\begin{definition}{Conjugate Harmonic Function}{}
+    Any two functions $\phi$ and $\psi$ such that $f(z) = \phi + i\psi$ is analytic, are called \textbf{Conjugate Harmonic Functions}.
+\end{definition}
+
+
+\subsection{Velocity Potential}
+Consider a two-dimensional flow of an incompressible fluid. The velocity of the fluid at a point $(x,y)$ is given by the vector
+\begin{equation}
+    \vb v = v_x \vu{i} + v_y \vu{j}
+\end{equation}
+
+The velocity potential $\phi(x,y)$ is defined as the scalar function such that
+\begin{equation}
+    \vb V = \nabla \phi = \left( \vu{i} \pdv{}{x} + \vu{j} \pdv{}{y} \right) \phi = \vu{i} \pdv{\phi}{x} + \vu{j} \pdv{\phi}{y}
+\end{equation}
+
+Comparing (3.3.1) and (3.3.2), we get
+\begin{equation}
+    v_x = \pdv{\phi}{x} \quad \text{and} \quad v_y = \pdv{\phi}{y}
+\end{equation}
+
+The scalar function $\phi(x,y)$ gives the velocity components. \\
+Since the fluid is incompressible,
+\begin{align*}
+    \nabla v &= 0 \\
+    \left( \vu{i} \pdv{}{x} + \vu{j} \pdv{}{y} \right) \left( \vu{i} v_x + \vu{j} v_y \right) &= 0 \\
+    \pdv{v_x}{x} + \pdv{v_y}{y} &= 0
+\end{align*}
+
+Putting the values of $v_x$ and $v_y$ from (3.3.3),
+\begin{align*}
+    \pdv{}{x} \left( \pdv{\phi}{x} \right) + \pdv{}{y} \left( \pdv{\phi}{y} \right) &= 0 \\
+    \pdv[2]{\phi}{x} + \pdv[2]{\phi}{y} &= 0
+\end{align*}
+
+This is Laplace's equation. Hence, the velocity potential $\phi(x,y)$ is a harmonic function and is a real part of the analytic function
+\[
+    f(z) = \phi + i\psi
+\]
+
+
+\subsection{Method for Finding Conjugate Harmonic Function}
+\subsubsection{Method 1: Real or Imaginary Part of an Analytic Function is Given}
+If $f(z) = u + iv$ and $u$ is known \\
+
+We know that \[
+    d{v} = \pdv{v}{x} d{x} + \pdv{v}{y} d{y}
+\] 
+Using C-R equations,
+\begin{align*}
+    d{v} &= -\pdv{u}{y} d{x} + \pdv{u}{x} d{y} \\
+    v &= -\int \pdv{u}{y} d{x} + \int \pdv{u}{x} d{y} + C
+\end{align*}
+Since $u$ is known, $v$ can be found using the above method. \\~\\
+
+If $v$ is known, then $u$ can be found using the same method.
+
+\subsubsection{Method 2: Milne's Method/ Milne Thomson Method}
+By this method, $f(z)$ is directly constructed without finding $v$. \\
+Since \[
+    z = x + iy \quad \text{and} \quad \bar{z} = x - iy
+\] \[
+    x = \frac{z + \bar{z}}{2} \quad \text{and} \quad y = \frac{z - \bar{z}}{2i}
+\] 
+
+Thus,
+\begin{equation}
+    \boxed{ f(z) = u\left( \frac{z + \bar{z}}{2}, \frac{z - \bar{z}}{2i} \right) + iv\left( \frac{z + \bar{z}}{2}, \frac{z - \bar{z}}{2i} \right) }
+\end{equation} \\~\\
+
+\underline{\textbf{Case 1: $u$ is given}} \\
+Let $f(z) = u + iv$ be an analytic function and $u$ is given. \\
+Then, \[
+    \pdv{u}{x} = u_1(x,y) \quad \text{and} \quad \pdv{u}{y} = u_2(x,y)
+\] 
+
+By Milne's method, we get
+\begin{equation}
+    f'(z) = u_1(z,0) - iu_2(z,0)
+\end{equation} 
+
+Integrating (3.4.1) w.r.t. $z$, we get
+\begin{equation}
+    f(z) = \int \left[ u_1(z,0) - iu_2(z,0) \right] dz + C_1
+\end{equation}
+
+\underline{\textbf{Case 2: $v$ is given}} \\
+If $v$ is given, then \[
+    \pdv{v}{y} = v_1(x,y) \quad \text{and} \quad \pdv{v}{x} = v_2(x,y)
+\] 
+
+By Milne's method, we get
+\begin{equation}
+    f'(z) = v_1(z,0) + iv_2(z,0)
+\end{equation}
+
+Integrating (3.4.3) w.r.t. $z$, we get
+\begin{equation}
+    f(z) = \int \left[ v_1(z,0) + iv_2(z,0) \right] dz + C_2
+\end{equation}

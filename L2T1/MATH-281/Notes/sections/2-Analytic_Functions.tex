@@ -134,5 +134,26 @@ Then
 
 Differentiating (2.4.1) with respect to $r$, we get
 \begin{equation}
-    \frac{\partial f}{\partial r} = \frac{\partial u}{\partial r} + i\frac{\partial v}{\partial r}
+    e^{i\theta}f'(re^{i\theta}) = \frac{\partial u}{\partial r} + i\frac{\partial v}{\partial r}
 \end{equation}
+
+Differentiating (2.4.1) with respect to $\theta$, we get
+\begin{equation}
+    ire^{i\theta}f'(re^{i\theta}) = \frac{\partial {u}}{\partial {\theta}} + i\frac{\partial {v}}{\partial {\theta}}
+\end{equation}
+
+Now, from (2.4.2) and (2.4.3),
+\begin{align*}
+    \pdv{u}{r} + i \pdv{v}{r} &= \frac{1}{ir} \left( \pdv{u}{\theta} + i \pdv{v}{\theta} \right)  \\
+    \pdv{u}{r} + i \pdv{v}{r} &= \frac{1}{ir} \pdv{u}{\theta} + \frac{1}{r} \pdv{v}{\theta} \\
+    \pdv{u}{r} + i \pdv{v}{r} &= -\frac{i}{r} \pdv{u}{\theta} + \frac{1}{r} \pdv{v}{\theta}
+\end{align*}
+
+Equating the real and imaginary parts, we get
+\begin{equation}
+    \boxed{ \pdv{u}{r} = \frac{1}{r} \pdv{v}{\theta} }
+    \quad \text{and} \quad 
+    \boxed{ \pdv{v}{r} = -\frac{1}{r} \pdv{u}{\theta} }
+\end{equation}
+
+These are the \textbf{Cauchy-Riemann equations in polar form}.
