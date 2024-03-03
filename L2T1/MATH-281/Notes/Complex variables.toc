@@ -4,7 +4,7 @@
 \contentsline {section}{\numberline {2}Analytic Functions}{4}{}%
 \contentsline {subsection}{\numberline {2.1}Definitions}{4}{}%
 \contentsline {subsection}{\numberline {2.2}Necessary Conditions for Analyticity}{5}{}%
-\contentsline {subsection}{\numberline {2.3}Cauchy-Riemann Equations}{5}{}%
+\contentsline {subsection}{\numberline {2.3}Cauchy-Riemann Equations}{6}{}%
 \contentsline {subsection}{\numberline {2.4}Cauchy-Riemann Equations in Polar Form}{6}{}%
 \contentsline {section}{\numberline {3}Harmonic Function}{7}{}%
 \contentsline {subsection}{\numberline {3.1}Laplace's Equation}{7}{}%
