@@ -131,6 +131,38 @@ Hence, we have
     f(a) &= \frac{1}{2\pi i} \oint_C \frac{f(z)}{z-a} \, dz \qed
 \end{align*}
 
+\begin{theorem}{Cauchy Integral Formula for the Derivative of an Analytic Function}{}
+    \\If $f(z)$ is analytic inside and on a simple closed curve $C$, and if $a$ is a point inside the curve $C$, then
+    \begin{equation}
+        f'(a) = \frac{1}{2\pi i} \oint_C \frac{f(z)}{(z-a)^2} \, dz
+    \end{equation}
+    \begin{equation}
+        f''(a) = \frac{2!}{2\pi i} \oint_C \frac{f(z)}{(z-a)^3} \, dz
+    \end{equation}
+    \begin{equation}
+        f^{(n)}(a) = \frac{n!}{2\pi i} \oint_C \frac{f(z)}{(z-a)^{n+1}} \, dz
+    \end{equation}
+\end{theorem}
+
+\underline{\textbf{Proof:}} \\
+The proof of these formulas can be obtained by differentiating the Cauchy Integral Formula and using the Cauchy Integral Formula for $f(a)$. \\
+We know
+\begin{equation}
+    f(a) = \frac{1}{2\pi i} \oint_C \frac{f(z)}{z-a} \, dz
+\end{equation} 
+Differentiating both sides with respect to $a$, we get
+\begin{equation}
+    f'(a) = \frac{1}{2\pi i} \oint_C \frac{f(z)}{(z-a)^2} \, dz
+\end{equation}
+Differentiating again, we get
+\begin{equation}
+    f''(a) = \frac{2!}{2\pi i} \oint_C \frac{f(z)}{(z-a)^3} \, dz
+\end{equation}
+Continuing this process, we get
+\begin{equation}
+    f^{(n)}(a) = \frac{n!}{2\pi i} \oint_C \frac{f(z)}{(z-a)^{n+1}} \, dz \qed
+\end{equation}
+
 \vspace{20pt}\rule{3in}{1pt}
 
 

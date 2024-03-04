@@ -19,4 +19,4 @@
 \contentsline {subsection}{\numberline {4.2}Complex Line Integrals}{11}{}%
 \contentsline {subsection}{\numberline {4.3}Cauchy's Integral Theorem}{11}{}%
 \contentsline {subsection}{\numberline {4.4}Cauchy's Integral Formula}{12}{}%
-\contentsline {subsection}{\numberline {4.5}Cauchy's Extended Theorem}{13}{}%
+\contentsline {subsection}{\numberline {4.5}Cauchy's Extended Theorem}{14}{}%
