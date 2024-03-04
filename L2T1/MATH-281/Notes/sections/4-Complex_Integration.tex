@@ -1,0 +1,143 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Complex Integration  %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Complex Integration}
+\subsection{Definitions}
+\begin{definition}{Simply Connected Region}{}
+    A connected region is said to be a \textbf{Simply Connected} region if all the interior points of a closed curve $C$ drawn in the region $D$ are the points of the region $D$.
+\end{definition}
+
+\begin{definition}{Multi-Connected Region}{}
+    A \textbf{Multi-connected} region is bounded by more than one curve. A multi-connected region can be divided into simply connected regions.
+\end{definition}
+
+\vspace{20pt}\rule{3in}{1pt}
+
+
+\subsection{Complex Line Integrals}
+\begin{definition}{Complex Line Integral}{}
+    The \textbf{Complex Line Integral} of a function $f(z)$ along a curve $C$ is defined as
+    \begin{equation}
+        \oint_C f(z) \, dz = \lim_{n \to \infty} \sum_{k=1}^n f(z_k^*) \Delta z_k
+    \end{equation}
+    where $z_k^*$ is a point on the curve $C$ and $\Delta z_k$ is the length of the curve $C$.
+\end{definition}
+\vspace{20pt}
+
+If $z = x + iy$ and $f(z) = u(x,y) + iv(x,y)$, then \[
+    d{z} = dx + i \, dy
+\] and \[
+    f(z) \, dz = (u \, dx - v \, dy) + i(u \, dy + v \, dx)
+\] Hence, the complex line integral can be written as
+\begin{equation}
+    \boxed{ \oint_C f(z) \, dz = \int_C (u \, dx - v \, dy) + i \int_C (u \, dy + v \, dx) }
+\end{equation}
+
+\vspace{20pt}\rule{3in}{1pt}
+
+
+\subsection{Cauchy's Integral Theorem}
+\begin{theorem}{Cauchy's Integral Theorem}{}
+    \\If $f(z)$ is analytic and its derivative $f'(z)$ is continuous at all points inside and on a simple closed curve $C$, then
+    \begin{equation}
+        \oint_C f(z) \, dz = 0
+    \end{equation}
+\end{theorem}
+
+\underline{\textbf{Proof:}} \\
+Let the region enclosed by the curve $C$ be $D$, and let
+\begin{align*}
+    f(z) &= u(x,y) + iv(x,y) \\
+    z &= x + iy \\
+    dz &= dx + i \, dy
+\end{align*}
+
+Now,
+\begin{align*}
+    \oint_C {f(z) \, dz} &= \oint_C {\left( u+iv \right)\left( dx + idy \right)}  \\
+    &= \oint_C {(u \, dx - v \, dy) + i \oint_C (u \, dy + v \, dx)} \\
+    &= \oint_C {u \, dx - v \, dy} + i \oint_C {u \, dy + v \, dx} \\
+    &= \iint_R \left( -\pdv{v}{x} - \pdv{u}{y} \right) \, dx \, dy + i \iint_R \left( \pdv{u}{x} - \pdv{v}{y} \right) \, dx \, dy
+\end{align*}
+\hfill[By Green's Theorem]
+
+Since $f(z)$ is analytic, the Cauchy-Riemann equations hold, i.e.
+\begin{equation*}
+    \pdv{u}{x} = \pdv{v}{y} 
+    \quad \text{and} \quad
+    \pdv{u}{y} = -\pdv{v}{x}
+\end{equation*}
+Thus, we get \[
+    \oint_C f(z) \, dz = 0 \qed
+\] 
+
+\vspace{20pt}\rule{3in}{1pt}
+
+
+\subsection{Cauchy's Integral Formula}
+\begin{theorem}{Cauchy's Integral Formula}{}
+    \\If $f(z)$ is analytic inside and on a simple closed curve $C$, and if $a$ is a point inside the curve $C$, then
+    \begin{equation}
+        f(a) = \frac{1}{2\pi i} \oint_C \frac{f(z)}{z-a} \, dz
+    \end{equation}
+\end{theorem}
+
+\underline{\textbf{Proof:}} \\
+Let $f(z)$ be analytic inside and on a simple closed curve $C$, and let $a$ be a point inside the curve $C$. Then, by Cauchy's Integral Theorem, we have
+\begin{equation*}
+    \oint_C f(z) \, dz = 0
+\end{equation*}
+Now, consider the function
+\begin{equation*}
+    g(z) = \frac{f(z)}{z-a}
+\end{equation*}
+This function is analytic inside and on the curve $C$, except at the point $z=a$. Thus, by Cauchy's Integral Theorem, we have
+\begin{equation*}
+    \oint_C g(z) \, dz = 0
+\end{equation*}
+Now, we have
+\begin{align*}
+    \oint_C g(z) \, dz &= \oint_C \frac{f(z)}{z-a} \, dz \\
+    &= \oint_C \frac{f(z)}{z-a} \, dz - \oint_C \frac{f(a)}{z-a} \, dz + \oint_C \frac{f(a)}{z-a} \, dz \\
+    &= \oint_C \frac{f(z) - f(a)}{z-a} \, dz + f(a) \oint_C \frac{1}{z-a} \, dz
+\end{align*}
+For any point on the curve $C_1$, we have
+\[
+    z - a = re^{i\theta}
+    \quad \text{and} \quad
+    dz = ire^{i\theta} \, d\theta
+\] 
+\begin{align*}
+    \oint_{C_1} \frac{f(z) - f(a)}{z-a} \, dz &= \int_{C_1}^{} {\frac{f(z) - f(a)}{z-a}} \; dz \\
+    &= \int_{0}^{2\pi} {\frac{f(re^{i\theta}) - f(a)}{re^{i\theta}}} \; ire^{i\theta} \, d{\theta} \\
+    &= \int_{0}^{2\pi} i \left[ f(re^{i\theta}) - f(a) \right] \, d{\theta} \\
+    &= 0 \\
+    \int_{C_1}^{} {\frac{1}{z-a}} \; d{z} &= \int_{0}^{2\pi} {\frac{ire^{i\theta}}{re^{i\theta}}} \; d{\theta} \\
+    &= \int_{0}^{2\pi} i \, d{\theta} \\
+    &= 2\pi i
+\end{align*}
+
+Thus, we have
+\begin{align*}
+    \oint_C g(z) \, dz &= \oint_C \frac{f(z) - f(a)}{z-a} \, dz + f(a) \oint_C \frac{1}{z-a} \, dz \\
+    &= 0 + f(a) \cdot 2\pi i \\
+    &= 2\pi i f(a)
+\end{align*}
+
+Hence, we have
+\begin{align*}
+    \oint_C g(z) \, dz &= 2\pi i f(a) \\
+    \oint_C \frac{f(z)}{z-a} \, dz &= 2\pi i f(a) \\
+    f(a) &= \frac{1}{2\pi i} \oint_C \frac{f(z)}{z-a} \, dz \qed
+\end{align*}
+
+\vspace{20pt}\rule{3in}{1pt}
+
+
+\subsection{Cauchy's Extended Theorem}
+\begin{theorem}{Cauchy's Extended Theorem}{}
+    \\If $f(x)$ is analytic within and on the boundary of a region bounded by two closed curves $C_1$ and $C_2$, then
+    \begin{equation}
+        \oint_{C_1} f(z) \, dz = \oint_{C_2} f(z) \, dz
+    \end{equation}
+\end{theorem}

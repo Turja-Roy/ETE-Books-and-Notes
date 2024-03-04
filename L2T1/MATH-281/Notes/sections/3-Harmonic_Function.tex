@@ -163,3 +163,42 @@ Integrating (3.4.3) w.r.t. $z$, we get
 \end{equation}
 
 \vspace{20pt}\rule{3in}{1pt}
+
+
+\subsection{Complex Potential Function}
+\begin{definition}{Complex Potential Function}{}
+    The analytic function  \[
+        W = \phi(x,y) + i\psi(x,y)
+    \] is called the \textbf{Complex Potential Function}. \\
+    The real part $\phi(x,y)$ represents the velocity potential function, and the imaginary part $\psi(x,y)$ represents the stream function.
+\end{definition}
+
+\begin{example}{
+        If $W = \phi + i\psi$ represents the complex potential for an electric field, and $\psi = 3x^2y-y^3$, then find $\phi$.
+    }{}
+    Given, \[
+        \psi = 3x^2y - y^3
+    \] Hence,
+    \begin{align*}
+        \pdv{\psi}{y} &= 3x^2 - 3y^2 \\
+        \pdv{\phi}{x} &= 6xy
+    \end{align*}
+    
+    By Milne's method, we have
+    \begin{align*}
+        W'(z) &= \psi_1(z,0) + i\psi_2(z,0) \\
+        &= 3z^2 + i\cdot 0 \\
+        &= 3z^2
+    \end{align*}
+    Integrating $W'(z)$ w.r.t. $z$, we get
+    \begin{align*}
+        W(z) &= \int 3z^2 dz + C \\
+        \phi + i\psi &= z^3 + c_1 + ic_2 \\
+        \phi + i\psi = x^3 - 3xy^2 + c_1 + i\left( 3x^2y - y^3 + c_2 \right)
+    \end{align*}
+    Comparing real and imaginary parts, we get the required potential function \[
+        \boxed{ \phi = x^3 - 3xy^2 + c_1 }
+    \] 
+\end{example}
+
+\vspace{20pt}\rule{3in}{1pt}

@@ -13,3 +13,10 @@
 \contentsline {subsection}{\numberline {3.4}Method for Finding Conjugate Harmonic Function}{8}{}%
 \contentsline {subsubsection}{\numberline {A}Method 1: Real or Imaginary Part of an Analytic Function is Given}{8}{}%
 \contentsline {subsubsection}{\numberline {B}Method 2: Milne's Method/ Milne Thomson Method}{9}{}%
+\contentsline {subsection}{\numberline {3.5}Complex Potential Function}{10}{}%
+\contentsline {section}{\numberline {4}Complex Integration}{11}{}%
+\contentsline {subsection}{\numberline {4.1}Definitions}{11}{}%
+\contentsline {subsection}{\numberline {4.2}Complex Line Integrals}{11}{}%
+\contentsline {subsection}{\numberline {4.3}Cauchy's Integral Theorem}{11}{}%
+\contentsline {subsection}{\numberline {4.4}Cauchy's Integral Formula}{12}{}%
+\contentsline {subsection}{\numberline {4.5}Cauchy's Extended Theorem}{13}{}%
