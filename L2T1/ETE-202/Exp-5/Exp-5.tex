@@ -1,0 +1,110 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=0.75in]{geometry}
+\usepackage[document]{ragged2e}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{placeins}
+\graphicspath{ {./images/} }
+\input{preamble.tex}
+
+\title{
+    \textbf{\Large Experiment 5}\\
+    \textbf{\Large Experiments on Class AB and Class C Amplifier}
+}
+
+\author{
+    Turja Roy\\
+    2108052
+}
+\date{February 20, 2024}
+
+\begin{document}
+\maketitle
+
+\section{Objective}
+\begin{enumerate}
+    \item To study the working principle of a Class AB Amplifier.
+    \item To study the working principle of a Class C Amplifier.
+\end{enumerate}
+
+\section{Apparatus}
+\begin{enumerate}
+    \item Transistors (2N3904 npn) - 2
+    \item Resistors
+    \item Capacitors
+    \item DC Power Supply (0-30V)
+    \item Function Generator
+    \item Oscilloscope
+    \item Multimeter
+    \item Breadboard, Connecting wires, etc.
+\end{enumerate}
+
+\section{Circuit Diagram}
+In the following page is given the circuit diagram for the Class AB Amplifier and Class C Amplifier. \\~\\
+
+In Figure 1, The Class AB amplifier was built using two npn transistor. The input signal was given parallelly to the bases of the transistors. The transistor bases were connected by two diodes to overcome the crossover distortion. The emitter of $Q_1$ was connected to the collector of $Q_2$ and the output was taken from the collector of $Q_2$. The $100 \Omega$ resistor was used as the load resistor in the circuit. Oscilloscope has been connected in the shown way to get the input and output curves. \\~\\
+
+In Figure 2, the Class C amplifier was built using a single npn transistor. The input signal was given to the base of the transistor. The output was taken from the emitter of the transistor. The $10 \; k\Omega$ resistor was used as the load resistor in the circuit. Oscilloscope has been connected in the shown way to get the input and output curves.
+
+\begin{figure}[!htpb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Class_AB_Diagram.jpg}
+    \caption{Class AB Amplifier Circuit Diagram}
+\end{figure}
+
+\begin{figure}[!htpb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Class_C_Diagram.png}
+    \caption{Class C Amplifier Circuit Diagram}
+\end{figure}
+
+\FloatBarrier
+\section{Result Analysis}
+
+\subsection{Class AB Amplifier}
+The Class AB amplifier is a combination of Class A and Class B amplifier. The input signal is divided into two halves and each half is amplified by one transistor. The bases of the transistors are connected by two diodes to overcome the crossover distortion. The output of these two transistors are then combined to get the amplified output.
+
+\subsubsection{Class AB Amplifier Input and Output Graphs}
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}{0.55\textwidth}
+        \includegraphics[width=\textwidth]{Class_AB_Graph.jpg}
+        \caption{Simulated Graph}
+    \end{subfigure}
+    \begin{subfigure}{0.55\textwidth}
+        \includegraphics[width=\textwidth]{Class_AB_Practical.png}
+        \caption{Experimental Graph}
+    \end{subfigure}
+    \caption{Simulated and Practical Input and Output Graphs for Class AB Amplifier}
+\end{figure}
+
+In the simulated graph (Figure 3-a), the red and the blue lines show the input and output curves respectively. In the practical graph (Figure 3-b), we see that the crossover distortion is almost negligible. The output curve is almost similar to the input curve.
+
+\subsection{Class C Amplifier}
+The Class C amplifier is a type of amplifier where the transistor conducts for less than half of the input cycle. The input signal is given to the base of the transistor and the output is taken from the emitter of the transistor. The transistor conducts only when the input signal is greater than the base-emitter voltage of the transistor.
+
+\subsubsection{Class C Amplifier Input and Output Graphs}
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}{0.55\textwidth}
+        \includegraphics[width=\textwidth]{Class_C_Graph.png}
+        \caption{Simulated Graph}
+    \end{subfigure}
+    \begin{subfigure}{0.55\textwidth}
+        \includegraphics[width=\textwidth]{Class_C_Practical.png}
+        \caption{Experimental Graph}
+    \end{subfigure}
+    \caption{Simulated and Practical Input and Output Graphs for Class AB Amplifier}
+\end{figure}
+
+In the simulated graph (Figure 4-a), the blue and the red lines show the input and output curves respectively. In the practical graph (Figure 4-b), we see that the input and output curves are almost similar to that of the simulated graph.
+
+\FloatBarrier
+\section{Discussion}
+The experiment was conducted to observe the amplification of a signal in Class AB amplifier and Class C amplifier. In the Class C amplifier, the Q-point is set below the cutoff region. The transistor conducts only when the input signal is greater than the base-emitter voltage of the transistor. \\~\\
+
+In the Class AB amplifier, the Q-point is set at the cutoff region. To overcome the crossover distortion, the bases of the transistors are connected by two diodes. In the experiment, it was observed that the output curve was almost similar to the input curve, and the crossover distortion was almost negligible.
+
+\end{document}

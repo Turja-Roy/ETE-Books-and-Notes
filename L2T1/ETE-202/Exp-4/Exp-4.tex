@@ -31,8 +31,8 @@
 \section{Apparatus}
 \begin{enumerate}
     \item Transistors (2N3904 npn) - 2
-    \item Resistors (220 $\Omega$, 1.2 k$\Omega$, 3.6 k$\Omega$, 20 k$\Omega$, 10 k$\Omega$)
-    \item Capacitors (10 $\mu$F) - 3
+    \item Resistors
+    \item Capacitors
     \item DC Power Supply (0-30V)
     \item Function Generator
     \item Oscilloscope
@@ -64,7 +64,7 @@ In the following page is given the circuit diagrams for the Class A, Class B, an
 
 In Figure 1, The Class A multistage amplifier was built by connecting two amplifier circuits through the capacitor $C_5$. The output of the first amplifier ($Q_1$) acts as the input of the second amplifier ($Q_3$). The 10k $\Omega$ is the load resistor in the circuit. Oscilloscope has been connected in the shown way to get the input and output curves. \\~\\
 
-In Figure 2, The Class B amplifier was built using onw npn transistor. The input signal was given to the base and $R_1$ and $R_2$ were base resistors. The output was taken from the emitter and the $R_3 = 100 \Omega$ was the load resistor. \\~\\
+In Figure 2, The Class B amplifier was built using two npn transistor. The input signal was given to the base and $R_1$ and $R_2$ were base resistors. The output was taken from the emitter and the $R_3 = 100 \Omega$ was the load resistor. \\~\\
 
 In Figure 3, The Class B push-pull amplifier was built using two npn transistors. The input signal was given parallelly to the bases of $Q_1$ and $Q_2$. The base resistance is $R_{th} = R_1 \| (R_2 + R_3) \| R_4$. The emitter of $Q_1$ and the collector of $Q_2$ were connected to the output terminal. The load resistor was $R_5 = 100 \Omega$.
 
@@ -204,6 +204,8 @@ The Class B push-pull amplifier is a combination of two Class B amplifiers. The 
 In the simulated graph (Figure 6-a), the red full waves and the black full waves show the input and output curves respectively. The output curve has crossover distortion. In the practical graph (Figure 6-b), the output curve has crossover distortion.
 
 \section{Discussion}
-The experiment was conducted to observe the amplification of a signal in multiple stages. Error had been measured between the simulated data and the practical data. The error analysis shows that the accuracy of the practical data is roughly within the range of 75\% to 90\%. The theoretical, simulation and practical data had some discripancies. One of the possible reason for this was that in the theoretical and simulated data, the internal resistance of wires and other equipments were considered negligible.
+The experiment was conducted to observe the amplification of a signal in different types of amplifiers (Class A, B, and B push pull). Error had been measured between the simulated data and the practical data. The error analysis shows that the accuracy of the practical data is roughly within the range of 75\% to 90\%. The Class B push-pull amplifier had crossover distortion in the output curve. \\~\\
+
+One of the possible reason for this discrepancy was that in the simulated data, the internal resistance of wires and other equipments were considered negligible. But in practical, these resistances are not negligible. Another reason could be the temperature of the transistors. The temperature of the transistors could have been different in the practical data and the simulated data.
 
 \end{document}
