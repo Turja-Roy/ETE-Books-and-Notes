@@ -1,4 +1,6 @@
 #include <bits/stdc++.h>
+#define vi vector<int>
+#define pb push_back
 using namespace std;
 
 void bfs (map<int, vector<int>> graph, int source) {
@@ -12,12 +14,9 @@ void bfs (map<int, vector<int>> graph, int source) {
         int u = q.front();
         cout << u << " ";
 
-        for (auto v : graph[u]) {
-            if (!visited[v]) {
-                q.push(v);
-                visited[v] = true;
-            }
-        }
+        for (auto v : graph[u])
+            if (!visited[v]) q.push(v), visited[v] = true;
+
         q.pop();
     }
     cout << endl;
@@ -30,13 +29,13 @@ int main ()
     cout << "Number of Nodes: "; cin >> nodes;
     cout << "Number of Edges: "; cin >> edges;
 
-    map<int, vector<int>> graph;
+    map<int, vi> graph;
 
     for (int i=0 ; i<edges ; i++) {
         int u, v; cin >> u >> v;
 
-        graph[u].push_back(v);
-        graph[v].push_back(u);
+        graph[u].pb(v);
+        graph[v].pb(u);
     }
 
     int source;
