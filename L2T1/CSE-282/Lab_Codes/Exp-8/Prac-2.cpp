@@ -1,14 +1,14 @@
 #include <bits/stdc++.h>
-#define vi vector<int>
 #define si set<int>
-#define mii map<int, int>
+#define vi vector<int>
 #define pb push_back
+#define mii map<int, int>
 #define ff first
 #define ss second
 #define mkp make_pair
 using namespace std;
 
-map<int,pair<int,vi>> shortestPath (map<int,si> graph, int source) {
+auto shortestPath (map<int,si> graph, int source) {
     mii dist, parent;
     dist[source]=0, parent[source]=-1;
 
@@ -42,48 +42,37 @@ map<int,pair<int,vi>> shortestPath (map<int,si> graph, int source) {
     return result;
 }
 
-vi paths (map<int,si>graph, mii parent, int source, int dest) {
-    vi path;
-    int u = dest;
-    while (u != -1) {
-        path.pb(u);
-        u = parent[u];
-    }
-    reverse(path.begin(), path.end());
-    return path;
-}
-
 int main() {
-    freopen("Exmp-in.txt", "r", stdin);
-    freopen("Exmp-2-out.txt", "w", stdout);
+    freopen("input.txt", "r", stdin);
+    freopen("output-2.txt", "w", stdout);
 
-    int nodes, edges;
-    map<int, si> graph;
+    int t=2;
+    for (int i=0 ; i<t ; i++) {
+        cout << "===== Graph " << i+1 << " =====\n";
+        int nodes, edges; cin >> nodes >> edges;
+        map<int, si> graph;
 
-    // cout << "Number of Nodes: ";
-    cin >> nodes;
-    // cout << "Number of Edges: ";
-    cin >> edges;
 
-    // cout << "Enter the edge connnections:" << endl;
-    for(int i = 0; i < edges; i++) {
-        int u, v; cin >> u >> v;
+        for(int i = 0; i < edges; i++) {
+            int u, v; cin >> u >> v;
 
-        graph[u].insert(v);
-        graph[v].insert(u);
-    }
+            graph[u].insert(v);
+            graph[v].insert(u);
+        }
 
-    // cout << "Enter source: ";
-    int source; cin >> source;
+        int source; cin >> source;
 
     auto result = shortestPath(graph, source);
 
     for (auto it : result) {
         if (it.ff == source) continue;
-        cout << "Distance from " << source << " to " << it.ff << " is " << it.ss.ff << endl;
+        cout << "Distance (" << source << "-->" << it.ff << ") : " << it.ss.ff << "\t";
         cout << "Path: ";
         for (auto x : it.ss.ss) cout << x << " ";
         cout << endl;
+    }
+
+        if (i != t-1) cout << endl;
     }
 
     return 0;

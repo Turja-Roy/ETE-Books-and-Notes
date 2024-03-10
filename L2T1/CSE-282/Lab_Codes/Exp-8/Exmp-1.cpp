@@ -30,6 +30,7 @@ mii shortestPath(map<int, si> graph, int source) {
 
 int main() {
     freopen("Exmp-in.txt", "r", stdin);
+    freopen("Exmp-1-out.txt", "w", stdout);
 
     int nodes, edges;
     map<int, si> graph;

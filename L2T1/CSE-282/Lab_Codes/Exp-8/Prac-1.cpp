@@ -24,6 +24,7 @@ mii shortestPath(map<int, si> graph, int source) {
 
 int main() {
     freopen("input.txt", "r", stdin);
+    freopen("output-1.txt", "w", stdout);
 
     int t=2;
     for (int i=0 ; i<t ; i++) {

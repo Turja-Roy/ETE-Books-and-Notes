@@ -27,7 +27,7 @@ int main ()
 
     int t=2;
     for (int i=0 ; i<t ; i++) {
-        cout << "===== Graph" << i+1 << "=====\n\n";
+        cout << "===== Graph" << i+1 << "=====\n";
         int nodes, edges;
         cin >> nodes >> edges;
 
@@ -40,8 +40,10 @@ int main ()
             graph[v].push_back(u);
         }
 
+        srand((unsigned) time(NULL));
         auto it = graph.begin();
-        int source = std::advance( it, random_0_to_n(graph.size()) );
+        for (int i=0 ; i<rand() % graph.size() ; i++) it++;
+        int source = it->first;
 
         bfs(graph, source);
         if (i != t-1) cout << endl;

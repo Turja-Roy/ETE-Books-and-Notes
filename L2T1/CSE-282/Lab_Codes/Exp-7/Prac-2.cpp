@@ -8,7 +8,7 @@ int main ()
 
     int t=2;
     for (int i=0 ; i<t ; i++) {
-        cout << "===== Graph" << i+1 << "=====\n\n";
+        cout << "===== Graph" << i+1 << "=====\n";
         int nodes, edges; cin >> nodes >> edges;
         map<int, set<int>> graph;
 

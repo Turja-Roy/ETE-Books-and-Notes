@@ -1,0 +1,8 @@
+Distance from 3 to 1 is 2
+Path: 3 2 1 
+Distance from 3 to 2 is 1
+Path: 3 2 
+Distance from 3 to 4 is 1
+Path: 3 4 
+Distance from 3 to 5 is 1
+Path: 3 5 
