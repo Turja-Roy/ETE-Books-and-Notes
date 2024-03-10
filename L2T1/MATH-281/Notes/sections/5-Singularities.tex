@@ -1,0 +1,47 @@
+%%%%%%%%%%%%%%%%%%%
+%  Singularities  %
+%%%%%%%%%%%%%%%%%%%
+
+\section{Singularities and Residues}
+\subsection{Definitions}
+\begin{definition}{Singular Points}{}
+    All the points of the z-plane at which an analytic function does not have a unique derivative are called singular points.  \\~\\
+    
+    For example, the function $f(z) = \frac{1}{z}$ has a singular point at $z = 0$ because the derivative of $f(z)$ at $z = 0$ is not unique.
+\end{definition}
+
+\begin{definition}{Poles}{}
+    A singular point $z_0$ of a function $f(z)$ is called a pole of order $m$ if the function $f(z)$ can be written as
+    \[ f(z) = \frac{g(z)}{(z - z_0)^m} \]
+    where $g(z)$ is analytic at $z_0$ and $g(z_0) \neq 0$. \\~\\
+    
+    The smallest positive integer $m$ for which the above equation holds is called the order of the pole. \\
+    Poles of order 1 are called simple poles, poles of order 2 are called double poles, and so on.
+\end{definition}
+
+\begin{definition}{Residues}{}
+    If $f(z)$ has a pole of order $n$ at $z=a$ but is analytic at every other point inside and on a circle $C$ with center at $a$, then the \textbf{Laurent series} about $z=a$ is given by
+    \begin{equation}
+        f(z) = \sum_{n=-\infty}^{\infty} a_n (z-a)^n
+    \end{equation} Or,
+    \begin{align*}
+        f(z) &= \sum_{n=0}^{\infty} a_n (z-a)^n + \sum_{n=1}^{\infty} a_{-n} (z-a)^{-n} \\
+        f(z) &= a_0 + a_1(z-a) + a_2(z-a)^2 + \cdots + \frac{a_{-1}}{z-a} + \frac{a_{-2}}{(z-a)^2} + \cdots
+    \end{align*}
+
+    The part of the Laurent series containing the positive powers of $(z-a)$ is called the \textbf{analytic part} of $f(z)$ at $z=a$ and is denoted by $P(f;a)$, and the part containing the negative powers of $(z-a)$ is called the \textbf{principal part} of $f(z)$ at $z=a$ and is denoted by $Q(f;a)$.  \\~\\
+
+    The coefficient $a_{-1}$ is called the \textbf{residue} of $f(z)$ at $z=a$ and is denoted by $\Res(f;a)$.
+\end{definition}
+
+
+\subsection{Method of Finding Residues}
+\begin{theorem}{Residue at a Simple Pole}{}
+    \\If $f(z)$ has a simple pole at $z=a$, then the residue of $f(z)$ at $z=a$ is given by
+    \[ \Res(f;a) = \lim_{z \to a} (z-a)f(z) \]
+\end{theorem}
+
+\begin{theorem}{Residue at a Pole of Order $m$}{}
+    \\If $f(z)$ has a pole of order $m$ at $z=a$, then the residue of $f(z)$ at $z=a$ is given by
+    \[ \Res(f;a) = \frac{1}{(m-1)!} \lim_{z \to a} \frac{d^{m-1}}{dz^{m-1}} \left[ (z-a)^m f(z) \right] \]
+\end{theorem}
