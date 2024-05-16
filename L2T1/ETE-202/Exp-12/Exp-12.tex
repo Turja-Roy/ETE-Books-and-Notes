@@ -1,0 +1,122 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=0.75in]{geometry}
+\usepackage[document]{ragged2e}
+\usepackage{graphicx}
+\usepackage{multicol}
+\graphicspath{ {./images/} }
+\input{preamble.tex}
+
+\title{
+    \textbf{Experiment 12} \\
+    \textbf{Experiment on Band Pass Filter} \\
+}
+
+\author{
+    Turja Roy \\
+    ID: 2108052
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Objective}
+\begin{enumerate}
+    \item To determine the Band Pass Filter frequency response of an RC circuit. 
+    \item To measure the cut off frequency and observe the attenuation rate. 
+    \item To compare the graph of simulation data and practical data.
+\end{enumerate}
+
+\section{Apparatus}
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item Resistors
+        \item Capacitors
+        \item Oscilloscope
+        \item Breadboard
+    \end{enumerate}
+    \columnbreak
+    \begin{enumerate}
+        \item Wires
+        \item Function Generator
+        \item DC Power Supply
+        \item Multimeter
+    \end{enumerate}
+\end{multicols}
+
+\section{Circuit Diagram}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{BPF.png}
+    \caption{Band Pass Filter RC Circuit}
+\end{figure}
+
+\section{Result Analysis}
+The circuit configuration on Figure 1 entails an active band pass filter where an active high-pass filter(HPF) and an active low-pass filter (LPF) are connected in series via a resistor R6. This arrangement facilitates the transmission of signals within a specified frequency range while attenuating both low and highfrequency components. The resistor R6 acts as a coupling element, regulating the flow of signals between the filters.
+
+\subsection{Data Table}
+
+Table 1 represents the experimental output data. The input and output voltage Vout are in volts. The voltage gain is calculated in decibel(dB) using the equation
+\[
+    A_v = 20 \log \left( \frac{V_{out}}{V_{in}} \right)
+\] 
+
+\begin{table}[h!]
+    \centering
+    \caption{Practical Data of Band Pass Filter}
+    \begin{tabular}{rrrr}
+        \hline
+        Vin &  Vout &  frequency &         Av \\
+        \hline
+        1 & 0.045 &        0.1 & -26.935750 \\
+        1 & 0.063 &        5.0 & -24.013189 \\
+        1 & 0.072 &        6.0 & -22.853350 \\
+        1 & 0.082 &        7.0 & -21.723723 \\
+        1 & 0.098 &        8.0 & -20.175478 \\
+        1 & 0.104 &        9.0 & -19.659333 \\
+        1 & 0.117 &       10.0 & -18.636283 \\
+        1 & 0.127 &       11.0 & -17.923926 \\
+        1 & 0.130 &       12.0 & -17.721133 \\
+        1 & 0.133 &       13.0 & -17.522967 \\
+        1 & 0.145 &       14.0 & -16.772640 \\
+        1 & 0.166 &       15.0 & -15.597838 \\
+        1 & 0.187 &       16.0 & -14.563168 \\
+        1 & 0.187 &       17.0 & -14.563168 \\
+        1 & 0.187 &       18.0 & -14.563168 \\
+        1 & 0.187 &       19.0 & -14.563168 \\
+        1 & 0.192 &       20.0 & -14.333975 \\
+        1 & 0.182 &       21.0 & -14.798572 \\
+        1 & 0.182 &       22.0 & -14.798572 \\
+        1 & 0.182 &       23.0 & -14.798572 \\
+        1 & 0.179 &       24.0 & -14.942939 \\
+        1 & 0.176 &       25.0 & -15.089747 \\
+        1 & 0.176 &       26.0 & -15.089747 \\
+        1 & 0.176 &       27.0 & -15.089747 \\
+        1 & 0.175 &       30.0 & -15.139239 \\
+        1 & 0.175 &       35.0 & -15.139239 \\
+        1 & 0.160 &       60.0 & -15.917600 \\
+        1 & 0.159 &       80.0 & -15.972058 \\
+        1 & 0.152 &      150.0 & -16.363128 \\
+        1 & 0.062 &      400.0 & -24.152166 \\
+        1 & 0.045 &      550.0 & -26.935750 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\newpage
+\subsection{Graph}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{BPF_Graph.png}
+    \caption{Frequency Response of Band Pass Filter}
+\end{figure}
+
+The graph in Figure 2 shows the frequency response of the band pass filter. The gain is highest at a mid-range frequency. The filter blocks higher frequencies and passes lower frequencies. The filter looks like a high pass filter after increasing the frequency and a low pass filter after decreasing the frequency. The condition of the band pass filter is observed.
+
+\section{Discussion}
+
+In this experiment, the band pass filter frequency response of an RC circuit is determined. The cut off frequency is observed at 15 Hz. The attenuation rate is observed to be -20 dB/decade. The graph of simulation data and practical data is compared. The graph shows the frequency response of the band pass filter. The gain is highest at a mid-range frequency. The filter blocks higher frequencies and passes lower frequencies. The filter looks like a high pass filter after increasing the frequency and a low pass filter after decreasing the frequency. The condition of the band pass filter is observed.
+
+\end{document}
+
