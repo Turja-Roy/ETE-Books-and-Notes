@@ -1,0 +1,114 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=0.75in]{geometry}
+\usepackage[document]{ragged2e}
+\usepackage{graphicx}
+\usepackage{multicol}
+\graphicspath{ {./images/} }
+\input{preamble.tex}
+
+\title{
+    \textbf{Experiment 10} \\
+    \textbf{Frequency Response of High Pass Filter}
+}
+
+\author{
+    Turja Roy \\
+    ID: 2108052
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Objective}
+\begin{enumerate}
+    \item To determine the high pass filter frequency response of an RC circuit.
+    \item To measure the cut off frequency and observe the attenuation rate.
+    \item To compare the graph of simulation data and practical data.
+\end{enumerate}
+
+\section{Apparatus}
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item Resistors
+        \item Capacitors
+        \item Oscilloscope
+        \item Breadboard
+    \end{enumerate}
+    \columnbreak
+    \begin{enumerate}
+        \item Wires
+        \item Function Generator
+        \item DC Power Supply
+        \item Multimeter
+    \end{enumerate}
+\end{multicols}
+
+\section{Circuit Diagram}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{HPF.png}
+    \caption{High Pass Filter Circuit}
+\end{figure}
+
+\section{Result Analysis}
+
+\subsection{Data Table}
+A filter which passes only those signals whose frequencies are higher than cutoff frequencies thereby attenuating signals of lower frequencies. The value of cutoff frequency depends on the design of the filter. \\~\\
+
+The basic High Pass Filter is built by a series connection of capacitor and resistor. While the input signal is applied to the capacitor, the output is drawn across the resistor. \\~\\
+
+When we talk about cut of frequency we refer to the point in the frequency response in filter,where the gain is equal to 50\% the peak gain of the signal .i.e. 3dB of the peak gain. In High Pass Filter gain increases with an increase in frequencies.
+
+\begin{table}[htpb]
+    \centering
+    \caption{Practical Data of High Pass Filter}
+    \begin{tabular}{ccrc}
+        \hline
+        Vin &  Vout & Freuency & Av         \\
+        \hline          
+        1 & 0.019   &        1 & -34.424928  \\
+        1 & 0.045   &        2 & -26.935750  \\
+        1 & 0.113   &        3 & -18.938431  \\
+        1 & 0.550   &        4 &  -5.192746  \\
+        1 & 0.835   &        5 &  -1.566270  \\
+        1 & 0.920   &        8 &  -0.724243  \\
+        1 & 0.994   &       10 &  -0.052272  \\
+        1 & 1.070   &       12 &   0.587676  \\
+        1 & 1.140   &       15 &   1.138097  \\
+        1 & 1.250   &       20 &   1.938200  \\
+        1 & 1.310   &       25 &   2.345426  \\
+        1 & 1.360   &       30 &   2.670778  \\
+        1 & 1.400   &       40 &   2.922561  \\
+        1 & 1.430   &       50 &   3.106721  \\
+        1 & 1.460   &       75 &   3.287057  \\
+        1 & 1.470   &      100 &   3.346347  \\
+        1 & 1.480   &      150 &   3.405234  \\
+        1 & 1.480   &      200 &   3.405234  \\
+        1 & 1.490   &      300 &   3.463725  \\
+        1 & 1.490   &      500 &   3.463725  \\
+        1 & 1.490   &     1000 &   3.463725  \\
+        1 & 1.480   &     2000 &   3.405234  \\
+        1 & 1.480   &     3000 &   3.405234  \\
+        1 & 1.480   &     5000 &   3.405234  \\
+        1 & 1.430   &    10000 &   3.106721  \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\newpage
+\subsection{Graph}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{HPF_Graph.png}
+    \caption{Frequency Response of High Pass Filter}
+\end{figure}
+
+In this graph we were seen that at the low frequency the the gain was zero.After increasing the frequency randomly we were seen that this graph block the lower frequency and pass the higher frequency,and that was the condition of High Pass Filter.
+
+\section{Discussion}
+In this experiment we were seen that the High Pass Filter block the lower frequency and pass the higher frequency. The cut off frequency of the High Pass Filter was 1000Hz. The gain of the High Pass Filter was 3.463725. The gain of the High Pass Filter was increased with the increase of the frequency.
+
+\end{document}
+
