@@ -26,8 +26,8 @@ int main ()
     freopen("Prac-3_out.txt", "w", stdout);
 
     int t=2;
-    for (int i=0 ; i<t ; i++) {
-        cout << "===== Graph" << i+1 << "=====\n";
+    for (int k=0 ; k<t ; k++) {
+        cout << "===== Graph " << k+1 << " =====\n";
         int nodes, edges;
         cin >> nodes >> edges;
 
@@ -46,7 +46,7 @@ int main ()
         int source = it->first;
 
         bfs(graph, source);
-        if (i != t-1) cout << endl;
+        if (k != t-1) cout << endl;
     }
 
     return 0;

@@ -27,8 +27,8 @@ int main() {
     freopen("output-1.txt", "w", stdout);
 
     int t=2;
-    for (int i=0 ; i<t ; i++) {
-        cout << "===== Graph " << i+1 << " =====\n";
+    for (int k=0 ; k<t ; k++) {
+        cout << "===== Graph " << k+1 << " =====\n";
         int nodes, edges; cin >> nodes >> edges;
         map<int, si> graph;
 
@@ -47,7 +47,7 @@ int main() {
         for(auto i: distance)
             cout << "Distance from " << source << " to " << i.ff << " is " << i.ss << endl;
 
-        if (i != t-1) cout << endl;
+        if (k != t-1) cout << endl;
     }
 
     return 0;

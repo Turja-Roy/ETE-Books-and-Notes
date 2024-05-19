@@ -7,8 +7,8 @@ int main ()
     freopen("Prac-2_out.txt", "w", stdout);
 
     int t=2;
-    for (int i=0 ; i<t ; i++) {
-        cout << "===== Graph" << i+1 << "=====\n";
+    for (int k=0 ; k<t ; k++) {
+        cout << "===== Graph" << k+1 << "=====\n";
         int nodes, edges; cin >> nodes >> edges;
         map<int, set<int>> graph;
 
@@ -24,7 +24,7 @@ int main ()
             for (auto j : i.second) cout << j << " ";
             cout << endl;
         }
-        if (i != t-1) cout << endl;
+        if (k != t-1) cout << endl;
     }
 
     return 0;

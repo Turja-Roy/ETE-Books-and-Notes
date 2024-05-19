@@ -47,8 +47,8 @@ int main() {
     freopen("output-2.txt", "w", stdout);
 
     int t=2;
-    for (int i=0 ; i<t ; i++) {
-        cout << "===== Graph " << i+1 << " =====\n";
+    for (int k=0 ; k<t ; k++) {
+        cout << "===== Graph " << k+1 << " =====\n";
         int nodes, edges; cin >> nodes >> edges;
         map<int, si> graph;
 
@@ -62,17 +62,17 @@ int main() {
 
         int source; cin >> source;
 
-    auto result = shortestPath(graph, source);
+        auto result = shortestPath(graph, source);
 
-    for (auto it : result) {
-        if (it.ff == source) continue;
-        cout << "Distance (" << source << "-->" << it.ff << ") : " << it.ss.ff << "\t";
-        cout << "Path: ";
-        for (auto x : it.ss.ss) cout << x << " ";
-        cout << endl;
-    }
+        for (auto it : result) {
+            if (it.ff == source) continue;
+            cout << "Distance (" << source << "-->" << it.ff << ") : " << it.ss.ff << "\t";
+            cout << "Path: ";
+            for (auto x : it.ss.ss) cout << x << " ";
+            cout << endl;
+        }
 
-        if (i != t-1) cout << endl;
+        if (k != t-1) cout << endl;
     }
 
     return 0;
