@@ -35,13 +35,37 @@
 \end{definition}
 
 
-\subsection{Method of Finding Residues}
+\subsection{Methods of Finding Residues}
 \begin{theorem}{Residue at a Simple Pole}{}
     \\If $f(z)$ has a simple pole at $z=a$, then the residue of $f(z)$ at $z=a$ is given by
     \[ \Res(f;a) = \lim_{z \to a} (z-a)f(z) \]
 \end{theorem}
 
+\underline{\textbf{Proof:}} \\
+Since $f(z)$ has a simple pole at $z=a$, we can write $f(z)$ as
+\[ f(z) = \frac{g(z)}{z-a} \]
+where $g(z)$ is analytic at $z=a$ and $g(a) \neq 0$. \\
+Multiplying both sides by $(z-a)$, we get
+\[ (z-a)f(z) = g(z) \]
+Taking the limit as $z \to a$ on both sides, we get
+\[ \lim_{z \to a} (z-a)f(z) = \lim_{z \to a} g(z) = g(a) \]
+Therefore, the residue of $f(z)$ at $z=a$ is given by
+\[ \Res(f;a) = \lim_{z \to a} (z-a)f(z) = g(a) \qed\]
+
 \begin{theorem}{Residue at a Pole of Order $m$}{}
     \\If $f(z)$ has a pole of order $m$ at $z=a$, then the residue of $f(z)$ at $z=a$ is given by
     \[ \Res(f;a) = \frac{1}{(m-1)!} \lim_{z \to a} \frac{d^{m-1}}{dz^{m-1}} \left[ (z-a)^m f(z) \right] \]
 \end{theorem}
+
+\underline{\textbf{Proof:}} \\
+Since $f(z)$ has a pole of order $m$ at $z=a$, we can write $f(z)$ as
+\[ f(z) = \frac{g(z)}{(z-a)^m} \]
+where $g(z)$ is analytic at $z=a$ and $g(a) \neq 0$. \\
+Multiplying both sides by $(z-a)^m$, we get
+\[ (z-a)^m f(z) = g(z) \]
+Differentiating both sides $m-1$ times, we get
+\[ \frac{d^{m-1}}{dz^{m-1}} \left[ (z-a)^m f(z) \right] = \frac{d^{m-1}}{dz^{m-1}} g(z) \]
+Taking the limit as $z \to a$ on both sides, we get
+\[ \frac{1}{(m-1)!} \lim_{z \to a} \frac{d^{m-1}}{dz^{m-1}} \left[ (z-a)^m f(z) \right] = \frac{1}{(m-1)!} \frac{d^{m-1}}{dz^{m-1}} g(a) \]
+Therefore, the residue of $f(z)$ at $z=a$ is given by
+\[ \Res(f;a) = \frac{1}{(m-1)!} \lim_{z \to a} \frac{d^{m-1}}{dz^{m-1}} \left[ (z-a)^m f(z) \right] = \frac{1}{(m-1)!} \frac{d^{m-1}}{dz^{m-1}} g(a) \qed \]

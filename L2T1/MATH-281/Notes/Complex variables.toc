@@ -22,4 +22,4 @@
 \contentsline {subsection}{\numberline {4.5}Cauchy's Extended Theorem}{14}{}%
 \contentsline {section}{\numberline {5}Singularities and Residues}{15}{}%
 \contentsline {subsection}{\numberline {5.1}Definitions}{15}{}%
-\contentsline {subsection}{\numberline {5.2}Method of Finding Residues}{16}{}%
+\contentsline {subsection}{\numberline {5.2}Methods of Finding Residues}{16}{}%

@@ -22,7 +22,7 @@
     
     A complex function $f(z)$ is single-valued if and only if $f(z_1) = f(z_2)$ implies $z_1 = z_2$. In other words, if $z_1 \neq z_2$, then $f(z_1) \neq f(z_2)$.
     \[
-        \forall z_1, z_2 \in \mathbb{C} \quad \text{s.t.} \quad z_1 \neq z_2 \quad \text{implies} \quad f(z_1) \neq f(z_2)
+        \forall z_1, z_2 \in \mathbb{C} \quad : \quad z_1 \neq z_2 \quad \implies \quad f(z_1) \neq f(z_2)
     \] 
 \end{definition}
 
@@ -31,7 +31,7 @@
     
     A complex function $f(z)$ is multiple-valued if and only if $f(z_1) = f(z_2)$ for some $z_1 \neq z_2$.
     \[
-        \exists z_1, z_2 \in \mathbb{C} \quad \text{s.t.} \quad z_1 \neq z_2 \quad \text{and} \quad f(z_1) = f(z_2)
+        \exists z_1, z_2 \in \mathbb{C} \quad : \quad z_1 \neq z_2 \quad \implies \quad f(z_1) = f(z_2)
     \] 
 \end{definition}
 
@@ -47,6 +47,9 @@
 
 \begin{definition}{Analytic Function}{}
     A complex function $f(z)$ is \textbf{analytic} in a region $R$ if it is differentiable at every point in $R$. \\~\\
+    \[
+        \forall z \in R \quad : \quad f'(z) = \lim_{\Delta z \to 0} \frac{f(z + \Delta z) - f(z)}{\Delta z} \quad \text{exists}
+    \] 
     
     If $f(z)$ is analytic in a region $R$, then $f(z)$ is also said to be \textbf{regular} or \textbf{holomorphic} in $R$.
 \end{definition}
@@ -59,7 +62,7 @@ Let $f(z) = u(x,y) + iv(x,y)$ be an analytic function in a region $R$. \\~\\
 
 That means, $f(z)$ is differentiable at every point in $R$. \\~\\
 
-$\displaystyle\implies f'(z) = \lim_{\Delta z \to 0} \frac{f(z + \Delta z) - f(z)}{\Delta z}$ exists at every point in $R$. \\~\\
+or, $\displaystyle f'(z) = \lim_{\Delta z \to 0} \frac{f(z + \Delta z) - f(z)}{\Delta z}$ exists at every point in $R$. \\~\\
 
 Now, let $z = x+iy$ and $\Delta z = \Delta x + i\Delta y$.
 \[ z + \Delta z = (x + \Delta x) + i(y + \Delta y) \]
@@ -96,7 +99,7 @@ Along the real axis, $\Delta y = 0$. Hence, the limit is
     f'(z) = \lim \limits_{\Delta x \to 0} \frac{u(x + \Delta x, y) - u(x, y)}{\Delta x} + i\lim \limits_{\Delta x \to 0} \frac{v(x + \Delta x, y) - v(x, y)}{\Delta x}
 \end{equation*}
 \begin{equation}
-    f'(z) = \frac{\partial u}{\partial x} + i\frac{\partial v}{\partial x}
+    \boxed{ f'(z) = \frac{\partial u}{\partial x} + i\frac{\partial v}{\partial x} }
 \end{equation}
 
 Along the imaginary axis, $\Delta x = 0$. Hence, the limit is
@@ -104,7 +107,7 @@ Along the imaginary axis, $\Delta x = 0$. Hence, the limit is
     f'(z) = \lim \limits_{\Delta y \to 0} \frac{u(x, y + \Delta y) - u(x, y)}{i\Delta y} + i\lim \limits_{\Delta y \to 0} \frac{v(x, y + \Delta y) - v(x, y)}{i\Delta y}
 \end{equation*}
 \begin{equation}
-    f'(z) = -i\frac{\partial u}{\partial y} + \frac{\partial v}{\partial y}
+    \boxed{ f'(z) = -i\frac{\partial u}{\partial y} + \frac{\partial v}{\partial y} }
 \end{equation}
 
 \vspace{20pt}\rule{3in}{1pt}
