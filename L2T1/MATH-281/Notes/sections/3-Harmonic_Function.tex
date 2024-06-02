@@ -102,8 +102,10 @@ This is Laplace's equation. Hence, the velocity potential $\phi(x,y)$ is a harmo
 \vspace{20pt}\rule{3in}{1pt}
 
 
+\newpage
 \subsection{Method for Finding Conjugate Harmonic Function}
 \subsubsection{Method 1: Real or Imaginary Part of an Analytic Function is Given}
+\underline{\textbf{Case 1: Real part $u$ is known}} \\
 If $f(z) = u + iv$ and $u$ is known \\
 
 We know that \[
@@ -116,7 +118,18 @@ Using C-R equations,
 \end{align*}
 Since $u$ is known, $v$ can be found using the above method. \\~\\
 
-If $v$ is known, then $u$ can be found using the same method.
+\underline{\textbf{Case 2: Imaginary part $v$ is known}} \\
+If $f(z) = u + iv$ and $v$ is known \\
+
+We know that \[
+    d{u} = \pdv{u}{x} d{x} + \pdv{u}{y} d{y}
+\] 
+Using C-R equations,
+\begin{align*}
+    d{u} &= \pdv{v}{y} d{x} - \pdv{v}{x} d{y} \\
+    u &= \int \pdv{v}{y} d{x} + \int -\pdv{v}{x} d{y} + C
+\end{align*}
+Since $v$ is known, $u$ can be found using the above method.
 
 \subsubsection{Method 2: Milne's Method/ Milne Thomson Method}
 By this method, $f(z)$ is directly constructed without finding $v$. \\
@@ -128,8 +141,13 @@ Since \[
 
 Thus,
 \begin{equation}
-    \boxed{ f(z) = u\left( \frac{z + \bar{z}}{2}, \frac{z - \bar{z}}{2i} \right) + iv\left( \frac{z + \bar{z}}{2}, \frac{z - \bar{z}}{2i} \right) }
+    f(z) = u\left( \frac{z + \bar{z}}{2}, \frac{z - \bar{z}}{2i} \right) + iv\left( \frac{z + \bar{z}}{2}, \frac{z - \bar{z}}{2i} \right)
 \end{equation} \\~\\
+
+This relation can be regarded as a formal identity in two independent variables $z$ and $\overline{z}$. Replacing $\overline{z}$ by $z$ in (3.4.1), we get
+\begin{equation}
+    \boxed{ f(z) \equiv u(z,0) + iv(z,0) }
+\end{equation}
 
 \underline{\textbf{Case 1: $u$ is given}} \\
 Let $f(z) = u + iv$ be an analytic function and $u$ is given. \\
@@ -142,7 +160,7 @@ By Milne's method, we get
     f'(z) = u_1(z,0) - iu_2(z,0)
 \end{equation} 
 
-Integrating (3.4.1) w.r.t. $z$, we get
+Integrating (3.4.3) w.r.t. $z$, we get
 \begin{equation}
     f(z) = \int \left[ u_1(z,0) - iu_2(z,0) \right] dz + C_1
 \end{equation}
@@ -157,7 +175,7 @@ By Milne's method, we get
     f'(z) = v_1(z,0) + iv_2(z,0)
 \end{equation}
 
-Integrating (3.4.3) w.r.t. $z$, we get
+Integrating (3.4.5) w.r.t. $z$, we get
 \begin{equation}
     f(z) = \int \left[ v_1(z,0) + iv_2(z,0) \right] dz + C_2
 \end{equation}
@@ -181,7 +199,7 @@ Integrating (3.4.3) w.r.t. $z$, we get
     \] Hence,
     \begin{align*}
         \pdv{\psi}{y} &= 3x^2 - 3y^2 \\
-        \pdv{\phi}{x} &= 6xy
+        \pdv{\psi}{x} &= 6xy
     \end{align*}
     
     By Milne's method, we have
@@ -194,11 +212,28 @@ Integrating (3.4.3) w.r.t. $z$, we get
     \begin{align*}
         W(z) &= \int 3z^2 dz + C \\
         \phi + i\psi &= z^3 + c_1 + ic_2 \\
-        \phi + i\psi = x^3 - 3xy^2 + c_1 + i\left( 3x^2y - y^3 + c_2 \right)
+        \phi + i\psi &= \left( x^3 - 3xy^2 + c_1 \right) + i\left( 3x^2y - y^3 + c_2 \right)
     \end{align*}
     Comparing real and imaginary parts, we get the required potential function \[
         \boxed{ \phi = x^3 - 3xy^2 + c_1 }
     \] 
+
+    \textbf{Alternate Method:} \\
+    Given, \[
+        W = \phi + i\psi
+    \] 
+    We know that
+    \begin{align*}
+        d\phi &= \pdv{\phi}{x} dx + \pdv{\phi}{y} dy \\
+              &= \pdv{\psi}{y} dx - \pdv{\psi}{x} dy \qquad\text{ [Using C-R equations] } \\
+        &= (3x^2 - 3y^2) dx - 6xy dy \\
+        &= d \left( x^3 - 3xy^2 \right) \\
+        \therefore \phi &= \int {} \; d{(x^3 - 3xy^2)} \\
+        \phi &= x^3 - 3xy^2 + C
+    \end{align*}
+    Hence, \[
+        \boxed{ \phi = x^3 - 3xy^2 + C }
+    \]
 \end{example}
 
 \vspace{20pt}\rule{3in}{1pt}

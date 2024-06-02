@@ -10,16 +10,16 @@
 \contentsline {subsection}{\numberline {3.1}Laplace's Equation}{7}{}%
 \contentsline {subsection}{\numberline {3.2}Harmonic Function}{7}{}%
 \contentsline {subsection}{\numberline {3.3}Velocity Potential}{8}{}%
-\contentsline {subsection}{\numberline {3.4}Method for Finding Conjugate Harmonic Function}{8}{}%
-\contentsline {subsubsection}{\numberline {A}Method 1: Real or Imaginary Part of an Analytic Function is Given}{8}{}%
+\contentsline {subsection}{\numberline {3.4}Method for Finding Conjugate Harmonic Function}{9}{}%
+\contentsline {subsubsection}{\numberline {A}Method 1: Real or Imaginary Part of an Analytic Function is Given}{9}{}%
 \contentsline {subsubsection}{\numberline {B}Method 2: Milne's Method/ Milne Thomson Method}{9}{}%
 \contentsline {subsection}{\numberline {3.5}Complex Potential Function}{10}{}%
-\contentsline {section}{\numberline {4}Complex Integration}{11}{}%
-\contentsline {subsection}{\numberline {4.1}Definitions}{11}{}%
-\contentsline {subsection}{\numberline {4.2}Complex Line Integrals}{11}{}%
-\contentsline {subsection}{\numberline {4.3}Cauchy's Integral Theorem}{11}{}%
-\contentsline {subsection}{\numberline {4.4}Cauchy's Integral Formula}{12}{}%
-\contentsline {subsection}{\numberline {4.5}Cauchy's Extended Theorem}{14}{}%
-\contentsline {section}{\numberline {5}Singularities and Residues}{15}{}%
-\contentsline {subsection}{\numberline {5.1}Definitions}{15}{}%
-\contentsline {subsection}{\numberline {5.2}Methods of Finding Residues}{16}{}%
+\contentsline {section}{\numberline {4}Complex Integration}{12}{}%
+\contentsline {subsection}{\numberline {4.1}Definitions}{12}{}%
+\contentsline {subsection}{\numberline {4.2}Complex Line Integrals}{12}{}%
+\contentsline {subsection}{\numberline {4.3}Cauchy's Integral Theorem}{12}{}%
+\contentsline {subsection}{\numberline {4.4}Cauchy's Integral Formula}{13}{}%
+\contentsline {subsection}{\numberline {4.5}Cauchy's Extended Theorem}{15}{}%
+\contentsline {section}{\numberline {5}Singularities and Residues}{16}{}%
+\contentsline {subsection}{\numberline {5.1}Definitions}{16}{}%
+\contentsline {subsection}{\numberline {5.2}Methods of Finding Residues}{17}{}%
