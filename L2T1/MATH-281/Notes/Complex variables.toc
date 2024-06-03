@@ -23,3 +23,6 @@
 \contentsline {section}{\numberline {5}Singularities and Residues}{16}{}%
 \contentsline {subsection}{\numberline {5.1}Definitions}{16}{}%
 \contentsline {subsection}{\numberline {5.2}Methods of Finding Residues}{17}{}%
+\contentsline {subsection}{\numberline {5.3}Cauchy's Residue Theorem}{18}{}%
+\contentsline {section}{\numberline {6}Conformal Mapping}{20}{}%
+\contentsline {subsection}{\numberline {6.1}Definitions}{20}{}%

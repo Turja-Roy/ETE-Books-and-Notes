@@ -1,0 +1,69 @@
+%%%%%%%%%%%%%%%%%%%%%%%
+%  Conformal Mapping  %
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Conformal Mapping}
+\subsection{Definitions}
+
+\begin{definition}{Mapping or Transformation}{}
+    A mapping or transformation is a rule that assigns to each point $(x,y)$ in a plane a unique point $(u,v)$ in another plane. \\~\\
+
+    The set of equations $u = u(x,y)$, $v = v(x,y)$ defines a mapping or transformation of the $xy$-plane into the $uv$-plane.
+\end{definition}
+
+\begin{definition}{Conformal Mapping}{}
+    A mapping $w = f(z)$ is called conformal at a point $z=z_0$ if it preserves the angles between any two curves through $z_0$ in the $z$ plane both in magnitude and direction.
+\end{definition}
+
+\begin{definition}{Isogonal Mapping}{}
+    A mapping $w = f(z)$ is called isogonal at a point $z=z_0$ if it preserves the angles between any two curves through $z_0$ in the $z$ plane in magnitude but not necessarily in direction.
+\end{definition}
+
+\begin{definition}{Critical Point}{}
+    A point $z_0$ is called a critical point of a mapping $w = f(z)$ if it is not conformal at $z_0$ where $f'(z_0)=0$.
+    \begin{enumerate}[(i)]
+        \item The critical point will occur at $\displaystyle \dv{\omega}{z} = 0$. Also if $w=f(z)$ is conformal then $z=f^{-1}(w)$ is also conformal. Hence, the critical point will occur at $\displaystyle \dv{z}{\omega} = 0$.
+        \item If $f(z)$ is not analytic, then $f(z)$ is not conformal.
+        \item An analytic function is conformal except at points where $f'(z) = 0$.
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}{Linear Transformation}{}
+    A linear transformation is a mapping of the form \[
+        w = az + b
+    \] where $a$ and $b$ are constants.
+\end{definition}
+
+\begin{definition}{Bilinear Transformation}{}
+    A bilinear transformation is a mapping of the form \[
+        w = \frac{az+b}{cz+d}
+    \] where $a,b,c,d$ are constants. \\
+    \begin{enumerate}[(i)]
+        \item The bilinear transformation is also called a Mobius transformation or a fractional linear transformation.
+        \item The transformation $\displaystyle w = \frac{az+b}{cz+d}$ can be expressed as \[
+            cwz + dw = az + b
+        \] which is linear both in $z$ and $w$.
+        \item The inverse of the transformation $\displaystyle w = \frac{az+b}{cz+d}$ is \[
+            z = \frac{dw-b}{-cw+a}
+        \] which is also a bilinear transformation except at $w = \frac{a}{c}$.
+        \item The expression $ad - bc$ is called the determinant of the transformation.
+        \item The transformation is corformal only when $\frac{dw}{dz} \neq 0$ or $\frac{dz}{dw} \neq 0$, i.e. $ad-bc \neq 0$.
+        \item If $ad - bc = 0$, every point in the $z$-plane or $w$-plane is a critical point.
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}{Invariant or Fixed Points}{}
+    If $z$ is mapped into itself (i.e. $w=z$), then $\displaystyle w = \frac{az+b}{cz+d}$ gives \[
+        z = \frac{az+b}{cz+d}
+    \] or, \[
+        cz^2 + (d-a)z - b = 0
+    \] which has two solutions. These two solutions are called the invariant or fixed points of the bilinear transformation.
+\end{definition}
+
+\begin{definition}{Cross Ratio}{}
+    The cross ratio of four points $z_1, z_2, z_3, z_4$ is defined as \[
+        [z_1, z_2, z_3, z_4] = \frac{(z_1-z_2)(z_3-z_4)}{(z_2-z_3)(z_4-z_1)}
+    \] The cross ratio is invariant under bilinear transformations.
+\end{definition}
+
+\vspace{20pt}\rule{3in}{1pt}
