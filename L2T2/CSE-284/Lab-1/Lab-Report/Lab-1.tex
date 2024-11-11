@@ -1,0 +1,169 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=0.75in]{geometry}
+\usepackage[document]{ragged2e}
+\usepackage{graphicx}
+\usepackage{placeins}
+\graphicspath{ {./images/} }
+\input{preamble.tex}
+
+\title{
+    CSE-284: Object Oriented Programming \\
+    Experiment 1: Introduction to Class and Objects in OOP
+}
+
+\author{
+    Turja Roy \\ 
+    ID: 2108052 \\ 
+    Group: G-2
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Objectives:}
+\begin{itemize}
+    \item Introduction with Classes and Objects in C++. 
+    \item To create data member and member functions (Methods) in a class. 
+    \item To understand the concept of visibility of data member and member functions (Public and Private access).
+\end{itemize}
+
+
+\FloatBarrier
+\section*{Example 1}
+Write a C++ program to define a class \texttt{Box} and create objects of this class.
+
+\subsection*{Code}
+\lstinputlisting[language=C++]{../Exp-1.cpp}
+
+\subsection*{Output}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Exp-1.png}
+    \caption{Output of Exp-1.cpp}
+\end{figure}
+
+
+\FloatBarrier
+\section*{Example 2}
+Write a C++ program to define a class \texttt{Box} with member functions.
+
+\subsection*{Code}
+\lstinputlisting[language=C++]{../Exp-2.cpp}
+
+\subsection*{Output}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Exp-2.png}
+    \caption{Output of Exp-2.cpp}
+\end{figure}
+
+
+\FloatBarrier
+\section*{Example 3}
+Write a C++ program to define a class \texttt{Box} with member functions.
+
+\subsection*{Code}
+\lstinputlisting[language=C++]{../Exp-3.cpp}
+
+\subsection*{Output}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Exp-3-Error.png}
+    \caption{Exp-3 error log}
+\end{figure}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Exp-3-Error-fixed.png}
+    \caption{Output of Exp-3.cpp After fixing error}
+\end{figure}
+
+
+\FloatBarrier
+\section*{Example 4}
+Write a C++ program to understand public and private access of class members.
+
+\subsection*{Code}
+\lstinputlisting[language=C++]{../Exp-4.cpp}
+
+\subsection*{Output}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Exp-4-Error.png}
+    \caption{Exp-4 error log}
+\end{figure}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Exp-4-Error-fixed.png}
+    \caption{Output of Exp-4.cpp After fixing error}
+\end{figure}
+
+
+\FloatBarrier
+\section*{Lab Task}
+Write a C++ program to calculate the CGPA of a student using class and objects.
+
+\subsection*{Code}
+\lstinputlisting[language=C++]{../Lab-Test.cpp}
+
+\subsection*{Output}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Lab-Test.png}
+    \caption{Output of CGPA Calculator}
+\end{figure}
+
+
+\FloatBarrier
+\section*{Practice Exercise 1}
+Write a class having two private variables and one member function which will return the area and parimeter of the rectangle. 
+
+\subsection*{Code}
+\lstinputlisting[language=C++]{../Prac-1.cpp}
+
+\subsection*{Output}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Prac-1.png}
+    \caption{Output of Prac-1.cpp}
+\end{figure}
+
+
+\FloatBarrier
+\section*{Practice Exercise 2}
+Write a C++ program to define a class \texttt{batsman} with the following specifications:
+\begin{itemize}
+    \item Private members:
+    \begin{itemize}
+        \item \texttt{batsman\_code}: 4 digits code number
+        \item \texttt{batsman\_name} 20 characters (string)
+        \item \texttt{total\_innings, notout\_innings, total\_runs}: integer type
+        \item \texttt{calcavg()}: Function to compute batavg
+    \end{itemize}
+    \item Public members:
+    \begin{itemize}
+        \item \texttt{readdata()}: Function to accept value from batsman code, batsman name, to- tal innings, notout innings, total runs and invoke the function calcavg().
+        \item \texttt{displaydata()}: Function to display the data members on the screen.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Code}
+\lstinputlisting[language=C++]{../Prac-2.cpp}
+
+\subsection*{Output}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Prac-2.png}
+    \caption{Output of Prac-2.cpp}
+\end{figure}
+
+
+\newpage
+\section*{Discussion}
+\begin{itemize}
+    \item In this lab, basic concepts of class and objects in C++ were discussed.
+    \item The visibility of data members and member functions were discussed.
+    \item When a private member is accessed from outside the class, it generates an error. The errors can be fixed by making the member public, or by using public member functions.
+\end{itemize}
+
+\end{document}

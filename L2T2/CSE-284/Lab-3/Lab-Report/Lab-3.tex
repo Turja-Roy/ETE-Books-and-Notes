@@ -1,0 +1,141 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=0.75in]{geometry}
+\usepackage[document]{ragged2e}
+\usepackage{graphicx}
+\usepackage{placeins}
+\graphicspath{ {./images/} }
+\input{preamble.tex}
+
+\title{
+    CSE-284: Object Oriented Programming \\
+    Experiment 3: Static Data Member, and Function Overloading in C++
+}
+
+\author{
+    Turja Roy \\ 
+    ID: 2108052 \\ 
+    Group: G-2
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Objectives:}
+\begin{itemize}
+    \item Introduction with the Static Data Member and Member function.
+    \item To understand the concept of function overloading in C++.
+\end{itemize}
+
+
+\FloatBarrier
+\section*{Example 1}
+A C++ program to demonstrate the use of static data member.
+
+\subsection*{Code}
+\lstinputlisting[language=C++]{../Exp-1.cpp}
+
+\subsection*{Output}
+\vspace{-1em}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Exp-1.png}
+    \caption{Output of Exp-1.cpp}
+\end{figure}
+
+
+\FloatBarrier
+\section*{Example 2}
+A C++ program to demonstrate the use of static member function.
+
+\subsection*{Code}
+\lstinputlisting[language=C++]{../Exp-2.cpp}
+
+\subsection*{Output}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Exp-2.png}
+    \caption{Output of Exp-2.cpp}
+\end{figure}
+
+
+\FloatBarrier
+\section*{Example 3}
+A program to understand the Function Overloading in C++.
+
+\subsection*{Code}
+\lstinputlisting[language=C++]{../Exp-3.cpp}
+
+\subsection*{Output}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Exp-3.png}
+    \caption{Output of Exp-3.cpp}
+\end{figure}
+
+
+\FloatBarrier
+\section*{Lab Task}
+Write a C++ program with a class \texttt{Student} that contains two variables \texttt{a, b}, and a static variable \texttt{objCount} to keep track of the number of objects created starting from 100. Print the values of \texttt{a, b, objCount} for each object created.
+
+\subsection*{Code}
+\lstinputlisting[language=C++]{../Lab-Test.cpp}
+
+\subsection*{Output}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Lab-Test.png}
+    \caption{Output of Lab Task}
+\end{figure}
+
+
+\FloatBarrier
+\section*{Practice 1}
+Write a C++ program to define a class \texttt{Batsman} with the following specifications:
+\begin{itemize}
+    \item \texttt{batsman\_ID}: 6 digits roll number 
+    \item \texttt{static member count}: To keep track on number of object 
+    \item \texttt{static function getcount()}: return the value of count 
+    \item \texttt{function getname()}: To take batsman name as input 
+    \item \texttt{showname()}: To show batsman name
+\end{itemize}
+Access all the data members and member functions using the objects of class Batsman.
+
+\subsection*{Code}
+\lstinputlisting[language=C++]{../Prac-1.cpp}
+
+\subsection*{Output}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Prac-1.png}
+    \caption{Output of Prac-1.cpp}
+\end{figure}
+
+
+\newpage
+\section*{Practice 2}
+Write a C++ Program to calculate the area of different geometric shapes such as Circle, Triangle, and Rectangle. Use function overloading. \\ 
+\underline{\textbf{Class Name: Shape}}
+
+\subsection*{Code}
+\lstinputlisting[language=C++]{../Prac-2.cpp}
+
+\subsection*{Output}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Prac-2.png}
+    \caption{Output of Prac-2.cpp}
+\end{figure}
+
+
+\FloatBarrier
+\section*{Discussion}
+\begin{itemize}
+    \item In this lab, Static Data Member and Static Member Functions were discussed. 
+    \item The concept of Function Overloading was discussed too. 
+    \item Function overloading is used to define multiple functions with the same name but with different parameters. 
+    \item In the Practice-2 task, the constructor function was overloaded to determine which shape it was. 
+    \item The area of the shapes was calculated using the overloaded function \texttt{calculateArea}.
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,11 @@
+\contentsline {section}{\numberline {1}Digital Systems}{2}{}%
+\contentsline {section}{\numberline {2}Number Systems}{2}{}%
+\contentsline {subsection}{\numberline {2.1}Number Base Conversions}{2}{}%
+\contentsline {subsection}{\numberline {2.2}Complements of Numbers}{3}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}Diminished Radix Complement}{3}{}%
+\contentsline {subsubsection}{\numberline {2.2.2}Radix Complement}{4}{}%
+\contentsline {subsubsection}{\numberline {2.2.3}Subtraction with Complements}{5}{}%
+\contentsline {subsection}{\numberline {2.3}Binary Coded Decimal Codes (BCD)}{6}{}%
+\contentsline {subsubsection}{\numberline {2.3.1}BCD Addition}{6}{}%
+\contentsline {subsection}{\numberline {2.4}Gray Code}{6}{}%
+\contentsline {subsection}{\numberline {2.5}Error-Detecting Code}{7}{}%

@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=0.75in]{geometry}
+\usepackage[document]{ragged2e}
+\usepackage{graphicx}
+\usepackage{placeins}
+\graphicspath{ {./images/} }
+\input{preamble.tex}
+
+\title{
+    CSE-284: Object Oriented Programming \\
+    Experiment 4: Inheritance in C++.
+}
+
+\author{
+    Turja Roy \\ 
+    ID: 2108052 \\ 
+    Group: G-2
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Objectives:}
+\begin{itemize}
+    \item Familiarization with Inheritance. 
+    \item To understand the concept of Single and Multi level inheritance in OOP. 
+    \item To solve various problems in order to comprehend the topics.
+\end{itemize}
+
+
+\FloatBarrier
+\section*{Example 1}
+A C++ program to demonstrate the single level inheritance.
+
+\subsection*{Code}
+\lstinputlisting[language=C++]{../Exp-1.cpp}
+
+\subsection*{Output}
+\vspace{-1em}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Exp-1.png}
+    \caption{Output of Exp-1.cpp}
+\end{figure}
+
+
+\FloatBarrier
+\section*{Example 2}
+A C++ program to demonstrate the Multilevel Inheritance.
+
+\subsection*{Code}
+\lstinputlisting[language=C++]{../Exp-2.cpp}
+
+\subsection*{Output}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Exp-2.png}
+    \caption{Output of Exp-2.cpp}
+\end{figure}
+
+
+\FloatBarrier
+\section*{Practice 1}
+Write a C++ program to add two numbers. Accept these two numbers from the user in base class and display the sum of these two numbers in derived class.
+
+\subsection*{Code}
+\lstinputlisting[language=C++]{../Prac-1.cpp}
+
+\subsection*{Output}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Prac-1.png}
+    \caption{Output of Prac-1.cpp}
+\end{figure}
+
+
+\FloatBarrier
+\section*{Practice 2}
+Write a C++ program to calculate the percentage of a student. Accept the marks of five subjects (Physics, Chemistry, Math, Biology, and English) in base class. A class will be derived from the base class which includes a function to find the total marks obtained and another class derived from this first derived class which calculates and displays the percentage of student. \\ 
+\underline{\textbf{Hints:} Use array for taking the marks of a student.}
+
+\subsection*{Code}
+\lstinputlisting[language=C++]{../Prac-2.cpp}
+
+\subsection*{Output}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Prac-2.png}
+    \caption{Output of Prac-2.cpp}
+\end{figure}
+
+
+\FloatBarrier
+\section*{Discussion}
+\begin{itemize}
+    \item Inheritance is a powerful feature in C++ that allows a class to inherit properties and behavior from another class. 
+    \item Single level inheritance is a type of inheritance where a class inherits properties and behavior from a single class. 
+    \item Multi level inheritance is a type of inheritance where a class inherits properties and behavior from another class which in turn inherits from another class. 
+    \item Inheritance is a powerful feature that allows code reusability and helps in reducing redundancy. 
+    \item In this experiment, various problems were solved to understand the concept of inheritance in C++. 
+    \item In Practice-2 problem, the base class constructor was called from the derived class constructor.
+\end{itemize}
+
+\end{document}

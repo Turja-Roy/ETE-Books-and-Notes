@@ -1,0 +1,160 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=0.75in]{geometry}
+\usepackage[document]{ragged2e}
+\usepackage{graphicx}
+\usepackage{placeins}
+\graphicspath{ {./images/} }
+\input{preamble.tex}
+
+\title{
+    CSE-284: Object Oriented Programming \\
+    Experiment 2: Constructor and Destruction in OOP
+}
+
+\author{
+    Turja Roy \\ 
+    ID: 2108052 \\ 
+    Group: G-2
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Objectives:}
+\begin{itemize}
+    \item Introduction with Constructor class in C++.
+    \item To define different types of constructors.
+    \item To learn Constructor and Destructor in C++.
+\end{itemize}
+
+
+\FloatBarrier
+\section*{Example 1}
+Write a C++ program to demonstrate the use of the default constructor.
+
+\subsection*{Code}
+\lstinputlisting[language=C++]{../Exp-1.cpp}
+
+\subsection*{Output}
+\vspace{-1em}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Exp-1.png}
+    \caption{Output of Exp-1.cpp}
+\end{figure}
+
+
+\FloatBarrier
+\section*{Example 2}
+Write a C++ program to demonstrate the use of Parameterized Constructor.
+
+\subsection*{Code}
+\lstinputlisting[language=C++]{../Exp-2.cpp}
+
+\subsection*{Output}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Exp-2.png}
+    \caption{Output of Exp-2.cpp}
+\end{figure}
+
+
+\FloatBarrier
+\section*{Example 3}
+Write a C++ program to demonstrate the use of Copy Constructor.
+
+\subsection*{Code}
+\lstinputlisting[language=C++]{../Exp-3.cpp}
+
+\subsection*{Output}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Exp-3.png}
+    \caption{Output of Exp-3.cpp}
+\end{figure}
+
+
+\FloatBarrier
+\section*{Example 4}
+Write a C++ program to understand the Destructor Class in C++.
+
+\subsection*{Code}
+\lstinputlisting[language=C++]{../Exp-4.cpp}
+
+\subsection*{Output}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Exp-4.png}
+    \caption{Output of Exp-4.cpp}
+\end{figure}
+
+
+\FloatBarrier
+\section*{Lab Task}
+Write a C++ program with a class named \texttt{Student} that contains three variables \texttt{a, b, c}. If a constructor is not used, the variables will be initialized with values \texttt{1, 2, 3} respectively. If a constructor is used, the variables will be initialized with the values passed as arguments.
+
+\subsection*{Code}
+\lstinputlisting[language=C++]{../Lab-Test.cpp}
+
+
+\FloatBarrier
+\section*{Practice 1}
+Suppose you have a Savings Account with an initial amount of 500 and you have to add some more amount to it. Create a class 'AddMoney' with a data member named 'amount' with an initial value of 500. Now make two constructors of this cclass as follows:
+\begin{itemize}
+    \item without any parameter -- no amount will be added to the Savings Account. 
+    \item having a parameter which is the amount that will be added to the Savings Account.
+\end{itemize}
+Create an object of the 'AddMoney' class and display the final amount in the Savings Account.
+
+\subsection*{Code}
+\lstinputlisting[language=C++]{../Prac-1.cpp}
+
+\subsection*{Output}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Prac-1.png}
+    \caption{Output of Prac-1.cpp}
+\end{figure}
+
+
+\FloatBarrier
+\section*{Practice 2}
+Write a C++ program to define a class 'Car' with the following specifications:
+\begin{itemize}
+    \item Private members:
+        \begin{itemize}
+            \item \texttt{car\_name}, \texttt{model\_name}, \texttt{fuel\_type}: string type 
+            \item \texttt{mileage}: float type 
+            \item \texttt{price}: float type
+        \end{itemize}
+    \item Public members:
+        \begin{itemize}
+            \item \texttt{displaydata()}: Function to display the data members on the screen.
+        \end{itemize}
+\end{itemize}
+Use Constructor (both Default and parameterized) and Destructor. When no parameter is passed, the default Constructor will be called with the message "Default Constructor has been called."
+
+\subsection*{Code}
+\lstinputlisting[language=C++]{../Prac-2.cpp}
+
+\subsection*{Output}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Prac-2.png}
+    \caption{Output of Prac-2.cpp}
+\end{figure}
+
+
+\newpage
+\section*{Discussion}
+\begin{itemize}
+    \item In this lab, constructors and destructors were discussed.
+    \item Default and parameterized constructors were implemented. 
+    \item In experiment 3, the copy constructor was used to copy the values of one object to another object. 
+    \item While using copy constructor, the addresses were checked. It can be noticed that the addresses of the two objects were different even though the values were the same. 
+    \item The destructor is always called at the end of the program. It is used to free the memory allocated to the object. 
+    \item When calling the default constructor, if no value is assigned for the variables, garbage values are assigned there.
+\end{itemize}
+
+\end{document}
